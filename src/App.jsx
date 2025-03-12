@@ -4,6 +4,7 @@ import FloatingAction from "./inputs/FloatingAction"
 import SwitchComponent from "./inputs/SwitchComponent"
 import { CustomizedSwitches }  from "./inputs/CustomizedSwitches"
 import BasicRating from "./inputs/BasicRating"
+import HoverFeedback from "./inputs/hoverFeedback"
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <FloatingAction /> */}
       {/* <SwitchComponent /> */}
       {/* <CustomizedSwitches /> */}
-      <BasicRating />
+      {/* <BasicRating /> */}
+      <HoverFeedback />
     </>
   )
 }
