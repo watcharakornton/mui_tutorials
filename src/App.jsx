@@ -8,6 +8,7 @@ import HoverFeedback from "./inputs/hoverFeedback"
 import { CustomizedRating } from "./inputs/CustomizedRating"
 import { RadioGroupRating } from "./inputs/RadioGroupRating"
 import { BasicTransferList } from "./inputs/BasicTransferList"
+import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
       {/* <HoverFeedback /> */}
       {/* <CustomizedRating /> */}
       {/* <RadioGroupRating /> */}
-      <BasicTransferList />
+      {/* <BasicTransferList /> */}
+      <EnhancedTransferList />
     </>
   )
 }
