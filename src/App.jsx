@@ -9,6 +9,7 @@ import { CustomizedRating } from "./inputs/CustomizedRating"
 import { RadioGroupRating } from "./inputs/RadioGroupRating"
 import { BasicTransferList } from "./inputs/BasicTransferList"
 import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
+import { BasicTable } from "./inputs/BasicTable"
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <CustomizedRating /> */}
       {/* <RadioGroupRating /> */}
       {/* <BasicTransferList /> */}
-      <EnhancedTransferList />
+      {/* <EnhancedTransferList /> */}
+      <BasicTable />
     </>
   )
 }
