@@ -10,6 +10,7 @@ import { RadioGroupRating } from "./inputs/RadioGroupRating"
 import { BasicTransferList } from "./inputs/BasicTransferList"
 import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
 import { BasicTable } from "./inputs/BasicTable"
+import { DenseTable } from "./inputs/DenseTable"
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       {/* <RadioGroupRating /> */}
       {/* <BasicTransferList /> */}
       {/* <EnhancedTransferList /> */}
-      <BasicTable />
+      {/* <BasicTable /> */}
+      <DenseTable />
     </>
   )
 }
