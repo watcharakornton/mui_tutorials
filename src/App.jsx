@@ -3,6 +3,7 @@ import BasicSelect from "./inputs/BasicSelect"
 import FloatingAction from "./inputs/FloatingAction"
 import SwitchComponent from "./inputs/SwitchComponent"
 import { CustomizedSwitches }  from "./inputs/CustomizedSwitches"
+import BasicRating from "./inputs/BasicRating"
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <BasicSelect /> */}
       {/* <FloatingAction /> */}
       {/* <SwitchComponent /> */}
-      <CustomizedSwitches />
+      {/* <CustomizedSwitches /> */}
+      <BasicRating />
     </>
   )
 }
