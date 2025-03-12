@@ -6,6 +6,7 @@ import { CustomizedSwitches }  from "./inputs/CustomizedSwitches"
 import BasicRating from "./inputs/BasicRating"
 import HoverFeedback from "./inputs/hoverFeedback"
 import { CustomizedRating } from "./inputs/CustomizedRating"
+import { RadioGroupRating } from "./inputs/RadioGroupRating"
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <CustomizedSwitches /> */}
       {/* <BasicRating /> */}
       {/* <HoverFeedback /> */}
-      <CustomizedRating />
+      {/* <CustomizedRating /> */}
+      <RadioGroupRating />
     </>
   )
 }
