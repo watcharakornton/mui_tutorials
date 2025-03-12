@@ -9,7 +9,7 @@ import Select from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 
 
-export const BasicSelect = () => {
+const BasicSelect = () => {
     const theme = useTheme();
     const [personName, setPersonName] = React.useState([]);
 
@@ -89,3 +89,5 @@ export const BasicSelect = () => {
         </div>
     );
 }
+
+export default BasicSelect
