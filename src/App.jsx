@@ -5,6 +5,7 @@ import SwitchComponent from "./inputs/SwitchComponent"
 import { CustomizedSwitches }  from "./inputs/CustomizedSwitches"
 import BasicRating from "./inputs/BasicRating"
 import HoverFeedback from "./inputs/hoverFeedback"
+import { CustomizedRating } from "./inputs/CustomizedRating"
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <SwitchComponent /> */}
       {/* <CustomizedSwitches /> */}
       {/* <BasicRating /> */}
-      <HoverFeedback />
+      {/* <HoverFeedback /> */}
+      <CustomizedRating />
     </>
   )
 }
