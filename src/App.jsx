@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Divider, Stack, Container } from '@mui/material';
 
-import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "./inputs/AutocompleteComponent"
+// import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "./inputs/AutocompleteComponent"
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         justifyContent="center"
         sx={{ minHeight: "100vh" }}
       >
-        <ComboBox />
+        {/* <ComboBox />
         <Divider sx={{ width: "100%" }} />
         <Playground />
         <Divider sx={{ width: "100%" }} />
@@ -24,7 +24,7 @@ function App() {
         <RenderGroup />
         <Divider sx={{ width: "100%" }} />
         <DisabledOptions />
-        <Divider sx={{ width: "100%" }} />
+        <Divider sx={{ width: "100%" }} /> */}
       </Stack>
     </Container>
   )
