@@ -1,4 +1,5 @@
-import AutoComplete from "./inputs/AutoComplete"
+import { ComboBox, Playground } from "./inputs/AutocompleteComponent"
+
 import BasicSelect from "./inputs/BasicSelect"
 import FloatingAction from "./inputs/FloatingAction"
 import SwitchComponent from "./inputs/SwitchComponent"
@@ -17,28 +18,8 @@ import { CheckBoxes, CheckboxLabels, SizeCheckboxes, ColorCheckboxes, IconCheckb
 function App() {
   return (
     <>
-      {/* <AutoComplete /> */}
-      {/* <BasicSelect /> */}
-      {/* <FloatingAction /> */}
-      {/* <SwitchComponent /> */}
-      {/* <CustomizedSwitches /> */}
-      {/* <BasicRating /> */}
-      {/* <HoverFeedback /> */}
-      {/* <CustomizedRating /> */}
-      {/* <RadioGroupRating /> */}
-      {/* <BasicTransferList /> */}
-      {/* <EnhancedTransferList /> */}
-      {/* <BasicTable /> */}
-      {/* <DenseTable /> */}
-      {/* <BasicButtonGroup /> */}
-      {/* <GroupSizesColors /> */}
-      {/* <CheckBoxes /> */}
-      {/* <CheckboxLabels /> */}
-      {/* <SizeCheckboxes /> */}
-      {/* <ColorCheckboxes /> */}
-      {/* <IconCheckboxes /> */}
-      {/* <IndeterminateCheckbox /> */}
-      {/* <CheckboxesGroup /> */}
+      {/* <ComboBox /> */}
+      <Playground />
     </>
   )
 }
