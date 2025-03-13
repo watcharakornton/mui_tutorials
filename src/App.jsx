@@ -11,8 +11,8 @@ import { BasicTransferList } from "./inputs/BasicTransferList"
 import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
 import { BasicTable } from "./inputs/BasicTable"
 import { DenseTable } from "./inputs/DenseTable"
-import { BasicButtonGroup } from "./inputs/BasicButtonGroup"
-import { GroupSizesColors } from "./inputs/BasicButtonGroup"
+import { BasicButtonGroup, GroupSizesColors } from "./inputs/BasicButtonGroup"
+import { CheckBoxes, CheckboxLabels, SizeCheckboxes, ColorCheckboxes } from "./inputs/CheckBoxes"
 
 function App() {
   return (
@@ -31,7 +31,11 @@ function App() {
       {/* <BasicTable /> */}
       {/* <DenseTable /> */}
       {/* <BasicButtonGroup /> */}
-      <GroupSizesColors />
+      {/* <GroupSizesColors /> */}
+      {/* <CheckBoxes /> */}
+      {/* <CheckboxLabels /> */}
+      {/* <SizeCheckboxes /> */}
+      <ColorCheckboxes />
     </>
   )
 }
