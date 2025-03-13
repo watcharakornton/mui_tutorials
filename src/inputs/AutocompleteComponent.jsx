@@ -1,9 +1,5 @@
 import * as React from 'react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
-import Stack from '@mui/material/Stack';
-import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography';
+import { TextField, Autocomplete, useAutocomplete, Stack, Box } from '@mui/material'
 
 import { useTheme } from '@mui/material/styles';
 import { styled, lighten, darken } from '@mui/system';
@@ -20,7 +16,6 @@ export const DisabledOptions = () => {
 
     return (
         <>
-            <Typography variant="body1" gutterBottom>Disabled Options</Typography>
             <Autocomplete
                 options={timeSlots}
                 getOptionDisabled={(option) =>
@@ -60,19 +55,21 @@ export const RenderGroup = () => {
     })
 
     return (
-        <Autocomplete
-            options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
-            groupBy={(option) => option.firstLetter}
-            getOptionLabel={(option) => option.label}
-            sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="With categories" />}
-            renderGroup={(params) => (
-                <li key={params.key}>
-                    <GroupHeader>{params.group}</GroupHeader>
-                    <GroupItems>{params.children}</GroupItems>
-                </li>
-            )}
-        />
+        <>
+            <Autocomplete
+                options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+                groupBy={(option) => option.firstLetter}
+                getOptionLabel={(option) => option.label}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="With categories" />}
+                renderGroup={(params) => (
+                    <li key={params.key}>
+                        <GroupHeader>{params.group}</GroupHeader>
+                        <GroupItems>{params.children}</GroupItems>
+                    </li>
+                )}
+            />
+        </>
     );
 }
 
@@ -292,11 +289,13 @@ export const Playground = () => {
 
 export const ComboBox = () => {
     return (
-        <Autocomplete
-            disablePortal
-            options={top100Films}
-            sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Movie" />}
-        />
+        <>
+            <Autocomplete
+                disablePortal
+                options={top100Films}
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Movie" />}
+            />
+        </>
     );
 }
