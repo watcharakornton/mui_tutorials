@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography';
 
 import { useTheme } from '@mui/material/styles';
 import { styled, lighten, darken } from '@mui/system';
@@ -12,21 +13,23 @@ import countries from '../data/countries';
 
 export const DisabledOptions = () => {
     const timeSlots = Array.from(new Array(24 * 2)).map(
-        (_, index) => 
-            `${index < 20 ? '0' : ''}${Math.floor(index / 2)}:${
-                index % 2 === 0 ? '00' : '30'
+        (_, index) =>
+            `${index < 20 ? '0' : ''}${Math.floor(index / 2)}:${index % 2 === 0 ? '00' : '30'
             }`,
     );
 
     return (
-        <Autocomplete 
-            options={timeSlots}
-            getOptionDisabled={(option) =>
-                option === timeSlots[0] || option === timeSlots[2]
-            }
-            sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Disabled options" />}
-        />
+        <>
+            <Typography variant="body1" gutterBottom>Disabled Options</Typography>
+            <Autocomplete
+                options={timeSlots}
+                getOptionDisabled={(option) =>
+                    option === timeSlots[0] || option === timeSlots[2]
+                }
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Disabled options" />}
+            />
+        </>
     )
 }
 

@@ -1,30 +1,32 @@
+import * as React from 'react';
+import { Box, Typography, Divider, Stack, Container } from '@mui/material';
+
 import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "./inputs/AutocompleteComponent"
 
-import BasicSelect from "./inputs/BasicSelect"
-import FloatingAction from "./inputs/FloatingAction"
-import SwitchComponent from "./inputs/SwitchComponent"
-import { CustomizedSwitches }  from "./inputs/CustomizedSwitches"
-import BasicRating from "./inputs/BasicRating"
-import HoverFeedback from "./inputs/hoverFeedback"
-import { CustomizedRating } from "./inputs/CustomizedRating"
-import { RadioGroupRating } from "./inputs/RadioGroupRating"
-import { BasicTransferList } from "./inputs/BasicTransferList"
-import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
-import { BasicTable } from "./inputs/BasicTable"
-import { DenseTable } from "./inputs/DenseTable"
-import { BasicButtonGroup, GroupSizesColors } from "./inputs/BasicButtonGroup"
-import { CheckBoxes, CheckboxLabels, SizeCheckboxes, ColorCheckboxes, IconCheckboxes, IndeterminateCheckbox, CheckboxesGroup } from "./inputs/CheckBoxes"
 
 function App() {
   return (
-    <>
-      {/* <ComboBox /> */}
-      {/* <Playground /> */}
-      {/* <CountrySelect /> */}
-      {/* <Grouped /> */}
-      {/* <RenderGroup /> */}
-      <DisabledOptions />
-    </>
+    <Container maxWidth="sm">
+      <Stack
+        spacing={3}
+        alignItems="center"
+        justifyContent="center"
+        sx={{ minHeight: "100vh" }}
+      >
+        <ComboBox />
+        <Divider sx={{ width: "100%" }} />
+        <Playground />
+        <Divider sx={{ width: "100%" }} />
+        <CountrySelect />
+        <Divider sx={{ width: "100%" }} />
+        <Grouped />
+        <Divider sx={{ width: "100%" }} />
+        <RenderGroup />
+        <Divider sx={{ width: "100%" }} />
+        <DisabledOptions />
+        <Divider sx={{ width: "100%" }} />
+      </Stack>
+    </Container>
   )
 }
 
