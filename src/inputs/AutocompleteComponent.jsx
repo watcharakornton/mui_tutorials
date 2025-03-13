@@ -1,8 +1,122 @@
 import * as React from 'react';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-import top100Films from '../data/top100Films';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box'
+
+import { useTheme } from '@mui/material/styles';
+import { styled, lighten, darken } from '@mui/system';
+
+import top100Films from '../data/top100Films';
+import countries from '../data/countries';
+
+export const RenderGroup = () => {
+    const theme = useTheme();
+
+    const GroupHeader = styled('div')({
+        position: 'sticky',
+        top: '-8px',
+        padding: '4px 10px',
+        color: theme.palette.primary.main,
+        backgroundColor: lighten(theme.palette.primary.light, 0.85),
+        ...theme.applyStyles('dark', {
+            backgroundColor: darken(theme.palette.primary.main, 0.8),
+        }),
+    });
+
+    const GroupItems = styled('ul')({
+        padding: 0,
+    });
+
+    const options = top100Films.map((option) => {
+        const firstLetter = option.label[0].toUpperCase();
+        return {
+            firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,
+            ...option,
+        }
+    })
+
+    return (
+        <Autocomplete
+            options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+            groupBy={(option) => option.firstLetter}
+            getOptionLabel={(option) => option.label}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="With categories" />}
+            renderGroup={(params) => (
+                <li key={params.key}>
+                    <GroupHeader>{params.group}</GroupHeader>
+                    <GroupItems>{params.children}</GroupItems>
+                </li>
+            )}
+        />
+    );
+}
+
+export const Grouped = () => {
+    const options = top100Films.map((option) => {
+        const firstLetter = option.label[0].toUpperCase();
+        return {
+            firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,
+            ...option,
+        };
+    });
+
+    return (
+        <Autocomplete
+            options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+            groupBy={(option) => option.firstLetter}
+            getOptionLabel={(option) => option.label}
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="With categories" />
+            }
+        />
+    );
+}
+
+export const CountrySelect = () => {
+    return (
+        <Autocomplete
+            id="country-select-demo"
+            sx={{ width: 300 }}
+            options={countries}
+            autoHighlight
+            getOptionLabel={(option) => option.label}
+            renderOption={(props, option) => {
+                const { key, ...optionProps } = props;
+                return (
+                    <Box
+                        key={key}
+                        component="li"
+                        sx={{ '& > img': { mr: 2, flexShrink: 0 } }}
+                        {...optionProps}
+                    >
+                        <img
+                            loading="lazy"
+                            width="20"
+                            srcSet={`https://flagcdn.com/w40/${option.code.toLowerCase()}.png 2x`}
+                            src={`https://flagcdn.com/w20/${option.code.toLowerCase()}.png`}
+                            alt=""
+                        />
+                        {option.label} ({option.code}) + {option.phone}
+                    </Box>
+                );
+            }}
+            renderInput={(params) => (
+                <TextField
+                    {...params}
+                    label="Choose a country"
+                    slotProps={{
+                        htmlInput: {
+                            ...params.inputProps,
+                            autoComplete: 'new-password',
+                        },
+                    }}
+                />
+            )}
+        />
+    );
+}
 
 export const Playground = () => {
     const defaultProps = {
