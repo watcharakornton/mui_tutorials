@@ -11,6 +11,8 @@ import { BasicTransferList } from "./inputs/BasicTransferList"
 import { EnhancedTransferList } from "./inputs/EnhancedTransferList"
 import { BasicTable } from "./inputs/BasicTable"
 import { DenseTable } from "./inputs/DenseTable"
+import { BasicButtonGroup } from "./inputs/BasicButtonGroup"
+import { GroupSizesColors } from "./inputs/BasicButtonGroup"
 
 function App() {
   return (
@@ -27,7 +29,9 @@ function App() {
       {/* <BasicTransferList /> */}
       {/* <EnhancedTransferList /> */}
       {/* <BasicTable /> */}
-      <DenseTable />
+      {/* <DenseTable /> */}
+      {/* <BasicButtonGroup /> */}
+      <GroupSizesColors />
     </>
   )
 }
