@@ -10,6 +10,26 @@ import { styled, lighten, darken } from '@mui/system';
 import top100Films from '../data/top100Films';
 import countries from '../data/countries';
 
+export const DisabledOptions = () => {
+    const timeSlots = Array.from(new Array(24 * 2)).map(
+        (_, index) => 
+            `${index < 20 ? '0' : ''}${Math.floor(index / 2)}:${
+                index % 2 === 0 ? '00' : '30'
+            }`,
+    );
+
+    return (
+        <Autocomplete 
+            options={timeSlots}
+            getOptionDisabled={(option) =>
+                option === timeSlots[0] || option === timeSlots[2]
+            }
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="Disabled options" />}
+        />
+    )
+}
+
 export const RenderGroup = () => {
     const theme = useTheme();
 
