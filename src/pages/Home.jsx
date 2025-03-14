@@ -41,7 +41,7 @@ const Home = () => {
         { title: 'Button Page', href: "/button" },
         { title: 'Button Group Page', href: "/button-group" },
         { title: 'Checkbox Page', href: "/checkbox" },
-        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'FAB page', href: "/floating-action-button"},
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },

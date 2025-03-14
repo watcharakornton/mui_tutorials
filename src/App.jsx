@@ -5,6 +5,7 @@ import AutoCompletePage from "./pages/AutoCompletePage";
 import ButtonPage from "./pages/ButtonPage";
 import ButtonGroupPage from "./pages/ButtonGroupPage";
 import CheckboxPage from "./pages/CheckboxPage";
+import FloatingActionButtonPage from "./pages/FloatingActionButtonPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/button" element={<ButtonPage />} />
         <Route path="/button-group" element={<ButtonGroupPage />} />
         <Route path="/checkbox" element={<CheckboxPage />} />
+        <Route path="/floating-action-button" element={<FloatingActionButtonPage />} />
       </Routes>
     </Router>
   )
