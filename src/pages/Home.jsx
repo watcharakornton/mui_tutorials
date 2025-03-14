@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
     Container,
+    Grid,
     Stack,
     Card,
     CardActions,
@@ -26,7 +27,7 @@ const CardComponent = ({ title, href, isTemplate }) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button  sx={{ ml: 1 }} size="small" href={href} endIcon={<ChevronRightIcon />} disabled={isTemplate}>
+                <Button sx={{ ml: 1 }} size="small" href={href} endIcon={<ChevronRightIcon />} disabled={isTemplate}>
                     View
                 </Button>
             </CardActions>
@@ -35,14 +36,14 @@ const CardComponent = ({ title, href, isTemplate }) => {
 }
 
 const Home = () => {
-    const cardsColOne = [
+    const cards = [
         { title: 'Autocomplete Page', href: "/autocomplete" },
         { title: 'Button Page', href: "/button" },
         { title: 'Button Group Page', href: "/button-group" },
         { title: 'Checkbox Page', href: "/checkbox" },
         { title: 'Templates', href: "/", isTemplate: true },
-    ]
-    const cardsColTwo = [
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
@@ -50,44 +51,14 @@ const Home = () => {
         { title: 'Templates', href: "/", isTemplate: true },
     ]
     return (
-        <Container maxWidth="md">
-            <Stack
-                direction="row"
-                spacing={3}
-                justifyContent="center"
-            >
-                <Stack
-                    spacing={3}
-                    alignItems="center"
-                    justifyContent="center"
-                    sx={{ minHeight: "100vh" }}
-                >
-                    {cardsColOne.map((card, index) => (
-                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
-                    ))}
-                </Stack>
-                <Stack
-                    spacing={3}
-                    alignItems="center"
-                    justifyContent="center"
-                    sx={{ minHeight: "100vh" }}
-                >
-                    {cardsColTwo.map((card, index) => (
-                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
-                    ))}
-                </Stack>
-                {/* <Stack
-                    spacing={3}
-                    alignItems="center"
-                    justifyContent="center"
-                    sx={{ minHeight: "100vh" }}
-                >
-                    {cardsColTwo.map((card, index) => (
-                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
-                    ))}
-                </Stack> */}
-            </Stack>
-
+        <Container maxWidth="md" sx={{ mt: 4, minHeight: "100vh" }} >
+            <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
+                {cards.map((card, index) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <CardComponent title={card.title} href={card.href} isTemplate={card.isTemplate} />
+                    </Grid>
+                ))}
+            </Grid>
         </Container>
     )
 }
