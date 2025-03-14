@@ -1,6 +1,16 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles'
-import { Stack, Box, Button, IconButton, Tooltip, Badge, badgeClasses } from '@mui/material';
+import {
+    Stack,
+    Box,
+    Button,
+    IconButton,
+    Tooltip,
+    Badge,
+    badgeClasses,
+    FormControlLabel,
+    Switch,
+} from '@mui/material';
 import {
     Delete as DeleteIcon,
     Send as SendIcon,
@@ -10,7 +20,110 @@ import {
     ShoppingCartOutlined as ShoppingCartOutlinedIcon,
     Fingerprint,
     CloudUpload as CloudUploadIcon,
+    Save as SaveIcon,
 } from '@mui/icons-material';
+
+export const LoadingButtonsTransition = () => {
+    const [loading, setLoading] = React.useState(true);
+    function handleClick() {
+        setLoading(true);
+    }
+
+    return (
+        <div>
+            <FormControlLabel
+                sx={{ display: 'block' }}
+                control={
+                    <Switch
+                        checked={loading}
+                        onChange={() => setLoading(!loading)}
+                        name="loading"
+                        color="primary"
+                    />
+                }
+                label="Loading"
+            />
+            <Box sx={{ '& > button': { m: 1 } }}>
+                <Button
+                    size="small"
+                    onClick={handleClick}
+                    loading={loading}
+                    variant="outlined"
+                    disabled
+                >
+                    Disabled
+                </Button>
+                <Button
+                    size="small"
+                    onClick={handleClick}
+                    loading={loading}
+                    loadingIndicator="Loading..."
+                    variant="outlined"
+                >
+                    Fetch data
+                </Button>
+                <Button
+                    size="small"
+                    onClick={handleClick}
+                    endIcon={<SendIcon />}
+                    loading={loading}
+                    loadingPosition="end"
+                    variant="contained"
+                >
+                    Send
+                </Button>
+                <Button
+                    size="small"
+                    color="secondary"
+                    onClick={handleClick}
+                    loading={loading}
+                    loadingPosition="start"
+                    startIcon={<SaveIcon />}
+                    variant="contained"
+                >
+                    Save
+                </Button>
+            </Box>
+            <Box sx={{ '& > button': { m: 1 } }}>
+                <Button
+                    onClick={handleClick}
+                    loading={loading}
+                    variant="outlined"
+                    disabled
+                >
+                    Disabled
+                </Button>
+                <Button
+                    onClick={handleClick}
+                    loading={loading}
+                    loadingIndicator="Loading..."
+                    variant="outlined"
+                >
+                    Fetch data
+                </Button>
+                <Button
+                    onClick={handleClick}
+                    endIcon={<SendIcon />}
+                    loading={loading}
+                    loadingPosition="end"
+                    variant="contained"
+                >
+                    Send
+                </Button>
+                <Button
+                    color="secondary"
+                    onClick={handleClick}
+                    loading={loading}
+                    loadingPosition="start"
+                    startIcon={<SaveIcon />}
+                    variant="contained"
+                >
+                    Save
+                </Button>
+            </Box>
+        </div>
+    )
+}
 
 export const InputFileUpload = () => {
     const VisuallyHiddenInput = styled('input')({
@@ -34,7 +147,7 @@ export const InputFileUpload = () => {
             startIcon={<CloudUploadIcon />}
         >
             Upload files
-            <VisuallyHiddenInput 
+            <VisuallyHiddenInput
                 type="file"
                 onChange={(event) => console.log(event.target.files)}
                 multiple

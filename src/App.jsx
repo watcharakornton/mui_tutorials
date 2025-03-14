@@ -14,6 +14,7 @@ import {
   LoadingIconButton,
   IconButtonWithBadge,
   InputFileUpload,
+  LoadingButtonsTransition,
 } from './inputs/ButtonComponent';
 
 
@@ -61,6 +62,8 @@ function App() {
         <IconButtonWithBadge />
         <Divider sx={{ width: "100%" }} />
         <InputFileUpload />
+        <Divider sx={{ width: "100%" }} />
+        <LoadingButtonsTransition />
       </Stack>
     </Container>
   )
