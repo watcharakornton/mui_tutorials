@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Divider, Stack, Container } from '@mui/material';
 
 // import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "./inputs/AutocompleteComponent"
-import { BasicButtons, TextButtons, ColorButtons } from './inputs/ButtonComponent';
+import { BasicButtons, TextButtons, ColorButtons, ButtonSizes } from './inputs/ButtonComponent';
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
         <TextButtons />
         <Divider sx={{ width: "100%"}} />
         <ColorButtons />
+        <Divider sx={{ width: "100%"}} />
+        <ButtonSizes />
         <Divider sx={{ width: "100%"}} />
       </Stack>
     </Container>
