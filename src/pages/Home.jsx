@@ -2,25 +2,31 @@ import * as React from 'react';
 import {
     Container,
     Stack,
-    Box,
     Card,
     CardActions,
     CardContent,
     Button,
     Typography
 } from '@mui/material'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const CardComponent = ({ title, href, isTemplate }) => {
-    console.log(isTemplate)
     return (
-        <Card sx={{ minWidth: 275, bgcolor: isTemplate ? "#9E9E9E" : "white" }}>
+        <Card
+            variant="outlined"
+            sx={{
+                minWidth: 275,
+                bgcolor: isTemplate ? "#6E6E6E" : "background.default",
+                color: isTemplate ? "white" : "text.primary",
+            }}
+        >
             <CardContent>
-                <Typography color={isTemplate ? "red" : "black"} variant="h6" component="div">
+                <Typography variant="h5" component="div">
                     {title}
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small" href={href} disabled={isTemplate}>
+                <Button  sx={{ ml: 1 }} size="small" href={href} endIcon={<ChevronRightIcon />} disabled={isTemplate}>
                     View
                 </Button>
             </CardActions>
@@ -34,14 +40,14 @@ const Home = () => {
         { title: 'Button Page', href: "/button" },
         { title: 'Button Group Page', href: "/button-group" },
         { title: 'Checkbox Page', href: "/checkbox" },
-        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
     ]
     const cardsColTwo = [
-        { title: 'Template Page', href: "/", isTemplate: true },
-        { title: 'Template Page', href: "/", isTemplate: true },
-        { title: 'Template Page', href: "/", isTemplate: true },
-        { title: 'Template Page', href: "/", isTemplate: true },
-        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
     ]
     return (
         <Container maxWidth="md">

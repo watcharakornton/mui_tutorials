@@ -6,8 +6,6 @@ import ButtonPage from "./pages/ButtonPage";
 import ButtonGroupPage from "./pages/ButtonGroupPage";
 import CheckboxPage from "./pages/CheckboxPage";
 
-import { Box, Divider, Stack, Container } from '@mui/material';
-
 function App() {
   return (
     <Router>
