@@ -8,6 +8,21 @@ import {
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
+export const SizeCheckboxes = () => {
+    return (
+        <div>
+            <Typography variant='body1'>Size Checkboxes</Typography>
+            <Checkbox {...label} defaultChecked size="small" />
+            <Checkbox {...label} defaultChecked />
+            <Checkbox
+                {...label} 
+                defaultChecked 
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 28 }}}
+            />
+        </div>
+    );
+}
+
 export const CheckboxLabels = () => {
     return (
         <>

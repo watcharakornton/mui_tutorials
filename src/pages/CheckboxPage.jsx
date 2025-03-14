@@ -4,13 +4,15 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import {
     Checkboxes,
-    CheckboxLabels
+    CheckboxLabels,
+    SizeCheckboxes,
 } from "../inputs/CheckboxComponent";
 
 const CheckboxPage = () => {
     const sections = [
         <Checkboxes />, 
         <CheckboxLabels />,
+        <SizeCheckboxes />,
     ];
 
     return (
