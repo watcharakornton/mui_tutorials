@@ -1,5 +1,19 @@
 import * as React from 'react';
-import { Stack, Box, Button } from '@mui/material'
+import { Stack, Box, Button } from '@mui/material';
+import { Delete as DeleteIcon, Send as SendIcon } from '@mui/icons-material';
+
+export const IconLabelButtons = () => {
+    return (
+        <Stack direction="row" spacing={2}>
+            <Button variant="outlined" startIcon={<DeleteIcon />}>
+                Delete
+            </Button>
+            <Button variant="contained" startIcon={<SendIcon />}>
+                Send
+            </Button>
+        </Stack>
+    )
+}
 
 export const ButtonSizes = () => {
     return (
