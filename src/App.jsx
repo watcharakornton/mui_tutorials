@@ -18,6 +18,10 @@ import {
   CustomizedButtons,
 } from './inputs/ButtonComponent';
 
+import {
+  BasicButtonGroup
+} from './inputs/ButtonGroupComponent';
+
 
 function App() {
   return (
@@ -41,7 +45,7 @@ function App() {
         <DisabledOptions />
         <Divider sx={{ width: "100%" }} /> */}
 
-        <Divider sx={{ width: "100%" }} />
+        {/* <Divider sx={{ width: "100%" }} />
         <BasicButtons />
         <Divider sx={{ width: "100%" }} />
         <TextButtons />
@@ -67,7 +71,11 @@ function App() {
         <LoadingButtonsTransition />
         <Divider sx={{ width: "100%" }} />
         <CustomizedButtons />
+        <Divider sx={{ width: "100%" }} /> */}
+
         <Divider sx={{ width: "100%" }} />
+        <BasicButtonGroup />
+
       </Stack>
     </Container>
   )
