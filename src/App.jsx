@@ -19,7 +19,8 @@ import {
 } from './inputs/ButtonComponent';
 
 import {
-  BasicButtonGroup
+  BasicButtonGroup,
+  VariantButtonGroup,
 } from './inputs/ButtonGroupComponent';
 
 
@@ -75,6 +76,8 @@ function App() {
 
         <Divider sx={{ width: "100%" }} />
         <BasicButtonGroup />
+        <Divider sx={{ width: "100%" }} />
+        <VariantButtonGroup />
 
       </Stack>
     </Container>
