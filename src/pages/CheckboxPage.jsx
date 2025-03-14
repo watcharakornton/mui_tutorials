@@ -4,6 +4,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import {
     Checkboxes,
+    CheckboxLabels
 } from "../inputs/CheckboxComponent";
 
 const AutoCompletePage = () => {
@@ -17,6 +18,8 @@ const AutoCompletePage = () => {
             >
                 <Divider sx={{ width: "100%" }} />
                 <Checkboxes />
+                <Divider sx={{ width: "100%" }} />
+                <CheckboxLabels />
                 <Divider sx={{ width: "100%" }} />
                 <Button size='large' startIcon={<ChevronLeftIcon />} href="/">Back</Button>
             </Stack>
