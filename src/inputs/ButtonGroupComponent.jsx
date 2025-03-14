@@ -1,16 +1,48 @@
 import * as React from 'react';
-import { 
-    Button, 
+import {
+    Button,
     ButtonGroup,
     Box
 } from '@mui/material'
 
+const buttons = [
+    <Button key="one">One</Button>,
+    <Button key="two">Two</Button>,
+    <Button key="three">Three</Button>
+];
+
+export const GroupOrientation = () => {
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                '& > *': {
+                    m: 1,
+                },
+            }}
+        >
+            <ButtonGroup orientation="vertical" aria-label="Vertical button group">
+                {buttons}
+            </ButtonGroup>
+            <ButtonGroup
+                orientation="vertical"
+                aria-label="Vertical buttong group"
+                variant="contained"
+            >
+                {buttons}
+            </ButtonGroup>
+            <ButtonGroup
+                orientation="vertical"
+                aria-label="Vertical button group"
+                variant="text"
+            >
+                {buttons}
+            </ButtonGroup>
+        </Box>
+    )
+}
+
 export const GroupSizesColors = () => {
-    const buttons = [
-        <Button key="one">One</Button>,
-        <Button key="two">Two</Button>,
-        <Button key="three">Three</Button>
-    ];
 
     return (
         <Box

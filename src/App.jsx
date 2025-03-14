@@ -22,6 +22,7 @@ import {
   BasicButtonGroup,
   VariantButtonGroup,
   GroupSizesColors,
+  GroupOrientation,
 } from './inputs/ButtonGroupComponent';
 
 
@@ -81,6 +82,9 @@ function App() {
         <VariantButtonGroup />
         <Divider sx={{ width: "100%" }} />
         <GroupSizesColors />
+        <Divider sx={{ width: "100%" }} />
+        <GroupOrientation />
+        <Divider sx={{ width: "100%" }} />
 
       </Stack>
     </Container>
