@@ -1,17 +1,61 @@
 import * as React from 'react';
-import { Stack, Box, Button, IconButton, Tooltip } from '@mui/material';
+import { styled } from '@mui/material/styles'
+import { Stack, Box, Button, IconButton, Tooltip, Badge, badgeClasses } from '@mui/material';
 import {
     Delete as DeleteIcon,
     Send as SendIcon,
     Alarm as AlarmIcon,
     AddShoppingCart as AddShoppingCartIcon,
     ShoppingCart as ShoppingCartIcon,
-    Fingerprint
+    ShoppingCartOutlined as ShoppingCartOutlinedIcon,
+    Fingerprint,
+    CloudUpload as CloudUploadIcon,
 } from '@mui/icons-material';
 
-export const IconButtonWithBadge = () => {
+export const InputFileUpload = () => {
+    const VisuallyHiddenInput = styled('input')({
+        clip: 'react(0 0 0 0)',
+        clipPath: 'inset(50%)',
+        height: 1,
+        overflow: 'hidden',
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        whiteSpace: 'nowrap',
+        width: 1,
+    });
+
     return (
-        <div>IconButtonWithBadge</div>
+        <Button
+            component="label"
+            role={undefined}
+            variant="contained"
+            tabIndex={-1}
+            startIcon={<CloudUploadIcon />}
+        >
+            Upload files
+            <VisuallyHiddenInput 
+                type="file"
+                onChange={(event) => console.log(event.target.files)}
+                multiple
+            />
+        </Button>
+    )
+}
+
+export const IconButtonWithBadge = () => {
+    const CartBadge = styled(Badge)`
+        & .${badgeClasses.badge} {
+            top: -12px;
+            right: -6px;
+        }
+    `;
+
+    return (
+        <IconButton>
+            <ShoppingCartOutlinedIcon fontSize="small" />
+            <CartBadge badgeContent={2} color="primary" overlap="circular" />
+        </IconButton>
     )
 }
 
