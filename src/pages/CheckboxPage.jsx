@@ -7,7 +7,9 @@ import {
     CheckboxLabels
 } from "../inputs/CheckboxComponent";
 
-const AutoCompletePage = () => {
+const CheckboxPage = () => {
+    const sections = [<Checkboxes />, <CheckboxLabels />];
+
     return (
         <Container maxWidth="sm">
             <Stack
@@ -17,14 +19,16 @@ const AutoCompletePage = () => {
                 sx={{ minHeight: "100vh" }}
             >
                 <Divider sx={{ width: "100%" }} />
-                <Checkboxes />
-                <Divider sx={{ width: "100%" }} />
-                <CheckboxLabels />
-                <Divider sx={{ width: "100%" }} />
+                {sections.map((Component, index) => (
+                    <React.Fragment key={index}>
+                        {Component}
+                        <Divider sx={{ width: "100%" }} />
+                    </React.Fragment>
+                ))}
                 <Button size='large' startIcon={<ChevronLeftIcon />} href="/">Back</Button>
             </Stack>
         </Container>
     )
 }
 
-export default AutoCompletePage
+export default CheckboxPage
