@@ -2,7 +2,18 @@ import * as React from 'react';
 import { Box, Divider, Stack, Container } from '@mui/material';
 
 // import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "./inputs/AutocompleteComponent"
-import { BasicButtons, TextButtons, ColorButtons, ButtonSizes, IconLabelButtons } from './inputs/ButtonComponent';
+import {
+  BasicButtons,
+  TextButtons,
+  ColorButtons,
+  ButtonSizes,
+  IconLabelButtons,
+  IconButtons,
+  IconButtonSizes,
+  IconButtonColors,
+  LoadingIconButton,
+  IconButtonWithBadge,
+} from './inputs/ButtonComponent';
 
 
 function App() {
@@ -27,17 +38,26 @@ function App() {
         <DisabledOptions />
         <Divider sx={{ width: "100%" }} /> */}
 
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
         <BasicButtons />
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
         <TextButtons />
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
         <ColorButtons />
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
         <ButtonSizes />
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
         <IconLabelButtons />
-        <Divider sx={{ width: "100%"}} />
+        <Divider sx={{ width: "100%" }} />
+        <IconButtons />
+        <Divider sx={{ width: "100%" }} />
+        <IconButtonSizes />
+        <Divider sx={{ width: "100%" }} />
+        <IconButtonColors />
+        <Divider sx={{ width: "100%" }} />
+        <LoadingIconButton />
+        <Divider sx={{ width: "100%" }} />
+        <IconButtonWithBadge />
       </Stack>
     </Container>
   )

@@ -1,6 +1,87 @@
 import * as React from 'react';
-import { Stack, Box, Button } from '@mui/material';
-import { Delete as DeleteIcon, Send as SendIcon } from '@mui/icons-material';
+import { Stack, Box, Button, IconButton, Tooltip } from '@mui/material';
+import {
+    Delete as DeleteIcon,
+    Send as SendIcon,
+    Alarm as AlarmIcon,
+    AddShoppingCart as AddShoppingCartIcon,
+    ShoppingCart as ShoppingCartIcon,
+    Fingerprint
+} from '@mui/icons-material';
+
+export const IconButtonWithBadge = () => {
+    return (
+        <div>IconButtonWithBadge</div>
+    )
+}
+
+export const LoadingIconButton = () => {
+    const [loading, setLoading] = React.useState(false);
+    React.useEffect(() => {
+        const timeout = setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+        return () => clearTimeout(timeout);
+    });
+    return (
+        <Tooltip title="Cleck to see loading">
+            <IconButton onClick={() => setLoading(true)} loading={loading}>
+                <ShoppingCartIcon />
+            </IconButton>
+        </Tooltip>
+    );
+}
+
+export const IconButtonColors = () => {
+    return (
+        <Stack direction="row" spacing={1}>
+            <IconButton aria-label="fingerprint" color="secondary">
+                <Fingerprint />
+            </IconButton>
+            <IconButton aria-label="fingerprint" color="success">
+                <Fingerprint />
+            </IconButton>
+        </Stack>
+    )
+}
+
+export const IconButtonSizes = () => {
+    return (
+        <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+            <IconButton aria-label="delete" size="small">
+                <DeleteIcon fontSize="inherit" />
+            </IconButton>
+            <IconButton aria-label="delete" size="small">
+                <DeleteIcon fontSize="inherit" />
+            </IconButton>
+            <IconButton aria-label="delete" size="large">
+                <DeleteIcon />
+            </IconButton>
+            <IconButton aria-label="delete" size="large">
+                <DeleteIcon fontSize="inherit" />
+            </IconButton>
+        </Stack>
+    )
+}
+
+export const IconButtons = () => {
+    return (
+        <Stack direction="row" spacing={1}>
+            <IconButton aria-label="delete">
+                <DeleteIcon />
+            </IconButton>
+            <IconButton aria-label="delete" disabled color="primary">
+                <DeleteIcon />
+            </IconButton>
+            <IconButton color="secondary" aria-label="add on alarm">
+                <AlarmIcon />
+            </IconButton>
+            <IconButton color="primary" aria-label="add to shopping cart">
+                <AddShoppingCartIcon />
+            </IconButton>
+        </Stack>
+    )
+}
 
 export const IconLabelButtons = () => {
     return (
