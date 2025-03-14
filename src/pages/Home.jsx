@@ -10,21 +10,45 @@ import {
     Typography
 } from '@mui/material'
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-    >
-        .
-    </Box>
-)
+const CardComponent = ({ title, href, isTemplate }) => {
+    console.log(isTemplate)
+    return (
+        <Card sx={{ minWidth: 275, bgcolor: isTemplate ? "#9E9E9E" : "white" }}>
+            <CardContent>
+                <Typography color={isTemplate ? "red" : "black"} variant="h6" component="div">
+                    {title}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small" href={href} disabled={isTemplate}>
+                    View
+                </Button>
+            </CardActions>
+        </Card>
+    )
+}
 
 const Home = () => {
+    const cardsColOne = [
+        { title: 'Autocomplete Page', href: "/autocomplete" },
+        { title: 'Button Page', href: "/button" },
+        { title: 'Button Group Page', href: "/button-group" },
+        { title: 'Checkbox Page', href: "/checkbox" },
+        { title: 'Template Page', href: "/", isTemplate: true },
+    ]
+    const cardsColTwo = [
+        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Template Page', href: "/", isTemplate: true },
+        { title: 'Template Page', href: "/", isTemplate: true },
+    ]
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Stack
                 direction="row"
                 spacing={3}
+                justifyContent="center"
             >
                 <Stack
                     spacing={3}
@@ -32,56 +56,9 @@ const Home = () => {
                     justifyContent="center"
                     sx={{ minHeight: "100vh" }}
                 >
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography variant="h6" component="div">
-                                Autocomplete Page
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/autocomplete">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography variant="h6" component="div">
-                                Button
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/button">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography variant="h6" component="div">
-                                Button Group
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/button-group">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography variant="h6" component="div">
-                                Checkbox
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/checkbox">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
+                    {cardsColOne.map((card, index) => (
+                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
+                    ))}
                 </Stack>
                 <Stack
                     spacing={3}
@@ -89,57 +66,20 @@ const Home = () => {
                     justifyContent="center"
                     sx={{ minHeight: "100vh" }}
                 >
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ minWidth: 275 }}>
-                        <CardContent>
-                            <Typography color='red' variant="h6" component="div">
-                                Templates
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" href="/">View</Button>
-                        </CardActions>
-                    </Card>
+                    {cardsColTwo.map((card, index) => (
+                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
+                    ))}
                 </Stack>
+                {/* <Stack
+                    spacing={3}
+                    alignItems="center"
+                    justifyContent="center"
+                    sx={{ minHeight: "100vh" }}
+                >
+                    {cardsColTwo.map((card, index) => (
+                        <CardComponent key={index} title={card.title} href={card.href} isTemplate={card.isTemplate} />
+                    ))}
+                </Stack> */}
             </Stack>
 
         </Container>
