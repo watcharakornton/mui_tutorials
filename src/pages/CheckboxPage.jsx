@@ -6,7 +6,8 @@ import {
     Checkboxes,
     CheckboxLabels,
     SizeCheckboxes,
-    ColorCheckboxes
+    ColorCheckboxes,
+    IconCheckboxes,
 } from "../inputs/CheckboxComponent";
 
 const CheckboxPage = () => {
@@ -15,6 +16,7 @@ const CheckboxPage = () => {
         <CheckboxLabels />,
         <SizeCheckboxes />,
         <ColorCheckboxes />,
+        <IconCheckboxes />,
     ];
 
     return (
