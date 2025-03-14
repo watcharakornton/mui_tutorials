@@ -15,6 +15,7 @@ const AutoCompletePage = () => {
                 justifyContent="center"
                 sx={{ minHeight: "100vh" }}
             >
+                <Divider sx={{ width: "100%" }} />
                 <Checkboxes />
                 <Divider sx={{ width: "100%" }} />
                 <Button size='large' startIcon={<ChevronLeftIcon />} href="/">Back</Button>
