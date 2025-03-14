@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Container, Stack, Divider, Button } from '@mui/material';
-import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "../inputs/AutocompleteComponent"
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "../inputs/AutocompleteComponent"
 
 const AutoCompletePage = () => {
     return (
@@ -24,7 +24,7 @@ const AutoCompletePage = () => {
                 <Divider sx={{ width: "100%" }} />
                 <DisabledOptions />
                 <Divider sx={{ width: "100%" }} />
-                <Button variant="contained" startIcon={<ChevronLeftIcon />} href="/">Back</Button>
+                <Button size="large" startIcon={<ChevronLeftIcon />} href="/">Back</Button>
             </Stack>
         </Container>
     )

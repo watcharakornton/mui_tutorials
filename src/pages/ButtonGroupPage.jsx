@@ -30,7 +30,7 @@ const Home = () => {
                 <Divider sx={{ width: "100%" }} />
                 <SplitButton />
                 <Divider sx={{ width: "100%" }} />
-                <Button variant="contained" startIcon={<ChevronLeftIcon />} href="/">Back</Button>
+                <Button size="large" startIcon={<ChevronLeftIcon />} href="/">Back</Button>
             </Stack>
         </Container>
     )

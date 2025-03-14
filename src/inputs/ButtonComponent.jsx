@@ -10,6 +10,7 @@ import {
     badgeClasses,
     FormControlLabel,
     Switch,
+    Typography
 } from '@mui/material';
 import {
     Delete as DeleteIcon,
@@ -71,12 +72,15 @@ export const CustomizedButtons = () => {
     });
 
     return (
-        <Stack spacing={2} direction="row">
-            <ColorButton variant="contained">Custom CSS</ColorButton>
-            <BootstrapButton variant="contained" disableRipple>
-                Bootstrap
-            </BootstrapButton>
-        </Stack>
+        <>
+            <Typography variant='body1'>Customized Buttons</Typography>
+            <Stack spacing={2} direction="row">
+                <ColorButton variant="contained">Custom CSS</ColorButton>
+                <BootstrapButton variant="contained" disableRipple>
+                    Bootstrap
+                </BootstrapButton>
+            </Stack>
+        </>
     );
 }
 
@@ -87,98 +91,101 @@ export const LoadingButtonsTransition = () => {
     }
 
     return (
-        <div>
-            <FormControlLabel
-                sx={{ display: 'block' }}
-                control={
-                    <Switch
-                        checked={loading}
-                        onChange={() => setLoading(!loading)}
-                        name="loading"
-                        color="primary"
-                    />
-                }
-                label="Loading"
-            />
-            <Box sx={{ '& > button': { m: 1 } }}>
-                <Button
-                    size="small"
-                    onClick={handleClick}
-                    loading={loading}
-                    variant="outlined"
-                    disabled
-                >
-                    Disabled
-                </Button>
-                <Button
-                    size="small"
-                    onClick={handleClick}
-                    loading={loading}
-                    loadingIndicator="Loading..."
-                    variant="outlined"
-                >
-                    Fetch data
-                </Button>
-                <Button
-                    size="small"
-                    onClick={handleClick}
-                    endIcon={<SendIcon />}
-                    loading={loading}
-                    loadingPosition="end"
-                    variant="contained"
-                >
-                    Send
-                </Button>
-                <Button
-                    size="small"
-                    color="secondary"
-                    onClick={handleClick}
-                    loading={loading}
-                    loadingPosition="start"
-                    startIcon={<SaveIcon />}
-                    variant="contained"
-                >
-                    Save
-                </Button>
-            </Box>
-            <Box sx={{ '& > button': { m: 1 } }}>
-                <Button
-                    onClick={handleClick}
-                    loading={loading}
-                    variant="outlined"
-                    disabled
-                >
-                    Disabled
-                </Button>
-                <Button
-                    onClick={handleClick}
-                    loading={loading}
-                    loadingIndicator="Loading..."
-                    variant="outlined"
-                >
-                    Fetch data
-                </Button>
-                <Button
-                    onClick={handleClick}
-                    endIcon={<SendIcon />}
-                    loading={loading}
-                    loadingPosition="end"
-                    variant="contained"
-                >
-                    Send
-                </Button>
-                <Button
-                    color="secondary"
-                    onClick={handleClick}
-                    loading={loading}
-                    loadingPosition="start"
-                    startIcon={<SaveIcon />}
-                    variant="contained"
-                >
-                    Save
-                </Button>
-            </Box>
-        </div>
+        <>
+            <Typography variant='body1'>Loading Buttons Transition</Typography>
+            <div>
+                <FormControlLabel
+                    sx={{ display: 'block' }}
+                    control={
+                        <Switch
+                            checked={loading}
+                            onChange={() => setLoading(!loading)}
+                            name="loading"
+                            color="primary"
+                        />
+                    }
+                    label="Loading"
+                />
+                <Box sx={{ '& > button': { m: 1 } }}>
+                    <Button
+                        size="small"
+                        onClick={handleClick}
+                        loading={loading}
+                        variant="outlined"
+                        disabled
+                    >
+                        Disabled
+                    </Button>
+                    <Button
+                        size="small"
+                        onClick={handleClick}
+                        loading={loading}
+                        loadingIndicator="Loading..."
+                        variant="outlined"
+                    >
+                        Fetch data
+                    </Button>
+                    <Button
+                        size="small"
+                        onClick={handleClick}
+                        endIcon={<SendIcon />}
+                        loading={loading}
+                        loadingPosition="end"
+                        variant="contained"
+                    >
+                        Send
+                    </Button>
+                    <Button
+                        size="small"
+                        color="secondary"
+                        onClick={handleClick}
+                        loading={loading}
+                        loadingPosition="start"
+                        startIcon={<SaveIcon />}
+                        variant="contained"
+                    >
+                        Save
+                    </Button>
+                </Box>
+                <Box sx={{ '& > button': { m: 1 } }}>
+                    <Button
+                        onClick={handleClick}
+                        loading={loading}
+                        variant="outlined"
+                        disabled
+                    >
+                        Disabled
+                    </Button>
+                    <Button
+                        onClick={handleClick}
+                        loading={loading}
+                        loadingIndicator="Loading..."
+                        variant="outlined"
+                    >
+                        Fetch data
+                    </Button>
+                    <Button
+                        onClick={handleClick}
+                        endIcon={<SendIcon />}
+                        loading={loading}
+                        loadingPosition="end"
+                        variant="contained"
+                    >
+                        Send
+                    </Button>
+                    <Button
+                        color="secondary"
+                        onClick={handleClick}
+                        loading={loading}
+                        loadingPosition="start"
+                        startIcon={<SaveIcon />}
+                        variant="contained"
+                    >
+                        Save
+                    </Button>
+                </Box>
+            </div>
+        </>
     )
 }
 
@@ -196,20 +203,23 @@ export const InputFileUpload = () => {
     });
 
     return (
-        <Button
-            component="label"
-            role={undefined}
-            variant="contained"
-            tabIndex={-1}
-            startIcon={<CloudUploadIcon />}
-        >
-            Upload files
-            <VisuallyHiddenInput
-                type="file"
-                onChange={(event) => console.log(event.target.files)}
-                multiple
-            />
-        </Button>
+        <>
+            <Typography variant='body1'>Input File Upload</Typography>
+            <Button
+                component="label"
+                role={undefined}
+                variant="contained"
+                tabIndex={-1}
+                startIcon={<CloudUploadIcon />}
+            >
+                Upload files
+                <VisuallyHiddenInput
+                    type="file"
+                    onChange={(event) => console.log(event.target.files)}
+                    multiple
+                />
+            </Button>
+        </>
     )
 }
 
@@ -222,10 +232,13 @@ export const IconButtonWithBadge = () => {
     `;
 
     return (
-        <IconButton>
-            <ShoppingCartOutlinedIcon fontSize="small" />
-            <CartBadge badgeContent={2} color="primary" overlap="circular" />
-        </IconButton>
+        <>
+            <Typography variant='body1'>Icon Button with Badge</Typography>
+            <IconButton>
+                <ShoppingCartOutlinedIcon fontSize="small" />
+                <CartBadge badgeContent={2} color="primary" overlap="circular" />
+            </IconButton>
+        </>
     )
 }
 
@@ -238,138 +251,165 @@ export const LoadingIconButton = () => {
         return () => clearTimeout(timeout);
     });
     return (
-        <Tooltip title="Cleck to see loading">
-            <IconButton onClick={() => setLoading(true)} loading={loading}>
-                <ShoppingCartIcon />
-            </IconButton>
-        </Tooltip>
+        <>
+            <Typography variant='body1'>Loading Icon Button</Typography>
+            <Tooltip title="Cleck to see loading">
+                <IconButton onClick={() => setLoading(true)} loading={loading}>
+                    <ShoppingCartIcon />
+                </IconButton>
+            </Tooltip>
+        </>
     );
 }
 
 export const IconButtonColors = () => {
     return (
-        <Stack direction="row" spacing={1}>
-            <IconButton aria-label="fingerprint" color="secondary">
-                <Fingerprint />
-            </IconButton>
-            <IconButton aria-label="fingerprint" color="success">
-                <Fingerprint />
-            </IconButton>
-        </Stack>
+        <>
+            <Typography variant='body1'>Icon Button Colors</Typography>
+            <Stack direction="row" spacing={1}>
+                <IconButton aria-label="fingerprint" color="secondary">
+                    <Fingerprint />
+                </IconButton>
+                <IconButton aria-label="fingerprint" color="success">
+                    <Fingerprint />
+                </IconButton>
+            </Stack>
+        </>
     )
 }
 
 export const IconButtonSizes = () => {
     return (
-        <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
-            <IconButton aria-label="delete" size="small">
-                <DeleteIcon fontSize="inherit" />
-            </IconButton>
-            <IconButton aria-label="delete" size="small">
-                <DeleteIcon fontSize="inherit" />
-            </IconButton>
-            <IconButton aria-label="delete" size="large">
-                <DeleteIcon />
-            </IconButton>
-            <IconButton aria-label="delete" size="large">
-                <DeleteIcon fontSize="inherit" />
-            </IconButton>
-        </Stack>
+        <>
+            <Typography variant='body1'>Icon Button Sizes</Typography>
+            <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
+                <IconButton aria-label="delete" size="small">
+                    <DeleteIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="small">
+                    <DeleteIcon fontSize="inherit" />
+                </IconButton>
+                <IconButton aria-label="delete" size="large">
+                    <DeleteIcon />
+                </IconButton>
+                <IconButton aria-label="delete" size="large">
+                    <DeleteIcon fontSize="inherit" />
+                </IconButton>
+            </Stack>
+        </>
     )
 }
 
 export const IconButtons = () => {
     return (
-        <Stack direction="row" spacing={1}>
-            <IconButton aria-label="delete">
-                <DeleteIcon />
-            </IconButton>
-            <IconButton aria-label="delete" disabled color="primary">
-                <DeleteIcon />
-            </IconButton>
-            <IconButton color="secondary" aria-label="add on alarm">
-                <AlarmIcon />
-            </IconButton>
-            <IconButton color="primary" aria-label="add to shopping cart">
-                <AddShoppingCartIcon />
-            </IconButton>
-        </Stack>
+        <>
+            <Typography variant='body1'>Icon Buttons</Typography>
+            <Stack direction="row" spacing={1}>
+                <IconButton aria-label="delete">
+                    <DeleteIcon />
+                </IconButton>
+                <IconButton aria-label="delete" disabled color="primary">
+                    <DeleteIcon />
+                </IconButton>
+                <IconButton color="secondary" aria-label="add on alarm">
+                    <AlarmIcon />
+                </IconButton>
+                <IconButton color="primary" aria-label="add to shopping cart">
+                    <AddShoppingCartIcon />
+                </IconButton>
+            </Stack>
+        </>
     )
 }
 
 export const IconLabelButtons = () => {
     return (
-        <Stack direction="row" spacing={2}>
-            <Button variant="outlined" startIcon={<DeleteIcon />}>
-                Delete
-            </Button>
-            <Button variant="contained" startIcon={<SendIcon />}>
-                Send
-            </Button>
-        </Stack>
+        <>
+            <Typography variant='body1'>Icon Label Buttons</Typography>
+            <Stack direction="row" spacing={2}>
+                <Button variant="outlined" startIcon={<DeleteIcon />}>
+                    Delete
+                </Button>
+                <Button variant="contained" startIcon={<SendIcon />}>
+                    Send
+                </Button>
+            </Stack>
+        </>
     )
 }
 
 export const ButtonSizes = () => {
     return (
-        <Box sx={{ '& button': { m: 1 } }}>
-            <div>
-                <Button size="small">Small</Button>
-                <Button size="medium">Medium</Button>
-                <Button size="large">Large</Button>
-            </div>
-            <div>
-                <Button variant="outlined" size="small">
-                    Small
-                </Button>
-                <Button variant="outlined" size="medium">
-                    Medium
-                </Button>
-                <Button variant="outlined" size="large">
-                    Large
-                </Button>
-            </div>
-            <div>
-                <Button variant="contained" size="small">
-                    Small
-                </Button>
-                <Button variant="contained" size="medium">
-                    Medium
-                </Button>
-                <Button variant="contained" size="large">
-                    Large
-                </Button>
-            </div>
-        </Box>
+        <>
+            <Typography variant='body1'>Buttons Sizes</Typography>
+            <Box sx={{ '& button': { m: 1 } }}>
+                <div>
+                    <Button size="small">Small</Button>
+                    <Button size="medium">Medium</Button>
+                    <Button size="large">Large</Button>
+                </div>
+                <div>
+                    <Button variant="outlined" size="small">
+                        Small
+                    </Button>
+                    <Button variant="outlined" size="medium">
+                        Medium
+                    </Button>
+                    <Button variant="outlined" size="large">
+                        Large
+                    </Button>
+                </div>
+                <div>
+                    <Button variant="contained" size="small">
+                        Small
+                    </Button>
+                    <Button variant="contained" size="medium">
+                        Medium
+                    </Button>
+                    <Button variant="contained" size="large">
+                        Large
+                    </Button>
+                </div>
+            </Box>
+        </>
     )
 }
 
 export const BasicButtons = () => {
     return (
-        <Stack spacing={2} direction="row">
-            <Button variant="text">Text</Button>
-            <Button variant="contained">Contained</Button>
-            <Button variant="outlined">Outlined</Button>
-        </Stack>
+        <>
+            <Typography variant='body1'>Basic Buttons</Typography>
+            <Stack spacing={2} direction="row">
+                <Button variant="text">Text</Button>
+                <Button variant="contained">Contained</Button>
+                <Button variant="outlined">Outlined</Button>
+            </Stack>
+        </>
     )
 }
 
 export const TextButtons = () => {
     return (
-        <Stack spacing={2} direction="row">
-            <Button>Primary</Button>
-            <Button disabled>Disabled</Button>
-            <Button href="#text-buttons">Link</Button>
-        </Stack>
+        <>
+            <Typography variant='body1'>Texts Buttons</Typography>
+            <Stack spacing={2} direction="row">
+                <Button>Primary</Button>
+                <Button disabled>Disabled</Button>
+                <Button href="#text-buttons">Link</Button>
+            </Stack>
+        </>
     )
 }
 
 export const ColorButtons = () => {
     return (
-        <Stack spacing={2} direction="row">
-            <Button color="secondary">Secondary</Button>
-            <Button variant="contained" color="success">Success</Button>
-            <Button variant="outlined" color="error">Error</Button>
-        </Stack>
+        <>
+            <Typography variant='body1'>Color Buttons</Typography>
+            <Stack spacing={2} direction="row">
+                <Button color="secondary">Secondary</Button>
+                <Button variant="contained" color="success">Success</Button>
+                <Button variant="outlined" color="error">Error</Button>
+            </Stack>
+        </>
     )
 }

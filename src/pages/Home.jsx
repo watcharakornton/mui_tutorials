@@ -58,6 +58,16 @@ const Home = () => {
                         <Button size="small" href="/button-group">View</Button>
                     </CardActions>
                 </Card>
+                <Card sx={{ minWidth: 275 }}>
+                    <CardContent>
+                        <Typography variant="h6" component="div">
+                            Checkbox
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button size="small" href="/checkbox">View</Button>
+                    </CardActions>
+                </Card>
             </Stack>
         </Container>
     )
