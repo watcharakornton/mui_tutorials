@@ -5,8 +5,31 @@ import {
     FormGroup,
     FormControlLabel
 } from '@mui/material';
+import { pink } from '@mui/material/colors';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+export const ColorCheckboxes = () => {
+    return (
+        <div>
+            <Typography variant='body1'>Color Checkboxes</Typography>
+            <Checkbox {...label} defaultChecked />
+            <Checkbox {...label} defaultChecked color="secondary" />
+            <Checkbox {...label} defaultChecked color="success" />
+            <Checkbox {...label} defaultChecked color="default" />
+            <Checkbox 
+                {...label}
+                defaultChecked
+                sx={{
+                    color: pink[800],
+                    '&.Mui-checked': {
+                        color: pink[600],
+                    },
+                }}
+            />
+        </div>
+    );
+}
 
 export const SizeCheckboxes = () => {
     return (
