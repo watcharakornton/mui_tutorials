@@ -11,12 +11,14 @@ import {
 } from '@mui/icons-material';
 
 import {
-    RadioButtonsGroup
+    RadioButtonsGroup,
+    RowRadioButtonsGroup,
 } from '../inputs/RadioGroupComponent';
 
 const CheckboxPage = () => {
     const sections = [
         <RadioButtonsGroup />,
+        <RowRadioButtonsGroup />,
     ];
 
     return (
