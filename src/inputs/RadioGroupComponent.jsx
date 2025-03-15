@@ -9,11 +9,29 @@ import {
 } from '@mui/material';
 
 export const ControlledRadioButtonsGroup = () => {
+    const [value, setValue] = React.useState('female');
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    };
+
     return (
         <>
             <Typography variant='body1' sx={{ mb: 3 }}>Controlled Radio Buttons Group</Typography>
+            <FormControl>
+                <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
+                <RadioGroup
+                    aria-labelledby="demo-controlled-radio-buttons-group"
+                    name="controlled-radio-buttons-group"
+                    value={value}
+                    onChange={handleChange}
+                >
+                    <FormControlLabel value="female" control={<Radio />} label="Female" />
+                    <FormControlLabel value="male" control={<Radio />} label="Male" />
+                </RadioGroup>
+            </FormControl>
         </>
-    )
+    );
 }
 
 export const RowRadioButtonsGroup = () => {
