@@ -9,6 +9,7 @@ import {
     ColorCheckboxes,
     IconCheckboxes,
     IndeterminateCheckbox,
+    FormControlLabelPosition,
 } from "../inputs/CheckboxComponent";
 
 const CheckboxPage = () => {
@@ -19,6 +20,7 @@ const CheckboxPage = () => {
         <ColorCheckboxes />,
         <IconCheckboxes />,
         <IndeterminateCheckbox />,
+        <FormControlLabelPosition />,
     ];
 
     return (

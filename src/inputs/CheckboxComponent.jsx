@@ -4,7 +4,9 @@ import {
     Checkbox,
     Typography,
     FormGroup,
-    FormControlLabel
+    FormControlLabel,
+    FormControl,
+    FormLabel,
 } from '@mui/material';
 import {
     FavoriteBorder,
@@ -15,6 +17,28 @@ import {
 import { pink, green } from '@mui/material/colors';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
+export const FormControlLabelPosition = () => {
+    return (
+        <FormControl component="fieldset">
+            <FormLabel component="legend">Label placement</FormLabel>
+            <FormGroup aria-label="position" row>
+                <FormControlLabel 
+                    value="bottom"
+                    control={<Checkbox />}
+                    label="Button"
+                    labelPlacement="bottom"
+                />
+                <FormControlLabel 
+                    value="end"
+                    control={<Checkbox />}
+                    label="End"
+                    labelPlacement="end"
+                />
+            </FormGroup>
+        </FormControl>
+    );
+}
 
 export const IndeterminateCheckbox = () => {
     const [checked, setChecked] = React.useState([true, false]);
