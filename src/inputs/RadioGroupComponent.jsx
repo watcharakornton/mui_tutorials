@@ -8,6 +8,36 @@ import {
     FormLabel,
 } from '@mui/material';
 
+export const RadioButtons = () => {
+    const [selectedValue, setSelectedValue] = React.useState('a');
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+    return (
+        <>
+            <Typography variant='body1' sx={{ mb: 3 }}>Radio Buttons</Typography>
+            <div>
+                <Radio
+                    checked={selectedValue === 'a'}
+                    onChange={handleChange}
+                    value="a"
+                    name="radio-buttons"
+                    inputProps={{ 'aria-label': 'A' }}
+                />
+                <Radio
+                    checked={selectedValue === 'b'}
+                    onChange={handleChange}
+                    value="b"
+                    name="radio-buttons"
+                    inputProps={{ 'aria-label': 'B' }}
+                />
+            </div>
+        </>
+    )
+}
+
 export const ControlledRadioButtonsGroup = () => {
     const [value, setValue] = React.useState('female');
 
@@ -48,7 +78,7 @@ export const RowRadioButtonsGroup = () => {
                     <FormControlLabel value="female" control={<Radio />} label="Female" />
                     <FormControlLabel value="male" control={<Radio />} label="Male" />
                     <FormControlLabel value="other" control={<Radio />} label="Other" />
-                    <FormControlLabel 
+                    <FormControlLabel
                         value="disabled"
                         disabled
                         control={<Radio />}
