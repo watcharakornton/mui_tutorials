@@ -44,7 +44,7 @@ const Home = () => {
         { title: 'Radio Group page', href: "/radio-group" },
         { title: 'Rating Page', href: "/rating" },
         { title: 'Select Page', href: "/select" },
-        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Slider Page', href: "/slider" },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
