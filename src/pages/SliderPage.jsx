@@ -12,11 +12,29 @@ import {
 
 import {
     ContinuousSlider,
+    SliderSizes,
+    DiscreteSlider,
+    DiscreteSliderSteps,
+    DiscreteSliderMarks,
+    DiscreteSliderValues,
+    DiscreteSliderLabel,
+    RangeSlider,
+    MinimumDistanceSlider,
+    InputSlider,
 } from '../inputs/SliderComponent';
 
 const SliderPage = () => {
     const sections = [
         <ContinuousSlider />,
+        <SliderSizes />,
+        <DiscreteSlider />,
+        <DiscreteSliderSteps />,
+        <DiscreteSliderMarks />,
+        <DiscreteSliderValues />,
+        <DiscreteSliderLabel />,
+        <RangeSlider />,
+        <MinimumDistanceSlider />,
+        <InputSlider />,
     ];
 
     return (
