@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
+import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
     Rating,
@@ -10,7 +11,67 @@ import {
     Star as StarIcon,
     Favorite as FavoriteIcon,
     FavoriteBorder as FavoriteBorderIcon,
+    SentimentVeryDissatisfied as SentimentVeryDissatisfiedIcon,
+    SentimentDissatisfied as SentimentDissatisfiedIcon,
+    SentimentSatisfied as SentimentSatisfiedIcon,
+    SentimentSatisfiedAltOutlined as SentimentSatisfiedAltIcon,
+    SentimentVerySatisfied as SentimentVerySatisfiedIcon,
 } from '@mui/icons-material';
+
+export const RadioGroupRating = () => {
+    const theme = useTheme();
+
+    const StyledRating = styled(Rating)({
+        '& .MuiRating-iconEmpty .MuiSvgIcon-root': {
+            color: theme.palette.action.disabled,
+        },
+    });
+
+    const customIcons = {
+        1: {
+            icon: <SentimentVeryDissatisfiedIcon color="error" />,
+            label: 'Very Dissatisfied',
+        },
+        2: {
+            icon: <SentimentDissatisfiedIcon color="error" />,
+            label: 'Dissatisfied',
+        },
+        3: {
+            icon: <SentimentSatisfiedIcon color="warning" />,
+            label: 'Neutral',
+        },
+        4: {
+            icon: <SentimentSatisfiedAltIcon color="success" />,
+            label: 'Satisfied',
+        },
+        5: {
+            icon: <SentimentVerySatisfiedIcon color="success" />,
+            label: 'Very Satisfied',
+        },
+    };
+
+    function IconContainer(props) {
+        const { value, ...other } = props;
+        return <span {...other}>{customIcons[value].icon}</span>
+    }
+
+    IconContainer.propTypes = {
+        value: PropTypes.number.isRequired
+    }
+
+    return (
+        <>
+            <Typography variant='body1' sx={{ mb: 3 }}>Radio Group Rating</Typography>
+            <StyledRating 
+                name="highlight-selected-only"
+                defaultValue={2}
+                IconContainerComponent={IconContainer}
+                getLabelText={(value) => customIcons[value].label}
+                highlightSelectedOnly
+            />
+        </>
+    )
+}
 
 export const CustomizedRating = () => {
     const StyledRating = styled(Rating)({
@@ -27,7 +88,7 @@ export const CustomizedRating = () => {
             <Typography variant='body1' sx={{ mb: 3 }}>Customized Rating</Typography>
             <Box sx={{ '& > legend': { mt: 2 } }}>
                 <Typography component="legend">Custom icon and color</Typography>
-                <StyledRating 
+                <StyledRating
                     name="customized-color"
                     defaultValue={2}
                     getLabelText={(value) => `${value} Heart${value !== 1 ? 's' : ''}`}

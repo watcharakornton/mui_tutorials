@@ -16,6 +16,7 @@ import {
     HoverRating,
     RatingSize,
     CustomizedRating,
+    RadioGroupRating,
 } from '../inputs/RatingComponent';
 
 const RatingPage = () => {
@@ -25,6 +26,7 @@ const RatingPage = () => {
         <HoverRating />,
         <RatingSize />,
         <CustomizedRating />,
+        <RadioGroupRating />,
     ];
 
     return (
