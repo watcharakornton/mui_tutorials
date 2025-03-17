@@ -6,6 +6,7 @@ import {
     FloatingActionButtons,
     FloatingActionButtonSize,
     FloatingActionButtonExtendedSize,
+    FloatingActionButtonZoom,
 } from "../inputs/FloatingActionButtonComponent";
 
 const CheckboxPage = () => {
@@ -13,6 +14,7 @@ const CheckboxPage = () => {
         <FloatingActionButtons />,
         <FloatingActionButtonSize />,
         <FloatingActionButtonExtendedSize />,
+        <FloatingActionButtonZoom />,
     ];
 
     return (
