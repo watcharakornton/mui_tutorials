@@ -19,6 +19,7 @@ import {
     ColorRadioButtons,
     FormControlLabelPlacement,
     ErrorRadios,
+    CustomizedRadios,
 } from '../inputs/RadioGroupComponent';
 
 const CheckboxPage = () => {
@@ -31,6 +32,7 @@ const CheckboxPage = () => {
         <ColorRadioButtons />,
         <FormControlLabelPlacement />,
         <ErrorRadios />,
+        <CustomizedRadios />,
     ];
 
     return (
