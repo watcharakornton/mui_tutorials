@@ -10,7 +10,173 @@ import {
     Typography,
     NativeSelect,
     InputBase,
+    OutlinedInput,
+    Checkbox,
+    ListItemText,
+    Chip,
 } from '@mui/material';
+
+const ITEM_HEIGHT = 48;
+const ITEM_PADDING_TOP = 8;
+const MenuProps = {
+    PaperProps: {
+        style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+        },
+    },
+};
+
+const names = [
+    'Oliver Hansen',
+    'Van Henry',
+    'April Tucker',
+    'Ralph Hubbard',
+    'Omar Alexander',
+    'Carlos Abbott',
+    'Miriam Wagner',
+    'Bradley Wilkerson',
+    'Virginia Andrews',
+    'Kelly Snyder',
+];
+
+function getStyles(name, personName, theme) {
+    return {
+        fontWeight: personName.includes(name)
+            ? theme.typography.fontWeightMedium
+            : theme.typography.fontWeightRegular,
+    };
+}
+
+export const MultipleSelectChip = () => {
+    const theme = useTheme();
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select Chip</Typography>
+            <FormControl sx={{ m: 1, width: 300 }}>
+                <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
+                <Select
+                    labelId="demo-multiple-chip-label"
+                    id="demo-multiple-chip"
+                    multiple
+                    value={personName}
+                    onChange={handleChange}
+                    input={<OutlinedInput id="selet-multiple-chip" label="Chip" />}
+                    renderValue={(selected) => (
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                            {selected.map((value) => (
+                                <Chip key={value} label={value} />
+                            ))}
+                        </Box>
+                    )}
+                    MenuProps={MenuProps}
+                >
+                    {names.map((name) => (
+                        <MenuItem
+                            key={name}
+                            value={name}
+                            style={getStyles(name, personName, theme)}
+                        >
+                            {name}
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </div>
+    );
+}
+
+export const MultipleSelectCheckmarks = () => {
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select Checkmarks</Typography>
+            <FormControl sx={{ m: 1, width: 300 }}>
+                <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+                <Select
+                    labelId="demo-multiple-checkbox-label"
+                    id="demo-multiple-checkbox"
+                    multiple
+                    value={personName}
+                    onChange={handleChange}
+                    input={<OutlinedInput label="Tag" />}
+                    renderValue={(selected) => selected.join(', ')}
+                    MenuProps={MenuProps}
+                >
+                    {names.map((name) => (
+                        <MenuItem key={name} value={name}>
+                            <Checkbox checked={personName.includes(name)} />
+                            <ListItemText primary={name} />
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </div>
+    );
+}
+
+export const MultipleSelect = () => {
+    const theme = useTheme();
+    const [personName, setPersonName] = React.useState([]);
+
+    const handleChange = (event) => {
+        const {
+            target: { value },
+        } = event;
+        setPersonName(
+            typeof value === 'string' ? value.split(',') : value,
+        );
+    };
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select</Typography>
+            <FormControl sx={{ m: 1, width: 300 }}>
+                <InputLabel id="demo-multiple-name-label">Name</InputLabel>
+                <Select
+                    labelId="demo-multiple-name-label"
+                    id="demo-multiple-name"
+                    multiple
+                    value={personName}
+                    onChange={handleChange}
+                    input={<OutlinedInput label="Name" />}
+                    MenuProps={MenuProps}
+                >
+                    {names.map((name) => (
+                        <MenuItem
+                            key={name}
+                            value={name}
+                            style={getStyles(name, personName, theme)}
+                        >
+                            {name}
+                        </MenuItem>
+                    ))}
+                </Select>
+            </FormControl>
+        </div>
+    );
+}
 
 export const CustomizedSelects = () => {
     const theme = useTheme();

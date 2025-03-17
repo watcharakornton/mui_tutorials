@@ -18,6 +18,9 @@ import {
     SelectOtherProps,
     NativeSelectDemo,
     CustomizedSelects,
+    MultipleSelect,
+    MultipleSelectCheckmarks,
+    MultipleSelectChip,
 } from '../inputs/SelectComponent';
 
 const SelectPage = () => {
@@ -29,6 +32,9 @@ const SelectPage = () => {
         <SelectOtherProps />,
         <NativeSelectDemo />,
         <CustomizedSelects />,
+        <MultipleSelect />,
+        <MultipleSelectCheckmarks />,
+        <MultipleSelectChip />,
     ];
 
     return (
