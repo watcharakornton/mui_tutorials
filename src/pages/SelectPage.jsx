@@ -17,6 +17,7 @@ import {
     SelectSmall,
     SelectOtherProps,
     NativeSelectDemo,
+    CustomizedSelects,
 } from '../inputs/SelectComponent';
 
 const SelectPage = () => {
@@ -27,6 +28,7 @@ const SelectPage = () => {
         <SelectSmall />,
         <SelectOtherProps />,
         <NativeSelectDemo />,
+        <CustomizedSelects />,
     ];
 
     return (

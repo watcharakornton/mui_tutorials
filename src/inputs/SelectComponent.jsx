@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
     InputLabel,
@@ -8,14 +9,97 @@ import {
     Select,
     Typography,
     NativeSelect,
+    InputBase,
 } from '@mui/material';
+
+export const CustomizedSelects = () => {
+    const theme = useTheme();
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(event.target.value);
+    };
+
+    const BootstrapInput = styled(InputBase)({
+        'label + &': {
+            marginTop: theme.spacing(3),
+        },
+        '& .MuiInputBase-input': {
+            borderRadius: 4,
+            position: 'relative',
+            backgroundColor: theme.palette.background.paper,
+            border: '1px solid #ced4da',
+            fontSize: 16,
+            padding: '10px 26px 10px 12px',
+            transition: theme.transitions.create(['border-color', 'box-shadow']),
+            fontFamily: [
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+                '"Apple Color Emoji"',
+                '"Segoe UI Emoji"',
+                '"Segoe UI Symbol"',
+            ].join(','),
+            '&:focus': {
+                borderRadius: 4,
+                borderColor: '#80bdff',
+                boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+            },
+        },
+    });
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Customized Selects</Typography>
+            <FormControl sx={{ m: 1 }} variant="standard">
+                <InputLabel htmlFor="demo-customized-textbox">Age</InputLabel>
+                <BootstrapInput id="demo-customized-textbox" />
+            </FormControl>
+            <FormControl sx={{ m: 1 }} variant="standard">
+                <InputLabel id="demo-customized-select-label">Age</InputLabel>
+                <Select
+                    labelId="demo-customized-select-label"
+                    id="demo-customized-select"
+                    value={age}
+                    onChange={handleChange}
+                    input={<BootstrapInput />}
+                >
+                    <MenuItem value="">
+                        <em>None</em>
+                    </MenuItem>
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+            <FormControl sx={{ m: 1 }} variant="standard">
+                <InputLabel htmlFor="demo-customized-select-native">Age</InputLabel>
+                <NativeSelect
+                    id="demo-customized-select-native"
+                    value={age}
+                    onChange={handleChange}
+                    input={<BootstrapInput />}
+                >
+                    <option aria-label="None" value="" />
+                    <option value={10}>Ten</option>
+                    <option value={20}>Twenty</option>
+                    <option value={30}>Thirty</option>
+                </NativeSelect>
+            </FormControl>
+        </div>
+    );
+}
 
 export const NativeSelectDemo = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Select Other Props</Typography>
-            <Box sx={{ maxWidth: 120 }}>
-                <FormControl fullWidth>
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Native Select Demo</Typography>
+            <Box sx={{ m: 1, minWidth: 120 }}>
+                <FormControl>
                     <InputLabel variant="standard" htmlFor="uncontrolled-native">
                         Age
                     </InputLabel>
@@ -32,7 +116,7 @@ export const NativeSelectDemo = () => {
                     </NativeSelect>
                 </FormControl>
             </Box>
-        </>
+        </div>
     );
 }
 
@@ -244,7 +328,7 @@ export const BasicSelect = () => {
     return (
         <>
             <Typography variant='body1' sx={{ mb: 3 }}>Basic Select</Typography>
-            <Box sx={{ maxWidth: 120 }}>
+            <Box sx={{ m: 1, maxWidth: 120 }}>
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
