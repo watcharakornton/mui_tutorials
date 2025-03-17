@@ -5,12 +5,14 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import {
     FloatingActionButtons,
     FloatingActionButtonSize,
+    FloatingActionButtonExtendedSize,
 } from "../inputs/FloatingActionButtonComponent";
 
 const CheckboxPage = () => {
     const sections = [
         <FloatingActionButtons />,
         <FloatingActionButtonSize />,
+        <FloatingActionButtonExtendedSize />,
     ];
 
     return (

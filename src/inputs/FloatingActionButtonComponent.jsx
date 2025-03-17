@@ -7,6 +7,28 @@ import {
     Navigation as NavigationIcon,
 } from '@mui/icons-material';
 
+export const FloatingActionButtonExtendedSize = () => {
+    return (
+        <>
+            <Typography variant='body1' sx={{ mb: 2 }}>Floating Action Button Extended Size</Typography>
+            <Box sx={{ '& > :not(style)': { m: 1 } }}>
+                <Fab variant="extended" size="small" color="primary">
+                    <NavigationIcon sx={{ mr: 1 }} />
+                    Extended
+                </Fab>
+                <Fab variant="extended" size="medium" color="primary">
+                    <NavigationIcon sx={{ mr: 1 }} />
+                    Extended
+                </Fab>
+                <Fab variant="extended" color="primary">
+                    <NavigationIcon sx={{ mr: 1 }} />
+                    Extended
+                </Fab>
+            </Box>
+        </>
+    )
+}
+
 export const FloatingActionButtonSize = () => {
     return (
         <>
