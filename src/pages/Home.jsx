@@ -45,7 +45,7 @@ const Home = () => {
         { title: 'Rating Page', href: "/rating" },
         { title: 'Select Page', href: "/select" },
         { title: 'Slider Page', href: "/slider" },
-        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Switch Page', href: "/switch"},
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
     ]

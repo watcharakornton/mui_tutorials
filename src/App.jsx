@@ -10,6 +10,7 @@ import RadioGroupPage from "./pages/RadioGroupPage";
 import RatingPage from "./pages/RatingPage";
 import SelectPage from './pages/SelectPage';
 import SliderPage from './pages/SliderPage';
+import SwitchPage from './pages/SwitchPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/rating" element={<RatingPage />} />
         <Route path="/select" element={<SelectPage />} />
         <Route path="/slider" element={<SliderPage />} />
+        <Route path="/switch" element={<SwitchPage />} />
       </Routes>
     </Router>
   )
