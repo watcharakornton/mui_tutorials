@@ -11,6 +11,7 @@ import RatingPage from "./pages/RatingPage";
 import SelectPage from './pages/SelectPage';
 import SliderPage from './pages/SliderPage';
 import SwitchPage from './pages/SwitchPage';
+import TextFieldPage from './pages/TextFieldPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/select" element={<SelectPage />} />
         <Route path="/slider" element={<SliderPage />} />
         <Route path="/switch" element={<SwitchPage />} />
+        <Route path="/text-field" element={<TextFieldPage />} />
       </Routes>
     </Router>
   )

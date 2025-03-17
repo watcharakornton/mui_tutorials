@@ -46,6 +46,9 @@ const Home = () => {
         { title: 'Select Page', href: "/select" },
         { title: 'Slider Page', href: "/slider" },
         { title: 'Switch Page', href: "/switch"},
+        { title: 'Text Field Page', href: "/text-field" },
+        { title: 'Templates', href: "/", isTemplate: true },
+        { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
         { title: 'Templates', href: "/", isTemplate: true },
     ]
