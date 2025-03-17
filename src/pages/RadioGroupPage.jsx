@@ -15,6 +15,7 @@ import {
     RowRadioButtonsGroup,
     ControlledRadioButtonsGroup,
     RadioButtons,
+    SizeRadioButtons,
 } from '../inputs/RadioGroupComponent';
 
 const CheckboxPage = () => {
@@ -23,6 +24,7 @@ const CheckboxPage = () => {
         <RowRadioButtonsGroup />,
         <ControlledRadioButtonsGroup />,
         <RadioButtons />,
+        <SizeRadioButtons />,
     ];
 
     return (

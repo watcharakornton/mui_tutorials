@@ -8,6 +8,37 @@ import {
     FormLabel,
 } from '@mui/material';
 
+export const SizeRadioButtons = () => {
+    const [selectedValue, setSelectedValue] = React.useState('a');
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+
+    const controlProps = (item) => ({
+        checked: selectedValue === item,
+        onChange: handleChange,
+        value: item,
+        name: 'size-radio-button-demo',
+        inputProps: { 'aria-label': item },
+    });
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Size Radio Buttons</Typography>
+            <Radio {...controlProps('a')} size="small" />
+            <Radio {...controlProps('b')} />
+            <Radio
+                {...controlProps('c')}
+                sx={{
+                    '& .MuiSvgIcon-root': {
+                        fontSize: 28,
+                    },
+                }}
+            />
+        </div>
+    )
+}
+
 export const RadioButtons = () => {
     const [selectedValue, setSelectedValue] = React.useState('a');
 
