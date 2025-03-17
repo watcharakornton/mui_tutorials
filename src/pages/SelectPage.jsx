@@ -11,18 +11,12 @@ import {
 } from '@mui/icons-material';
 
 import {
-    BasicRating,
-    HalfRating,
-    HoverRating,
-    RatingSize,
-} from '../inputs/RatingComponent';
+    BasicSelect,
+} from '../inputs/SelectComponent';
 
-const RatingPage = () => {
+const SelectPage = () => {
     const sections = [
-        <BasicRating />,
-        <HalfRating />,
-        <HoverRating />,
-        <RatingSize />,
+        <BasicSelect />,
     ];
 
     return (
@@ -35,7 +29,7 @@ const RatingPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant='h3' align='center' sx={{ mt: 5 }}>
-                        Rating Page
+                        Select Page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -54,4 +48,4 @@ const RatingPage = () => {
     )
 }
 
-export default RatingPage
+export default SelectPage

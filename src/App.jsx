@@ -8,6 +8,7 @@ import CheckboxPage from "./pages/CheckboxPage";
 import FloatingActionButtonPage from "./pages/FloatingActionButtonPage";
 import RadioGroupPage from "./pages/RadioGroupPage";
 import RatingPage from "./pages/RatingPage";
+import SelectPage from './pages/SelectPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/floating-action-button" element={<FloatingActionButtonPage />} />
         <Route path="/radio-group" element={<RadioGroupPage />} />
         <Route path="/rating" element={<RatingPage />} />
+        <Route path="/select" element={<SelectPage />} />
       </Routes>
     </Router>
   )
