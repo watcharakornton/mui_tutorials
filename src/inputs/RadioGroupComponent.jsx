@@ -7,6 +7,42 @@ import {
     FormControl,
     FormLabel,
 } from '@mui/material';
+import { pink } from '@mui/material/colors';
+
+export const ColorRadioButtons = () => {
+    const [selectedValue, setSelectedValue] = React.useState('a');
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+    };
+    
+    const controlProps = (item) => ({
+        checked: selectedValue === item,
+        onChange: handleChange,
+        value: item,
+        name: 'color-radio-button-demo',
+        inputProps: { 'aria-label': item },
+    });
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Color Radio Buttons</Typography>
+            <Radio {...controlProps('a')} />
+            <Radio {...controlProps('b')} color="secondary" />
+            <Radio {...controlProps('c')} color="success" />
+            <Radio {...controlProps('d')} color="default" />
+            <Radio 
+                {...controlProps('e')}
+                sx={{
+                    color: pink[800],
+                    '&.Mui-checked': {
+                        color: pink[600],
+                    },
+                }}
+            />
+        </div>
+    )
+}
 
 export const SizeRadioButtons = () => {
     const [selectedValue, setSelectedValue] = React.useState('a');
