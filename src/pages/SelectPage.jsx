@@ -21,6 +21,8 @@ import {
     MultipleSelect,
     MultipleSelectCheckmarks,
     MultipleSelectChip,
+    DialogSelect,
+    GroupedSelect,
 } from '../inputs/SelectComponent';
 
 const SelectPage = () => {
@@ -35,6 +37,8 @@ const SelectPage = () => {
         <MultipleSelect />,
         <MultipleSelectCheckmarks />,
         <MultipleSelectChip />,
+        <DialogSelect />,
+        <GroupedSelect />,
     ];
 
     return (

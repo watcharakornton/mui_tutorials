@@ -2,14 +2,20 @@ import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
-    InputLabel,
+    Button,
+    Dialog,
+    DialogActions,
+    DialogContent,
+    DialogTitle,
     MenuItem,
+    ListSubheader,
     FormHelperText,
     FormControl,
     Select,
     Typography,
     NativeSelect,
     InputBase,
+    InputLabel,
     OutlinedInput,
     Checkbox,
     ListItemText,
@@ -46,6 +52,110 @@ function getStyles(name, personName, theme) {
             ? theme.typography.fontWeightMedium
             : theme.typography.fontWeightRegular,
     };
+}
+
+export const GroupedSelect = () => {
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Grouped Select</Typography>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel htmlFor="grouped-native-select">Grouping</InputLabel>
+                <Select native defaultValue="" id="grouped-native-select" label="Grouping">
+                    <option aria-label="None" value="" />
+                    <optgroup label="Category 1">
+                        <option value={1}>Option 1</option>
+                        <option value={2}>Option 2</option>
+                    </optgroup>
+                    <optgroup label="Category 2">
+                        <option value={3}>Option 3</option>
+                        <option value={4}>Option 4</option>
+                    </optgroup>
+                </Select>
+            </FormControl>
+            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                <InputLabel hrmlFor="grouped-select">Grouping</InputLabel>
+                <Select defaultValue="" id="grouped-select" label="Grouping">
+                    <MenuItem value="">
+                        <em>None</em>
+                    </MenuItem>
+                    <ListSubheader>Category 1</ListSubheader>
+                    <MenuItem value={1}>Option 1</MenuItem>
+                    <MenuItem value={2}>Option 2</MenuItem>
+                    <ListSubheader>Category 2</ListSubheader>
+                    <MenuItem value={3}>Option 3</MenuItem>
+                    <MenuItem value={4}>Option 4</MenuItem>
+                </Select>
+            </FormControl>
+        </div>
+    );
+}
+
+export const DialogSelect = () => {
+    const [open, setOpen] = React.useState(false);
+    const [age, setAge] = React.useState('');
+
+    const handleChange = (event) => {
+        setAge(Number(event.target.value) || '');
+    };
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason !== 'backdropClick') {
+            setOpen(false);
+        }
+    };
+
+    return (
+        <div>
+            <Typography variant='body1' sx={{ mb: 3 }}>Dialog Select</Typography>
+            <Button onClick={handleClickOpen}>Open select dialog</Button>
+            <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
+                <DialogTitle>Fill the form</DialogTitle>
+                <DialogContent>
+                    <Box component="form" sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                        <FormControl sx={{ m: 1, minWidth: 120 }}>
+                            <InputLabel htmlFor="demo-dialog-native">Age</InputLabel>
+                            <Select
+                                native
+                                value={age}
+                                onChange={handleChange}
+                                input={<OutlinedInput label="Age" id="demo-dialog-native" />}
+                            >
+                                <option aria-label="None" value="" />
+                                <option value={10}>Ten</option>
+                                <option value={20}>Twenty</option>
+                                <option value={30}>Thirty</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl sx={{ m: 1, minWidth: 120 }}>
+                            <InputLabel id="demo-dialog-select-label">Age</InputLabel>
+                            <Select
+                                labelId="demo-dialog-select-label"
+                                id="demo-dialog-select"
+                                value={age}
+                                onChange={handleChange}
+                                input={<OutlinedInput label="Age" />}
+                            >
+                                <MenuItem value="">
+                                    <em>None</em>
+                                </MenuItem>
+                                <MenuItem value={10}>Ten</MenuItem>
+                                <MenuItem value={20}>Twenty</MenuItem>
+                                <MenuItem value={30}>Thirty</MenuItem>
+                            </Select>
+                        </FormControl>
+                    </Box>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose}>Cancel</Button>
+                    <Button onClick={handleClose}>Ok</Button>
+                </DialogActions>
+            </Dialog>
+        </div>
+    );
 }
 
 export const MultipleSelectChip = () => {
