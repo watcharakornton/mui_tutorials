@@ -16,6 +16,7 @@ import {
     SelectAutoWidth,
     SelectSmall,
     SelectOtherProps,
+    NativeSelectDemo,
 } from '../inputs/SelectComponent';
 
 const SelectPage = () => {
@@ -25,6 +26,7 @@ const SelectPage = () => {
         <SelectAutoWidth />,
         <SelectSmall />,
         <SelectOtherProps />,
+        <NativeSelectDemo />,
     ];
 
     return (

@@ -7,7 +7,34 @@ import {
     FormControl,
     Select,
     Typography,
+    NativeSelect,
 } from '@mui/material';
+
+export const NativeSelectDemo = () => {
+    return (
+        <>
+            <Typography variant='body1' sx={{ mb: 3 }}>Select Other Props</Typography>
+            <Box sx={{ maxWidth: 120 }}>
+                <FormControl fullWidth>
+                    <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                        Age
+                    </InputLabel>
+                    <NativeSelect
+                        defaultValue={30}
+                        inputProps={{
+                            name: 'age',
+                            id: 'uncontrolled-native',
+                        }}
+                    >
+                        <option value={10}>Ten</option>
+                        <option value={20}>Twenty</option>
+                        <option value={30}>Thirty</option>
+                    </NativeSelect>
+                </FormControl>
+            </Box>
+        </>
+    );
+}
 
 export const SelectOtherProps = () => {
     const [age, setAge] = React.useState('');
@@ -217,7 +244,7 @@ export const BasicSelect = () => {
     return (
         <>
             <Typography variant='body1' sx={{ mb: 3 }}>Basic Select</Typography>
-            <Box sx={{ minWidth: 120 }}>
+            <Box sx={{ maxWidth: 120 }}>
                 <FormControl fullWidth>
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
