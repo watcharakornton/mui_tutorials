@@ -9,13 +9,38 @@ import {
 } from '@mui/material';
 import { pink } from '@mui/material/colors';
 
+export const FormControlLabelPlacement = () => {
+    return (
+        <>
+            <Typography variant='body1' sx={{ mb: 3 }}>Form Control Label Placement</Typography>
+            <FormControl>
+                <FormLabel id="demo-form-control-label-placement">Label placement</FormLabel>
+                <RadioGroup
+                    row
+                    aria-labelledby="demo-form-control-label-placement"
+                    name="position"
+                    defaultValue="top"
+                >
+                    <FormControlLabel 
+                        value="bottom"
+                        control={<Radio />}
+                        label="Bottom"
+                        labelPlacement='bottom'
+                    />
+                    <FormControlLabel value="end" control={<Radio />} label="End" />
+                </RadioGroup>
+            </FormControl>
+        </>
+    );
+}
+
 export const ColorRadioButtons = () => {
     const [selectedValue, setSelectedValue] = React.useState('a');
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
     };
-    
+
     const controlProps = (item) => ({
         checked: selectedValue === item,
         onChange: handleChange,
@@ -31,7 +56,7 @@ export const ColorRadioButtons = () => {
             <Radio {...controlProps('b')} color="secondary" />
             <Radio {...controlProps('c')} color="success" />
             <Radio {...controlProps('d')} color="default" />
-            <Radio 
+            <Radio
                 {...controlProps('e')}
                 sx={{
                     color: pink[800],
