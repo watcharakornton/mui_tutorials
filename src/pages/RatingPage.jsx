@@ -15,6 +15,7 @@ import {
     HalfRating,
     HoverRating,
     RatingSize,
+    CustomizedRating,
 } from '../inputs/RatingComponent';
 
 const RatingPage = () => {
@@ -23,6 +24,7 @@ const RatingPage = () => {
         <HalfRating />,
         <HoverRating />,
         <RatingSize />,
+        <CustomizedRating />,
     ];
 
     return (
