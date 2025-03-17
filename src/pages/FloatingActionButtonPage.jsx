@@ -3,12 +3,14 @@ import { Container, Grid, Divider, Button, Typography } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import {
-    FloatingActionButtons
+    FloatingActionButtons,
+    FloatingActionButtonSize,
 } from "../inputs/FloatingActionButtonComponent";
 
 const CheckboxPage = () => {
     const sections = [
         <FloatingActionButtons />,
+        <FloatingActionButtonSize />,
     ];
 
     return (
