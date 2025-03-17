@@ -12,11 +12,19 @@ import {
 
 import {
     BasicSelect,
+    SelectVariants,
+    SelectAutoWidth,
+    SelectSmall,
+    SelectOtherProps,
 } from '../inputs/SelectComponent';
 
 const SelectPage = () => {
     const sections = [
         <BasicSelect />,
+        <SelectVariants />,
+        <SelectAutoWidth />,
+        <SelectSmall />,
+        <SelectOtherProps />,
     ];
 
     return (
