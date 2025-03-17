@@ -11,12 +11,18 @@ import {
 } from '@mui/icons-material';
 
 import {
-    BasicRating
+    BasicRating,
+    HalfRating,
+    HoverRating,
+    RatingSize,
 } from '../inputs/RatingComponent';
 
 const CheckboxPage = () => {
     const sections = [
         <BasicRating />,
+        <HalfRating />,
+        <HoverRating />,
+        <RatingSize />,
     ];
 
     return (
