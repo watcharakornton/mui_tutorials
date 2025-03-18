@@ -1,5 +1,59 @@
 import * as React from "react";
-import { Typography, Box, TextField, MenuItem } from "@mui/material";
+import {
+  Input,
+  InputLabel,
+  InputAdornment,
+  FormControl,
+  Typography,
+  Box,
+  TextField,
+  MenuItem,
+} from "@mui/material";
+
+import { AccountCircle } from "@mui/icons-material";
+
+export const InputWithIcon = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Input With Icon
+      </Typography>
+      <Box sx={{ "& > :not(style)": { m: 1 } }}>
+        <FormControl variant="standard">
+          <InputLabel hrmlFor="input-with-icon-adornment">
+            With a start adornment
+          </InputLabel>
+          <Input
+            id="input-with-icon-adornment"
+            startAdornment={
+              <InputAdornment position="start">
+                <AccountCircle />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <TextField
+          id="input-with-icon-textfield"
+          label="TextField"
+          slotProps={{
+            input: {
+              startAdornment: (
+                <InputAdornment position="start">
+                  <AccountCircle />
+                </InputAdornment>
+              ),
+            },
+          }}
+          variant="standard"
+        />
+        <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+          <AccountCircle sx={{ color: "action.active", mr: 1, my: 0.5 }} />
+          <TextField id="input-with-sx" label="With sx" variant="standard" />
+        </Box>
+      </Box>
+    </>
+  );
+};
 
 export const SelectTextFields = () => {
   const currencies = [

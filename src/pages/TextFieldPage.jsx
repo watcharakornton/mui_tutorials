@@ -8,6 +8,7 @@ import {
   ValidationTextFields,
   MultilineTextFields,
   SelectTextFields,
+  InputWithIcon,
 } from "../inputs/TextFieldComponent";
 
 const TextFieldPage = () => {
@@ -17,6 +18,7 @@ const TextFieldPage = () => {
     <ValidationTextFields />,
     <MultilineTextFields />,
     <SelectTextFields />,
+    <InputWithIcon />,
   ];
 
   return (
