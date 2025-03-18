@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 import {
     Typography,
     Box,
     Stack,
     Slider,
+    Input as MuiInput,
+    Grid,
 } from '@mui/material';
 import {
     VolumeDown,
@@ -34,9 +37,63 @@ function valueText(value) {
 }
 
 export const InputSlider = () => {
+    const [value, setValue] = React.useState(30);
+
+    const handleSliderChange = (event, newValue) => {
+        setValue(newValue);
+    }
+
+    const handleInputChange = (event) => {
+        setValue(event.target.value === '' ? 0 : Number(event.target.value));
+    };
+
+    const handleBlur = () => {
+        if (value < 0) {
+            setValue(0);
+        } else if (value > 100) {
+            setValue(100);
+        }
+    };
+
+    const Input = styled(MuiInput)`
+        width: 42px;
+    `;
+
     return (
         <>
             <Typography variant='body1' sx={{ mb: 3 }}>Input Slider</Typography>
+            <Box sx={{ width: 250, mx: 'auto' }}>
+                <Typography id="input-slider" gutterBottom>
+                    Volume
+                </Typography>
+                <Grid container spacing={2} sx={{ alignIems: 'center' }}>
+                    <Grid item>
+                        <VolumeUp />
+                    </Grid>
+                    <Grid item xs>
+                        <Slider 
+                            value={typeof value === 'number' ? value : 0}
+                            onChange={handleSliderChange}
+                            aria-labelledby='input-slider'
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Input
+                            value={value}
+                            size="small"
+                            onChange={handleInputChange}
+                            onBlur={handleBlur}
+                            inputProps={{
+                                step: 10,
+                                min: 0,
+                                max: 100,
+                                type: 'number',
+                                'aria-labelledby': 'input-slider'
+                            }}
+                        />
+                    </Grid>
+                </Grid>
+            </Box>
         </>
     )
 }
