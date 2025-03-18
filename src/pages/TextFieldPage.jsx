@@ -7,6 +7,7 @@ import {
   FormPropsTextFields,
   ValidationTextFields,
   MultilineTextFields,
+  SelectTextFields,
 } from "../inputs/TextFieldComponent";
 
 const TextFieldPage = () => {
@@ -15,6 +16,7 @@ const TextFieldPage = () => {
     <FormPropsTextFields />,
     <ValidationTextFields />,
     <MultilineTextFields />,
+    <SelectTextFields />,
   ];
 
   return (
