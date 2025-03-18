@@ -4,6 +4,7 @@ import {
   InputLabel,
   InputAdornment,
   FormControl,
+  useFormControl,
   Typography,
   Box,
   TextField,
@@ -15,9 +16,79 @@ import {
   filledInputClasses,
   inputBaseClasses,
   Stack,
+  Paper,
+  InputBase,
+  Divider,
 } from "@mui/material";
 
-import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
+import {
+  AccountCircle,
+  Visibility,
+  VisibilityOff,
+  Menu as MenuIcon,
+  Search as SearchIcon,
+  Directions as DirectionsIcon,
+} from "@mui/icons-material";
+
+export const MyFormHelperText = () => {
+  function MyFormHelperText() {
+    const { focused } = useFormControl() || {};
+
+    const helperText = React.useMemo(() => {
+      if (focused) {
+        return "This field is being focused";
+      }
+
+      return "Helper text";
+    }, [focused]);
+
+    return <FormHelperText>{helperText}</FormHelperText>;
+  }
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        My Form Helper Text
+      </Typography>
+      <form noValidate autoComplete="off">
+        <FormControl sx={{ width: "25ch" }}>
+          <OutlinedInput placeholder="Please enter text" />
+          <MyFormHelperText />
+        </FormControl>
+      </form>
+    </>
+  );
+};
+
+export const CustomziedInputBase = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Customized Input Base
+      </Typography>
+      <Paper
+        component="form"
+        sx={{ p: "2px 4px", display: "flex", alignItems: "center", width: 400 }}
+      >
+        <IconButton sx={{ p: "10px" }} aria-label="menu">
+          <MenuIcon />
+        </IconButton>
+        <InputBase
+          sx={{ ml: 1, flex: 1 }}
+          placeholder="Search Google Maps"
+          inputProps={{ "aria-label": "search google maps" }}
+        />
+        <IconButton type="button" sx={{ p: "10px" }} aria-label="search">
+          <SearchIcon />
+        </IconButton>
+        <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+        <IconButton color="primary" sx={{ p: "10px" }} aria-label="directions">
+          <DirectionsIcon />
+        </IconButton>
+      </Paper>
+    </>
+  );
+};
 
 export const ColorTextFields = () => {
   return (
