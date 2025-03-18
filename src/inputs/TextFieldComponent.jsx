@@ -14,9 +14,54 @@ import {
   FormHelperText,
   filledInputClasses,
   inputBaseClasses,
+  Stack,
 } from "@mui/material";
 
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
+
+export const FullWidthTextField = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Full Width Text Field
+      </Typography>
+      <Box sx={{ width: 500, maxWidth: "100%" }}>
+        <TextField fullWidth label="fullWidth" id="fullWidth" />
+      </Box>
+    </>
+  );
+};
+
+export const TextFieldHiddenLabel = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Text Field Hidden Label
+      </Typography>
+      <Stack
+        component="form"
+        sx={{ width: "25ch" }}
+        spacing={2}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          hiddenLabel
+          id="filled-hidden-label-small"
+          defaultValue="Small"
+          variant="filled"
+          size="small"
+        />
+        <TextField
+          hiddenLabel
+          id="filled-hidden-label-normal"
+          defaultValue="Normal"
+          variant="filled"
+        />
+      </Stack>
+    </>
+  );
+};
 
 export const TextFieldSizes = () => {
   return (

@@ -12,6 +12,8 @@ import {
   InputAdornments,
   InputSuffixShrink,
   TextFieldSizes,
+  TextFieldHiddenLabel,
+  FullWidthTextField,
 } from "../inputs/TextFieldComponent";
 
 const TextFieldPage = () => {
@@ -25,6 +27,8 @@ const TextFieldPage = () => {
     <InputAdornments />,
     <InputSuffixShrink />,
     <TextFieldSizes />,
+    <TextFieldHiddenLabel />,
+    <FullWidthTextField />,
   ];
 
   return (
