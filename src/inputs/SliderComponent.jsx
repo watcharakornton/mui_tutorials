@@ -47,6 +47,38 @@ function valueText(value) {
     return `${value}°C`;
 }
 
+export const VerticalSlider = () => {
+    return (
+        <>
+            <Typography variant="body1" sx={{ mb: 3 }}>Vertical Slider</Typography>
+            <Stack sx={{ height: 300, width: 100, mx: 'auto' }} spacing={1} direction="row">
+                <Slider
+                    aria-label="Temperature"
+                    orientation="vertical"
+                    getAriaValueText={valueText}
+                    valueLabelDisplay="auto"
+                    defaultValue={30}
+                />
+                <Slider
+                    aria-label="Temperature"
+                    orientation="vertical"
+                    defaultValue={30}
+                    valueLabelDisplay="auto"
+                    disabled
+                />
+                <Slider
+                    getAriaLabel={() => 'Temperature'}
+                    orientation="vertical"
+                    getAriaValueText={valueText}
+                    defaultValue={[20, 37]}
+                    valueLabelDisplay="auto"
+                    marks={marks}
+                />
+            </Stack>
+        </>
+    )
+}
+
 export const MusicPlayerSlider = () => {
     const theme = useTheme();
     const WallPaper = styled("div")({

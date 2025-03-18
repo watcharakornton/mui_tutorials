@@ -16,6 +16,7 @@ import {
   ColorSlider,
   CustomizedSlider,
   MusicPlayerSlider,
+  VerticalSlider,
 } from "../inputs/SliderComponent";
 
 const SliderPage = () => {
@@ -33,6 +34,7 @@ const SliderPage = () => {
     <ColorSlider />,
     <CustomizedSlider />,
     <MusicPlayerSlider />,
+    <VerticalSlider />,
   ];
 
   return (
