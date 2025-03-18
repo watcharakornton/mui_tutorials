@@ -10,6 +10,8 @@ import {
   SelectTextFields,
   InputWithIcon,
   InputAdornments,
+  InputSuffixShrink,
+  TextFieldSizes,
 } from "../inputs/TextFieldComponent";
 
 const TextFieldPage = () => {
@@ -21,6 +23,8 @@ const TextFieldPage = () => {
     <SelectTextFields />,
     <InputWithIcon />,
     <InputAdornments />,
+    <InputSuffixShrink />,
+    <TextFieldSizes />,
   ];
 
   return (

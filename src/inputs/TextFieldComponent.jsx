@@ -12,9 +12,167 @@ import {
   FilledInput,
   OutlinedInput,
   FormHelperText,
+  filledInputClasses,
+  inputBaseClasses,
 } from "@mui/material";
 
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
+
+export const TextFieldSizes = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Text Field Sizes
+      </Typography>
+      <Box
+        component="form"
+        sx={{ "& .MuiTextField-root": { m: 1, width: "25ch" } }}
+        noValidate
+        autoComplete="off"
+      >
+        <div>
+          <TextField
+            label="Size"
+            id="outlined-size-small"
+            defaultValue="Small"
+            size="small"
+          />
+          <TextField
+            label="Size"
+            id="outlined-size-normal"
+            defaultValue="Normal"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Size"
+            id="filled-size-small"
+            defaultValue="Small"
+            variant="filled"
+            size="small"
+          />
+          <TextField
+            label="Size"
+            id="filled-size-normal"
+            defaultValue="Normal"
+            variant="filled"
+          />
+        </div>
+        <div>
+          <TextField
+            label="Size"
+            id="standard-size-small"
+            defaultValue="Small"
+            size="small"
+            variant="standard"
+          />
+          <TextField
+            label="Size"
+            id="standard-size-normal"
+            defaultValue="Normal"
+            variant="standard"
+          />
+        </div>
+      </Box>
+    </>
+  );
+};
+
+export const InputSuffixShrink = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Input Suffix Shrink
+      </Typography>
+      <Box
+        component="form"
+        sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField
+          id="outlined-suffix-shrink"
+          label="Outlined"
+          variant="outlined"
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment
+                  position="end"
+                  sx={{
+                    opacity: 0,
+                    pointerEvents: "none",
+                    [`[data-shrink=true] ~ .${inputBaseClasses.root} > &`]: {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  lbs
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
+        <TextField
+          id="filled-suffix-shrink"
+          label="Filled"
+          variant="filled"
+          slotProps={{
+            input: {
+              endAdornment: (
+                <InputAdornment
+                  position="end"
+                  sx={{
+                    alignSelf: "flex-end",
+                    opacity: 0,
+                    pointerEvents: "none",
+                    [`.${filledInputClasses.root} $`]: {
+                      marginBottom: "7.5px",
+                    },
+                    [`[data-shrink=true] ~ .${inputBaseClasses.root} > &`]: {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  days
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
+        <TextField
+          id="standard-suffix-shrink"
+          label="Standard"
+          variant="standard"
+          slotProps={{
+            htmlInput: {
+              sx: { textAlign: "right" },
+            },
+            input: {
+              endAdornment: (
+                <InputAdornment
+                  position="end"
+                  sx={{
+                    alignSelf: "flex-end",
+                    margin: 0,
+                    marginBottom: "5px",
+                    opacity: 0,
+                    pointerEvents: "none",
+                    [`[data-shrink=true] ~ .${inputBaseClasses.root} > &`]: {
+                      opacity: 1,
+                    },
+                  }}
+                >
+                  @gmail.com
+                </InputAdornment>
+              ),
+            },
+          }}
+        />
+      </Box>
+    </>
+  );
+};
 
 export const InputAdornments = () => {
   const [showPassword, setShowPassword] = React.useState(false);
@@ -62,7 +220,7 @@ export const InputAdornments = () => {
             </FormHelperText>
           </FormControl>
           <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
-            <InputLabel hrmlFor="outlined-adornment-password">
+            <InputLabel htmlFor="outlined-adornment-password">
               Password
             </InputLabel>
             <OutlinedInput
@@ -89,7 +247,7 @@ export const InputAdornments = () => {
             />
           </FormControl>
           <FormControl fullWidth sx={{ m: 1 }}>
-            <InputLabel hrmlFor="outlined-adornment-amount">Amount</InputLabel>
+            <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
             <OutlinedInput
               id="outlined-adornment-amount"
               startAdornment={
@@ -127,7 +285,7 @@ export const InputAdornments = () => {
             </FormHelperText>
           </FormControl>
           <FormControl sx={{ m: 1, width: "25ch" }} variant="filled">
-            <InputLabel hrmlFor="filled-adornment-password">
+            <InputLabel htmlFor="filled-adornment-password">
               Password
             </InputLabel>
             <FilledInput
@@ -190,7 +348,7 @@ export const InputAdornments = () => {
             </FormHelperText>
           </FormControl>
           <FormControl sx={{ m: 1, width: "25ch" }} variant="standard">
-            <InputLabel hrmlFor="standard-adornment-password">
+            <InputLabel htmlFor="standard-adornment-password">
               Password
             </InputLabel>
             <Input
@@ -237,7 +395,7 @@ export const InputWithIcon = () => {
       </Typography>
       <Box sx={{ "& > :not(style)": { m: 1 } }}>
         <FormControl variant="standard">
-          <InputLabel hrmlFor="input-with-icon-adornment">
+          <InputLabel htmlFor="input-with-icon-adornment">
             With a start adornment
           </InputLabel>
           <Input
