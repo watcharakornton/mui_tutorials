@@ -12,11 +12,13 @@ import {
 
 import {
     BasicTextFields,
+    FormPropsTextFields,
 } from '../inputs/TextFieldComponent';
 
 const TextFieldPage = () => {
     const sections = [
         <BasicTextFields />,
+        <FormPropsTextFields/>,
     ];
 
     return (
