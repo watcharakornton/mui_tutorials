@@ -19,6 +19,36 @@ import {
 
 import { AccountCircle, Visibility, VisibilityOff } from "@mui/icons-material";
 
+export const ColorTextFields = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
+        Color Text Fields
+      </Typography>
+      <Box
+        component="form"
+        sx={{ "& > :not(style)": { m: 1, width: "25ch" } }}
+        noValidate
+        autoComplete="off"
+      >
+        <TextField label="Outlined secondary" color="secondary" focused />
+        <TextField
+          label="Filled success"
+          variant="filled"
+          color="success"
+          focused
+        />
+        <TextField
+          label="Standard warning"
+          variant="standard"
+          color="warning"
+          focused
+        />
+      </Box>
+    </>
+  );
+};
+
 export const FullWidthTextField = () => {
   return (
     <>

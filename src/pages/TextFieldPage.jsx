@@ -14,6 +14,7 @@ import {
   TextFieldSizes,
   TextFieldHiddenLabel,
   FullWidthTextField,
+  ColorTextFields,
 } from "../inputs/TextFieldComponent";
 
 const TextFieldPage = () => {
@@ -29,6 +30,7 @@ const TextFieldPage = () => {
     <TextFieldSizes />,
     <TextFieldHiddenLabel />,
     <FullWidthTextField />,
+    <ColorTextFields />,
   ];
 
   return (
