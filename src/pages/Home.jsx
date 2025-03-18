@@ -53,13 +53,18 @@ const Home = () => {
     { title: "Slider Page", href: "/slider" },
     { title: "Switch Page", href: "/switch" },
     { title: "Text Field Page", href: "/text-field" },
+    { title: "Transfer List Page", href: "/transfer-list" },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
-    <Container maxWidth="md" sx={{ mt: 4, minHeight: "100vh" }}>
+    <Container maxWidth="md" sx={{ my: 4, minHeight: "100vh" }}>
       <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
         {cards.map((card, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
