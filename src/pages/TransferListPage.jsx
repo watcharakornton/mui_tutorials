@@ -2,10 +2,13 @@ import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
-import { TransferList } from "../inputs/TransferListComponent";
+import {
+  TransferList,
+  SelectAllTransferList,
+} from "../inputs/TransferListComponent";
 
 const TransferListPage = () => {
-  const sections = [<TransferList />];
+  const sections = [<TransferList />, <SelectAllTransferList />];
 
   return (
     <Container maxWidth="md">
