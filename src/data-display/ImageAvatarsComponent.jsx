@@ -1,25 +1,6 @@
 import * as React from "react";
-import { Typography, Box } from "@mui/material";
-
-const MyContainer = ({ children }) => {
-  return (
-    <Box
-      sx={{
-        width: "100%",
-        height: "auto",
-        py: "40px",
-        border: "1px solid rgba(61, 71, 81, 0.3)",
-        borderRadius: "12px 12px 0 0",
-        backgroundColor: "rgba(29, 33, 38, 0.1)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      {children}
-    </Box>
-  );
-};
+import MyContainer from "../component/MyContainer";
+import { Typography, Avatar, Stack } from "@mui/material";
 
 export const ImageAvatars = () => {
   return (
@@ -27,7 +8,13 @@ export const ImageAvatars = () => {
       <Typography variant="h5" sx={{ mb: 3 }}>
         ImageAvatars
       </Typography>
-      <MyContainer></MyContainer>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+          <Avatar alt="Cindy Baker" src="src/assets/images/avatar/3.jpg" />
+        </Stack>
+      </MyContainer>
     </>
   );
 };
