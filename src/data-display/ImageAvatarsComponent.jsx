@@ -1,6 +1,6 @@
 import * as React from "react";
 import MyContainer from "../component/MyContainer";
-import { Typography, Avatar, Stack } from "@mui/material";
+import { Typography, Avatar, Stack, AvatarGroup } from "@mui/material";
 import { deepOrange, deepPurple, green, pink } from "@mui/material/colors";
 import {
   Pageview as PageviewIcon,
@@ -34,6 +34,25 @@ function stringAvatar(name) {
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
+
+export const GroupAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Group Avatars
+      </Typography>
+      <MyContainer>
+        <AvatarGroup max={4}>
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/2.jpg" />
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/3.jpg" />
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/4.jpg" />
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/5.jpg" />
+        </AvatarGroup>
+      </MyContainer>
+    </>
+  );
+};
 
 export const FallbackAvatars = () => {
   return (
