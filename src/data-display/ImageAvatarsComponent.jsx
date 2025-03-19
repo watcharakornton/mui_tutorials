@@ -35,6 +35,26 @@ function stringAvatar(name) {
   };
 }
 
+export const VariantAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Variant Avatars
+      </Typography>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <Avatar sx={{ bgcolor: deepOrange[500] }} variant="square">
+            N
+          </Avatar>
+          <Avatar sx={{ bgcolor: green[500] }} variant="rounded">
+            <AssignmentIcon />
+          </Avatar>
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
+
 export const IconAvatars = () => {
   return (
     <>
