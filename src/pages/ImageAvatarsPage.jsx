@@ -11,6 +11,7 @@ import {
   VariantAvatars,
   FallbackAvatars,
   GroupAvatars,
+  TotalAvatars,
 } from "../data-display/ImageAvatarsComponent";
 
 const ToggleButtonPage = () => {
@@ -23,6 +24,7 @@ const ToggleButtonPage = () => {
     <VariantAvatars />,
     <FallbackAvatars />,
     <GroupAvatars />,
+    <TotalAvatars />,
   ];
 
   return (

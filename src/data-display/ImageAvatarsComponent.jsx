@@ -35,6 +35,24 @@ function stringAvatar(name) {
   };
 }
 
+export const TotalAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Total Avatars
+      </Typography>
+      <MyContainer>
+        <AvatarGroup total={24}>
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+          <Avatar alt="Agnes Walker" src="src/assets/images/avatar/4.jpg" />
+          <Avatar alt="Trevor Henderson" src="src/assets/images/avatar/5.jpg" />
+        </AvatarGroup>
+      </MyContainer>
+    </>
+  );
+};
+
 export const GroupAvatars = () => {
   return (
     <>
@@ -44,10 +62,10 @@ export const GroupAvatars = () => {
       <MyContainer>
         <AvatarGroup max={4}>
           <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
-          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/2.jpg" />
-          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/3.jpg" />
-          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/4.jpg" />
-          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/5.jpg" />
+          <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+          <Avatar alt="Cindy Baker" src="src/assets/images/avatar/3.jpg" />
+          <Avatar alt="Agnes Walker" src="src/assets/images/avatar/4.jpg" />
+          <Avatar alt="Trevor Henderson" src="src/assets/images/avatar/5.jpg" />
         </AvatarGroup>
       </MyContainer>
     </>
