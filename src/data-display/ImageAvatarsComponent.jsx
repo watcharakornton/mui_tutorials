@@ -1,6 +1,7 @@
 import * as React from "react";
+import { styled, useTheme } from "@mui/material/styles";
 import MyContainer from "../component/MyContainer";
-import { Typography, Avatar, Stack, AvatarGroup } from "@mui/material";
+import { Typography, Avatar, Stack, AvatarGroup, Badge } from "@mui/material";
 import { deepOrange, deepPurple, green, pink } from "@mui/material/colors";
 import {
   Pageview as PageviewIcon,
@@ -34,6 +35,104 @@ function stringAvatar(name) {
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
+
+export const BadgeAvatars = () => {
+  const theme = useTheme();
+  const StyledBadge = styled(Badge)({
+    "& .MuiBadge-badge": {
+      backgroundColor: "#44b700",
+      color: "#44b700",
+      boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+      "&::after": {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        borderRadius: "50%",
+        animation: "ripple 1.2s infinite ease-in-out",
+        border: "1px solid currentColor",
+        content: '""',
+      },
+    },
+    "@keyframes ripple": {
+      "0%": {
+        transform: "scale(.8)",
+        opacity: 1,
+      },
+      "100%": {
+        transform: "scale(2.4)",
+        opacity: 0,
+      },
+    },
+  });
+
+  const SmallAvatar = styled(Avatar)({
+    width: 22,
+    height: 22,
+    border: `2px solid ${theme.palette.background.paper}`,
+  });
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Badge Avatars
+      </Typography>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <StyledBadge
+            overlap="circular"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            variant="dot"
+          >
+            <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          </StyledBadge>
+          <Badge
+            overlap="circular"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            badgeContent={
+              <SmallAvatar
+                alt="Remy Sharp"
+                src="src/assets/images/avatar/1.jpg"
+              />
+            }
+          >
+            <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+          </Badge>
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
+
+export const Spacing = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Spacing
+      </Typography>
+      <MyContainer>
+        <Stack spacing={4}>
+          <AvatarGroup spacing="medium">
+            <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+            <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+            <Avatar alt="Cindy Baker" src="src/assets/images/avatar/3.jpg" />
+          </AvatarGroup>
+          <AvatarGroup spacing="small">
+            <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+            <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+            <Avatar alt="Cindy Baker" src="src/assets/images/avatar/3.jpg" />
+          </AvatarGroup>
+          <AvatarGroup spacing={24}>
+            <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+            <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+            <Avatar alt="Cindy Baker" src="src/assets/images/avatar/3.jpg" />
+          </AvatarGroup>
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
 
 export const CustomSurplusAvatars = () => {
   return (
