@@ -54,7 +54,7 @@ const Home = () => {
     { title: "Switch Page", href: "/switch" },
     { title: "Text Field Page", href: "/text-field" },
     { title: "Transfer List Page", href: "/transfer-list" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Toggle Button Page", href: "/toggle-button" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
@@ -81,4 +81,3 @@ const Home = () => {
 };
 
 export default Home;
-

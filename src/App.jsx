@@ -13,6 +13,7 @@ import SliderPage from "./pages/SliderPage";
 import SwitchPage from "./pages/SwitchPage";
 import TextFieldPage from "./pages/TextFieldPage";
 import TransferListPage from "./pages/TransferListPage";
+import ToggleButtonPage from "./pages/ToggleButtonPage";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/switch" element={<SwitchPage />} />
         <Route path="/text-field" element={<TextFieldPage />} />
         <Route path="/transfer-list" element={<TransferListPage />} />
+        <Route path="/toggle-button" element={<ToggleButtonPage />} />
       </Routes>
     </Router>
   );
