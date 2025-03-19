@@ -6,6 +6,8 @@ import {
   ImageAvatars,
   LetterAvatars,
   BackgroundLetterAvatars,
+  SizeAvatars,
+  IconAvatars,
 } from "../data-display/ImageAvatarsComponent";
 
 const ToggleButtonPage = () => {
@@ -13,6 +15,8 @@ const ToggleButtonPage = () => {
     <ImageAvatars />,
     <LetterAvatars />,
     <BackgroundLetterAvatars />,
+    <SizeAvatars />,
+    <IconAvatars />,
   ];
 
   return (

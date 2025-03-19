@@ -1,7 +1,12 @@
 import * as React from "react";
 import MyContainer from "../component/MyContainer";
 import { Typography, Avatar, Stack } from "@mui/material";
-import { deepOrange, deepPurple } from "@mui/material/colors";
+import { deepOrange, deepPurple, green, pink } from "@mui/material/colors";
+import {
+  Pageview as PageviewIcon,
+  Assignment as AssignmentIcon,
+  Folder as FolderIcon,
+} from "@mui/icons-material";
 
 function stringToColor(string) {
   let hash = 0;
@@ -29,6 +34,54 @@ function stringAvatar(name) {
     children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
   };
 }
+
+export const IconAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        IconAvatars
+      </Typography>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <Avatar>
+            <FolderIcon />
+          </Avatar>
+          <Avatar sx={{ bgcolor: pink[500] }}>
+            <PageviewIcon />
+          </Avatar>
+          <Avatar sx={{ bgcolor: green[500] }}>
+            <AssignmentIcon />
+          </Avatar>
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
+
+export const SizeAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Size Avatars
+      </Typography>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <Avatar
+            alt="Remy Sharp"
+            src="src/assets/images/avatar/1.jpg"
+            sx={{ width: 24, height: 24 }}
+          />
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          <Avatar
+            alt="Remy Sharp"
+            src="src/assets/images/avatar/1.jpg"
+            sx={{ width: 56, height: 56 }}
+          />
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
 
 export const BackgroundLetterAvatars = () => {
   return (
