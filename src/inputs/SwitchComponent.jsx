@@ -1,5 +1,13 @@
 import * as React from "react";
-import { Typography, Switch, FormGroup, FormControlLabel } from "@mui/material";
+import {
+  Typography,
+  Switch,
+  FormControl,
+  FormLabel,
+  FormGroup,
+  FormControlLabel,
+  FormHelperText,
+} from "@mui/material";
 import { alpha, styled, useTheme } from "@mui/material/styles";
 import { pink } from "@mui/material/colors";
 
@@ -28,6 +36,42 @@ export const SwitchesGroup = () => {
       <Typography variant="h5" sx={{ mb: 3 }}>
         Switches Group
       </Typography>
+      <FormControl component="fiedset" variant="standard">
+        <FormLabel component="legend">Assign responsibility</FormLabel>
+        <FormGroup>
+          <FormControlLabel
+            control={
+              <Switch
+                checked={state.gilad}
+                onChange={handleChange}
+                name="gilad"
+              />
+            }
+            label="Gilad Gray"
+          />
+          <FormControlLabel
+            control={
+              <Switch
+                checked={state.jason}
+                onChange={handleChange}
+                name="jason"
+              />
+            }
+            label="Jason Killian"
+          />
+          <FormControlLabel
+            control={
+              <Switch
+                checked={state.antoine}
+                onChange={handleChange}
+                name="antoine"
+              />
+            }
+            label="Antoine Llorca"
+          />
+        </FormGroup>
+        <FormHelperText>Be careful</FormHelperText>
+      </FormControl>
     </>
   );
 };
