@@ -7,6 +7,7 @@ import {
   ToggleButtonMultiple,
   ToggleButtonSizes,
   ColorToggleButton,
+  VerticalToggleButtons,
 } from "../inputs/ToggleButtonComponent";
 
 const ToggleButtonPage = () => {
@@ -15,6 +16,7 @@ const ToggleButtonPage = () => {
     <ToggleButtonMultiple />,
     <ToggleButtonSizes />,
     <ColorToggleButton />,
+    <VerticalToggleButtons />,
   ];
 
   return (

@@ -16,6 +16,9 @@ import {
   FormatUnderlined as FormatUnderlinedIcon,
   FormatColorFill as FormatColorFillIcon,
   ArrowDropDown as ArrowDropDownIcon,
+  ViewList as ViewListIcon,
+  ViewModule as ViewModuleIcon,
+  ViewQuilt as ViewQuiltIcon,
 } from "@mui/icons-material";
 
 const MyContainer = ({ children }) => {
@@ -38,13 +41,65 @@ const MyContainer = ({ children }) => {
   );
 };
 
+export const VerticalToggleButtons = () => {
+  const [view, setView] = React.useState("list");
+
+  const handleChange = (event, nextView) => {
+    setView(nextView);
+  };
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Vertical Toggle Buttons
+      </Typography>
+      <MyContainer>
+        <ToggleButtonGroup
+          orientation="vertical"
+          value={view}
+          exclusive
+          onChange={handleChange}
+        >
+          <ToggleButton value="list" aria-label="list">
+            <ViewListIcon />
+          </ToggleButton>
+          <ToggleButton value="module" aria-label="module">
+            <ViewModuleIcon />
+          </ToggleButton>
+          <ToggleButton value="quilt" aria-label="quilt">
+            <ViewQuiltIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
+      </MyContainer>
+    </>
+  );
+};
+
 export const ColorToggleButton = () => {
+  const [alignment, setAlignment] = React.useState("web");
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
+
   return (
     <>
       <Typography variant="h5" sx={{ mb: 3 }}>
         Color Toggle Button
       </Typography>
-      <MyContainer></MyContainer>
+      <MyContainer>
+        <ToggleButtonGroup
+          color="primary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          aria-label="Platform"
+        >
+          <ToggleButton value="web">Web</ToggleButton>
+          <ToggleButton value="android">Android</ToggleButton>
+          <ToggleButton value="ios">iOS</ToggleButton>
+        </ToggleButtonGroup>
+      </MyContainer>
     </>
   );
 };
