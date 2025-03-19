@@ -9,6 +9,7 @@ import {
   ColorToggleButton,
   VerticalToggleButtons,
   ToggleButtonNotEmpty,
+  CustomizedDividers,
 } from "../inputs/ToggleButtonComponent";
 
 const ToggleButtonPage = () => {
@@ -19,6 +20,7 @@ const ToggleButtonPage = () => {
     <ColorToggleButton />,
     <VerticalToggleButtons />,
     <ToggleButtonNotEmpty />,
+    <CustomizedDividers />,
   ];
 
   return (

@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Typography,
   Grid,
+  Box,
   List,
   ListItemButton,
   ListItemIcon,
@@ -18,6 +19,26 @@ function not(a, b) {
 function intersection(a, b) {
   return a.filter((value) => b.includes(value));
 }
+
+const MyContainer = ({ children }) => {
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        height: "auto",
+        py: "40px",
+        border: "1px solid rgba(61, 71, 81, 0.3)",
+        borderRadius: "12px 12px 0 0",
+        backgroundColor: "rgba(29, 33, 38, 0.1)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {children}
+    </Box>
+  );
+};
 
 export const TransferList = () => {
   const [checked, setChecked] = React.useState([]);
@@ -96,58 +117,60 @@ export const TransferList = () => {
       <Typography variant="h5" sx={{ mb: 3 }} fontWeight="fontWeightMedium">
         Basic Transfer List
       </Typography>
-      <Grid
-        container
-        spacing={2}
-        sx={{ justifyContent: "center", alignItems: "center" }}
-      >
-        <Grid item>{customList(left)}</Grid>
-        <Grid item>
-          <Grid container direction="column" sx={{ alignItems: "center" }}>
-            <Button
-              sx={{ my: 0.5 }}
-              variant="outlined"
-              size="small"
-              onClick={handleAllRight}
-              disabled={left.length === 0}
-              aria-label="move all right"
-            >
-              ≫
-            </Button>
-            <Button
-              sx={{ my: 0.5 }}
-              variant="outlined"
-              size="small"
-              onClick={handleCheckedRight}
-              disabled={leftChecked.length === 0}
-              aria-label="move selected right"
-            >
-              &gt;
-            </Button>
-            <Button
-              sx={{ my: 0.5 }}
-              variant="outlined"
-              size="small"
-              onClick={handleCheckedLeft}
-              disabled={rightChecked.length === 0}
-              aria-label="move selected left"
-            >
-              &lt;
-            </Button>
-            <Button
-              sx={{ my: 0.5 }}
-              variant="outlined"
-              size="small"
-              onClick={handleAllLeft}
-              disabled={right.length === 0}
-              aria-label="move all left"
-            >
-              ≪
-            </Button>
+      <MyContainer>
+        <Grid
+          container
+          spacing={2}
+          sx={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <Grid item>{customList(left)}</Grid>
+          <Grid item>
+            <Grid container direction="column" sx={{ alignItems: "center" }}>
+              <Button
+                sx={{ my: 0.5 }}
+                variant="outlined"
+                size="small"
+                onClick={handleAllRight}
+                disabled={left.length === 0}
+                aria-label="move all right"
+              >
+                ≫
+              </Button>
+              <Button
+                sx={{ my: 0.5 }}
+                variant="outlined"
+                size="small"
+                onClick={handleCheckedRight}
+                disabled={leftChecked.length === 0}
+                aria-label="move selected right"
+              >
+                &gt;
+              </Button>
+              <Button
+                sx={{ my: 0.5 }}
+                variant="outlined"
+                size="small"
+                onClick={handleCheckedLeft}
+                disabled={rightChecked.length === 0}
+                aria-label="move selected left"
+              >
+                &lt;
+              </Button>
+              <Button
+                sx={{ my: 0.5 }}
+                variant="outlined"
+                size="small"
+                onClick={handleAllLeft}
+                disabled={right.length === 0}
+                aria-label="move all left"
+              >
+                ≪
+              </Button>
+            </Grid>
           </Grid>
+          <Grid item>{customList(right)}</Grid>
         </Grid>
-        <Grid item>{customList(right)}</Grid>
-      </Grid>
+      </MyContainer>
     </>
   );
 };

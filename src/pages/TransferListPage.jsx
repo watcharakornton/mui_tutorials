@@ -8,7 +8,7 @@ const TransferListPage = () => {
   const sections = [<TransferList />];
 
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="md">
       <Grid
         container
         alignItems="center"
@@ -17,7 +17,7 @@ const TransferListPage = () => {
       >
         <Grid item xs={12}>
           <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-            Text Fields Page
+            Transfer List Page
           </Typography>
         </Grid>
         {sections.map((Component, index) => (
