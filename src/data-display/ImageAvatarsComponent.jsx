@@ -35,6 +35,27 @@ function stringAvatar(name) {
   };
 }
 
+export const CustomSurplusAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Custom Surplus Avatars
+      </Typography>
+      <MyContainer>
+        <AvatarGroup
+          renderSurplus={(surplus) => <span>+{surplus.toString()[0]}k</span>}
+          total={4251}
+        >
+          <Avatar alt="Remy Sharp" src="src/assets/images/avatar/1.jpg" />
+          <Avatar alt="Travis Howard" src="src/assets/images/avatar/2.jpg" />
+          <Avatar alt="Agnes Walker" src="src/assets/images/avatar/4.jpg" />
+          <Avatar alt="Trevor Henderson" src="src/assets/images/avatar/5.jpg" />
+        </AvatarGroup>
+      </MyContainer>
+    </>
+  );
+};
+
 export const TotalAvatars = () => {
   return (
     <>
