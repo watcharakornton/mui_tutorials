@@ -8,6 +8,8 @@ import {
   SwitchesSizes,
   ColorSwitches,
   SwitchesGroup,
+  CustomizedSwitches,
+  FormControlLabelPosition,
 } from "../inputs/SwitchComponent";
 
 const SwitchPage = () => {
@@ -17,6 +19,8 @@ const SwitchPage = () => {
     <SwitchesSizes />,
     <ColorSwitches />,
     <SwitchesGroup />,
+    <CustomizedSwitches />,
+    <FormControlLabelPosition />,
   ];
 
   return (
