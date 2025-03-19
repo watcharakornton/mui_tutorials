@@ -35,6 +35,23 @@ function stringAvatar(name) {
   };
 }
 
+export const FallbackAvatars = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Fallback Avatars
+      </Typography>
+      <MyContainer>
+        <Stack direction="row" spacing={2}>
+          <Avatar sx={{ bgcolor: deepOrange[500] }}>B</Avatar>
+          <Avatar sx={{ bgcolor: deepOrange[500] }} alt="Remy Sharp" src="" />
+          <Avatar />
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
+
 export const VariantAvatars = () => {
   return (
     <>
