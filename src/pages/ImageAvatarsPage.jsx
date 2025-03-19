@@ -2,24 +2,10 @@ import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
-import {
-  ToggleButtons,
-  ToggleButtonMultiple,
-  ToggleButtonSizes,
-  ColorToggleButton,
-  VerticalToggleButtons,
-  ToggleButtonNotEmpty,
-} from "../inputs/ToggleButtonComponent";
+import { ImageAvatars } from "../data-display/ImageAvatarsComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [
-    <ToggleButtons />,
-    <ToggleButtonMultiple />,
-    <ToggleButtonSizes />,
-    <ColorToggleButton />,
-    <VerticalToggleButtons />,
-    <ToggleButtonNotEmpty />,
-  ];
+  const sections = [<ImageAvatars />];
 
   return (
     <Container maxWidth="sm">
@@ -31,7 +17,7 @@ const ToggleButtonPage = () => {
       >
         <Grid item xs={12}>
           <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-            Toggle Button Page
+            Image Avatars Page
           </Typography>
         </Grid>
         {sections.map((Component, index) => (

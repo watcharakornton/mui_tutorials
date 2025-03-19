@@ -41,6 +41,17 @@ const MyContainer = ({ children }) => {
   );
 };
 
+export const ToggleButtonNotEmpty = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        ToggleButtonNotEmpty
+      </Typography>
+      <MyContainer></MyContainer>
+    </>
+  );
+};
+
 export const VerticalToggleButtons = () => {
   const [view, setView] = React.useState("list");
 
