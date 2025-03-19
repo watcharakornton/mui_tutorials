@@ -19,6 +19,10 @@ import {
   ViewList as ViewListIcon,
   ViewModule as ViewModuleIcon,
   ViewQuilt as ViewQuiltIcon,
+  Laptop as LaptopIcon,
+  Tv as TvIcon,
+  PhoneAndroid as PhoneAndroidIcon,
+  PhoneAndroid,
 } from "@mui/icons-material";
 
 const MyContainer = ({ children }) => {
@@ -42,12 +46,62 @@ const MyContainer = ({ children }) => {
 };
 
 export const ToggleButtonNotEmpty = () => {
+  const [alignment, setAlignment] = React.useState("left");
+  const [devices, setDevices] = React.useState(() => ["phone"]);
+
+  const handleAlignment = (event, newAlignment) => {
+    if (newAlignment !== null) {
+      setAlignment(newAlignment);
+    }
+  };
+
+  const handleDevices = (event, newDevices) => {
+    if (newDevices.length) {
+      setDevices(newDevices);
+    }
+  };
+
   return (
     <>
       <Typography variant="h5" sx={{ mb: 3 }}>
         ToggleButtonNotEmpty
       </Typography>
-      <MyContainer></MyContainer>
+      <MyContainer>
+        <Stack direction="row" spacing={4}>
+          <ToggleButtonGroup
+            value={alignment}
+            exclusive
+            onChange={handleAlignment}
+            aria-label="text alignment"
+          >
+            <ToggleButton value="left" aria-label="left aligned">
+              <FormatAlignLeftIcon />
+            </ToggleButton>
+            <ToggleButton value="center" aria-label="centered">
+              <FormatAlignCenterIcon />
+            </ToggleButton>
+            <ToggleButton value="right" aria-label="right aligned">
+              <FormatAlignRightIcon />
+            </ToggleButton>
+          </ToggleButtonGroup>
+
+          <ToggleButtonGroup
+            value={devices}
+            onChange={handleDevices}
+            aria-label="device"
+          >
+            <ToggleButton value="laptop" aria-label="laptop">
+              <LaptopIcon />
+            </ToggleButton>
+            <ToggleButton value="tv" aria-label="tv">
+              <TvIcon />
+            </ToggleButton>
+            <ToggleButton value="phone" aria-label="phone">
+              <PhoneAndroidIcon />
+            </ToggleButton>
+          </ToggleButtonGroup>
+        </Stack>
+      </MyContainer>
     </>
   );
 };
