@@ -6,10 +6,18 @@ import {
   BasicSwitches,
   SwitchLabels,
   SwitchesSizes,
+  ColorSwitches,
+  SwitchesGroup,
 } from "../inputs/SwitchComponent";
 
 const SwitchPage = () => {
-  const sections = [<BasicSwitches />, <SwitchLabels />, <SwitchesSizes />];
+  const sections = [
+    <BasicSwitches />,
+    <SwitchLabels />,
+    <SwitchesSizes />,
+    <ColorSwitches />,
+    <SwitchesGroup />,
+  ];
 
   return (
     <Container maxWidth="sm">

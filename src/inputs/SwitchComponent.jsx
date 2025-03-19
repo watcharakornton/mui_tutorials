@@ -1,10 +1,67 @@
 import * as React from "react";
 import { Typography, Switch, FormGroup, FormControlLabel } from "@mui/material";
+import { alpha, styled, useTheme } from "@mui/material/styles";
+import { pink } from "@mui/material/colors";
 
 const label = [
   { inputProps: { "aria-label": "Switch demo" } },
   { inputProps: { "aria-label": "Size switch demo" } },
+  { inputProps: { "aria-label": "Color switch demo" } },
 ];
+
+export const SwitchesGroup = () => {
+  const [state, setState] = React.useState({
+    gilad: true,
+    jason: false,
+    antoine: true,
+  });
+
+  const handleChange = (event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.checked,
+    });
+  };
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Switches Group
+      </Typography>
+    </>
+  );
+};
+
+export const ColorSwitches = () => {
+  const theme = useTheme();
+
+  const PinkSwitch = styled(Switch)({
+    "& .MuiSwitch-switchBase.Mui-checked": {
+      color: pink[600],
+      "&:hover": {
+        backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
+      },
+    },
+    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+      backgroundColor: pink[600],
+    },
+  });
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Color Switches
+      </Typography>
+      <div>
+        <Switch {...label[2]} defaultChecked />
+        <Switch {...label[2]} defaultChecked color="secondary" />
+        <Switch {...label[2]} defaultChecked color="warning" />
+        <Switch {...label[2]} defaultChecked color="default" />
+        <PinkSwitch {...label[2]} defaultChecked />
+      </div>
+    </>
+  );
+};
 
 export const SwitchesSizes = () => {
   return (
