@@ -5,10 +5,17 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
   ToggleButtons,
   ToggleButtonMultiple,
+  ToggleButtonSizes,
+  ColorToggleButton,
 } from "../inputs/ToggleButtonComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [<ToggleButtons />, <ToggleButtonMultiple />];
+  const sections = [
+    <ToggleButtons />,
+    <ToggleButtonMultiple />,
+    <ToggleButtonSizes />,
+    <ColorToggleButton />,
+  ];
 
   return (
     <Container maxWidth="sm">

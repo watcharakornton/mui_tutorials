@@ -2,6 +2,7 @@ import * as React from "react";
 import {
   Typography,
   Box,
+  Stack,
   ToggleButton,
   ToggleButtonGroup,
 } from "@mui/material";
@@ -22,7 +23,8 @@ const MyContainer = ({ children }) => {
     <Box
       sx={{
         width: "100%",
-        height: "100px",
+        height: "auto",
+        py: "40px",
         border: "1px solid rgba(61, 71, 81, 0.3)",
         borderRadius: "12px 12px 0 0",
         backgroundColor: "rgba(29, 33, 38, 0.1)",
@@ -33,6 +35,67 @@ const MyContainer = ({ children }) => {
     >
       {children}
     </Box>
+  );
+};
+
+export const ColorToggleButton = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Color Toggle Button
+      </Typography>
+      <MyContainer></MyContainer>
+    </>
+  );
+};
+
+export const ToggleButtonSizes = () => {
+  const [alignment, setAlignment] = React.useState("left");
+
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
+
+  const children = [
+    <ToggleButton value="left" key="left">
+      <FormatAlignLeftIcon />
+    </ToggleButton>,
+    <ToggleButton value="center" key="center">
+      <FormatAlignCenterIcon />
+    </ToggleButton>,
+    <ToggleButton value="right" key="right">
+      <FormatAlignRightIcon />
+    </ToggleButton>,
+    <ToggleButton value="justify" key="justify">
+      <FormatAlignJustifyIcon />
+    </ToggleButton>,
+  ];
+
+  const control = {
+    value: alignment,
+    onChange: handleChange,
+    exclusive: true,
+  };
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Toggle Button Sizes
+      </Typography>
+      <MyContainer>
+        <Stack spacing={2} sx={{ alignItems: "center" }}>
+          <ToggleButtonGroup size="small" {...control} aria-label="Small size">
+            {children}
+          </ToggleButtonGroup>
+          <ToggleButtonGroup {...control} aria-label="Medium size">
+            {children}
+          </ToggleButtonGroup>
+          <ToggleButtonGroup size="large" {...control} aria-label="Large size">
+            {children}
+          </ToggleButtonGroup>
+        </Stack>
+      </MyContainer>
+    </>
   );
 };
 
