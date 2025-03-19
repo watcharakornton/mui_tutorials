@@ -2,10 +2,18 @@ import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
-import { ImageAvatars } from "../data-display/ImageAvatarsComponent";
+import {
+  ImageAvatars,
+  LetterAvatars,
+  BackgroundLetterAvatars,
+} from "../data-display/ImageAvatarsComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [<ImageAvatars />];
+  const sections = [
+    <ImageAvatars />,
+    <LetterAvatars />,
+    <BackgroundLetterAvatars />,
+  ];
 
   return (
     <Container maxWidth="sm">
