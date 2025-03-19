@@ -2,10 +2,13 @@ import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
-import { ToggleButtons } from "../inputs/ToggleButtonComponent";
+import {
+  ToggleButtons,
+  ToggleButtonMultiple,
+} from "../inputs/ToggleButtonComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [<ToggleButtons />];
+  const sections = [<ToggleButtons />, <ToggleButtonMultiple />];
 
   return (
     <Container maxWidth="sm">
