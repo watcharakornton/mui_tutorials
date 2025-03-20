@@ -5,12 +5,16 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     BasicChip,
     ClickableChips,
+    DeletableChips,
+    ClickableAndDeletableChips,
 } from "../data-display/ChipComponent";
 
 const ChipPage = () => {
     const sections = [
         <BasicChip />,
         <ClickableChips />,
+        <DeletableChips />,
+        <ClickableAndDeletableChips />,
     ];
 
     return (
