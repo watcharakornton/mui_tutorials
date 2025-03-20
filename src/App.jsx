@@ -16,6 +16,7 @@ import TransferListPage from "./pages/TransferListPage";
 import ToggleButtonPage from "./pages/ToggleButtonPage";
 import ImageAvatarsPage from "./pages/ImageAvatarsPage";
 import BadgePage from "./pages/BadgePage";
+import ChipPage from "./pages/ChipPage";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/toggle-button" element={<ToggleButtonPage />} />
         <Route path="/image-avatars" element={<ImageAvatarsPage />} />
         <Route path="/badge" element={<BadgePage />} />
+        <Route path="/chip" element={<ChipPage />} />
       </Routes>
     </Router>
   );

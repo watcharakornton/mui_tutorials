@@ -57,6 +57,7 @@ const Home = () => {
     { title: "Toggle Button Page", href: "/toggle-button" },
     { title: "Image Avatars Page", href: "/image-avatars" },
     { title: "Badge Page", href: "/badge" },
+    { title: "Chip Page", href: "/chip" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
