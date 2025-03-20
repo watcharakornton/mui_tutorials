@@ -2,10 +2,14 @@ import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
-import { SimpleBadge } from "../data-display/BadgeComponent";
+import {
+  SimpleBadge,
+  ColorBadge,
+  CustomizedBadge,
+} from "../data-display/BadgeComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [<SimpleBadge />];
+  const sections = [<SimpleBadge />, <ColorBadge />, <CustomizedBadge />];
 
   return (
     <Container maxWidth="sm">
