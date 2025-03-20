@@ -6,10 +6,47 @@ import {
     Chip,
     Stack,
 } from "@mui/material";
+import {
+    Done as DoneIcon,
+    Delete as DeleteIcon,
+} from '@mui/icons-material';
+
+export const CustomDeleteIconChips = () => {
+    const handleClick = () => {
+        console.info('You clicked the Chip.');
+    };
+
+    const handleDelete = () => {
+        console.info('You clicked the delete icon.');
+    };
+
+    return (
+        <>
+            <MyTitle title="Custom Delete Icon Chips" />
+            <MyContainer>
+                <Stack direction="row" spacing={1}>
+                    <Chip
+                        label="Custom delete icon"
+                        onClick={handleClick}
+                        onDelete={handleDelete}
+                        deleteIcon={<DoneIcon />}
+                    />
+                    <Chip
+                        label="Custom delete icon"
+                        onClick={handleClick}
+                        onDelete={handleDelete}
+                        deleteIcon={<DeleteIcon />}
+                        variant="outlined"
+                    />
+                </Stack>
+            </MyContainer>
+        </>
+    )
+}
 
 export const ClickableAndDeletableChips = () => {
     const handleClick = () => {
-        console.info('YOu clicked the Chip.');
+        console.info('You clicked the Chip.');
     };
 
     const handleDelete = () => {
@@ -21,12 +58,12 @@ export const ClickableAndDeletableChips = () => {
             <MyTitle title="Clickable and Deletable Chips" />
             <MyContainer>
                 <Stack direction="row" spacing={1}>
-                    <Chip 
+                    <Chip
                         label="Clickable Deletable"
                         onClick={handleClick}
                         onDelete={handleDelete}
                     />
-                    <Chip 
+                    <Chip
                         label="Clickable Deletable"
                         variant="outlined"
                         onClick={handleClick}
