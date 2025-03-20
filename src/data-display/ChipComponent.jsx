@@ -6,6 +6,17 @@ import {
     Stack,
 } from "@mui/material";
 
+export const ClickableChips = () => {
+    return (
+        <>
+            <Typography variant="h5" sx={{ mb: 3 }}>
+                ClickableChips
+            </Typography>
+            <MyContainer></MyContainer>
+        </>
+    )
+}
+
 export const BasicChip = () => {
     return (
         <>

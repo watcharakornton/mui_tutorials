@@ -3,14 +3,12 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    BasicChip,
-    ClickableChips,
-} from "../data-display/ChipComponent";
+    IntroDivider
+} from "../data-display/DividerComponent";
 
-const ChipPage = () => {
+const DividerPage = () => {
     const sections = [
-        <BasicChip />,
-        <ClickableChips />,
+        <IntroDivider />
     ];
 
     return (
@@ -23,7 +21,7 @@ const ChipPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Chip Page
+                        Divider page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -44,4 +42,4 @@ const ChipPage = () => {
     );
 };
 
-export default ChipPage;
+export default DividerPage;

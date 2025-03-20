@@ -17,6 +17,7 @@ import ToggleButtonPage from "./pages/ToggleButtonPage";
 import ImageAvatarsPage from "./pages/ImageAvatarsPage";
 import BadgePage from "./pages/BadgePage";
 import ChipPage from "./pages/ChipPage";
+import DividerPage from "./pages/DividerPage";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/image-avatars" element={<ImageAvatarsPage />} />
         <Route path="/badge" element={<BadgePage />} />
         <Route path="/chip" element={<ChipPage />} />
+        <Route path="/divider" element={<DividerPage />} />
       </Routes>
     </Router>
   );
