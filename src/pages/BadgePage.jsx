@@ -6,10 +6,20 @@ import {
   SimpleBadge,
   ColorBadge,
   CustomizedBadge,
+  BadgeVisibility,
+  ShowZeroBadge,
+  BadgeMax,
 } from "../data-display/BadgeComponent";
 
 const ToggleButtonPage = () => {
-  const sections = [<SimpleBadge />, <ColorBadge />, <CustomizedBadge />];
+  const sections = [
+    <SimpleBadge />,
+    <ColorBadge />,
+    <CustomizedBadge />,
+    <BadgeVisibility />,
+    <ShowZeroBadge />,
+    <BadgeMax />,
+  ];
 
   return (
     <Container maxWidth="sm">
