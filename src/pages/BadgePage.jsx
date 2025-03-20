@@ -12,6 +12,7 @@ import {
   DotBadge,
   BadgeOverlap,
   BadgeAlignment,
+  AccessibleBadges,
 } from "../data-display/BadgeComponent";
 
 const ToggleButtonPage = () => {
@@ -25,6 +26,7 @@ const ToggleButtonPage = () => {
     <DotBadge />,
     <BadgeOverlap />,
     <BadgeAlignment />,
+    <AccessibleBadges />,
   ];
 
   return (

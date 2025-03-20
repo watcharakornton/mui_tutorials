@@ -23,6 +23,33 @@ import {
   Typography,
 } from "@mui/material";
 
+export const AccessibleBadges = () => {
+  function notificationsLabel(count) {
+    if (count === 0) {
+      return "no notifications";
+    }
+    if (count > 99) {
+      return "more than 99 notifications";
+    }
+    return `${count} notifications`;
+  }
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Accessible Badges
+      </Typography>
+      <MyContainer>
+        <IconButton aria-label={notificationsLabel(100)}>
+          <Badge badgeContent={100} color="secondary">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+      </MyContainer>
+    </>
+  );
+};
+
 export const BadgeAlignment = () => {
   const [horizontal, setHorizontal] = React.useState("right");
   const [vertical, setVertical] = React.useState("top");
@@ -34,15 +61,6 @@ export const BadgeAlignment = () => {
   const handleVerticalChange = (event) => {
     setVertical(event.target.value);
   };
-
-  const jsx = `
-  <Badge
-    anchorOrigin={{
-    vertical: '${vertical}',
-    horizontal: '${horizontal},
-    }}
-  >
-  `;
 
   return (
     <>
