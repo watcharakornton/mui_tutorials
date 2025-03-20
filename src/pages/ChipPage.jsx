@@ -8,6 +8,7 @@ import {
     DeletableChips,
     ClickableAndDeletableChips,
     CustomDeleteIconChips,
+    AvatarChips,
 } from "../data-display/ChipComponent";
 
 const ChipPage = () => {
@@ -17,6 +18,7 @@ const ChipPage = () => {
         <DeletableChips />,
         <ClickableAndDeletableChips />,
         <CustomDeleteIconChips />,
+        <AvatarChips />,
     ];
 
     return (

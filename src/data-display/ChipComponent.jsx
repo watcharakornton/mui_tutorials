@@ -2,14 +2,32 @@ import * as React from "react";
 import MyContainer from "../component/MyContainer";
 import MyTitle from "../component/MyTitle";
 import {
-    Typography,
     Chip,
     Stack,
+    Avatar,
 } from "@mui/material";
 import {
     Done as DoneIcon,
     Delete as DeleteIcon,
 } from '@mui/icons-material';
+
+export const AvatarChips = () => {
+    return (
+        <>
+            <MyTitle title="Avatar Chips" />
+            <MyContainer>
+                <Stack direction="row" spacing={1}>
+                    <Chip avatar={<Avatar>M</Avatar>} label="Avatar" />
+                    <Chip
+                        avatar={<Avatar alt="Natacha" src="src/assets/images/avatar/1.jpg" />}
+                        label="Avatar"
+                        variant="outlined"
+                     />
+                </Stack>
+            </MyContainer>
+        </>
+    )
+}
 
 export const CustomDeleteIconChips = () => {
     const handleClick = () => {
