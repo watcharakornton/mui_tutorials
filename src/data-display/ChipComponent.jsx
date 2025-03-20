@@ -7,12 +7,21 @@ import {
 } from "@mui/material";
 
 export const ClickableChips = () => {
+    const handleClick = () => {
+        console.info('You clicked the clip');
+    };
+
     return (
         <>
             <Typography variant="h5" sx={{ mb: 3 }}>
                 ClickableChips
             </Typography>
-            <MyContainer></MyContainer>
+            <MyContainer>
+                <Stack direction="row" spacing={1}>
+                    <Chip label="Clickable" onClick={handleClick} />
+                    <Chip label="Clickable" variant="outlined" onClick={handleClick} />
+                </Stack>
+            </MyContainer>
         </>
     )
 }
