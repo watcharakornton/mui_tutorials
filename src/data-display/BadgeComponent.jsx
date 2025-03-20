@@ -1,23 +1,78 @@
-import * as React from "react";
-import { styled, useTheme } from "@mui/material/styles";
-import MyContainer from "../component/MyContainer";
 import {
-  Typography,
-  Badge,
-  Stack,
-  IconButton,
-  ButtonGroup,
-  Button,
-  Box,
-  Switch,
-  FormControlLabel,
-} from "@mui/material";
-import {
-  Mail as MailIcon,
-  ShoppingCart as ShoppingCartIcon,
   Add as AddIcon,
+  Mail as MailIcon,
   Remove as RemoveIcon,
+  ShoppingCart as ShoppingCartIcon,
 } from "@mui/icons-material";
+import {
+  Badge,
+  Box,
+  Button,
+  ButtonGroup,
+  FormControlLabel,
+  IconButton,
+  Stack,
+  Switch,
+  Typography,
+} from "@mui/material";
+import { styled, useTheme } from "@mui/material/styles";
+import * as React from "react";
+import MyContainer from "../component/MyContainer";
+
+export const BadgeOverlap = () => {
+  const shapeStyles = { bgcolor: "primary.main", width: 40, height: 40 };
+  const shapeCircleStyles = { borderRadius: "50%" };
+  const rectangle = <Box component="span" sx={shapeStyles} />;
+  const circle = (
+    <Box component="span" sx={{ ...shapeStyles, ...shapeCircleStyles }} />
+  );
+
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Badge Overlap
+      </Typography>
+      <MyContainer>
+        <Stack spacing={3} direction="row">
+          <Badge color="secondary" badgeContent=" ">
+            {rectangle}
+          </Badge>
+          <Badge color="secondary" badgeContent=" " variant="dot">
+            {rectangle}
+          </Badge>
+          <Badge color="secondary" overlap="circular" badgeContent=" ">
+            {circle}
+          </Badge>
+          <Badge
+            color="secondary"
+            overlap="circular"
+            badgeContent=" "
+            variant="dot"
+          >
+            {circle}
+          </Badge>
+        </Stack>
+      </MyContainer>
+    </>
+  );
+};
+
+export const DotBadge = () => {
+  return (
+    <>
+      <Typography variant="h5" sx={{ mb: 3 }}>
+        Dot Badge
+      </Typography>
+      <MyContainer>
+        <Box sx={{ color: "action.active" }}>
+          <Badge color="secondary" variant="dot">
+            <MailIcon />
+          </Badge>
+        </Box>
+      </MyContainer>
+    </>
+  );
+};
 
 export const BadgeMax = () => {
   return (
