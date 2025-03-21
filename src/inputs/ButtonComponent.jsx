@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import { styled, useTheme } from '@mui/material/styles'
 import {
     Stack,
@@ -72,15 +73,14 @@ export const CustomizedButtons = () => {
     });
 
     return (
-        <>
-            <Typography variant='body1'>Customized Buttons</Typography>
+        <MyContainer title="Customized Buttons">
             <Stack spacing={2} direction="row">
                 <ColorButton variant="contained">Custom CSS</ColorButton>
                 <BootstrapButton variant="contained" disableRipple>
                     Bootstrap
                 </BootstrapButton>
             </Stack>
-        </>
+        </MyContainer>
     );
 }
 
@@ -91,8 +91,7 @@ export const LoadingButtonsTransition = () => {
     }
 
     return (
-        <>
-            <Typography variant='body1'>Loading Buttons Transition</Typography>
+        <MyContainer title="Loading Buttons Transition">
             <div>
                 <FormControlLabel
                     sx={{ display: 'block' }}
@@ -185,7 +184,7 @@ export const LoadingButtonsTransition = () => {
                     </Button>
                 </Box>
             </div>
-        </>
+        </MyContainer>
     )
 }
 
@@ -203,8 +202,7 @@ export const InputFileUpload = () => {
     });
 
     return (
-        <>
-            <Typography variant='body1'>Input File Upload</Typography>
+        <MyContainer title="Input File Upload">
             <Button
                 component="label"
                 role={undefined}
@@ -219,7 +217,7 @@ export const InputFileUpload = () => {
                     multiple
                 />
             </Button>
-        </>
+        </MyContainer>
     )
 }
 
@@ -232,13 +230,12 @@ export const IconButtonWithBadge = () => {
     `;
 
     return (
-        <>
-            <Typography variant='body1'>Icon Button with Badge</Typography>
+        <MyContainer title="Icon Button with Badge">
             <IconButton>
                 <ShoppingCartOutlinedIcon fontSize="small" />
                 <CartBadge badgeContent={2} color="primary" overlap="circular" />
             </IconButton>
-        </>
+        </MyContainer>
     )
 }
 
@@ -251,21 +248,19 @@ export const LoadingIconButton = () => {
         return () => clearTimeout(timeout);
     });
     return (
-        <>
-            <Typography variant='body1'>Loading Icon Button</Typography>
+        <MyContainer title="Loading Icon Button">
             <Tooltip title="Cleck to see loading">
                 <IconButton onClick={() => setLoading(true)} loading={loading}>
                     <ShoppingCartIcon />
                 </IconButton>
             </Tooltip>
-        </>
+        </MyContainer>
     );
 }
 
 export const IconButtonColors = () => {
     return (
-        <>
-            <Typography variant='body1'>Icon Button Colors</Typography>
+        <MyContainer title="Icon Button Colors">
             <Stack direction="row" spacing={1}>
                 <IconButton aria-label="fingerprint" color="secondary">
                     <Fingerprint />
@@ -274,14 +269,13 @@ export const IconButtonColors = () => {
                     <Fingerprint />
                 </IconButton>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const IconButtonSizes = () => {
     return (
-        <>
-            <Typography variant='body1'>Icon Button Sizes</Typography>
+        <MyContainer title="Icon Button Sizes">
             <Stack direction="row" spacing={1} sx={{ alignItems: 'center' }}>
                 <IconButton aria-label="delete" size="small">
                     <DeleteIcon fontSize="inherit" />
@@ -296,14 +290,13 @@ export const IconButtonSizes = () => {
                     <DeleteIcon fontSize="inherit" />
                 </IconButton>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const IconButtons = () => {
     return (
-        <>
-            <Typography variant='body1'>Icon Buttons</Typography>
+        <MyContainer title="Icon Buttons">
             <Stack direction="row" spacing={1}>
                 <IconButton aria-label="delete">
                     <DeleteIcon />
@@ -318,14 +311,13 @@ export const IconButtons = () => {
                     <AddShoppingCartIcon />
                 </IconButton>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const IconLabelButtons = () => {
     return (
-        <>
-            <Typography variant='body1'>Icon Label Buttons</Typography>
+        <MyContainer title="Icon Label Buttons">
             <Stack direction="row" spacing={2}>
                 <Button variant="outlined" startIcon={<DeleteIcon />}>
                     Delete
@@ -334,14 +326,13 @@ export const IconLabelButtons = () => {
                     Send
                 </Button>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const ButtonSizes = () => {
     return (
-        <>
-            <Typography variant='body1'>Buttons Sizes</Typography>
+        <MyContainer title="Buttons Sizes">
             <Box sx={{ '& button': { m: 1 } }}>
                 <div>
                     <Button size="small">Small</Button>
@@ -371,45 +362,42 @@ export const ButtonSizes = () => {
                     </Button>
                 </div>
             </Box>
-        </>
+        </MyContainer>
     )
 }
 
 export const BasicButtons = () => {
     return (
-        <>
-            <Typography variant='body1'>Basic Buttons</Typography>
+        <MyContainer title="Basic Buttons">
             <Stack spacing={2} direction="row">
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
                 <Button variant="outlined">Outlined</Button>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const TextButtons = () => {
     return (
-        <>
-            <Typography variant='body1'>Texts Buttons</Typography>
+        <MyContainer title="Texts Buttons">
             <Stack spacing={2} direction="row">
                 <Button>Primary</Button>
                 <Button disabled>Disabled</Button>
                 <Button href="#text-buttons">Link</Button>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const ColorButtons = () => {
     return (
-        <>
-            <Typography variant='body1'>Color Buttons</Typography>
+        <MyContainer title="Color Buttons">
             <Stack spacing={2} direction="row">
                 <Button color="secondary">Secondary</Button>
                 <Button variant="contained" color="success">Success</Button>
                 <Button variant="outlined" color="error">Error</Button>
             </Stack>
-        </>
+        </MyContainer>
     )
 }
