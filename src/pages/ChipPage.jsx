@@ -10,6 +10,9 @@ import {
     CustomDeleteIconChips,
     AvatarChips,
     IconChips,
+    ColorChips,
+    SizesChips,
+    MultilineChips,
 } from "../data-display/ChipComponent";
 
 const ChipPage = () => {
@@ -21,6 +24,9 @@ const ChipPage = () => {
         <CustomDeleteIconChips />,
         <AvatarChips />,
         <IconChips />,
+        <ColorChips />,
+        <SizesChips />,
+        <MultilineChips />,
     ];
 
     return (

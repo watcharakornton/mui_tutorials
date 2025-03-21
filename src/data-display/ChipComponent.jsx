@@ -3,6 +3,7 @@ import MyContainer from "../component/MyContainer";
 import MyTitle from "../component/MyTitle";
 import {
     Chip,
+    Box,
     Stack,
     Avatar,
 } from "@mui/material";
@@ -11,6 +12,56 @@ import {
     Delete as DeleteIcon,
     Face as FaceIcon,
 } from '@mui/icons-material';
+
+export const MultilineChips = () => {
+    return (
+        <MyContainer title="Multiline Chips">
+            <Box sx={{ width: 100 }}>
+                <Chip 
+                    sx={{
+                        height: 'auto',
+                        '& .MuiChip-label': {
+                            display: 'block',
+                            whiteSpace: 'normal',
+                        },
+                    }}
+                    label="This is a chip that has multiple lines."
+                />
+            </Box>
+        </MyContainer>
+    )
+}
+
+export const SizesChips = () => {
+    return (
+        <MyContainer title="Sizes Chip">
+            <Stack direction="row" spacing={1}>
+                <Chip label="Small" size="small" />
+                <Chip label="Small" size="small" variant="outlined" />
+            </Stack>
+        </MyContainer>
+    );
+}
+
+export const ColorChips = () => {
+    return (
+        <>
+            <MyTitle title="Color Chips" />
+            <MyContainer>
+                <Stack spacing={1} sx={{ alignItems: 'center' }}>
+                    <Stack direction="row" spacing={1}>
+                        <Chip label="primary" color="primary" />
+                        <Chip label="success" color="success" />
+                    </Stack>
+                    <Stack direction="row" spacing={1}>
+                        <Chip label="primary" color="primary" variant="outlined" />
+                        <Chip label="success" color="success" variant="outlined" />
+                    </Stack>
+                </Stack>
+            </MyContainer>
+        </>
+    )
+}
 
 export const IconChips = () => {
     return (
@@ -37,7 +88,7 @@ export const AvatarChips = () => {
                         avatar={<Avatar alt="Natacha" src="src/assets/images/avatar/1.jpg" />}
                         label="Avatar"
                         variant="outlined"
-                     />
+                    />
                 </Stack>
             </MyContainer>
         </>
