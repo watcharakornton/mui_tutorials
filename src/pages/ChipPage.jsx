@@ -13,6 +13,7 @@ import {
     ColorChips,
     SizesChips,
     MultilineChips,
+    ChipsArray,
 } from "../data-display/ChipComponent";
 
 const ChipPage = () => {
@@ -27,6 +28,7 @@ const ChipPage = () => {
         <ColorChips />,
         <SizesChips />,
         <MultilineChips />,
+        <ChipsArray />,
     ];
 
     return (

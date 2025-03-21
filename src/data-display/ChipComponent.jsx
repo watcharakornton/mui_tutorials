@@ -1,4 +1,5 @@
 import * as React from "react";
+import { styled, useTheme } from '@mui/material/styles';
 import MyContainer from "../component/MyContainer";
 import MyTitle from "../component/MyTitle";
 import {
@@ -6,12 +7,68 @@ import {
     Box,
     Stack,
     Avatar,
+    Paper,
 } from "@mui/material";
 import {
     Done as DoneIcon,
     Delete as DeleteIcon,
     Face as FaceIcon,
+    TagFaces as TagFacesIcon,
 } from '@mui/icons-material';
+
+export const ChipsArray = () => {
+    const theme = useTheme();
+
+    const ListItem = styled('li')({
+        margin: theme.spacing(0.5),
+    });
+
+    const [chipdata, setChipData] = React.useState([
+        { key: 0, label: 'Angular' },
+        { key: 1, label: 'jQuery' },
+        { key: 2, label: 'Polymer' },
+        { key: 3, label: 'React' },
+        { key: 4, label: 'Vue.js' },
+    ]);
+
+    const handleDelete = (chipToDelete) => () => {
+        setChipData((chips) => chips.filter((chip) => chip.key !== chipToDelete.key));
+    };
+
+    return (
+        <MyContainer title="Chips Array">
+            <Paper
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap',
+                    listStyle: 'none',
+                    p: 0.5,
+                    m: 0,
+                }}
+                component="ul"
+            >
+                {chipdata.map((data) => {
+                    let icon;
+
+                    if (data.label === 'React') {
+                        icon = <TagFacesIcon />;
+                    }
+                    
+                    return (
+                        <ListItem>
+                            <Chip 
+                                icon={icon}
+                                label={data.label}
+                                onDelete={data.label === 'React' ? undefined : handleDelete(data)}
+                            />
+                        </ListItem>
+                    );
+                })}
+            </Paper>
+        </MyContainer>
+    );
+}
 
 export const MultilineChips = () => {
     return (
