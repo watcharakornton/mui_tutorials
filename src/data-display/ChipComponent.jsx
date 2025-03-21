@@ -56,7 +56,7 @@ export const ChipsArray = () => {
                     }
                     
                     return (
-                        <ListItem>
+                        <ListItem key={data.key}>
                             <Chip 
                                 icon={icon}
                                 label={data.label}
