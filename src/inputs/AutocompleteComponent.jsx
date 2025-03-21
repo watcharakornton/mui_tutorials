@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { TextField, Autocomplete, useAutocomplete, Stack, Box, Typography } from '@mui/material'
+import MyContainer from '../component/MyContainer';
+import { TextField, Autocomplete, Stack, Box, Typography } from '@mui/material'
 
 import { useTheme } from '@mui/material/styles';
 import { styled, lighten, darken } from '@mui/system';
@@ -16,15 +17,16 @@ export const DisabledOptions = () => {
 
     return (
         <>
-            <Typography variant='body1'>Disabled Options</Typography>
-            <Autocomplete
-                options={timeSlots}
-                getOptionDisabled={(option) =>
-                    option === timeSlots[0] || option === timeSlots[2]
-                }
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="Disabled options" />}
-            />
+            <MyContainer title="Disabled Options">
+                <Autocomplete
+                    options={timeSlots}
+                    getOptionDisabled={(option) =>
+                        option === timeSlots[0] || option === timeSlots[2]
+                    }
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label="Disabled options" />}
+                />
+            </MyContainer>
         </>
     )
 }
@@ -57,20 +59,21 @@ export const RenderGroup = () => {
 
     return (
         <>
-            <Typography variant='body1'>Render Group</Typography>
-            <Autocomplete
-                options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
-                groupBy={(option) => option.firstLetter}
-                getOptionLabel={(option) => option.label}
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="With categories" />}
-                renderGroup={(params) => (
-                    <li key={params.key}>
-                        <GroupHeader>{params.group}</GroupHeader>
-                        <GroupItems>{params.children}</GroupItems>
-                    </li>
-                )}
-            />
+            <MyContainer title="Render Group">
+                <Autocomplete
+                    options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+                    groupBy={(option) => option.firstLetter}
+                    getOptionLabel={(option) => option.label}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label="With categories" />}
+                    renderGroup={(params) => (
+                        <li key={params.key}>
+                            <GroupHeader>{params.group}</GroupHeader>
+                            <GroupItems>{params.children}</GroupItems>
+                        </li>
+                    )}
+                />
+            </MyContainer>
         </>
     );
 }
@@ -86,23 +89,23 @@ export const Grouped = () => {
 
     return (
         <>
-            <Typography variant='body1'>Grouped</Typography>
-            <Autocomplete
-                options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
-                groupBy={(option) => option.firstLetter}
-                getOptionLabel={(option) => option.label}
-                sx={{ width: 300 }}
-                renderInput={(params) => <TextField {...params} label="With categories" />
-                }
-            />
+            <MyContainer title="Grouped">
+                <Autocomplete
+                    options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+                    groupBy={(option) => option.firstLetter}
+                    getOptionLabel={(option) => option.label}
+                    sx={{ width: 300 }}
+                    renderInput={(params) => <TextField {...params} label="With categories" />
+                    }
+                />
+            </MyContainer>
         </>
     );
 }
 
 export const CountrySelect = () => {
     return (
-        <>
-            <Typography variant='body1'>Country Select</Typography>
+        <MyContainer title="Country Select">
             <Autocomplete
                 id="country-select-demo"
                 sx={{ width: 300 }}
@@ -142,8 +145,7 @@ export const CountrySelect = () => {
                     />
                 )}
             />
-        </>
-
+        </MyContainer>
     );
 }
 
@@ -159,8 +161,7 @@ export const Playground = () => {
     const [value, setValue] = React.useState(null);
 
     return (
-        <>
-            <Typography variant='body1'>Playground</Typography>
+        <MyContainer title="Playground">
             <Stack spacing={1} sx={{ width: 300 }}>
                 <Autocomplete
                     {...defaultProps}
@@ -295,20 +296,19 @@ export const Playground = () => {
                     )}
                 />
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
 export const ComboBox = () => {
     return (
-        <>
-            <Typography variant='body1'>Combo Box</Typography>
+        <MyContainer title="Combo Box">
             <Autocomplete
                 disablePortal
                 options={top100Films}
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Movie" />}
             />
-        </>
+        </MyContainer>
     );
 }

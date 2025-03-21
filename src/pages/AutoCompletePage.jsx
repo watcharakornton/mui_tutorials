@@ -1,31 +1,52 @@
 import * as React from 'react'
-import { Container, Stack, Divider, Button } from '@mui/material';
+import { Container, Grid, Divider, Button, Typography } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { ComboBox, Playground, CountrySelect, Grouped, RenderGroup, DisabledOptions } from "../inputs/AutocompleteComponent"
+import {
+    ComboBox,
+    Playground,
+    CountrySelect,
+    Grouped,
+    RenderGroup,
+    DisabledOptions,
+} from '../inputs/AutocompleteComponent';
 
 const AutoCompletePage = () => {
+    const sections = [
+        <ComboBox />,
+        <Playground />,
+        <CountrySelect />,
+        <Grouped />,
+        <RenderGroup />,
+        <DisabledOptions />,
+    ];
+
     return (
         <Container maxWidth="sm">
-            <Stack
-                spacing={3}
+            <Grid
+                container
                 alignItems="center"
                 justifyContent="center"
                 sx={{ minHeight: "100vh" }}
             >
-                <ComboBox />
-                <Divider sx={{ width: "100%" }} />
-                <Playground />
-                <Divider sx={{ width: "100%" }} />
-                <CountrySelect />
-                <Divider sx={{ width: "100%" }} />
-                <Grouped />
-                <Divider sx={{ width: "100%" }} />
-                <RenderGroup />
-                <Divider sx={{ width: "100%" }} />
-                <DisabledOptions />
-                <Divider sx={{ width: "100%" }} />
-                <Button size="large" startIcon={<ChevronLeftIcon />} href="/">Back</Button>
-            </Stack>
+                <Grid item xs={12}>
+                    <Typography variant="h3" align="center" sx={{ mt: 5 }}>
+                        Auto Complete Page
+                    </Typography>
+                </Grid>
+                {sections.map((Component, index) => (
+                    <React.Fragment key={index}>
+                        <Grid item xs={12} sx={{ mt: 5 }}>
+                            {Component}
+                            <Divider sx={{ mt: 3, width: "100%" }} />
+                        </Grid>
+                    </React.Fragment>
+                ))}
+                <Grid item xs={12} sx={{ my: 5 }}>
+                    <Button size="large" startIcon={<ChevronLeftIcon />} href="/">
+                        Back
+                    </Button>
+                </Grid>
+            </Grid>
         </Container>
     )
 }
