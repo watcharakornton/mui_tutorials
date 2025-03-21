@@ -9,7 +9,22 @@ import {
 import {
     Done as DoneIcon,
     Delete as DeleteIcon,
+    Face as FaceIcon,
 } from '@mui/icons-material';
+
+export const IconChips = () => {
+    return (
+        <>
+            <MyTitle title="Icon Chips" />
+            <MyContainer>
+                <Stack direction="row" spacing={1}>
+                    <Chip icon={<FaceIcon />} label="With Icon" />
+                    <Chip icon={<FaceIcon />} label="With Icon" variant="outlined" />
+                </Stack>
+            </MyContainer>
+        </>
+    )
+}
 
 export const AvatarChips = () => {
     return (
