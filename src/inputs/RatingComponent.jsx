@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import PropTypes from 'prop-types';
 import { styled, useTheme } from '@mui/material/styles';
 import {
@@ -60,8 +61,7 @@ export const RadioGroupRating = () => {
     }
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Radio Group Rating</Typography>
+        <MyContainer title="Radio Group Rating">
             <StyledRating 
                 name="highlight-selected-only"
                 defaultValue={2}
@@ -69,7 +69,7 @@ export const RadioGroupRating = () => {
                 getLabelText={(value) => customIcons[value].label}
                 highlightSelectedOnly
             />
-        </>
+        </MyContainer>
     )
 }
 
@@ -84,8 +84,7 @@ export const CustomizedRating = () => {
     });
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Customized Rating</Typography>
+        <MyContainer title="Customized Rating">
             <Box sx={{ '& > legend': { mt: 2 } }}>
                 <Typography component="legend">Custom icon and color</Typography>
                 <StyledRating
@@ -99,20 +98,19 @@ export const CustomizedRating = () => {
                 <Typography component="legend">10 stars</Typography>
                 <Rating name="customized-10" defaultValue={2} max={10} />
             </Box>
-        </>
+        </MyContainer>
     );
 }
 
 export const RatingSize = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Rating Size</Typography>
+        <MyContainer title="Rating Size">
             <Stack spacing={1}>
                 <Rating name="size-small" defaultValue={2} size="small" />
                 <Rating name="size-medium" defaultValue={2} />
                 <Rating name="size-large" defaultValue={2} size="large" />
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
@@ -138,8 +136,7 @@ export const HoverRating = () => {
     }
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Hover Rating</Typography>
+        <MyContainer title="Hover Rating">
             <Box sx={{ width: 200, display: 'flex', alignItems: 'center' }}>
                 <Rating
                     name="hover-feedback"
@@ -158,19 +155,18 @@ export const HoverRating = () => {
                     <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
                 )}
             </Box>
-        </>
+        </MyContainer>
     );
 }
 
 export const HalfRating = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Half Rating</Typography>
+        <MyContainer title="Half Rating">
             <Stack spacing={1}>
                 <Rating name="half-rating" defaultValue={2.5} precision={0.5} />
                 <Rating name="half-rating-read" defaultValue={2.5} precision={0.5} readOnly />
             </Stack>
-        </>
+        </MyContainer>
     )
 }
 
@@ -178,8 +174,7 @@ export const BasicRating = () => {
     const [value, setValue] = React.useState(2);
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Basic Rating</Typography>
+        <MyContainer title="Basic Rating">
             <Box sx={{ '& > legend': { mt: 2 } }}>
                 <Typography component="legend">Controlled</Typography>
                 <Rating
@@ -204,6 +199,6 @@ export const BasicRating = () => {
                 <Typography component="legend">No rating given</Typography>
                 <Rating name="no-value" value={null} />
             </Box>
-        </>
+        </MyContainer>
     );
 }
