@@ -3,12 +3,14 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    IntroDivider
+    IntroDivider,
+    DividerVariants,
 } from "../data-display/DividerComponent";
 
 const DividerPage = () => {
     const sections = [
-        <IntroDivider />
+        <IntroDivider />,
+        <DividerVariants />,
     ];
 
     return (
@@ -28,7 +30,7 @@ const DividerPage = () => {
                     <React.Fragment key={index}>
                         <Grid item xs={12} sx={{ mt: 5 }}>
                             {Component}
-                            <Divider sx={{ mt: 3, width: "100%" }} />
+                            {/* <Divider sx={{ mt: 3, width: "100%" }} /> */}
                         </Grid>
                     </React.Fragment>
                 ))}
