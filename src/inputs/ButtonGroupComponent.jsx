@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import {
     Button,
     ButtonGroup,
@@ -49,8 +50,7 @@ export const SplitButton = () => {
     }
 
     return (
-        <>
-            <Typography variant='body1'>Split Button</Typography>
+        <MyContainer title="Split Button">
             <React.Fragment>
                 <ButtonGroup
                     variant="contained"
@@ -105,14 +105,13 @@ export const SplitButton = () => {
                     )}
                 </Popper>
             </React.Fragment>
-        </>
+        </MyContainer>
     )
 }
 
 export const GroupOrientation = () => {
     return (
-        <>
-            <Typography variant='body1'>Group Orientation</Typography>
+        <MyContainer title="Group Orientation">
             <Box
                 sx={{
                     display: 'flex',
@@ -139,15 +138,13 @@ export const GroupOrientation = () => {
                     {buttons}
                 </ButtonGroup>
             </Box>
-        </>
+        </MyContainer>
     )
 }
 
 export const GroupSizesColors = () => {
-
     return (
-        <>
-            <Typography variant='body1'>Group Sizes Colors</Typography>
+        <MyContainer title="Group Sizes Color">
             <Box
                 sx={{
                     display: 'flex',
@@ -168,14 +165,13 @@ export const GroupSizesColors = () => {
                     {buttons}
                 </ButtonGroup>
             </Box>
-        </>
+        </MyContainer>
     )
 }
 
 export const VariantButtonGroup = () => {
     return (
-        <>
-            <Typography variant='body1'>Varaint Button Group</Typography>
+        <MyContainer title="Variant Button Group">
             <Box
                 sx={{
                     display: 'flex',
@@ -197,19 +193,18 @@ export const VariantButtonGroup = () => {
                     <Button>Three</Button>
                 </ButtonGroup>
             </Box>
-        </>
+        </MyContainer>
     )
 }
 
 export const BasicButtonGroup = () => {
     return (
-        <>
-            <Typography variant='body1'>Basic Button Group</Typography>
+        <MyContainer title="Basic Button Group">
             <ButtonGroup variant="contained" aria-label="Basic button group">
                 <Button>One</Button>
                 <Button>Two</Button>
                 <Button>Three</Button>
             </ButtonGroup>
-        </>
+        </MyContainer>
     );
 }

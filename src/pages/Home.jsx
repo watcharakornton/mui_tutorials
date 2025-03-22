@@ -18,6 +18,7 @@ const CardComponent = ({ title, href, isTemplate }) => {
         minWidth: 275,
         bgcolor: isTemplate ? "#6E6E6E" : "background.default",
         color: isTemplate ? "white" : "text.primary",
+        borderRadius: '12px 12px 1px 1px'
       }}
     >
       <CardContent>
