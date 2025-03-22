@@ -7,10 +7,74 @@ import {
     Chip,
     Stack,
     Divider,
+    dividerClasses,
     List,
     ListItem,
     ListItemText,
 } from "@mui/material";
+
+import {
+    FormatAlignLeft as FormatAlignLeftIcon,
+    FormatAlignCenter as FormatAlignCenterIcon,
+    FormatAlignRight as FormatAlignRightIcon,
+    FormatBold as FormatBoldIcon,
+    FormatItalic as FormatItalicIcon,
+} from '@mui/icons-material';
+
+export const FlexDivider = () => {
+    return (
+        <MyContainer title="Flex Divider">
+            <Box
+                sx={{
+                    display: 'inline-flex',
+                    alignitems: 'center',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    borderRadius: 2,
+                    bgcolor: 'background.paper',
+                    color: 'text.secondary',
+                    '& svg': {
+                        m: 1,
+                    },
+                }}
+            >
+                <FormatBoldIcon />
+                <Divider orientation="vertical" variant="middle" flexItem />
+                <FormatItalicIcon />
+            </Box>
+        </MyContainer>
+    )
+}
+
+export const VerticalDividers = () => {
+    return (
+        <MyContainer title="Vertical Dividers">
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    borderRadius: 1,
+                    bgcolor: 'background.paper',
+                    color: 'text.secondary',
+                    '& svg': {
+                        m: 1,
+                    },
+                    [`& .${dividerClasses.root}`]: {
+                        mx: 0.5,
+                    },
+                }}
+            >
+                <FormatAlignLeftIcon />
+                <FormatAlignCenterIcon />
+                <FormatAlignRightIcon />
+                <Divider orientation="vertical" flexItem />
+                <FormatBoldIcon />
+            </Box>
+        </MyContainer>
+    )
+}
 
 export const DividerVariants = () => {
     const style = {

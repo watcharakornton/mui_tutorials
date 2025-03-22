@@ -5,12 +5,16 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     IntroDivider,
     DividerVariants,
+    VerticalDividers,
+    FlexDivider,
 } from "../data-display/DividerComponent";
 
 const DividerPage = () => {
     const sections = [
         <IntroDivider />,
         <DividerVariants />,
+        <VerticalDividers />,
+        <FlexDivider />,
     ];
 
     return (
