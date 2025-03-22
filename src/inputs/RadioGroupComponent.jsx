@@ -1,4 +1,5 @@
 import * as React from 'react'
+import MyContainer from '../component/MyContainer';
 import {
     Typography,
     Radio,
@@ -74,8 +75,7 @@ export const CustomizedRadios = () => {
     }
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Error Radios</Typography>
+        <MyContainer title="Customized Radios">
             <FormControl>
                 <FormLabel id="demo-customized-radios">Gender</FormLabel>
                 <RadioGroup
@@ -94,7 +94,7 @@ export const CustomizedRadios = () => {
                     />
                 </RadioGroup>
             </FormControl>
-        </>
+        </MyContainer>
     );
 }
 
@@ -125,8 +125,7 @@ export const ErrorRadios = () => {
     };
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Error Radios</Typography>
+        <MyContainer title="Error Radios">
             <form onSubmit={handleSubmit}>
                 <FormControl sx={{ m: 3 }} error={error} variant="standard">
                     <FormLabel id="demo-error-radios">Pop quiz: MUI is...</FormLabel>
@@ -145,14 +144,13 @@ export const ErrorRadios = () => {
                     </Button>
                 </FormControl>
             </form>
-        </>
+        </MyContainer>
     );
 }
 
 export const FormControlLabelPlacement = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Form Control Label Placement</Typography>
+        <MyContainer title="Form Control Label Placement">
             <FormControl>
                 <FormLabel id="demo-form-control-label-placement">Label placement</FormLabel>
                 <RadioGroup
@@ -170,7 +168,7 @@ export const FormControlLabelPlacement = () => {
                     <FormControlLabel value="end" control={<Radio />} label="End" />
                 </RadioGroup>
             </FormControl>
-        </>
+        </MyContainer>
     );
 }
 
@@ -190,8 +188,7 @@ export const ColorRadioButtons = () => {
     });
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Color Radio Buttons</Typography>
+        <MyContainer title="Color Radio Buttons">
             <Radio {...controlProps('a')} />
             <Radio {...controlProps('b')} color="secondary" />
             <Radio {...controlProps('c')} color="success" />
@@ -205,7 +202,7 @@ export const ColorRadioButtons = () => {
                     },
                 }}
             />
-        </div>
+        </MyContainer>
     )
 }
 
@@ -224,8 +221,7 @@ export const SizeRadioButtons = () => {
     });
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Size Radio Buttons</Typography>
+        <MyContainer title="Size Radio Buttons">
             <Radio {...controlProps('a')} size="small" />
             <Radio {...controlProps('b')} />
             <Radio
@@ -236,7 +232,7 @@ export const SizeRadioButtons = () => {
                     },
                 }}
             />
-        </div>
+        </MyContainer>
     )
 }
 
@@ -248,8 +244,7 @@ export const RadioButtons = () => {
     };
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Radio Buttons</Typography>
+        <MyContainer title="Radio Buttons">
             <div>
                 <Radio
                     checked={selectedValue === 'a'}
@@ -266,7 +261,7 @@ export const RadioButtons = () => {
                     inputProps={{ 'aria-label': 'B' }}
                 />
             </div>
-        </>
+        </MyContainer>
     )
 }
 
@@ -278,8 +273,7 @@ export const ControlledRadioButtonsGroup = () => {
     };
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Controlled Radio Buttons Group</Typography>
+        <MyContainer title="Controlled Radio Button Group">
             <FormControl>
                 <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
                 <RadioGroup
@@ -292,14 +286,13 @@ export const ControlledRadioButtonsGroup = () => {
                     <FormControlLabel value="male" control={<Radio />} label="Male" />
                 </RadioGroup>
             </FormControl>
-        </>
+        </MyContainer>
     );
 }
 
 export const RowRadioButtonsGroup = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Row Radio Buttons Group</Typography>
+        <MyContainer title="Row Radio Buttons Group">
             <FormControl>
                 <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>
                 <RadioGroup
@@ -318,14 +311,13 @@ export const RowRadioButtonsGroup = () => {
                     />
                 </RadioGroup>
             </FormControl>
-        </>
+        </MyContainer>
     )
 }
 
 export const RadioButtonsGroup = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Radio Buttons Group</Typography>
+        <MyContainer title="Radio Buttons Group">
             <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">Gender</FormLabel>
                 <RadioGroup
@@ -338,6 +330,6 @@ export const RadioButtonsGroup = () => {
                     <FormControlLabel value="other" control={<Radio />} label="Other" />
                 </RadioGroup>
             </FormControl>
-        </>
+        </MyContainer>
     )
 }
