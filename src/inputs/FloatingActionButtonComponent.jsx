@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import PropTypes from 'prop-types';
 import { useTheme } from '@mui/material/styles';
 import {
@@ -98,8 +99,7 @@ export const FloatingActionButtonZoom = () => {
     ];
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 2 }}>Floating Action Button Zoom</Typography>
+        <MyContainer title="Floating Action Button Zoom">
             <Box
                 sx={{
                     bgcolor: 'background.paper',
@@ -147,14 +147,13 @@ export const FloatingActionButtonZoom = () => {
                     </Zoom>
                 ))}
             </Box>
-        </>
+        </MyContainer>
     );
 }
 
 export const FloatingActionButtonExtendedSize = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 2 }}>Floating Action Button Extended Size</Typography>
+        <MyContainer title="Aloting Action Button Extended Sizes">
             <Box sx={{ '& > :not(style)': { m: 1 } }}>
                 <Fab variant="extended" size="small" color="primary">
                     <NavigationIcon sx={{ mr: 1 }} />
@@ -169,14 +168,13 @@ export const FloatingActionButtonExtendedSize = () => {
                     Extended
                 </Fab>
             </Box>
-        </>
+        </MyContainer>
     )
 }
 
 export const FloatingActionButtonSize = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 2 }}>Floating Action Button Size</Typography>
+        <MyContainer title="Floating Action Button Size">
             <Box sx={{ '& > :not(style)': { m: 1 } }}>
                 <Fab size="small" color="secondary" aria-label="add">
                     <AddIcon />
@@ -188,14 +186,13 @@ export const FloatingActionButtonSize = () => {
                     <AddIcon />
                 </Fab>
             </Box>
-        </>
+        </MyContainer>
     );
 }
 
 export const FloatingActionButtons = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 2 }}>Floating Action Buttons</Typography>
+        <MyContainer title="Floating Action Buttons">
             <Box sx={{ '& > :not(style)': { m: 1 } }}>
                 <Fab color="primary" aria-label="add">
                     <AddIcon />
@@ -211,6 +208,6 @@ export const FloatingActionButtons = () => {
                     <FavoriteIcon />
                 </Fab>
             </Box>
-        </>
+        </MyContainer>
     );
 }

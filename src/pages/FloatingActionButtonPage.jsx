@@ -18,7 +18,7 @@ const CheckboxPage = () => {
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
