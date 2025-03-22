@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import {
     Box,
     Checkbox,
@@ -86,19 +87,17 @@ export const CustomizedCheckbox = () => {
     }
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>CustomizedCheckbox</Typography>
+        <MyContainer title="Customized Checkbox">
             <BpCheckbox />
             <BpCheckbox defaultChecked />
             <BpCheckbox disabled />
-        </div>
+        </MyContainer>
     )
 }
 
 export const FormControlLabelPosition = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Form Control Label Position</Typography>
+        <MyContainer title="Form Control Label Position">
             <FormControl component="fieldset">
                 <FormLabel component="legend">Label placement</FormLabel>
                 <FormGroup aria-label="position" row>
@@ -116,7 +115,7 @@ export const FormControlLabelPosition = () => {
                     />
                 </FormGroup>
             </FormControl>
-        </>
+        </MyContainer>
     );
 }
 
@@ -149,27 +148,27 @@ export const IndeterminateCheckbox = () => {
     );
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Indeterminate Checkbox</Typography>
-            <FormControlLabel
-                label="Parent"
-                control={
-                    <Checkbox
-                        checked={checked[0] && checked[1]}
-                        indeterminate={checked[0] !== checked[1]}
-                        onChange={handleChange1}
-                    />
-                }
-            />
-            {children}
-        </div>
+        <MyContainer title="Indeterminate Checkbox">
+            <div>
+                <FormControlLabel
+                    label="Parent"
+                    control={
+                        <Checkbox
+                            checked={checked[0] && checked[1]}
+                            indeterminate={checked[0] !== checked[1]}
+                            onChange={handleChange1}
+                        />
+                    }
+                />
+                {children}
+            </div>
+        </MyContainer>
     );
 }
 
 export const IconCheckboxes = () => {
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Icon Checkboxes</Typography>
+        <MyContainer title="Icon Checkboxes">
             <Checkbox
                 {...label} icon={<FavoriteBorder />}
                 checkedIcon={<Favorite />}
@@ -191,14 +190,13 @@ export const IconCheckboxes = () => {
                     },
                 }}
             />
-        </div>
+        </MyContainer>
     );
 }
 
 export const ColorCheckboxes = () => {
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Color Checkboxes</Typography>
+        <MyContainer title="Color Checkboxes">
             <Checkbox {...label} defaultChecked />
             <Checkbox {...label} defaultChecked color="secondary" />
             <Checkbox {...label} defaultChecked color="success" />
@@ -213,14 +211,13 @@ export const ColorCheckboxes = () => {
                     },
                 }}
             />
-        </div>
+        </MyContainer>
     );
 }
 
 export const SizeCheckboxes = () => {
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Size Checkboxes</Typography>
+        <MyContainer title="Size Checkboxes">
             <Checkbox {...label} defaultChecked size="small" />
             <Checkbox {...label} defaultChecked />
             <Checkbox
@@ -228,33 +225,31 @@ export const SizeCheckboxes = () => {
                 defaultChecked
                 sx={{ '& .MuiSvgIcon-root': { fontSize: 28 } }}
             />
-        </div>
+        </MyContainer>
     );
 }
 
 export const CheckboxLabels = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Checkbox Labels</Typography>
+        <MyContainer title="Checkbox Labels">
             <FormGroup>
                 <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
                 <FormControlLabel required control={<Checkbox />} label="Required" />
                 <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
             </FormGroup>
-        </>
+        </MyContainer>
     )
 }
 
 export const Checkboxes = () => {
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Checkboxes</Typography>
+        <MyContainer title="Checkboxes">
             <div>
                 <Checkbox {...label} defaultChecked />
                 <Checkbox {...label} />
                 <Checkbox {...label} disabled />
                 <Checkbox {...label} disabled checked />
             </div>
-        </>
+        </MyContainer>
     )
 }
