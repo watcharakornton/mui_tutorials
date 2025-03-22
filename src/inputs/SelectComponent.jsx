@@ -1,4 +1,5 @@
 import * as React from 'react';
+import MyContainer from '../component/MyContainer';
 import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
@@ -56,8 +57,7 @@ function getStyles(name, personName, theme) {
 
 export const GroupedSelect = () => {
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Grouped Select</Typography>
+        <MyContainer title="Grouped Select">
             <FormControl sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel htmlFor="grouped-native-select">Grouping</InputLabel>
                 <Select native defaultValue="" id="grouped-native-select" label="Grouping">
@@ -73,7 +73,7 @@ export const GroupedSelect = () => {
                 </Select>
             </FormControl>
             <FormControl sx={{ m: 1, minWidth: 120 }}>
-                <InputLabel hrmlFor="grouped-select">Grouping</InputLabel>
+                <InputLabel htmlFor="grouped-select">Grouping</InputLabel>
                 <Select defaultValue="" id="grouped-select" label="Grouping">
                     <MenuItem value="">
                         <em>None</em>
@@ -86,7 +86,7 @@ export const GroupedSelect = () => {
                     <MenuItem value={4}>Option 4</MenuItem>
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -109,8 +109,7 @@ export const DialogSelect = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Dialog Select</Typography>
+        <MyContainer title="Dialog Select">
             <Button onClick={handleClickOpen}>Open select dialog</Button>
             <Dialog disableEscapeKeyDown open={open} onClose={handleClose}>
                 <DialogTitle>Fill the form</DialogTitle>
@@ -154,7 +153,7 @@ export const DialogSelect = () => {
                     <Button onClick={handleClose}>Ok</Button>
                 </DialogActions>
             </Dialog>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -172,8 +171,7 @@ export const MultipleSelectChip = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select Chip</Typography>
+        <MyContainer title="Multiple Select Ship">
             <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
                 <Select
@@ -203,7 +201,7 @@ export const MultipleSelectChip = () => {
                     ))}
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -220,8 +218,7 @@ export const MultipleSelectCheckmarks = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select Checkmarks</Typography>
+        <MyContainer title="Multiple Select Checkmarks">
             <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
                 <Select
@@ -242,7 +239,7 @@ export const MultipleSelectCheckmarks = () => {
                     ))}
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -260,8 +257,7 @@ export const MultipleSelect = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Multiple Select</Typography>
+        <MyContainer title="Multiple Select">
             <FormControl sx={{ m: 1, width: 300 }}>
                 <InputLabel id="demo-multiple-name-label">Name</InputLabel>
                 <Select
@@ -284,7 +280,7 @@ export const MultipleSelect = () => {
                     ))}
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -329,8 +325,7 @@ export const CustomizedSelects = () => {
     });
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Customized Selects</Typography>
+        <MyContainer title="Customized Selects">
             <FormControl sx={{ m: 1 }} variant="standard">
                 <InputLabel htmlFor="demo-customized-textbox">Age</InputLabel>
                 <BootstrapInput id="demo-customized-textbox" />
@@ -366,14 +361,13 @@ export const CustomizedSelects = () => {
                     <option value={30}>Thirty</option>
                 </NativeSelect>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
 export const NativeSelectDemo = () => {
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Native Select Demo</Typography>
+        <MyContainer title="Native Select Demo">
             <Box sx={{ m: 1, minWidth: 120 }}>
                 <FormControl>
                     <InputLabel variant="standard" htmlFor="uncontrolled-native">
@@ -392,7 +386,7 @@ export const NativeSelectDemo = () => {
                     </NativeSelect>
                 </FormControl>
             </Box>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -404,8 +398,7 @@ export const SelectOtherProps = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Select Other Props</Typography>
+        <MyContainer title="Select Other Props">
             <FormControl sx={{ m: 1, minWidth: 120 }} disabled>
                 <InputLabel id="demo-simple-select-disabled-label">Age</InputLabel>
                 <Select
@@ -480,7 +473,7 @@ export const SelectOtherProps = () => {
                 </Select>
                 <FormHelperText>Required</FormHelperText>
             </FormControl>
-        </div>
+        </MyContainer>
     )
 }
 
@@ -492,8 +485,7 @@ export const SelectSmall = () => {
     };
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Select Small</Typography>
+        <MyContainer title="Select Small">
             <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
                 <InputLabel id="demo-select-small-label">Age</InputLabel>
                 <Select
@@ -511,7 +503,7 @@ export const SelectSmall = () => {
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
-        </>
+        </MyContainer>
     );
 }
 
@@ -523,8 +515,7 @@ export const SelectAutoWidth = () => {
     };
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Select Auto Width</Typography>
+        <MyContainer title="Select Auto Width">
             <FormControl sx={{ m: 1, minWidth: 80 }}>
                 <InputLabel id="demo-simple-select-autowidth-label">Age</InputLabel>
                 <Select
@@ -543,7 +534,7 @@ export const SelectAutoWidth = () => {
                     <MenuItem value={22}>Twenty one and a half</MenuItem>
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     );
 }
 
@@ -555,8 +546,7 @@ export const SelectVariants = () => {
     }
 
     return (
-        <div>
-            <Typography variant='body1' sx={{ mb: 3 }}>Select Variants</Typography>
+        <MyContainer title="Select Variants">
             <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
                 <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
                 <Select
@@ -590,7 +580,7 @@ export const SelectVariants = () => {
                     <MenuItem value={30}>Thirty</MenuItem>
                 </Select>
             </FormControl>
-        </div>
+        </MyContainer>
     )
 }
 
@@ -602,24 +592,21 @@ export const BasicSelect = () => {
     };
 
     return (
-        <>
-            <Typography variant='body1' sx={{ mb: 3 }}>Basic Select</Typography>
-            <Box sx={{ m: 1, maxWidth: 120 }}>
-                <FormControl fullWidth>
-                    <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                    <Select
-                        labelId="demo-simple-select-label"
-                        id="demo-simple-select"
-                        value={age}
-                        label="Age"
-                        onChange={handleChange}
-                    >
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
-                    </Select>
-                </FormControl>
-            </Box>
-        </>
+        <MyContainer title="Basic Select">
+            <FormControl sx={{ width: 100 }}>
+                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={age}
+                    label="Age"
+                    onChange={handleChange}
+                >
+                    <MenuItem value={10}>Ten</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+        </MyContainer>
     );
 }

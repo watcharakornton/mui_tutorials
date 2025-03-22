@@ -58,7 +58,6 @@ const SelectPage = () => {
                     <React.Fragment key={index}>
                         <Grid item xs={12} sx={{ mt: 5 }}>
                             {Component}
-                            <Divider sx={{ mt: 3, width: "100%" }} />
                         </Grid>
                     </React.Fragment>
                 ))}
