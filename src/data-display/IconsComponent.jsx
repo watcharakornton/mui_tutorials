@@ -25,22 +25,29 @@ import {
     Stack,
 } from "@mui/material";
 
+// Use this function in SvgIconsColor, SvgIconsSize
+function HomeIcon(props) {
+    return (
+        <SvgIcon {...props}>
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </SvgIcon>
+    )
+};
+
 export const SvgIconsSize = () => {
     return (
-       <MyContainer title="Svg Icons Sizes">
-
-       </MyContainer>
+        <MyContainer title="Svg Icons Sizes">
+            <Stack direction="row" spacing={3} sx={{ alignItems: 'flex-end'}}>
+                <HomeIcon fontSize="small" />
+                <HomeIcon />
+                <HomeIcon fontSize="large" />
+                <HomeIcon sx={{ fontSize: 40 }} />
+            </Stack>
+        </MyContainer>
     )
 }
 
 export const SvgIconsColor = () => {
-    function HomeIcon(props) {
-        return (
-            <SvgIcon {...props}>
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </SvgIcon>
-        )
-    };
 
     return (
         <MyContainer title="Svg Icons Color">
