@@ -3,12 +3,16 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    SvgMaterialIcons
+    SvgMaterialIcons,
+    SvgIconChildren,
+    SvgIconsColor,
 } from "../data-display/IconsComponent";
 
 const IconsPage = () => {
     const sections = [
         <SvgMaterialIcons />,
+        <SvgIconChildren />,
+        <SvgIconsColor />,
     ];
 
     return (
@@ -21,7 +25,7 @@ const IconsPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Icons Page
+                        Divider page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
