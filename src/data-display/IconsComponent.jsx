@@ -2,6 +2,7 @@ import * as React from "react";
 import MyContainer from "../component/MyContainer";
 import { styled, useTheme } from "@mui/material/styles";
 import { pink } from '@mui/material/colors';
+import { createSvgIcon } from '@mui/material/utils';
 import {
     Delete as DeleteIcon,
     DeleteOutlined as DeleteOutlinedIcon,
@@ -33,6 +34,19 @@ function HomeIcon(props) {
         </SvgIcon>
     )
 };
+
+export const CreateSvgIcon = () => {
+    const HomeIcon = createSvgIcon(
+
+    );
+    const PlusIcon = createSvgIcon(
+
+    );
+
+    return (
+        <MyContainer title="Create Svg Icon"></MyContainer>
+    )
+}
 
 export const SvgIconsSize = () => {
     return (

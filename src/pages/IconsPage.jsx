@@ -7,6 +7,7 @@ import {
     SvgIconChildren,
     SvgIconsColor,
     SvgIconsSize,
+    CreateSvgIcon,
 } from "../data-display/IconsComponent";
 
 const IconsPage = () => {
@@ -15,6 +16,7 @@ const IconsPage = () => {
         <SvgIconChildren />,
         <SvgIconsColor />,
         <SvgIconsSize />,
+        <CreateSvgIcon />,
     ];
 
     return (
