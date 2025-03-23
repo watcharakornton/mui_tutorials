@@ -1,7 +1,7 @@
 import * as React from "react";
 import MyContainer from "../component/MyContainer";
 import { styled, useTheme } from "@mui/material/styles";
-import { pink } from '@mui/material/colors';
+import { pink, green } from '@mui/material/colors';
 import { createSvgIcon } from '@mui/material/utils';
 import {
     Delete as DeleteIcon,
@@ -24,6 +24,7 @@ import {
     Box,
     SvgIcon,
     Stack,
+    Icon,
 } from "@mui/material";
 
 // Use this function in SvgIconsColor, SvgIconsSize
@@ -34,12 +35,6 @@ function HomeIcon(props) {
         </SvgIcon>
     )
 };
-
-export const Icons = () => {
-    return (
-        <MyContainer title="Icons"></MyContainer>
-    )
-}
 
 export const CreateSvgIcon = () => {
     const HomeIcon = createSvgIcon(
