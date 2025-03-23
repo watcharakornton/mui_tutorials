@@ -37,21 +37,39 @@ function HomeIcon(props) {
 
 export const CreateSvgIcon = () => {
     const HomeIcon = createSvgIcon(
-
+        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />,
+        'Home',
     );
-    const PlusIcon = createSvgIcon(
 
+    const PlusIcon = createSvgIcon(
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+        >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>,
+        'Plus',
     );
 
     return (
-        <MyContainer title="Create Svg Icon"></MyContainer>
+        <MyContainer title="Create Svg Icon">
+            <Stack direction="row" spacing={3}>
+                <HomeIcon />
+                <HomeIcon color="primary" />
+                <PlusIcon />
+                <PlusIcon color="secondary" />
+            </Stack>
+        </MyContainer>
     )
 }
 
 export const SvgIconsSize = () => {
     return (
         <MyContainer title="Svg Icons Sizes">
-            <Stack direction="row" spacing={3} sx={{ alignItems: 'flex-end'}}>
+            <Stack direction="row" spacing={3} sx={{ alignItems: 'flex-end' }}>
                 <HomeIcon fontSize="small" />
                 <HomeIcon />
                 <HomeIcon fontSize="large" />
