@@ -7,6 +7,8 @@ import {
     DividerVariants,
     VerticalDividers,
     FlexDivider,
+    DividerText,
+    ListDividers,
 } from "../data-display/DividerComponent";
 
 const DividerPage = () => {
@@ -15,6 +17,8 @@ const DividerPage = () => {
         <DividerVariants />,
         <VerticalDividers />,
         <FlexDivider />,
+        <DividerText />,
+        <ListDividers />,
     ];
 
     return (

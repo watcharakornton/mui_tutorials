@@ -1,5 +1,6 @@
 import * as React from "react";
 import MyContainer from "../component/MyContainer";
+import { styled, useTheme } from '@mui/material/styles';
 import {
     Typography,
     Card,
@@ -20,6 +21,74 @@ import {
     FormatBold as FormatBoldIcon,
     FormatItalic as FormatItalicIcon,
 } from '@mui/icons-material';
+
+export const ListDividers = () => {
+    const style = {
+        p: 0,
+        width: '100%',
+        maxWidth: 360,
+        borderRadius: 2,
+        border: '1px solid',
+        borderColor: 'divider',
+        backgroundColor: 'background.paper',
+    };
+
+    return (
+        <MyContainer title="List Dividers">
+            <List sx={style} aria-label="mailbox folders">
+                <ListItem>
+                    <ListItemText primary="Inbox" />
+                </ListItem>
+                <Divider component="li" />
+                <ListItem>
+                    <ListItemText primary="Drafts" />
+                </ListItem>
+                <Divider component="li" />
+                <ListItem>
+                    <ListItemText primary="Trash" />
+                </ListItem>
+                <Divider component="li" />
+                <ListItem>
+                    <ListItemText primary="Spam" />
+                </ListItem>
+            </List>
+        </MyContainer>
+    )
+}
+
+export const DividerText = () => {
+    const theme = useTheme();
+    const Root = styled('div')({
+        width: '90%',
+        ...theme.typography.body2,
+        color: theme.palette.text.secondary,
+        '& > :not(style) ~ :not(style)': {
+            marginTop: theme.spacing(2),
+        },
+    });
+
+    const content = (
+        <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit.`}</p>
+    )
+
+    return (
+        <MyContainer title="Divider Text">
+            <Root>
+                {content}
+                <Divider>CENTER</Divider>
+                {content}
+                <Divider textAlign="left">LEFT</Divider>
+                {content}
+                <Divider textAlign="right">RIGHT</Divider>
+                {content}
+                <Divider>
+                    <Chip label="Chip" size="small" />
+                </Divider>
+                {content}
+            </Root>
+        </MyContainer>
+    )
+}
 
 export const FlexDivider = () => {
     return (
