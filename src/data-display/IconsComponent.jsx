@@ -25,6 +25,14 @@ import {
     Stack,
 } from "@mui/material";
 
+export const SvgIconsSize = () => {
+    return (
+       <MyContainer title="Svg Icons Sizes">
+
+       </MyContainer>
+    )
+}
+
 export const SvgIconsColor = () => {
     function HomeIcon(props) {
         return (
