@@ -18,6 +18,7 @@ import ImageAvatarsPage from "./pages/ImageAvatarsPage";
 import BadgePage from "./pages/BadgePage";
 import ChipPage from "./pages/ChipPage";
 import DividerPage from "./pages/DividerPage";
+import IconsPage from "./pages/IconsPage";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/badge" element={<BadgePage />} />
         <Route path="/chip" element={<ChipPage />} />
         <Route path="/divider" element={<DividerPage />} />
+        <Route path="/icons" element={<IconsPage />} />
       </Routes>
     </Router>
   );
