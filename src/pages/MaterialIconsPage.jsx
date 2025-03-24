@@ -5,12 +5,14 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     MaterialIconsFilled,
     MaterialIconsOutlined,
+    MaterialIconsRounded,
 } from "../data-display/MaterialIconsComponent";
 
 const IconsPage = () => {
     const sections = [
         <MaterialIconsFilled />,
         <MaterialIconsOutlined />,
+        <MaterialIconsRounded />,
     ];
 
     return (
