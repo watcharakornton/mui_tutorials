@@ -24,6 +24,19 @@ import {
     AddBusiness as AddBusinessIcon,
     AddCard as AddCardIcon,
     AddCircle as AddCircleIcon,
+    AddHome as AddHomeIcon,
+    AddHomeWork as AddHomeWorkIcon,
+    AddIcCall as AddIcCallIcon,
+    AddLink as AddLinkIcon,
+    AddLocation as AddLocationIcon,
+    AddLocationAlt as AddLocationAltIcon,
+    AddModerator as AddModeratorIcon,
+    AddPhotoAlternate as AddPhotoAlternateIcon,
+    AddReaction as AddReactionIcon,
+    AddShoppingCart as AddShoppingCartIcon,
+    AddTask as AddTaskIcon,
+    AddToDrive as AddToDriveIcon,
+    AddToHomeScreen as AddToHomeScreenIcon,
 } from "@mui/icons-material";
 // Import Icons Outlined
 import {
@@ -40,8 +53,15 @@ import {
     AccountBalanceOutlined as AccountBalanceIconOutlined,
     AddCircleOutline as AddCircleOutlineIcon,
     AddComment as AddCommentIcon,
+    AddRoad as AddRoadIcon,
 } from '@mui/icons-material';
-import { Typography, Box, Grid } from "@mui/material";
+import {
+    AbcRounded as AbcRoundedIcon,
+    AcUnitRounded as AcUnitRoundedIcon,
+    AccessAlarmRounded as AccessAlarmRoundedIcon,
+    AccessAlarmsRounded as AccessAlarmsRoundedIcon,
+    AccessTimeRounded as AccessTimeRoundedIcon,
+} from '@mui/icons-material'
 
 const iconsSets = {
     filled: [
@@ -72,6 +92,20 @@ const iconsSets = {
         { component: AddCircleIcon, label: "AddCircle" },
         { component: AddCircleOutlineIcon, label: "AddCircleOutline" },
         { component: AddCommentIcon, label: "AddComment" },
+        { component: AddHomeIcon, label: "AddHome" },
+        { component: AddHomeWorkIcon, label: "AddHomeWork" },
+        { component: AddIcCallIcon, label: "AddIcCall" },
+        { component: AddLinkIcon, label: "AddLink" },
+        { component: AddLocationIcon, label: "AddLocation" },
+        { component: AddLocationAltIcon, label: "AddLocationAlt" },
+        { component: AddModeratorIcon, label: "AddModerator" },
+        { component: AddPhotoAlternateIcon, label: "AddPhotoAlternate" },
+        { component: AddReactionIcon, label: "AddReaction" },
+        { component: AddRoadIcon, label: "AddRoad" },
+        { component: AddShoppingCartIcon, label: "AddShoppingCart" },
+        { component: AddTaskIcon, label: "AddTask" },
+        { component: AddToDriveIcon, label: "AddToDrive" },
+        { component: AddToHomeScreenIcon, label: "AddToHomeScreen" },
     ],
     outlined: [
         { component: AbcIconOutlined, label: "AbcOutlined" },
@@ -85,6 +119,13 @@ const iconsSets = {
         { component: AccessibleIconOutlined, label: "AccessibleOutlined" },
         { component: AccessibleForwardIconOutlined, label: "AccessibleForwardOutlined" },
         { component: AccountBalanceIconOutlined, label: "AccountBalanceOutlined" },
+    ],
+    rounded: [
+        { component: AbcRoundedIcon, label: "AbcRounded" },
+        { component: AcUnitRoundedIcon, label: "AcUnitRounded" },
+        { component: AccessAlarmRoundedIcon, label: "AccessAlarmccessAlarm" },
+        { component: AccessAlarmsRoundedIcon, label: "AccessAlarmsRounded" },
+        { component: AccessTimeRoundedIcon, label: "AccessTimeRounded" },
     ]
 }
 
