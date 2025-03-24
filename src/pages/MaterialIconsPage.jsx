@@ -4,15 +4,17 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     MaterialIconsFilled,
+    MaterialIconsOutlined,
 } from "../data-display/MaterialIconsComponent";
 
 const IconsPage = () => {
     const sections = [
         <MaterialIconsFilled />,
+        <MaterialIconsOutlined />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
