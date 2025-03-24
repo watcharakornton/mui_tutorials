@@ -3,12 +3,12 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    MaterialIcons
+    MaterialIconsFilled,
 } from "../data-display/MaterialIconsComponent";
 
 const IconsPage = () => {
     const sections = [
-        <MaterialIcons />,
+        <MaterialIconsFilled />,
     ];
 
     return (
