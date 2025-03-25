@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     BasicList,
+    NestedList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
     const sections = [
         <BasicList />,
+        <NestedList />,
     ];
 
     return (
