@@ -11,6 +11,7 @@ import {
     AlignItemsList,
     CheckboxList,
     CheckboxListSecondary,
+    SwitchListSecondary,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -23,6 +24,7 @@ const IconsPage = () => {
         <AlignItemsList />,
         <CheckboxList />,
         <CheckboxListSecondary />,
+        <SwitchListSecondary />,
     ];
 
     return (

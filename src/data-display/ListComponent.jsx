@@ -19,6 +19,7 @@ import {
     Checkbox,
     Grid,
     Typography,
+    Switch,
 } from '@mui/material';
 
 import {
@@ -34,7 +35,64 @@ import {
     Folder as FolderIcon,
     Delete as DeleteIcon,
     Comment as CommentIcon,
+    Wifi as WifiIcon,
+    Bluetooth as BluetoothIcon,
 } from '@mui/icons-material';
+
+export const SwitchListSecondary = () => {
+    const [checked, setChecked] = React.useState(['wifi']);
+
+    const handleToggle = (value) => () => {
+        const currentIndex = checked.indexOf(value);
+        const newChecked = [...checked];
+
+        if (currentIndex === -1) {
+            newChecked.push(value);
+        } else {
+            newChecked.splice(currentIndex, 1);
+        }
+
+        setChecked(newChecked);
+    };
+
+    return (
+        <MyContainer title="Switch List Secondary">
+            <List 
+                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+                subheader={<ListSubheader>Settings</ListSubheader>}
+            >
+                <ListItem>
+                    <ListItemIcon>
+                        <WifiIcon />
+                    </ListItemIcon>
+                    <ListItemText id="switch-list-label-wifi" primary="Wi-Fi" />
+                    <Switch 
+                        edge="end"
+                        onChange={handleToggle('wifi')}
+                        checked={checked.includes('wifi')}
+                        inputProps={{
+                            'aria-labelledby': 'switch-list-label-wifi',
+                        }}
+                    />
+                </ListItem>
+                <ListItem>
+                    <ListItemIcon>
+                        <BluetoothIcon />
+                    </ListItemIcon>
+                    <ListItemText id="switch-list-label-bluetooth" primary="Bluetooth" />
+                    <Switch 
+                        edge="end"
+                        onChange={handleToggle('bluetooth')}
+                        checked={checked.includes('bluetooth')}
+                        inputProps={{
+                            'aria-labelledby': 'switch-list-label-bluetooth',
+                        }}
+                    />
+                </ListItem>
+            </List>
+        </MyContainer>
+    )
+}
 
 export const CheckboxListSecondary = () => {
     const [checked, setChecked] = React.useState([1]);
