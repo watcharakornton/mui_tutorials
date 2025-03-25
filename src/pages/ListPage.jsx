@@ -15,6 +15,7 @@ import {
     PinnedSubheaderList,
     InsetList,
     VirtualizedList,
+    CustomizedList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -31,6 +32,7 @@ const IconsPage = () => {
         <PinnedSubheaderList />,
         <InsetList />,
         <VirtualizedList />,
+        <CustomizedList />,
     ];
 
     return (
