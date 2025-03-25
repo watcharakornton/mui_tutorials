@@ -9,6 +9,7 @@ import {
     InteractiveList,
     SelectedListItem,
     AlignItemsList,
+    CheckboxList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -19,6 +20,7 @@ const IconsPage = () => {
         <InteractiveList />,
         <SelectedListItem />,
         <AlignItemsList />,
+        <CheckboxList />,
     ];
 
     return (
