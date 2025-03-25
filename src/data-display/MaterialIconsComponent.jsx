@@ -33,6 +33,14 @@ const IconsBox = ({ icons }) => {
     )
 }
 
+export const MaterialIconsSharp = () => {
+    return (
+        <MyContainer title="Material Icons Sharp">
+            <IconsBox icons={iconsSet.sharp} />
+        </MyContainer>
+    )
+}
+
 export const MaterialIconsTwoTone = () => {
     return (
         <MyContainer title="Material Icons Two Tone">

@@ -52,6 +52,20 @@ import {
     AddToQueue as AddToQueueIcon,
     Addchart as AddchartIcon,
     AdfScanner as AdfScannerIcon,
+    // 45
+    Adjust as AdjustIcon,
+    AdminPanelSettings as AdinPanelSettingsIcon,
+    AdsClick as AdsClickIcon,
+    Agriculture as AgricultureIcon,
+    Air as AirIcon,
+    AdminPanelSettings as AdminPanelSettingsIcon,
+    // 50 
+    AirlineSeatFlat as AirlineSeatFlatIcon,
+    AirlineSeatFlatAngled as AirlineSeatFlatAngledIcon,
+    AirlineSeatIndividualSuite as AirlineSeatIndividualSuiteIcon,
+    AirlineSeatLegroomExtra as AirlineSeatLegroomExtraIcon,
+    AirlineSeatLegroomNormal as AirlineSeatLegroomNormalIcon,
+
 } from "@mui/icons-material";
 // Import Icons Outlined
 import {
@@ -60,21 +74,25 @@ import {
     AccessAlarmOutlined as AccessAlarmOutlinedIcon,
     AccessAlarmsOutlined as AccessAlarmsOutlinedIcon,
     AccessTimeOutlined as AccessTimeOutlinedIcon,
+
     AccessTimeFilledOutlined as AccessTimeFilledOutlinedIcon,
     AccessibilityOutlined as AccessibilityOutlinedIcon,
     AccessibilityNewOutlined as AccessibilityNewOutlinedIcon,
     AccessibleOutlined as AccessibleOutlinedIcon,
     AccessibleForwardOutlined as AccessibleForwardOutlinedIcon,
+
     AccountBalanceOutlined as AccountBalanceOutlinedIcon,
     AccountBalanceWalletOutlined as AccountBalanceWalletOutlinedIcon,
     AccountBoxOutlined as AccountBoxOutlinedIcon,
     AccountCircleOutlined as AccountCircleOutlinedIcon,
     AccountTreeOutlined as AccountTreeOutlinedIcon,
+
     AdUnitsOutlined as AdUnitsOutlinedIcon,
     AdbOutlined as AdbOutlinedIcon,
     AddOutlined as AddOutlinedIcon,
     AddAPhotoOutlined as AddAPhotoOutlinedIcon,
     AddAlarmOutlined as AddAlarmOutlinedIcon,
+
 } from '@mui/icons-material';
 // Import Rounded Icons
 import {
@@ -83,21 +101,39 @@ import {
     AccessAlarmRounded as AccessAlarmRoundedIcon,
     AccessAlarmsRounded as AccessAlarmsRoundedIcon,
     AccessTimeRounded as AccessTimeRoundedIcon,
+
     AccessTimeFilledRounded as AccessTimeFilledRoundedIcon,
     AccessibilityRounded as AccessibilityRoundedIcon,
     AccessibilityNewRounded as AccessibilityNewRoundedIcon,
     AccessibleRounded as AccessibleRoundedIcon,
     AccessibleForwardRounded as AccessibleForwardRoundedIcon,
+
     AccountBalanceRounded as AccountBalanceRoundedIcon,
     AccountBalanceWalletRounded as AccountBalanceWalletRoundedIcon,
     AccountBoxRounded as AccountBoxRoundedIcon,
     AccountCircleRounded as AccountCircleRoundedIcon,
     AccountTreeRounded as AccountTreeRoundedIcon,
+
     AdUnitsRounded as AdUnitsRoundedIcon,
     AdbRounded as AdbRoundedIcon,
     AddRounded as AddRoundedIcon,
     AddAPhotoRounded as AddAPhotoRoundedIcon,
     AddAlarmRounded as AddAlarmRoundedIcon,
+
+} from '@mui/icons-material'
+
+import {
+    AbcTwoTone as AbcTwoToneIcon,
+    AcUnitTwoTone as AcUnitTwoToneIcon,
+    AccessAlarmTwoTone as AccessAlarmTwoToneIcon,
+    AccessAlarmsTwoTone as AccessAlarmsTwoToneIcon,
+    AccessTimeTwoTone as AccessTimeTwoToneIcon,
+
+    AccessTimeFilledTwoTone as AccessTimeFilledTwoToneIcon,
+    AccessibilityTwoTone as AccessibilityTwoToneIcon,
+    AccessibilityNewTwoTone as AccessibilityNewTwoToneIcon,
+    AccessibleTwoTone as AccessibleTwoToneIcon,
+    AccessibleForwardTwoTone as AccessibleForwardTwoToneIcon,
 } from '@mui/icons-material'
 
 const iconsSets = {
@@ -125,31 +161,48 @@ const iconsSets = {
         { component: AddIcon, label: "Add" },
         { component: AddAPhotoIcon, label: "AddAPhoto" },
         { component: AddAlarmIcon, label: "AddAlarm" },
+
         { component: AddAlertIcon, label: "AddAlert" },
         { component: AddBoxIcon, label: "AddBox" },
         { component: AddBusinessIcon, label: "AddBusiness" },
         { component: AddCardIcon, label: "AddCard" },
         { component: AddCircleIcon, label: "AddCircle" },
+
         { component: AddCircleOutlineIcon, label: "AddCircleOutline" },
         { component: AddCommentIcon, label: "AddComment" },
         { component: AddHomeIcon, label: "AddHome" },
         { component: AddHomeWorkIcon, label: "AddHomeWork" },
         { component: AddIcCallIcon, label: "AddIcCall" },
+
         { component: AddLinkIcon, label: "AddLink" },
         { component: AddLocationIcon, label: "AddLocation" },
         { component: AddLocationAltIcon, label: "AddLocationAlt" },
         { component: AddModeratorIcon, label: "AddModerator" },
         { component: AddPhotoAlternateIcon, label: "AddPhotoAlternate" },
+
         { component: AddReactionIcon, label: "AddReaction" },
         { component: AddRoadIcon, label: "AddRoad" },
         { component: AddShoppingCartIcon, label: "AddShoppingCart" },
         { component: AddTaskIcon, label: "AddTask" },
         { component: AddToDriveIcon, label: "AddToDrive" },
+
         { component: AddToHomeScreenIcon, label: "AddToHomeScreen" },
         { component: AddToPhotosIcon, label: "AddToPhotos" },
         { component: AddToQueueIcon, label: "AddToQueue" },
         { component: AddchartIcon, label: "Addchart" },
         { component: AdfScannerIcon, label: "AddScanner" },
+
+        { component: AdjustIcon, label: "Adjust" },
+        { component: AdminPanelSettingsIcon, label: "AdminPanelSettings" },
+        { component: AdsClickIcon, label: "AdsClick" },
+        { component: AgricultureIcon, label: "Agriculture" },
+        { component: AirIcon, label: "Air" },
+
+        { component: AirlineSeatFlatIcon, label: "AirlineSeatFlat" },
+        { component: AirlineSeatFlatAngledIcon, label: "AirlineSeatFlatAngled" },
+        { component: AirlineSeatIndividualSuiteIcon, label: "AirlineSeatIndividualSuite" },
+        { component: AirlineSeatLegroomExtraIcon, label: "AirlineSeatLegroomExtra" },
+        { component: AirlineSeatLegroomNormalIcon, label: "AirlineSeatLegroomNormal" },
     ],
     outlined: [
         { component: AbcOutlinedIcon, label: "AbcOutlined" },
@@ -157,16 +210,19 @@ const iconsSets = {
         { component: AccessAlarmOutlinedIcon, label: "AccessAlarmOutlined" },
         { component: AccessAlarmsOutlinedIcon, label: "AccessAlarmsOutlined" },
         { component: AccessTimeOutlinedIcon, label: "AccessTimeOutlined" },
+
         { component: AccessTimeFilledOutlinedIcon, label: "AccessTimeFilledOutlined" },
         { component: AccessibilityOutlinedIcon, label: "AccessibilityOutlined" },
         { component: AccessibilityNewOutlinedIcon, label: "AccessibilityNewOutlined" },
         { component: AccessibleOutlinedIcon, label: "AccessibleOutlined" },
         { component: AccessibleForwardOutlinedIcon, label: "AccessibleForwardOutlined" },
+
         { component: AccountBalanceOutlinedIcon, label: "AccountBalanceOutlined" },
         { component: AccountBalanceWalletOutlinedIcon, label: "AccountBalanceWalletOutlined" },
         { component: AccountBoxOutlinedIcon, label: "AccountBoxOutlined" },
         { component: AccountCircleOutlinedIcon, label: "AccountCircleOutlined" },
         { component: AccountTreeOutlinedIcon, label: "AccountTreeOutlined" },
+
         { component: AdUnitsOutlinedIcon, label: "AdUnitsOutlined" },
         { component: AdbOutlinedIcon, label: "AdbOutlined" },
         { component: AddOutlinedIcon, label: "AddOutlined" },
@@ -179,16 +235,19 @@ const iconsSets = {
         { component: AccessAlarmRoundedIcon, label: "AccessAlarmRounded" },
         { component: AccessAlarmsRoundedIcon, label: "AccessAlarmsRounded" },
         { component: AccessTimeRoundedIcon, label: "AccessTimeRounded" },
+
         { component: AccessTimeFilledRoundedIcon, label: "AccessTimeFilledRounded" },
         { component: AccessibilityRoundedIcon, label: "AccessibilityRounded" },
         { component: AccessibilityNewRoundedIcon, label: "AccessibilityNewRounded" },
         { component: AccessibleRoundedIcon, label: "AccessibleRounded" },
         { component: AccessibleForwardRoundedIcon, label: "AccessibleForwardRounded" },
+
         { component: AccountBalanceRoundedIcon, label: "AccountBalanceRounded" },
         { component: AccountBalanceWalletRoundedIcon, label: "AccountBalanceWalletRounded" },
         { component: AccountBoxRoundedIcon, label: "AccountBoxRounded" },
         { component: AccountCircleRoundedIcon, label: "AccountCircleRounded" },
         { component: AccountTreeRoundedIcon, label: "AccountTreeRounded" },
+
         { component: AdUnitsRoundedIcon, label: "AdUnitsRounded" },
         { component: AdbRoundedIcon, label: "AdbRounded" },
         { component: AddRoundedIcon, label: "AddRounded" },
@@ -196,6 +255,19 @@ const iconsSets = {
         { component: AddAlarmRoundedIcon, label: "AddAlarmRounded" },
     ],
     twotone: [
+        { component: AbcTwoToneIcon, label: "AbcTwoTone" },
+        { component: AcUnitTwoToneIcon, label: "AcUnitTwoTone" },
+        { component: AccessAlarmTwoToneIcon, label: "AccessAlarmTwoTone" },
+        { component: AccessAlarmsTwoToneIcon, label: "AccessAlarmsTwoTone" },
+        { component: AccessTimeTwoToneIcon, label: "AccessTimeTwoTone" },
+
+        { component: AccessTimeFilledTwoToneIcon, label: "AccessTimeFilledTwoTone" },
+        { component: AccessibilityTwoToneIcon, label: "AccessibilityTwoTone" },
+        { component: AccessibilityNewTwoToneIcon, label: "AccessibilityNewTwoTone" },
+        { component: AccessibleTwoToneIcon, label: "AccessibleTwoTone" },
+        { component: AccessibleForwardTwoToneIcon, label: "AccessibleForwardTwoTone" },
+    ],
+    sharp: [
 
     ]
 }

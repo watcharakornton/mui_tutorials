@@ -7,6 +7,7 @@ import {
     MaterialIconsOutlined,
     MaterialIconsRounded,
     MaterialIconsTwoTone,
+    MaterialIconsSharp,
 } from "../data-display/MaterialIconsComponent";
 
 const IconsPage = () => {
@@ -15,6 +16,7 @@ const IconsPage = () => {
         <MaterialIconsOutlined />,
         <MaterialIconsRounded />,
         <MaterialIconsTwoTone />,
+        <MaterialIconsSharp />,
     ];
 
     return (
