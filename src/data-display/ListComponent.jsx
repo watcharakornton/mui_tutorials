@@ -35,6 +35,56 @@ import {
     Delete as DeleteIcon,
 } from '@mui/icons-material';
 
+export const SelectedListItem = () => {
+    const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+    const handleListItemClick = (event, index) => {
+        setSelectedIndex(!index);
+    };
+
+    return (
+        <MyContainer title="Selected List Item">
+            <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                <List component="nav" aria-label="main mailbox folders">
+                    <ListItemButton
+                        selected={selectedIndex === 0}
+                        onClick={(event) => handleListItemClick(event, 0)}
+                    >
+                        <ListItemIcon>
+                            <InboxIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Inbox" />
+                    </ListItemButton>
+                    <ListItemButton
+                        selected={selectedIndex === 1}
+                        onClick={(event) => handleListItemClick(event, 1)}
+                    >
+                        <ListItemIcon>
+                            <DraftsIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Drafts" />
+                    </ListItemButton>
+                </List>
+                <Divider />
+                <List component="nav" aria-label="secondary mailbox folder">
+                    <ListItemButton
+                        selected={selectedIndex === 2}
+                        onClick={(event) => handleListItemClick(event, 2)}
+                    >
+                        <ListItemText primary="Trash" />
+                    </ListItemButton>
+                    <ListItemButton
+                        selected={selectedIndex === 3}
+                        onClick={(event) => handleListItemClick(event, 3)}
+                    >
+                        <ListItemText primary="Spam" />
+                    </ListItemButton>
+                </List>
+            </Box>
+        </MyContainer>
+    );
+}
+
 export const InteractiveList = () => {
     const theme = useTheme();
     const [dense, setDense] = React.useState(false);

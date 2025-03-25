@@ -7,6 +7,7 @@ import {
     NestedList,
     FolderList,
     InteractiveList,
+    SelectedListItem,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -15,10 +16,11 @@ const IconsPage = () => {
         <NestedList />,
         <FolderList />,
         <InteractiveList />,
+        <SelectedListItem />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
