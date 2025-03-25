@@ -62,7 +62,7 @@ const Home = () => {
     { title: "Divider page", href: "/divider" },
     { title: "Icons page", href: "/icons" },
     { title: "Material Icons page", href: "/material-icons" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "List Page", href: "/list" },
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (

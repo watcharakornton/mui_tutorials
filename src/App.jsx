@@ -20,6 +20,7 @@ import ChipPage from "./pages/ChipPage";
 import DividerPage from "./pages/DividerPage";
 import IconsPage from "./pages/IconsPage";
 import MaterialIconsPage from "./pages/MaterialIconsPage";
+import ListPage from "./pages/ListPage";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
         <Route path="/divider" element={<DividerPage />} />
         <Route path="/icons" element={<IconsPage />} />
         <Route path="/material-icons" element={<MaterialIconsPage />} />
+        <Route path="/list" element={<ListPage />} />
       </Routes>
     </Router>
   );
