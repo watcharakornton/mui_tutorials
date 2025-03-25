@@ -14,6 +14,7 @@ import {
     SwitchListSecondary,
     PinnedSubheaderList,
     InsetList,
+    VirtualizedList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -29,6 +30,7 @@ const IconsPage = () => {
         <SwitchListSecondary />,
         <PinnedSubheaderList />,
         <InsetList />,
+        <VirtualizedList />,
     ];
 
     return (

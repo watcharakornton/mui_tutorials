@@ -39,6 +39,39 @@ import {
     Bluetooth as BluetoothIcon,
     Star as StarIcon,
 } from '@mui/icons-material';
+import { FixedSizeList } from 'react-window';
+
+export const VirtualizedList = () => {
+    function renderRow(props) {
+        const { index, style } = props;
+
+        return (
+            <ListItem style={style} key={index} component="div" disablePadding>
+                <ListItemButton>
+                    <ListItemText primary={`Item ${index + 1}`} />
+                </ListItemButton>
+            </ListItem>
+        );
+    }
+
+    return (
+        <MyContainer title="Virtualized List">
+            <Box
+                sx={{ width: '100%', height: 400, maxWidth: 360, bgcolor: 'background.paper' }}
+            >
+                <FixedSizeList
+                    height={400}
+                    width={336}
+                    itemSize={46}
+                    itemCount={200}
+                    overscanCount={5}
+                >
+                    {renderRow}
+                </FixedSizeList>
+            </Box>
+        </MyContainer>
+    )
+}
 
 export const InsetList = () => {
     return (
