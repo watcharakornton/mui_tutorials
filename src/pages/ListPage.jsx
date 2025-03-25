@@ -6,6 +6,7 @@ import {
     BasicList,
     NestedList,
     FolderList,
+    InteractiveList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -13,6 +14,7 @@ const IconsPage = () => {
         <BasicList />,
         <NestedList />,
         <FolderList />,
+        <InteractiveList />,
     ];
 
     return (
