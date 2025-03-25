@@ -37,7 +37,33 @@ import {
     Comment as CommentIcon,
     Wifi as WifiIcon,
     Bluetooth as BluetoothIcon,
+    Star as StarIcon,
 } from '@mui/icons-material';
+
+export const InsetList = () => {
+    return (
+        <MyContainer title="Inset List">
+            <List
+                sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
+                aria-label="contacts"
+            >
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemIcon>
+                            <StarIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Chelsea Otakan" />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton>
+                        <ListItemText primary="Eric Hoffman" />
+                    </ListItemButton>
+                </ListItem>
+            </List>
+        </MyContainer>
+    )
+}
 
 export const PinnedSubheaderList = () => {
     return (
