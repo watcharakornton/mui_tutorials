@@ -8,6 +8,7 @@ import {
     FolderList,
     InteractiveList,
     SelectedListItem,
+    AlignItemsList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -17,6 +18,7 @@ const IconsPage = () => {
         <FolderList />,
         <InteractiveList />,
         <SelectedListItem />,
+        <AlignItemsList />,
     ];
 
     return (
