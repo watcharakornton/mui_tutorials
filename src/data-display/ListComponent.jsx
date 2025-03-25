@@ -36,6 +36,14 @@ import {
     Comment as CommentIcon,
 } from '@mui/icons-material';
 
+export const CheckboxListSecondary = () => {
+    return (
+        <MyContainer title="Checkbox List Secondary">
+
+        </MyContainer>
+    )
+}
+
 export const CheckboxList = () => {
     const [checked, setChecked] = React.useState([0]);
 

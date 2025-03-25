@@ -21,6 +21,7 @@ import DividerPage from "./pages/DividerPage";
 import IconsPage from "./pages/IconsPage";
 import MaterialIconsPage from "./pages/MaterialIconsPage";
 import ListPage from "./pages/ListPage";
+import TablePage from "./pages/TablePage";
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
         <Route path="/icons" element={<IconsPage />} />
         <Route path="/material-icons" element={<MaterialIconsPage />} />
         <Route path="/list" element={<ListPage />} />
+        <Route path="/table" element={<TablePage />} />
       </Routes>
     </Router>
   );

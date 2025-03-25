@@ -3,26 +3,12 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    BasicList,
-    NestedList,
-    FolderList,
-    InteractiveList,
-    SelectedListItem,
-    AlignItemsList,
-    CheckboxList,
-    CheckboxListSecondary,
-} from "../data-display/ListComponent";
+    BasicTable
+} from "../data-display/TableComponent";
 
 const IconsPage = () => {
     const sections = [
-        <BasicList />,
-        <NestedList />,
-        <FolderList />,
-        <InteractiveList />,
-        <SelectedListItem />,
-        <AlignItemsList />,
-        <CheckboxList />,
-        <CheckboxListSecondary />,
+        <BasicTable />,
     ];
 
     return (
@@ -35,7 +21,7 @@ const IconsPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        List Page
+                        Table Page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (

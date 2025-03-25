@@ -62,13 +62,22 @@ const Home = () => {
     { title: "Divider page", href: "/divider" },
     { title: "Icons page", href: "/icons" },
     { title: "Material Icons page", href: "/material-icons" },
-    { title: "List Page", href: "/list" },
+    { title: "List page", href: "/list" },
+    { title: "Table page", href: "/table" },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
     <Container maxWidth="md" sx={{ my: 4, minHeight: "100vh" }}>
-      <Typography variant="h4" sx={{ mb: 3, width: 100, mx: "auto" }}>
-        Inputs
+      <Typography variant="h4" sx={{ mb: 3, width: 200, mx: "auto" }}>
+        Home page
       </Typography>
       <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
         {cards.map((card, index) => (
