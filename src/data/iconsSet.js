@@ -136,6 +136,32 @@ import {
     AccessibleForwardTwoTone as AccessibleForwardTwoToneIcon,
 } from '@mui/icons-material'
 
+import {
+    AbcSharp as AbcSharpIcon,
+    AcUnitSharp as AcUnitSharpIcon,
+    AccessAlarmSharp as AccessAlarmSharpIcon,
+    AccessAlarmsSharp as AccessAlarmsSharpIcon,
+    AccessTimeSharp as AccessTimeSharpIcon,
+    // 5
+    AccessTimeFilledSharp as AccessTimeFilledSharpIcon,
+    AccessibilitySharp as AccessibilitySharpIcon,
+    AccessibilityNewSharp as AccessibilityNewSharpIcon,
+    AccessibleSharp as AccessibleSharpIcon,
+    AccessibleForwardSharp as AccessibleForwardSharpIcon,
+    // 10
+    AccountBalanceSharp as AccountBalanceSharpIcon,
+    AccountBalanceWalletSharp as AccountBalanceWalletSharpIcon,
+    AccountBoxSharp as AccountBoxSharpIcon,
+    AccountCircleSharp as AccountCircleSharpIcon,
+    AccountTreeSharp as AccountTreeSharpIcon,
+    // 15
+    AdUnitsSharp as AdUnitsSharpIcon,
+    AdbSharp as AdbSharpIcon,
+    AddSharp as AddSharpIcon,
+    AddAPhotoSharp as AddAPhotoSharpIcon,
+    AddAlarmSharp as AddAlarmSharpIcon,
+} from '@mui/icons-material'
+
 const iconsSets = {
     filled: [
         { component: AbcIcon, label: "Abc" },
@@ -268,7 +294,29 @@ const iconsSets = {
         { component: AccessibleForwardTwoToneIcon, label: "AccessibleForwardTwoTone" },
     ],
     sharp: [
+        { component: AbcSharpIcon, label: "AbcSharp" },
+        { component: AcUnitSharpIcon, label: "AcUnitSharp" },
+        { component: AccessAlarmSharpIcon, label: "AccessAlarmSharp" },
+        { component: AccessAlarmsSharpIcon, label: "AccessAlarmsSharp" },
+        { component: AccessTimeSharpIcon, label: "AccessTimeSharp" },
 
+        { component: AccessTimeFilledSharpIcon, label: "AccessTimeFilledSharp" },
+        { component: AccessibilitySharpIcon, label: "AccessibilitySharp" },
+        { component: AccessibilityNewSharpIcon, label: "AccessibilityNewSharp" },
+        { component: AccessibleSharpIcon, label: "AccessibleSharp" },
+        { component: AccessibleForwardSharpIcon, label: "AccessibleForwardSharp" },
+
+        { component: AccountBalanceSharpIcon, label: "AccountBalanceSharp" },
+        { component: AccountBalanceWalletSharpIcon, label: "AccountBalanceWalletSharp" },
+        { component: AccountBoxSharpIcon, label: "AccountBoxSharp" },
+        { component: AccountCircleSharpIcon, label: "AccountCircleSharp" },
+        { component: AccountTreeSharpIcon, label: "AccountTreeSharp" },
+
+        { component: AdUnitsSharpIcon, label: "AdUnitsSharp" },
+        { component: AdbSharpIcon, label: "AdbSharp" },
+        { component: AddSharpIcon, label: "AddSharp" },
+        { component: AddAPhotoSharpIcon, label: "AddAPhotoSharp" },
+        { component: AddAlarmSharpIcon, label: "AddAlarmSharp" },
     ]
 }
 
