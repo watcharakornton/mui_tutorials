@@ -12,6 +12,7 @@ import {
     CheckboxList,
     CheckboxListSecondary,
     SwitchListSecondary,
+    PinnedSubheaderList,
 } from "../data-display/ListComponent";
 
 const IconsPage = () => {
@@ -25,6 +26,7 @@ const IconsPage = () => {
         <CheckboxList />,
         <CheckboxListSecondary />,
         <SwitchListSecondary />,
+        <PinnedSubheaderList />,
     ];
 
     return (
