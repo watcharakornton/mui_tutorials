@@ -5,13 +5,14 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     BasicTable,
     DataTable,
-
+    DenseTable,
 } from "../data-display/TableComponent";
 
 const IconsPage = () => {
     const sections = [
         <BasicTable />,
         <DataTable />,
+        <DenseTable />,
     ];
 
     return (
