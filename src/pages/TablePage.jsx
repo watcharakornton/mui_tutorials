@@ -3,12 +3,15 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    BasicTable
+    BasicTable,
+    DataTable,
+
 } from "../data-display/TableComponent";
 
 const IconsPage = () => {
     const sections = [
         <BasicTable />,
+        <DataTable />,
     ];
 
     return (
