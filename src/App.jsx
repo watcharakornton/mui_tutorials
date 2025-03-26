@@ -22,6 +22,7 @@ import IconsPage from "./pages/IconsPage";
 import MaterialIconsPage from "./pages/MaterialIconsPage";
 import ListPage from "./pages/ListPage";
 import TablePage from "./pages/TablePage";
+import TooltipPage from "./pages/TooltipPage"
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/material-icons" element={<MaterialIconsPage />} />
         <Route path="/list" element={<ListPage />} />
         <Route path="/table" element={<TablePage />} />
+        <Route path="/tooltip" element={<TooltipPage />} />
       </Routes>
     </Router>
   );

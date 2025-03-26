@@ -64,7 +64,7 @@ const Home = () => {
     { title: "Material Icons page", href: "/material-icons" },
     { title: "List page", href: "/list" },
     { title: "Table page", href: "/table" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Tooltip page", href: "/tooltip" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },

@@ -3,22 +3,16 @@ import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    BasicTable,
-    DataTable,
-    DenseTable,
-    EnhancedTable,
-} from "../data-display/TableComponent";
+    BasicTooltip,
+} from "../data-display/TooltipComponent";
 
-const TablePage = () => {
+const TooltipPage = () => {
     const sections = [
-        <BasicTable />,
-        <DataTable />,
-        <DenseTable />,
-        <EnhancedTable />,
+        <BasicTooltip />,
     ];
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
             <Grid
                 container
                 alignItems="center"
@@ -27,7 +21,7 @@ const TablePage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Table Page
+                        Tooltip Page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -48,4 +42,4 @@ const TablePage = () => {
     );
 };
 
-export default TablePage;
+export default TooltipPage;
