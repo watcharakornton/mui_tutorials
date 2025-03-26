@@ -8,6 +8,8 @@ import {
     DenseTable,
     EnhancedTable,
     CustomizedTables,
+    CustomPaginationActionsTable,
+    StickyHeadTable,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -17,6 +19,8 @@ const TablePage = () => {
         <DenseTable />,
         <EnhancedTable />,
         <CustomizedTables />,
+        <CustomPaginationActionsTable />,
+        <StickyHeadTable />,
     ];
 
     return (
