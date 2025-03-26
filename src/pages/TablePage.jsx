@@ -6,6 +6,7 @@ import {
     BasicTable,
     DataTable,
     DenseTable,
+    EnhancedTable,
 } from "../data-display/TableComponent";
 
 const IconsPage = () => {
@@ -13,6 +14,7 @@ const IconsPage = () => {
         <BasicTable />,
         <DataTable />,
         <DenseTable />,
+        <EnhancedTable />,
     ];
 
     return (
