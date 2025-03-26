@@ -1,12 +1,13 @@
 import * as React from 'react';
 import MyContainer from "../component/MyContainer";
 import PropTypes from 'prop-types';
-import { alpha } from '@mui/material/styles';
+import { alpha, styled, useTheme } from '@mui/material/styles';
 import {
     Box,
     Table,
     TableBody,
     TableCell,
+    tableCellClasses,
     TableContainer,
     TableHead,
     TablePagination,
@@ -39,6 +40,59 @@ const rows = [
     createData('Cupcake', 305, 3.7, 67, 4.3),
     createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
+
+export const CustomizedTables = () => {
+    const theme = useTheme();
+    const StyledTableCell = styled(TableCell)({
+        [`&.${tableCellClasses.head}`]: {
+            backgroundColor: theme.palette.common.black,
+            color: theme.palette.common.white,
+        },
+        [`&.${tableCellClasses.body}`]: {
+            fontSize: 14,
+        },
+    });
+
+    const StyledTableRow = styled(TableRow)({
+        '&:nth-of-type(odd)': {
+            backgroundColor: theme.palette.action.hover,
+        },
+        '&:last-child td, &:last-child th': {
+            border: 0,
+        },
+    });
+
+    return (
+        <MyContainer title="Customized Tables">
+            <TableContainer component={Paper} sx={{ width: '95%' }}>
+                <Table sx={{ minWidth: 700 }} aria-label="customized table">
+                    <TableHead>
+                        <TableRow>
+                            <StyledTableCell>Dessert (100g serving)</StyledTableCell>
+                            <StyledTableCell align="right">Calories</StyledTableCell>
+                            <StyledTableCell align="right">Fat&nbsp;(g)</StyledTableCell>
+                            <StyledTableCell align="right">Carbs&nbsp;(g)</StyledTableCell>
+                            <StyledTableCell align="right">Protein&nbsp;(g)</StyledTableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {rows.map((row) => (
+                            <StyledTableRow key={row.name}>
+                                <StyledTableCell component="th" scope="row">
+                                    {row.name}
+                                </StyledTableCell>
+                                <StyledTableCell align="right">{row.calories}</StyledTableCell>
+                                <StyledTableCell align="right">{row.fat}</StyledTableCell>
+                                <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+                                <StyledTableCell align="right">{row.protein}</StyledTableCell>
+                            </StyledTableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </TableContainer>
+        </MyContainer>
+    )
+}
 
 export const EnhancedTable = () => {
     function createData(id, name, calories, fat, carbs, protein) {

@@ -7,6 +7,7 @@ import {
     DataTable,
     DenseTable,
     EnhancedTable,
+    CustomizedTables,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -15,6 +16,7 @@ const TablePage = () => {
         <DataTable />,
         <DenseTable />,
         <EnhancedTable />,
+        <CustomizedTables />,
     ];
 
     return (
