@@ -13,6 +13,7 @@ import {
     ColumnGroupingTable,
     CollapsibleTable,
     SpanningTable,
+    ReactVirtualizedTable,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -27,6 +28,7 @@ const TablePage = () => {
         <ColumnGroupingTable />,
         <CollapsibleTable />,
         <SpanningTable />,
+        <ReactVirtualizedTable />,
     ];
 
     return (
