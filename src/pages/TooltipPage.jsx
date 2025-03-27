@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     BasicTooltip,
+    PositionedTooltips,
 } from "../data-display/TooltipComponent";
 
 const TooltipPage = () => {
     const sections = [
         <BasicTooltip />,
+        <PositionedTooltips />,
     ];
 
     return (
