@@ -10,6 +10,7 @@ import {
     CustomizedTables,
     CustomPaginationActionsTable,
     StickyHeadTable,
+    ColumnGroupingTable,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -21,6 +22,7 @@ const TablePage = () => {
         <CustomizedTables />,
         <CustomPaginationActionsTable />,
         <StickyHeadTable />,
+        <ColumnGroupingTable />,
     ];
 
     return (
