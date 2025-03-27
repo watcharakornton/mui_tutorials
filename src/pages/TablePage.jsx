@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Container, Grid, Typography, Button, Divider } from "@mui/material";
+import { Container, Grid, Typography, Button, Divider, Collapse } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
@@ -11,6 +11,7 @@ import {
     CustomPaginationActionsTable,
     StickyHeadTable,
     ColumnGroupingTable,
+    CollapsibleTable,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -23,6 +24,7 @@ const TablePage = () => {
         <CustomPaginationActionsTable />,
         <StickyHeadTable />,
         <ColumnGroupingTable />,
+        <CollapsibleTable />,
     ];
 
     return (
