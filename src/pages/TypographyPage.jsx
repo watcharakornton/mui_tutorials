@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     Types,
+    TypographyTheme,
 } from "../data-display/TypographyComponent";
 
 const TypographyPage = () => {
     const sections = [
         <Types />,
+        <TypographyTheme />,
     ];
 
     return (

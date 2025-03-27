@@ -1,9 +1,25 @@
 import * as React from 'react';
 import MyContainer from "../component/MyContainer";
+import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
     Typography,
 } from '@mui/material'
+
+export const TypographyTheme = () => {
+    const theme = useTheme();
+    const Div = styled('div')({
+        ...theme.typography.button,
+        backgroundColor: (theme.vars || theme).palette.background.paper,
+        padding: theme.spacing(1),
+    });
+
+    return (
+        <MyContainer title="Typography Theme">
+            <Div>{"This div's text looks like that of a button."}</Div>
+        </MyContainer>
+    )
+}
 
 export const Types = () => {
     return (
