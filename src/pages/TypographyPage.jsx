@@ -12,7 +12,7 @@ const TypographyPage = () => {
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
