@@ -24,6 +24,7 @@ import ListPage from "./pages/ListPage";
 import TablePage from "./pages/TablePage";
 import TooltipPage from "./pages/TooltipPage"
 import TypographyPage from "./pages/TypographyPage"
+import AlertPage from "./pages/AlertPage";
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path="/table" element={<TablePage />} />
         <Route path="/tooltip" element={<TooltipPage />} />
         <Route path="/typography" element={<TypographyPage />} />
+        <Route path="/alert" element={<AlertPage />} />
       </Routes>
     </Router>
   );
