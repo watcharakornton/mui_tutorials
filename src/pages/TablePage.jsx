@@ -12,6 +12,7 @@ import {
     StickyHeadTable,
     ColumnGroupingTable,
     CollapsibleTable,
+    SpanningTable,
 } from "../data-display/TableComponent";
 
 const TablePage = () => {
@@ -25,6 +26,7 @@ const TablePage = () => {
         <StickyHeadTable />,
         <ColumnGroupingTable />,
         <CollapsibleTable />,
+        <SpanningTable />,
     ];
 
     return (
