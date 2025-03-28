@@ -10,6 +10,8 @@ import {
     ColorAlerts,
     ActionAlerts,
     IconAlerts,
+    DescriptionAlerts,
+    TransitionAlerts,
 } from "../feedback/AlertComponent";
 
 const AlertPage = () => {
@@ -21,6 +23,8 @@ const AlertPage = () => {
         <ColorAlerts />,
         <ActionAlerts />,
         <IconAlerts />,
+        <DescriptionAlerts />,
+        <TransitionAlerts />,
     ];
 
     return (

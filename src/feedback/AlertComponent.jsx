@@ -1,14 +1,83 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
 import {
+    Box,
     Alert,
+    AlertTitle,
+    IconButton,
+    Collapse,
     Stack,
     Button,
 } from '@mui/material';
 import {
     Check as CheckIcon,
-    CheckCircleOutline as CheckCircleOutlineIcon
+    CheckCircleOutline as CheckCircleOutlineIcon,
+    Close as CloseIcon,
 } from '@mui/icons-material';
+
+export const TransitionAlerts = () => {
+    const [open, setOpen] = React.useState(true);
+
+    return (
+        <MyContainer title="Transition Alerts">
+            <Box sx={{ width: '95%' }}>
+                <Collapse in={open}>
+                    <Alert
+                        action={
+                            <IconButton
+                                aria-label="close"
+                                color="inherit"
+                                size="small"
+                                onClick={() => {
+                                    setOpen(false);
+                                }}
+                            >
+                                <CloseIcon fontSize="inherit" />
+                            </IconButton>
+                        }
+                        sx={{ mb: 2 }}
+                    >
+                        Click the close icon to see the Collapse transition in action!
+                    </Alert>
+                </Collapse>
+                <Button
+                    disabled={open}
+                    variant='outlined'
+                    onClick={() => {
+                        setOpen(true);
+                    }}
+                >
+                    Re-open
+                </Button>
+            </Box>
+        </MyContainer>
+    );
+}
+
+export const DescriptionAlerts = () => {
+    return (
+        <MyContainer title="Description Alerts">
+            <Stack sx={{ width: '95%' }} spacing={2}>
+                <Alert severity='success'>
+                    <AlertTitle>Success</AlertTitle>
+                    This is a success Alert with an encouraging title.
+                </Alert>
+                <Alert severity='info'>
+                    <AlertTitle>Info</AlertTitle>
+                    This is a success Alert with an informative title.
+                </Alert>
+                <Alert severity='warning'>
+                    <AlertTitle>Warning</AlertTitle>
+                    This is a success Alert with an cautious title.
+                </Alert>
+                <Alert severity='error'>
+                    <AlertTitle>Error</AlertTitle>
+                    This is a success Alert with an scary title.
+                </Alert>
+            </Stack>
+        </MyContainer>
+    )
+}
 
 export const IconAlerts = () => {
     return (
