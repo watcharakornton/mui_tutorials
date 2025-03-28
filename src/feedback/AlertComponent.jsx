@@ -8,6 +8,28 @@ import {
     Check as CheckIcon,
 } from '@mui/icons-material';
 
+export const OutlinedAlerts = () => {
+    return (
+        <MyContainer title="Outlined Alerts">
+            <Stack sx={{ width: '95%' }} spacing={2}>
+                <Alert variant='outlined' severity='success'>
+                    This is a filled success Alert.
+                </Alert>
+                <Alert variant='outlined' severity='info'>
+                    This is a filled info Alert.
+                </Alert>
+                <Alert variant='outlined' severity='warning'>
+                    This is a filled warning Alert.
+                </Alert>
+                <Alert variant='outlined' severity='error'>
+                    This is a filled error Alert.
+                </Alert>
+            </Stack>
+
+        </MyContainer>
+    )
+}
+
 export const FilledAlerts = () => {
     return (
         <MyContainer title="Filled Alerts">

@@ -6,6 +6,7 @@ import {
     SimpleAlert,
     BasicAlerts,
     FilledAlerts,
+    OutlinedAlerts,
 } from "../feedback/AlertComponent";
 
 const AlertPage = () => {
@@ -13,6 +14,7 @@ const AlertPage = () => {
         <SimpleAlert />,
         <BasicAlerts />,
         <FilledAlerts />,
+        <OutlinedAlerts />,
     ];
 
     return (
