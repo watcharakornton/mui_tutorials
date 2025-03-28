@@ -7,7 +7,30 @@ import {
 } from '@mui/material';
 import {
     Check as CheckIcon,
+    CheckCircleOutline as CheckCircleOutlineIcon
 } from '@mui/icons-material';
+
+export const IconAlerts = () => {
+    return (
+        <MyContainer title="Icon Alerts">
+            <Stack sx={{ width: '95%' }} spacing={2}>
+                <Alert icon={<CheckIcon fontSize='inherit' />} severity='success'>
+                    This success Alert has a custom icon.
+                </Alert>
+                <Alert icon={false} severity='success'>
+                    This success Alert has no icon.
+                </Alert>
+                <Alert
+                    iconMapping={{
+                        success: <CheckCircleOutlineIcon fontSize='inherit' />,
+                    }}
+                >
+                    This success Alert uses `icomMapping` to override the default icon.
+                </Alert>
+            </Stack>
+        </MyContainer>
+    )
+}
 
 export const ActionAlerts = () => {
     return (
