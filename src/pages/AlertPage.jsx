@@ -4,11 +4,15 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     SimpleAlert,
+    BasicAlerts,
+    FilledAlerts,
 } from "../feedback/AlertComponent";
 
 const AlertPage = () => {
     const sections = [
         <SimpleAlert />,
+        <BasicAlerts />,
+        <FilledAlerts />,
     ];
 
     return (
