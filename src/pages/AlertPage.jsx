@@ -7,6 +7,8 @@ import {
     BasicAlerts,
     FilledAlerts,
     OutlinedAlerts,
+    ColorAlerts,
+    ActionAlerts,
 } from "../feedback/AlertComponent";
 
 const AlertPage = () => {
@@ -15,6 +17,8 @@ const AlertPage = () => {
         <BasicAlerts />,
         <FilledAlerts />,
         <OutlinedAlerts />,
+        <ColorAlerts />,
+        <ActionAlerts />,
     ];
 
     return (

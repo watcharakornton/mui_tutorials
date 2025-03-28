@@ -3,10 +3,43 @@ import MyContainer from '../component/MyContainer';
 import {
     Alert,
     Stack,
+    Button,
 } from '@mui/material';
 import {
     Check as CheckIcon,
 } from '@mui/icons-material';
+
+export const ActionAlerts = () => {
+    return (
+        <MyContainer title="Action Alerts">
+            <Stack sx={{ width: '95%' }} spacing={2}>
+                <Alert severity='warning' onClose={() => {}}>
+                    This Alert displays the default close icon.
+                </Alert>
+                <Alert
+                    severity='success'
+                    action={
+                        <Button color="inherit" size="small">
+                            UNDO
+                        </Button>
+                    }
+                >
+                    This Alert uses a Button component for its action.
+                </Alert>
+            </Stack>
+        </MyContainer>
+    )
+}
+
+export const ColorAlerts = () => {
+    return (
+        <MyContainer title="Color Alerts">
+            <Alert severity='success' color="warning">
+                This is a success Alert with warning colors.
+            </Alert>
+        </MyContainer>
+    )
+}
 
 export const OutlinedAlerts = () => {
     return (
