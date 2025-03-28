@@ -15,6 +15,76 @@ import {
     Delete as DeleteIcon,
 } from '@mui/icons-material';
 
+export const NonInteractiveTooltips = () => {
+    return (
+        <MyContainer title="Non Interactive Tooltips">
+            <Tooltip title="Add" disableInteractive>
+                <Button>Not interactive</Button>
+            </Tooltip>
+        </MyContainer>
+    )
+}
+
+export const VariableWidth = () => {
+    const CustomWidthTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))({
+        [`& .${tooltipClasses.tooltip}`]: {
+            maxWidth: 500,
+        }
+    });
+
+    const NoMaxWidthTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))({
+        [`& .${tooltipClasses.tooltip}`]: {
+            maxWidth: 'none',
+        },
+    });
+
+    const longText = `
+        Aliquam eget finibus ante, non facilisis lectus. Sed vitae dignissim est, vel aliquam tellus.
+        Praesent non nunc mollis, fermentum neque at, semper arcu.
+        Nullam eget est sed sem iaculis gravida eget vitae justo. 
+    `;
+
+    return (
+        <MyContainer title="Variable Width">
+            <div>
+                <Tooltip title={longText}>
+                    <Button sx={{ m: 1 }}>Default Width [300px]</Button>
+                </Tooltip>
+                <CustomWidthTooltip title={longText}>
+                    <Button sx={{ m: 1 }}>Custom Width [500px]</Button>
+                </CustomWidthTooltip>
+                <NoMaxWidthTooltip title={longText}>
+                    <Button sx={{ m: 1 }}>No wrapping</Button>
+                </NoMaxWidthTooltip>
+            </div>
+        </MyContainer>
+    )
+}
+
+export const ControlledTooltips = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleOpen = () => {
+        setOpen(true);
+    };
+
+    return (
+        <MyContainer title="Controlled Tooltips">
+            <Tooltip open={open} onClose={handleClose} onOpen={handleOpen} title="Add">
+                <Button>Controlled</Button>
+            </Tooltip>
+        </MyContainer>
+    );
+}
+
 export const TriggersTooltips = () => {
     const [open, setOpen] = React.useState(false);
 
@@ -61,7 +131,7 @@ export const TriggersTooltips = () => {
                                         },
                                     }}
                                 >
-                                   <Button onClick={handleTooltipOpen}>Click</Button> 
+                                    <Button onClick={handleTooltipOpen}>Click</Button>
                                 </Tooltip>
                             </div>
                         </ClickAwayListener>

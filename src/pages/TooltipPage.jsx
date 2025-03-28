@@ -9,6 +9,9 @@ import {
     ArrowTooltips,
     TooltipOffset,
     TriggersTooltips,
+    ControlledTooltips,
+    VariableWidth,
+    NonInteractiveTooltips,
 } from "../data-display/TooltipComponent";
 
 const TooltipPage = () => {
@@ -19,6 +22,9 @@ const TooltipPage = () => {
         <ArrowTooltips />,
         <TooltipOffset />,
         <TriggersTooltips />,
+        <ControlledTooltips />,
+        <VariableWidth />,
+        <NonInteractiveTooltips />,
     ];
 
     return (
