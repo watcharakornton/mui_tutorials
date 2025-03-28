@@ -12,6 +12,9 @@ import {
     ControlledTooltips,
     VariableWidth,
     NonInteractiveTooltips,
+    DisabledTooltips,
+    TransitionsTooltips,
+    FollowCursorTooltips,
 } from "../data-display/TooltipComponent";
 
 const TooltipPage = () => {
@@ -25,6 +28,9 @@ const TooltipPage = () => {
         <ControlledTooltips />,
         <VariableWidth />,
         <NonInteractiveTooltips />,
+        <DisabledTooltips />,
+        <TransitionsTooltips />,
+        <FollowCursorTooltips />,
     ];
 
     return (

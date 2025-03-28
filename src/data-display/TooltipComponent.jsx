@@ -10,10 +10,67 @@ import {
     IconButton,
     Typography,
     ClickAwayListener,
+    Fade,
+    Zoom
 } from '@mui/material';
 import {
     Delete as DeleteIcon,
 } from '@mui/icons-material';
+
+export const FollowCursorTooltips = () => {
+    return (
+        <MyContainer title="Follow Cursor Tooltips">
+            <Tooltip title="You don't have permission to do this" followCursor>
+                <Box sx={{ bgcolor: 'text.disabled', color: 'background.paper', p: 2 }}>
+                    Disabled Action
+                </Box>
+            </Tooltip>
+        </MyContainer>
+    );
+}
+
+export const TransitionsTooltips = () => {
+    return (
+        <MyContainer title="Transitions Tooltips">
+            <div>
+                <Tooltip title="Add">
+                    <Button>Grow</Button>
+                </Tooltip>
+                <Tooltip
+                    title="Add"
+                    slots={{
+                        transition: Fade,
+                    }}
+                    slotProps={{
+                        transition: { timeout: 600 },
+                    }}
+                >
+                    <Button>Fade</Button>
+                </Tooltip>
+                <Tooltip
+                    title="Add"
+                    slots={{
+                        transition: Zoom,
+                    }}
+                >
+                    <Button>Zoom</Button>
+                </Tooltip>
+            </div>
+        </MyContainer>
+    )
+}
+
+export const DisabledTooltips = () => {
+    return (
+        <MyContainer title="Disabled Tooltips">
+            <Tooltip title="You don't have permission to do this">
+                <span>
+                    <Button disabled>A Disabled Button</Button>
+                </span>
+            </Tooltip>
+        </MyContainer>
+    )
+}
 
 export const NonInteractiveTooltips = () => {
     return (
