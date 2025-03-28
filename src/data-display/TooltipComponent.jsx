@@ -17,6 +17,84 @@ import {
     Delete as DeleteIcon,
 } from '@mui/icons-material';
 
+export const AccessibilityTooltips = () => {
+    return (
+        <MyContainer title="Accessibility Tooltips">
+            <div>
+                <Tooltip title="Delete">
+                    <IconButton>
+                        <DeleteIcon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip describeChild title="Does not add if it already exists.">
+                    <Button>Add</Button>
+                </Tooltip>
+            </div>
+        </MyContainer>
+    )
+}
+
+export const DelayTooltips = () => {
+    return (
+        <MyContainer title="DelayTooltips">
+            <Tooltip title="Add" enterDelay={500} leaveDelay={200}>
+                <Button>[500ms, 200ms]</Button>
+            </Tooltip>
+        </MyContainer>
+    )
+}
+
+export const AnchorElTooltips = () => {
+    const positionRef = React.useRef({
+        x: 0,
+        y: 0,
+    });
+
+    const popperRef = React.useRef(null);
+    const areaRef = React.useRef(null);
+
+    const handleMouseMove = (event) => {
+        positionRef.current = { x: event.clientX, y: event.clientY };
+
+        if (popperRef.current != null) {
+            popperRef.current.update();
+        }
+    };
+
+    return (
+        <MyContainer title="Anchor El Tooltips">
+            <Tooltip
+                title="Add"
+                placement="top"
+                arrow
+                slotProps={{
+                    popper: {
+                        popperRef,
+                        anchorEl: {
+                            getBoundingClientRect: () => {
+                                return new DOMRect(
+                                    positionRef.current.x,
+                                    areaRef.current.getBoundingClientRect().y,
+                                    0,
+                                    0,
+                                );
+                            },
+                        },
+                    },
+                }}
+            >
+                <Box
+                    ref={areaRef}
+                    onMouseMove={handleMouseMove}
+                    sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', p: 2 }}
+                >
+                    Hover
+                </Box>
+            </Tooltip>
+        </MyContainer>
+    )
+}
+
 export const FollowCursorTooltips = () => {
     return (
         <MyContainer title="Follow Cursor Tooltips">
