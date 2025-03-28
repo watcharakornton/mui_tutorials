@@ -6,6 +6,7 @@ import {
     AlertDialog,
     AlertDialogSlide,
     FormDialog,
+    CustomizedDialogs,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -13,10 +14,11 @@ const DialogPage = () => {
         <AlertDialog />,
         <AlertDialogSlide />,
         <FormDialog />,
+        <CustomizedDialogs />,
     ];
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
             <Grid
                 container
                 alignItems="center"
