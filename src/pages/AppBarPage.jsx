@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     ButtonAppBar,
+    MenuAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
     const sections = [
         <ButtonAppBar />,
+        <MenuAppBar />,
     ];
 
     return (
