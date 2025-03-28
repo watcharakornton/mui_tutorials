@@ -25,7 +25,7 @@ import TablePage from "./pages/TablePage";
 import TooltipPage from "./pages/TooltipPage"
 import TypographyPage from "./pages/TypographyPage"
 import AlertPage from "./pages/AlertPage";
-import AppBar from './pages/AppBarPage'
+import BackdropPage from "./pages/BackdropPage";
 import AppBarPage from "./pages/AppBarPage";
 
 function App() {
@@ -60,6 +60,7 @@ function App() {
         <Route path="/tooltip" element={<TooltipPage />} />
         <Route path="/typography" element={<TypographyPage />} />
         <Route path="/alert" element={<AlertPage />} />
+        <Route path="/backdrop" element={<BackdropPage />} />
         <Route path="/app-bar" element={<AppBarPage />} />
       </Routes>
     </Router>
