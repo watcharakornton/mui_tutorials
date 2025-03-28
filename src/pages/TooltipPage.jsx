@@ -5,12 +5,20 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     BasicTooltip,
     PositionedTooltips,
+    CustomizedTooltips,
+    ArrowTooltips,
+    TooltipOffset,
+    TriggersTooltips,
 } from "../data-display/TooltipComponent";
 
 const TooltipPage = () => {
     const sections = [
         <BasicTooltip />,
         <PositionedTooltips />,
+        <CustomizedTooltips />,
+        <ArrowTooltips />,
+        <TooltipOffset />,
+        <TriggersTooltips />,
     ];
 
     return (

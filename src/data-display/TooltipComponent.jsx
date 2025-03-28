@@ -1,16 +1,171 @@
 import * as React from 'react';
 import MyContainer from "../component/MyContainer";
+import { styled, useTheme } from '@mui/material/styles';
 import {
     Box,
     Grid,
     Button,
     Tooltip,
-    IconButton
+    tooltipClasses,
+    IconButton,
+    Typography,
+    ClickAwayListener,
 } from '@mui/material';
 import {
     Delete as DeleteIcon,
 } from '@mui/icons-material';
 
+export const TriggersTooltips = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleTooltipClose = () => {
+        setOpen(false);
+    };
+
+    const handleTooltipOpen = () => {
+        setOpen(true);
+    };
+
+    return (
+        <MyContainer title="Triggers Tooltip">
+            <div>
+                <Grid container sx={{ justifyContent: 'center' }}>
+                    <Grid>
+                        <Tooltip disableFocusListener title="Add">
+                            <Button>Hover or touch</Button>
+                        </Tooltip>
+                    </Grid>
+                    <Grid>
+                        <Tooltip disableHoverListener title="Add">
+                            <Button>Focus or touch</Button>
+                        </Tooltip>
+                    </Grid>
+                    <Grid>
+                        <Tooltip disableFocusListener disableTouchListener title="Add">
+                            <Button>Hover</Button>
+                        </Tooltip>
+                    </Grid>
+                    <Grid>
+                        <ClickAwayListener onClickAway={handleTooltipClose}>
+                            <div>
+                                <Tooltip
+                                    onClose={handleTooltipClose}
+                                    open={open}
+                                    disableFocusListener
+                                    disableHoverListener
+                                    disableTouchListener
+                                    title="Add"
+                                    slotProps={{
+                                        props: {
+                                            disablePortal: true,
+                                        },
+                                    }}
+                                >
+                                   <Button onClick={handleTooltipOpen}>Click</Button> 
+                                </Tooltip>
+                            </div>
+                        </ClickAwayListener>
+                    </Grid>
+                </Grid>
+            </div>
+        </MyContainer>
+    )
+}
+
+export const TooltipOffset = () => {
+    return (
+        <MyContainer title="Tooltip Offset">
+            <Tooltip
+                title="Add"
+                slotProps={{
+                    popper: {
+                        modifiers: [
+                            {
+                                name: 'offset',
+                                options: {
+                                    offset: [0, -14],
+                                },
+                            },
+                        ],
+                    },
+                }}
+            >
+                <Button>Offset</Button>
+            </Tooltip>
+        </MyContainer>
+    )
+}
+
+export const ArrowTooltips = () => {
+    return (
+        <MyContainer title="Arrow Tooltips">
+            <Tooltip title="Add" arrow>
+                <Button>Arrow</Button>
+            </Tooltip>
+        </MyContainer>
+    )
+}
+
+export const CustomizedTooltips = () => {
+    const theme = useTheme();
+    const LightTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))({
+        [`$ .${tooltipClasses.tooltip}`]: {
+            backgroundColor: theme.palette.common.white,
+            color: 'rgba(0, 0, 0, 0.87)',
+            boxShadow: theme.shadows[1],
+            fontSize: 11,
+        },
+    });
+
+    const BootstrapTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} arrow classes={{ popper: className }} />
+    ))({
+        [`& .${tooltipClasses.arrow}`]: {
+            color: theme.palette.common.black
+        },
+        [`& .${tooltipClasses.tooltip}`]: {
+            backgroundColor: theme.palette.common.black,
+        },
+    });
+
+    const HtmlTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+    ))({
+        [`& .${tooltipClasses.tooltip}`]: {
+            backgroundColor: '#f5f5f9',
+            color: 'rgba(0, 0, 0, 0.87)',
+            maxWidth: 220,
+            fontSize: theme.typography.pxToRem(12),
+            border: '1px solid #dadde9',
+        },
+    });
+
+    return (
+        <MyContainer title="Customized Tooltips">
+            <div>
+                <LightTooltip title="Add">
+                    <Button>Light</Button>
+                </LightTooltip>
+                <BootstrapTooltip title="Add">
+                    <Button>Bootstrap</Button>
+                </BootstrapTooltip>
+                <HtmlTooltip
+                    title={
+                        <React.Fragment>
+                            <Typography color="inherit">Tooltip with HTML</Typography>
+                            <em>{"And here's"}</em> <b>{'some'}</b> <u>{'amazing content'}</u>.{' '}
+                            {"It's very engaging. Right?"}
+                        </React.Fragment>
+                    }
+                >
+                    <Button>HTML</Button>
+                </HtmlTooltip>
+            </div>
+        </MyContainer>
+    )
+}
 
 export const PositionedTooltips = () => {
     return (
