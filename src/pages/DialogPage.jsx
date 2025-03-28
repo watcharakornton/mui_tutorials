@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     AlertDialog,
+    AlertDialogSlide,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
     const sections = [
         <AlertDialog />,
+        <AlertDialogSlide />,
     ];
 
     return (
