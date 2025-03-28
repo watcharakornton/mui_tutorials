@@ -7,6 +7,7 @@ import {
     AlertDialogSlide,
     FormDialog,
     CustomizedDialogs,
+    FullScreenDialog,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -15,6 +16,7 @@ const DialogPage = () => {
         <AlertDialogSlide />,
         <FormDialog />,
         <CustomizedDialogs />,
+        <FullScreenDialog />,
     ];
 
     return (

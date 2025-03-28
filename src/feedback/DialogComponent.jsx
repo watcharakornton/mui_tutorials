@@ -5,6 +5,12 @@ import {
     Button,
     TextField,
     Dialog,
+    ListItemText,
+    ListItemButton,
+    List,
+    Divider,
+    AppBar,
+    Toolbar,
     DialogActions,
     DialogContent,
     DialogContentText,
@@ -16,6 +22,69 @@ import {
 import {
     Close as CloseIcon
 } from '@mui/icons-material';
+
+export const FullScreenDialog = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const Transition = React.forwardRef(function Transition(props, ref) {
+        return <Slide direction="up" ref={ref} {...props} />
+    });
+
+    return (
+        <MyContainer title="Full Screen Dialog">
+            <React.Fragment>
+                <Button variant='outlined' onClick={handleClickOpen}>
+                    Open full-screen dialog
+                </Button>
+                <Dialog
+                    fullScreen
+                    open={open}
+                    onClose={handleClose}
+                    TransitionComponent={Transition}
+                >
+                    <AppBar sx={{ position: 'relative' }}>
+                        <Toolbar>
+                            <IconButton
+                                edge="start"
+                                color="inherit"
+                                onClick={handleClose}
+                                aria-label="close"
+                            >
+                                <CloseIcon />
+                            </IconButton>
+                            <Typography sx={{ ml: 2, flex: 1 }} variant='h6' component="div">
+                                Sound
+                            </Typography>
+                            <Button autoFocus color="inherit" onClick={handleClose}>
+                                save
+                            </Button>
+                        </Toolbar>
+                    </AppBar>
+                    <List>
+                        <ListItemButton>
+                            <ListItemText primary="Phone ringtone" secondary="Titania" />
+                        </ListItemButton>
+                        <Divider />
+                        <ListItemButton>
+                            <ListItemText 
+                                primary="Deafult notification ringtone"
+                                secondary="Tethys"
+                            />
+                        </ListItemButton>
+                    </List>
+                </Dialog>
+            </React.Fragment>
+        </MyContainer>
+    )
+}
 
 export const CustomizedDialogs = () => {
     const theme = useTheme();
