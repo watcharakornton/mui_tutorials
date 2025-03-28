@@ -27,6 +27,7 @@ import TypographyPage from "./pages/TypographyPage"
 import AlertPage from "./pages/AlertPage";
 import BackdropPage from "./pages/BackdropPage";
 import AppBarPage from "./pages/AppBarPage";
+import DialogPage from "./pages/DialogPage";
 
 function App() {
   return (
@@ -61,6 +62,7 @@ function App() {
         <Route path="/typography" element={<TypographyPage />} />
         <Route path="/alert" element={<AlertPage />} />
         <Route path="/backdrop" element={<BackdropPage />} />
+        <Route path="/dialog" element={<DialogPage />} />
         <Route path="/app-bar" element={<AppBarPage />} />
       </Routes>
     </Router>
