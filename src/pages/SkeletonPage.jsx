@@ -3,16 +3,20 @@ import { Container, Grid, Typography, Button, Divider, Collapse } from "@mui/mat
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
-    Variants
+    Variants,
+    Animations,
+    YouTube,
 } from "../feedback/SkeletonComponent";
 
 const SkeletonPage = () => {
     const sections = [
         <Variants />,
+        <Animations />,
+        <YouTube />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
