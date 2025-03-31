@@ -34,12 +34,109 @@ import {
     Typography,
     RadioGroup,
     Radio,
+    Alert,
 } from '@mui/material';
 import {
     Close as CloseIcon,
     Menu as MenuIcon,
 } from '@mui/icons-material';
 import Draggable from 'react-draggable';
+import { DialogsProvider, useDialogs } from '@toolpad/core/useDialogs';
+
+export const ToolpadDialogsNoSnap = () => {
+    function MyCustomDialog({ open, onClose, payload }) {
+        return (
+            <Dialog fullWidth open={open} onClose={() => onClose()}>
+                <DialogTitle>Custom Error Handler</DialogTitle>
+                <DialogContent>
+                    <Alert severity='error'>
+                        {`An error occured while deleting item "${payload.id}":`}
+                        <pre>{payload.error}</pre>
+                    </Alert>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={() => onClose()}>Close me</Button>
+                </DialogActions>
+            </Dialog>
+        )
+    }
+
+    MyCustomDialog.propTypes = {
+        onClose: PropTypes.func.isRequired,
+        open: PropTypes.bool.isRequired,
+        payload: PropTypes.shape({
+            error: PropTypes.string,
+            id: PropTypes.string,
+        }).isRequired,
+    };
+
+    const mockApiDelete = async (id) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (!id) {
+                    reject(new Error('ID is required'));
+                } else if (parseInt(id, 10) % 2 === 0) {
+                    console.log('id', parseInt(id, 10));
+                    resolve(true);
+                } else if (parseInt(id, 10) % 2 === 1) {
+                    reject(new Error('Can not delete odd numbered elements'));
+                } else if (Number.isNaN(parseInt(id, 10))) {
+                    reject(new Error('ID must be a number'));
+                } else {
+                    reject(new Error('Unknown error'));
+                }
+            }, 1000);
+        });
+    };
+
+    function DemoContent() {
+        const dialogs = useDialogs();
+        const [isDeleting, setIsDeleting] = React.useState(false);
+
+        const handleDelete = async () => {
+            const id = await dialogs.prompt('Enter the ID to delete', {
+                okText: 'Delete',
+                cancelText: 'Cancel',
+            });
+
+            if (id) {
+                const deleteConfirmed = await dialogs.confirm(
+                    `Are you sure you want to delete "${id}"?`,
+                );
+                if (deleteConfirmed) {
+                    try {
+                        setIsDeleting(true);
+                        await mockApiDelete(id);
+                        dialogs.alert('Deleted!');
+                    } catch (error) {
+                        const message = error instanceof Error ? error.message : 'Unknown error';
+                        await dialogs.open(MyCustomDialog, { id, error: message });
+                    } finally {
+                        setIsDeleting(false);
+                    }
+                }
+            }
+        };
+
+        return (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+                <div style={{ display: 'flex', gap: 16 }}>
+                    <Button variant="contained" loading={isDeleting} onClick={handleDelete}>
+                        Delete
+                    </Button>
+                </div>
+            </div>
+        );
+    }
+
+    return (
+        <MyContainer title="Toolpad Dialogs No Snap">
+            <DialogsProvider>
+                <DemoContent />
+            </DialogsProvider>
+        </MyContainer>
+    )
+}
 
 export const ScrollDialog = () => {
     const [open, setOpen] = React.useState(false);
