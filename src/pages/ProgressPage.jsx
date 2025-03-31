@@ -8,6 +8,7 @@ import {
     CircularSize,
     CircularDeterminate,
     CircularIntegration,
+    CircularWithValueLabel,
 } from "../feedback/ProgressComponent";
 
 const ProgressPage = () => {
@@ -17,6 +18,7 @@ const ProgressPage = () => {
         <CircularSize />,
         <CircularDeterminate />,
         <CircularIntegration />,
+        <CircularWithValueLabel />,
     ];
 
     return (

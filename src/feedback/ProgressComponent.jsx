@@ -1,17 +1,70 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
 import { green } from '@mui/material/colors';
+import PropTypes from 'prop-types';
 import {
     Box,
     Stack,
     CircularProgress,
     Button,
     Fab,
+    Typography,
 } from '@mui/material';
 import {
     Check as CheckIcon,
     Save as SaveIcon,
 } from '@mui/icons-material';
+
+export const CircularWithValueLabel = () => {
+    function CircularProgressWithLabel(props) {
+        return (
+            <Box sx={{ position: 'relative', display: 'inline-flex' }}>
+                <CircularProgress variant='determinate' {...props} />
+                <Box
+                    sx={{
+                        top: 0,
+                        left: 0,
+                        bottom: 0,
+                        right: 0,
+                        position: 'absolute',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <Typography
+                        variant="caption"
+                        component="div"
+                        sx={{ color: 'text.secondary' }}
+                    >
+                        {`${Math.round(props.value)}%`}
+                    </Typography>
+                </Box>
+            </Box>
+        );
+    }
+
+    CircularProgressWithLabel.propTypes = {
+        value: PropTypes.number.isRequired,
+    };
+
+    const [progress, setProgress] = React.useState(10);
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10))
+        }, 800);
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    return (
+        <MyContainer title="Circular With Value Label">
+            <CircularProgressWithLabel value={progress} />
+        </MyContainer>
+    );
+}
 
 export const CircularIntegration = () => {
     const [loading, setLoading] = React.useState(false);
@@ -46,7 +99,53 @@ export const CircularIntegration = () => {
 
     return (
         <MyContainer title="Circular Integration">
-
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Box sx={{ m: 1, position: 'relative' }}>
+                    <Fab
+                        aria-label="save"
+                        color="primary"
+                        sx={buttonSx}
+                        onClick={handleButtonClick}
+                    >
+                        {success ? <CheckIcon /> : <SaveIcon />}
+                    </Fab>
+                    {loading && (
+                        <CircularProgress
+                            size={68}
+                            sx={{
+                                color: green[500],
+                                position: 'absolute',
+                                top: -6,
+                                left: -6,
+                                zIndex: 1,
+                            }}
+                        />
+                    )}
+                </Box>
+                <Box sx={{ m: 1, position: 'relative' }}>
+                    <Button
+                        variant='contained'
+                        sx={buttonSx}
+                        disabled={loading}
+                        onClick={handleButtonClick}
+                    >
+                        Accept terms
+                    </Button>
+                    {loading && (
+                        <CircularProgress 
+                            size={24}
+                            sx={{
+                                color: green[500],
+                                position: 'absolute',
+                                top: '50%',
+                                left: '50%',
+                                marginTop: '-12px',
+                                marginLeft: '-12px',
+                            }}
+                        />
+                    )}
+                </Box>
+            </Box>
         </MyContainer>
     )
 }
