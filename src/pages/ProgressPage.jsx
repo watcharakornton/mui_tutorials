@@ -4,11 +4,15 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     CircularIndeterminate,
+    CircularColor,
+    CircularSize,
 } from "../feedback/ProgressComponent";
 
 const ProgressPage = () => {
     const sections = [
         <CircularIndeterminate />,
+        <CircularColor />,
+        <CircularSize />,
     ];
 
     return (
