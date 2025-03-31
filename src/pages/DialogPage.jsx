@@ -12,6 +12,7 @@ import {
     ResponsiveDialog,
     ConfirmationDialog,
     DraggableDialog,
+    ScrollDialog,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -25,6 +26,7 @@ const DialogPage = () => {
         <ResponsiveDialog />,
         <ConfirmationDialog />,
         <DraggableDialog />,
+        <ScrollDialog />,
     ];
 
     return (
