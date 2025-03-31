@@ -30,6 +30,7 @@ import AppBarPage from "./pages/AppBarPage";
 import DialogPage from "./pages/DialogPage";
 import ProgressPage from "./pages/ProgressPage";
 import SkeletonPage from "./pages/SkeletonPage";
+import SnackbarPage from "./pages/SnackbarPage";
 
 function App() {
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route path="/dialog" element={<DialogPage />} />
         <Route path="/progress" element={<ProgressPage />} />
         <Route path="/skeleton" element={<SkeletonPage />} />
+        <Route path="/snackbar" element={<SnackbarPage />} />
 
         <Route path="/app-bar" element={<AppBarPage />} />
       </Routes>

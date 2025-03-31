@@ -71,7 +71,7 @@ const Home = () => {
     { title: "Dialog page", href: "/dialog" },
     { title: "Progress page", href: "/progress" },
     { title: "Skeleton page", href: "/skeleton" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Snackbar page", href: "/snackbar" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
