@@ -69,13 +69,13 @@ const Home = () => {
     { title: "Alert page", href: "/alert" },
     { title: "Backdrop page", href: "/backdrop" },
     { title: "Dialog page", href: "/dialog" },
+    { title: "Progress page", href: "/progress" },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
     { title: "App Bar page", href: "/app-bar" },
-    { title: "Templates", href: "/", isTemplate: true },
-    { title: "Templates", href: "/", isTemplate: true },
-    { title: "Templates", href: "/", isTemplate: true },
-    { title: "Templates", href: "/", isTemplate: true },
-    { title: "Templates", href: "/", isTemplate: true },
-    { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
     <Container maxWidth="md" sx={{ my: 4, minHeight: "100vh" }}>

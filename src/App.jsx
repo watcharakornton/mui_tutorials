@@ -28,6 +28,7 @@ import AlertPage from "./pages/AlertPage";
 import BackdropPage from "./pages/BackdropPage";
 import AppBarPage from "./pages/AppBarPage";
 import DialogPage from "./pages/DialogPage";
+import ProgressPage from "./pages/ProgressPage";
 
 function App() {
   return (
@@ -64,6 +65,7 @@ function App() {
         <Route path="/backdrop" element={<BackdropPage />} />
         <Route path="/dialog" element={<DialogPage />} />
         <Route path="/app-bar" element={<AppBarPage />} />
+        <Route path="/progress" element={<ProgressPage />} />
       </Routes>
     </Router>
   );
