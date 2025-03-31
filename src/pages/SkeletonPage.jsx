@@ -6,6 +6,7 @@ import {
     Variants,
     Animations,
     YouTube,
+    Facebook,
 } from "../feedback/SkeletonComponent";
 
 const SkeletonPage = () => {
@@ -13,6 +14,7 @@ const SkeletonPage = () => {
         <Variants />,
         <Animations />,
         <YouTube />,
+        <Facebook />,
     ];
 
     return (
