@@ -8,6 +8,7 @@ import {
     FormDialog,
     CustomizedDialogs,
     FullScreenDialog,
+    MaxWidthDialog,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -17,6 +18,7 @@ const DialogPage = () => {
         <FormDialog />,
         <CustomizedDialogs />,
         <FullScreenDialog />,
+        <MaxWidthDialog />,
     ];
 
     return (
