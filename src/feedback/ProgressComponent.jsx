@@ -16,6 +16,85 @@ import {
     Save as SaveIcon,
 } from '@mui/icons-material';
 
+export const LinearWithValueLabel = () => {
+    function LinearProgressWithLabel(props) {
+        return (
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Box sx={{ width: '100%', mr: 1 }}>
+                    <LinearProgress variant="determinate" {...props} />
+                </Box>
+                <Box sx={{ minWidth: 35 }}>
+                    <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                        {`${Math.round(props.value)}%`}
+                    </Typography>
+                </Box>
+            </Box>
+        );
+    }
+
+    LinearProgressWithLabel.propTypes = {
+        value: PropTypes.number.isRequired,
+    }
+
+    const [progress, setProgress] = React.useState(10);
+    
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
+        }, 800);
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    return (
+        <MyContainer title="Linear With Value Label">
+            <Box sx={{ width: '95%' }}>
+                <LinearProgressWithLabel value={progress} />
+            </Box>
+        </MyContainer>
+    )
+}
+
+export const LinearBuffer = () => {
+    const [progress, setProgress] = React.useState(0);
+    const [buffer, setBuffer] = React.useState(10);
+
+    const progressRef = React.useRef(() => { });
+    React.useEffect(() => {
+        progressRef.current = () => {
+            if (progress === 100) {
+                setProgress(0);
+                setBuffer(10);
+            } else {
+                setProgress(progress + 1);
+                if (buffer < 100 && progress % 5 === 0) {
+                    const newBuffer = buffer + 1 + Math.random() * 10;
+                    setBuffer(newBuffer > 100 ? 100 : newBuffer);
+                }
+            }
+        };
+    });
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            progressRef.current();
+        }, 100);
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    return (
+        <MyContainer title="Linear Buffer">
+            <Box sx={{ width: '95%' }}>
+                <LinearProgress variant='buffer' value={progress} valueBuffer={buffer} />
+            </Box>
+        </MyContainer>
+    )
+}
+
 export const LinearDeterminate = () => {
     const [progress, setProgress] = React.useState(0);
 
@@ -183,7 +262,7 @@ export const CircularIntegration = () => {
                         Accept terms
                     </Button>
                     {loading && (
-                        <CircularProgress 
+                        <CircularProgress
                             size={24}
                             sx={{
                                 color: green[500],

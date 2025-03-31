@@ -12,6 +12,8 @@ import {
     LinearIndeterminate,
     LinearColor,
     LinearDeterminate,
+    LinearBuffer,
+    LinearWithValueLabel,
 } from "../feedback/ProgressComponent";
 
 const ProgressPage = () => {
@@ -25,6 +27,8 @@ const ProgressPage = () => {
         <LinearIndeterminate />,
         <LinearColor />,
         <LinearDeterminate />,
+        <LinearBuffer />,
+        <LinearWithValueLabel />,
     ];
 
     return (
