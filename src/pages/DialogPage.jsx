@@ -11,6 +11,7 @@ import {
     MaxWidthDialog,
     ResponsiveDialog,
     ConfirmationDialog,
+    DraggableDialog,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -23,6 +24,7 @@ const DialogPage = () => {
         <MaxWidthDialog />,
         <ResponsiveDialog />,
         <ConfirmationDialog />,
+        <DraggableDialog />,
     ];
 
     return (
