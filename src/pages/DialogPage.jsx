@@ -10,6 +10,7 @@ import {
     FullScreenDialog,
     MaxWidthDialog,
     ResponsiveDialog,
+    ConfirmationDialog,
 } from "../feedback/DialogComponent";
 
 const DialogPage = () => {
@@ -21,6 +22,7 @@ const DialogPage = () => {
         <FullScreenDialog />,
         <MaxWidthDialog />,
         <ResponsiveDialog />,
+        <ConfirmationDialog />,
     ];
 
     return (
