@@ -6,6 +6,8 @@ import {
     CircularIndeterminate,
     CircularColor,
     CircularSize,
+    CircularDeterminate,
+    CircularIntegration,
 } from "../feedback/ProgressComponent";
 
 const ProgressPage = () => {
@@ -13,6 +15,8 @@ const ProgressPage = () => {
         <CircularIndeterminate />,
         <CircularColor />,
         <CircularSize />,
+        <CircularDeterminate />,
+        <CircularIntegration />,
     ];
 
     return (
