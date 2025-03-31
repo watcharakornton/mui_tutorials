@@ -6,6 +6,7 @@ import {
     Box,
     Stack,
     CircularProgress,
+    LinearProgress,
     Button,
     Fab,
     Typography,
@@ -14,6 +15,56 @@ import {
     Check as CheckIcon,
     Save as SaveIcon,
 } from '@mui/icons-material';
+
+export const LinearDeterminate = () => {
+    const [progress, setProgress] = React.useState(0);
+
+    React.useEffect(() => {
+        const timer = setInterval(() => {
+            setProgress((oldProgress) => {
+                if (oldProgress === 100) {
+                    return 0;
+                }
+                const diff = Math.random() + 10;
+                return Math.min(oldProgress + diff, 100);
+            });
+        }, 500);
+
+        return () => {
+            clearInterval(timer);
+        };
+    }, []);
+
+    return (
+        <MyContainer title="Linear Determinate">
+            <Box sx={{ width: '95%' }}>
+                <LinearProgress variant='determinate' value={progress} />
+            </Box>
+        </MyContainer>
+    )
+}
+
+export const LinearColor = () => {
+    return (
+        <MyContainer title="Linear Color">
+            <Stack sx={{ width: '95%', color: 'grey.500' }} spacing={2}>
+                <LinearProgress color="secondary" />
+                <LinearProgress color="success" />
+                <LinearProgress color="inherit" />
+            </Stack>
+        </MyContainer>
+    )
+}
+
+export const LinearIndeterminate = () => {
+    return (
+        <MyContainer title="Linear Indeterminate">
+            <Box sx={{ width: '95%' }}>
+                <LinearProgress />
+            </Box>
+        </MyContainer>
+    )
+}
 
 export const CircularWithValueLabel = () => {
     function CircularProgressWithLabel(props) {

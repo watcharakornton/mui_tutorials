@@ -9,6 +9,9 @@ import {
     CircularDeterminate,
     CircularIntegration,
     CircularWithValueLabel,
+    LinearIndeterminate,
+    LinearColor,
+    LinearDeterminate,
 } from "../feedback/ProgressComponent";
 
 const ProgressPage = () => {
@@ -19,6 +22,9 @@ const ProgressPage = () => {
         <CircularDeterminate />,
         <CircularIntegration />,
         <CircularWithValueLabel />,
+        <LinearIndeterminate />,
+        <LinearColor />,
+        <LinearDeterminate />,
     ];
 
     return (
