@@ -70,7 +70,7 @@ const Home = () => {
     { title: "Backdrop page", href: "/backdrop" },
     { title: "Dialog page", href: "/dialog" },
     { title: "Progress page", href: "/progress" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Skeleton page", href: "/skeleton" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },

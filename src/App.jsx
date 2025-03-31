@@ -29,6 +29,7 @@ import BackdropPage from "./pages/BackdropPage";
 import AppBarPage from "./pages/AppBarPage";
 import DialogPage from "./pages/DialogPage";
 import ProgressPage from "./pages/ProgressPage";
+import SkeletonPage from "./pages/SkeletonPage";
 
 function App() {
   return (
@@ -64,8 +65,10 @@ function App() {
         <Route path="/alert" element={<AlertPage />} />
         <Route path="/backdrop" element={<BackdropPage />} />
         <Route path="/dialog" element={<DialogPage />} />
-        <Route path="/app-bar" element={<AppBarPage />} />
         <Route path="/progress" element={<ProgressPage />} />
+        <Route path="/skeleton" element={<SkeletonPage />} />
+
+        <Route path="/app-bar" element={<AppBarPage />} />
       </Routes>
     </Router>
   );
