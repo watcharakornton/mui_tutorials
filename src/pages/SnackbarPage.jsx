@@ -4,11 +4,13 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     SimpleSnackbar,
+    PositionedSnackbar,
 } from "../feedback/SnackbarComponent";
 
 const SnackbarPage = () => {
     const sections = [
         <SimpleSnackbar />,
+        <PositionedSnackbar />,
     ];
 
     return (
