@@ -11,6 +11,7 @@ import {
     PrimarySearchAppBar,
     DenseAppBar,
     ProminentAppBar,
+    BottomAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -23,6 +24,7 @@ const AppBarPage = () => {
         <PrimarySearchAppBar />,
         <DenseAppBar />,
         <ProminentAppBar />,
+        <BottomAppBar />,
     ];
 
     return (

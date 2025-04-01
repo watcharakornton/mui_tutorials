@@ -29,6 +29,14 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const BottomAppBar = () => {
+    return (
+        <MyContainer title="Bottom AppBar">
+            <Button href="/app-bar/bottom-app-bar" variant='outlined' color="error">View BottomAppBar</Button>
+        </MyContainer>
+    )
+}
+
 export const ProminentAppBar = () => {
     const theme = useTheme();
     const StyledToolbar = styled(Toolbar)({

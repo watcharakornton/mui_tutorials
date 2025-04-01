@@ -32,7 +32,9 @@ import ProgressPage from "./pages/ProgressPage";
 import SkeletonPage from "./pages/SkeletonPage";
 import SnackbarPage from "./pages/SnackbarPage";
 import AccordionPage from "./pages/AccordionPage";
+
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
+import BottomAppBar from "./pages/AppBar/BottomAppBar";
 
 function App() {
   return (
@@ -74,6 +76,7 @@ function App() {
         <Route path="/accordion" element={<AccordionPage />} />
         <Route path="/app-bar" element={<AppBarPage />} />
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
+        <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
       </Routes>
     </Router>
   );
