@@ -29,6 +29,57 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const ProminentAppBar = () => {
+    const theme = useTheme();
+    const StyledToolbar = styled(Toolbar)({
+        alignItems: 'flex-start',
+        paddingTop: theme.spacing(1),
+        paddingBottom: theme.spacing(2),
+        '@media all': {
+            minHeight: 128,
+        },
+    });
+
+    return (
+        <MyContainer title="Prominent AppBar">
+            <Box sx={{ width: '95%' }}>
+                <AppBar position="static">
+                    <StyledToolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="open drawer"
+                            sx={{ mr: 2 }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography
+                            variant='h5'
+                            noWrap
+                            component="div"
+                            sx={{ flexGrow: 1, alignSelf: 'flex-end' }}
+                        >
+                            MUI
+                        </Typography>
+                        <IconButton size="large" aria-label="search" color="inherit">
+                            <SearchIcon />
+                        </IconButton>
+                        <IconButton
+                            size="large"
+                            aria-label="display more actions"
+                            edge="end"
+                            color="inherit"
+                        >
+                            <MoreIcon />
+                        </IconButton>
+                    </StyledToolbar>
+                </AppBar>
+            </Box>
+        </MyContainer>
+    )
+}
+
 export const DenseAppBar = () => {
     return (
         <MyContainer title="Dense AppBar">

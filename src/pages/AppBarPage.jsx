@@ -10,6 +10,7 @@ import {
     DrawerAppBar,
     PrimarySearchAppBar,
     DenseAppBar,
+    ProminentAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -21,6 +22,7 @@ const AppBarPage = () => {
         <DrawerAppBar />,
         <PrimarySearchAppBar />,
         <DenseAppBar />,
+        <ProminentAppBar />,
     ];
 
     return (
