@@ -4,15 +4,19 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 
 import {
     AccordionUsage,
+    AccordionExpandIcon,
+    AccordionExpandDefault,
 } from "../surfaces/AccordionComponent";
 
 const AccordionPage = () => {
     const sections = [
         <AccordionUsage />,
+        <AccordionExpandIcon />,
+        <AccordionExpandDefault />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
