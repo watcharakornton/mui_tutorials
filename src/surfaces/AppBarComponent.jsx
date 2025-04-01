@@ -29,10 +29,18 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const HideAppBar = () => {
+    return (
+        <MyContainer title="HideAppBar">
+            <Button href="/app-bar/hide-app-bar" variant='outlined'>View HideAppBar</Button>
+        </MyContainer>
+    )
+}
+
 export const BottomAppBar = () => {
     return (
         <MyContainer title="Bottom AppBar">
-            <Button href="/app-bar/bottom-app-bar" variant='outlined' color="error">View BottomAppBar</Button>
+            <Button href="/app-bar/bottom-app-bar" variant='outlined'>View BottomAppBar</Button>
         </MyContainer>
     )
 }
@@ -329,7 +337,7 @@ export const PrimarySearchAppBar = () => {
 export const DrawerAppBar = () => {
     return (
         <MyContainer title="DrawerAppBar">
-            <Button href="/app-bar/drawer-app-bar" variant='contained'>View DrawerAppBar</Button>
+            <Button href="/app-bar/drawer-app-bar" variant='outlined'>View DrawerAppBar</Button>
         </MyContainer>
     )
 }
