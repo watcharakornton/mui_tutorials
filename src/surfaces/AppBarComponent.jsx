@@ -29,6 +29,25 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const DenseAppBar = () => {
+    return (
+        <MyContainer title="Dense AppBar">
+            <Box sx={{ width: '95%' }}>
+                <AppBar position="static">
+                    <Toolbar variant='dense'>
+                        <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant='h6' color="inherit" component="div">
+                            Photos
+                        </Typography>
+                    </Toolbar>
+                </AppBar>
+            </Box>
+        </MyContainer>
+    )
+}
+
 export const PrimarySearchAppBar = () => {
     const theme = useTheme();
 
