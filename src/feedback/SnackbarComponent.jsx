@@ -14,12 +14,53 @@ import {
     Alert,
 } from '@mui/material';
 import {
+    useNotifications,
+    NotificationsProvider,
+} from '@toolpad/core/useNotifications';
+import {
     SnackbarProvider,
     useSnackbar,
 } from 'notistack';
 import {
     Close as CloseIcon
 } from '@mui/icons-material';
+
+export const ToolpadNotificationNoSnap = () => {
+    function NotifyButton() {
+        const notifications = useNotifications();
+        const [online, setOnline] = React.useState(true);
+        const prevOnline = React.useRef(online);
+        React.useEffect(() => {
+            if (prevOnline.current === online) {
+                return () => { };
+            }
+            prevOnline.current = online;
+
+            const key = online
+                ? notifications.show('You are now online', {
+                    severity: 'success',
+                    autoHideDuration: 3000,
+                })
+                : notifications.show('You are now offline', {
+                    severity: 'error',
+                });
+
+            return () => {
+                notifications.close(key);
+            };
+        }, [notifications, online]);
+
+        return <Button onClick={() => setOnline((prev) => !prev)}>Notify</Button>;
+    }
+
+    return (
+        <MyContainer title="Toolpad Notification No Snap">
+            <NotificationsProvider>
+                <NotifyButton />
+            </NotificationsProvider>
+        </MyContainer>
+    )
+}
 
 export const IntegrationNotistack = () => {
     function MyApp() {
@@ -91,7 +132,7 @@ export const ConsecutiveSnackbars = () => {
                     autoHideDuration={6000}
                     onClose={handleClose}
                     slotProps={{ transition: { onExited: handleExited } }}
-                    message={messageInfo ? messageInfo.message: undefined}
+                    message={messageInfo ? messageInfo.message : undefined}
                     action={
                         <React.Fragment>
                             <Button color="secondary" size="small" onClick={handleClose}>
@@ -181,7 +222,7 @@ export const TransitionsSnackbar = () => {
                 <Button onClick={handleClick(GrowTransition)}>Grow Transitions</Button>
                 <Button onClick={handleClick(Fade)}>Fade Transition</Button>
                 <Button onClick={handleClick(SlideTransition)}>Slide Transitions</Button>
-                <Snackbar 
+                <Snackbar
                     open={state.open}
                     onClose={handleClose}
                     slots={{ transition: state.Transition }}

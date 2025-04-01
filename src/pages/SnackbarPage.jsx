@@ -11,6 +11,7 @@ import {
     CustomizedSnackbars,
     ConsecutiveSnackbars,
     IntegrationNotistack,
+    ToolpadNotificationNoSnap,
 } from "../feedback/SnackbarComponent";
 
 const SnackbarPage = () => {
@@ -23,6 +24,7 @@ const SnackbarPage = () => {
         <CustomizedSnackbars />,
         <ConsecutiveSnackbars />,
         <IntegrationNotistack />,
+        <ToolpadNotificationNoSnap />,
     ];
 
     return (
