@@ -11,10 +11,141 @@ import {
     Fade,
     Slide,
     Grow,
+    Alert,
 } from '@mui/material';
+import {
+    SnackbarProvider,
+    useSnackbar,
+} from 'notistack';
 import {
     Close as CloseIcon
 } from '@mui/icons-material';
+
+export const IntegrationNotistack = () => {
+    function MyApp() {
+        const { enqueueSnackbar } = useSnackbar();
+
+        const handleClick = () => {
+            enqueueSnackbar('I love snacks.');
+        };
+
+        const handleClickVariant = (variant) => () => {
+            enqueueSnackbar('This is a success message!', { variant });
+        };
+
+        return (
+            <React.Fragment>
+                <Button onClick={handleClick}>Show snackbar</Button>
+                <Button onClick={handleClickVariant('success')}>Show success snackbar</Button>
+            </React.Fragment>
+        );
+    }
+
+    return (
+        <MyContainer title="Integration Notistack">
+            <SnackbarProvider maxSnack={3}>
+                <MyApp />
+            </SnackbarProvider>
+        </MyContainer>
+    )
+}
+
+export const ConsecutiveSnackbars = () => {
+    const [snackPack, setSnackPack] = React.useState([]);
+    const [open, setOpen] = React.useState(false);
+    const [messageInfo, setMessageInfo] = React.useState(undefined);
+
+    React.useEffect(() => {
+        if (snackPack.length && !messageInfo) {
+            setMessageInfo({ ...snackPack[0] });
+            setSnackPack((prev) => prev.slice(1));
+            setOpen(true);
+        } else if (snackPack.length && messageInfo && open) {
+            setOpen(false);
+        }
+    }, [snackPack, messageInfo, open]);
+
+    const handleClick = (message) => () => {
+        setSnackPack((prev) => [...prev, { message, key: new Date().getTime() }]);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+        setOpen(false);
+    };
+
+    const handleExited = () => {
+        setMessageInfo(undefined);
+    };
+
+    return (
+        <MyContainer title="Consecutive Snackbars">
+            <div>
+                <Button onClick={handleClick('Message A')}>Show message A</Button>
+                <Button onClick={handleClick('Message B')}>Show message B</Button>
+                <Snackbar
+                    key={messageInfo ? messageInfo.key : undefined}
+                    open={open}
+                    autoHideDuration={6000}
+                    onClose={handleClose}
+                    slotProps={{ transition: { onExited: handleExited } }}
+                    message={messageInfo ? messageInfo.message: undefined}
+                    action={
+                        <React.Fragment>
+                            <Button color="secondary" size="small" onClick={handleClose}>
+                                UNDO
+                            </Button>
+                            <IconButton
+                                aria-label="close"
+                                color="inherit"
+                                sx={{ p: 0.5 }}
+                                onClick={handleClose}
+                            >
+                                <CloseIcon />
+                            </IconButton>
+                        </React.Fragment>
+                    }
+                />
+            </div>
+        </MyContainer>
+    )
+}
+
+export const CustomizedSnackbars = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    return (
+        <MyContainer title="Customized Snackbars">
+            <div>
+                <Button onClick={handleClick}>Open Snackbars</Button>
+                <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                    <Alert
+                        onClose={handleClose}
+                        severity='success'
+                        variant='filled'
+                        sx={{ width: '100%' }}
+                    >
+                        This is a success Alert inside a Snackbar!
+                    </Alert>
+                </Snackbar>
+            </div>
+        </MyContainer>
+    );
+}
 
 export const TransitionsSnackbar = () => {
     function SlideTransition(props) {

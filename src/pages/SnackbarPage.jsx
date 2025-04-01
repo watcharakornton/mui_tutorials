@@ -8,6 +8,9 @@ import {
     LongTextSnackbar,
     AutohideSnackbar,
     TransitionsSnackbar,
+    CustomizedSnackbars,
+    ConsecutiveSnackbars,
+    IntegrationNotistack,
 } from "../feedback/SnackbarComponent";
 
 const SnackbarPage = () => {
@@ -17,6 +20,9 @@ const SnackbarPage = () => {
         <LongTextSnackbar />,
         <AutohideSnackbar />,
         <TransitionsSnackbar />,
+        <CustomizedSnackbars />,
+        <ConsecutiveSnackbars />,
+        <IntegrationNotistack />,
     ];
 
     return (
