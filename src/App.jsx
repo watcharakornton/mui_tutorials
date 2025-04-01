@@ -36,6 +36,7 @@ import AccordionPage from "./pages/AccordionPage";
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
 import HideAppBar from "./pages/AppBar/HideAppBar";
+import ElevateAppBar from "./pages/AppBar/ElevateAppBar";
 
 function App() {
   return (
@@ -76,9 +77,11 @@ function App() {
         <Route path="/snackbar" element={<SnackbarPage />} />
         <Route path="/accordion" element={<AccordionPage />} />
         <Route path="/app-bar" element={<AppBarPage />} />
+
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
         <Route path="/app-bar/hide-app-bar" element={<HideAppBar />} />
+        <Route path="/app-bar/elevate-app-bar" element={<ElevateAppBar />} />
       </Routes>
     </Router>
   );

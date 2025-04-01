@@ -13,6 +13,7 @@ import {
     ProminentAppBar,
     BottomAppBar,
     HideAppBar,
+    ElevationAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -27,6 +28,7 @@ const AppBarPage = () => {
         <ProminentAppBar />,
         <BottomAppBar />,
         <HideAppBar />,
+        <ElevationAppBar />,
     ];
 
     return (
