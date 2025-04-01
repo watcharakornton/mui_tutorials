@@ -6,6 +6,8 @@ import {
     SimpleSnackbar,
     PositionedSnackbar,
     LongTextSnackbar,
+    AutohideSnackbar,
+    TransitionsSnackbar,
 } from "../feedback/SnackbarComponent";
 
 const SnackbarPage = () => {
@@ -13,6 +15,8 @@ const SnackbarPage = () => {
         <SimpleSnackbar />,
         <PositionedSnackbar />,
         <LongTextSnackbar />,
+        <AutohideSnackbar />,
+        <TransitionsSnackbar />,
     ];
 
     return (
@@ -32,7 +36,6 @@ const SnackbarPage = () => {
                     <React.Fragment key={index}>
                         <Grid item xs={12} sx={{ mt: 5 }}>
                             {Component}
-                            {/* <Divider sx={{ mt: 3, width: "100%" }} /> */}
                         </Grid>
                     </React.Fragment>
                 ))}

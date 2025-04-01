@@ -8,10 +8,90 @@ import {
     Snackbar,
     SnackbarContent,
     IconButton,
+    Fade,
+    Slide,
+    Grow,
 } from '@mui/material';
 import {
     Close as CloseIcon
 } from '@mui/icons-material';
+
+export const TransitionsSnackbar = () => {
+    function SlideTransition(props) {
+        return <Slide {...props} direction="up" />;
+    }
+
+    function GrowTransition(props) {
+        return <Grow {...props} />;
+    }
+
+    const [state, setState] = React.useState({
+        open: false,
+        Transition: Fade,
+    });
+
+    const handleClick = (Transition) => () => {
+        setState({
+            open: true,
+            Transition,
+        });
+    };
+
+    const handleClose = () => {
+        setState({
+            ...state,
+            open: false,
+        });
+    };
+
+    return (
+        <MyContainer title="Transitions Snackbar">
+            <div>
+                <Button onClick={handleClick(GrowTransition)}>Grow Transitions</Button>
+                <Button onClick={handleClick(Fade)}>Fade Transition</Button>
+                <Button onClick={handleClick(SlideTransition)}>Slide Transitions</Button>
+                <Snackbar 
+                    open={state.open}
+                    onClose={handleClose}
+                    slots={{ transition: state.Transition }}
+                    message="I love snacks"
+                    key={state.Transition.name}
+                    autoHideDuration={1200}
+                />
+            </div>
+        </MyContainer>
+    );
+}
+
+export const AutohideSnackbar = () => {
+    const [open, setOpen] = React.useState(false);
+
+    const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    return (
+        <MyContainer title="Autohide Snackbar">
+            <div>
+                <Button onClick={handleClick}>Open Snackbar</Button>
+                <Snackbar
+                    open={open}
+                    autoHideDuration={5000}
+                    onClose={handleClose}
+                    message="This Snackbar will be dismissed in 5 seconds."
+                />
+            </div>
+        </MyContainer>
+    )
+}
 
 export const LongTextSnackbar = () => {
     const action = (
