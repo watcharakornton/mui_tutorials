@@ -31,6 +31,7 @@ import DialogPage from "./pages/DialogPage";
 import ProgressPage from "./pages/ProgressPage";
 import SkeletonPage from "./pages/SkeletonPage";
 import SnackbarPage from "./pages/SnackbarPage";
+import AccordionPage from "./pages/AccordionPage";
 
 function App() {
   return (
@@ -69,6 +70,7 @@ function App() {
         <Route path="/progress" element={<ProgressPage />} />
         <Route path="/skeleton" element={<SkeletonPage />} />
         <Route path="/snackbar" element={<SnackbarPage />} />
+        <Route path="/accordion" element={<AccordionPage />} />
 
         <Route path="/app-bar" element={<AppBarPage />} />
       </Routes>
