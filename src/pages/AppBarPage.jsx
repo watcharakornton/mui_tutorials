@@ -5,12 +5,14 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     ButtonAppBar,
     MenuAppBar,
+    ResponsiveAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
     const sections = [
         <ButtonAppBar />,
         <MenuAppBar />,
+        <ResponsiveAppBar />,
     ];
 
     return (
