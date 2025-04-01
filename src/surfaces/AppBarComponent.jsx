@@ -1,6 +1,7 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
 import { styled, alpha, useTheme } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 import {
     AppBar,
     Box,
@@ -24,6 +25,14 @@ import {
     Adb as AdbIcon,
     Search as SearchIcon,
 } from '@mui/icons-material'
+
+export const DrawerAppBar = () => {
+    return (
+        <MyContainer title="DrawerAppBar">
+            <Button href="/app-bar/drawer-app-bar" variant='contained'>View DrawerAppBar</Button>
+        </MyContainer>
+    )
+}
 
 export const SearchAppBar = () => {
     const theme = useTheme();
@@ -82,7 +91,7 @@ export const SearchAppBar = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Typography 
+                        <Typography
                             variant='h6'
                             noWrap
                             component="div"
@@ -94,7 +103,7 @@ export const SearchAppBar = () => {
                             <SearchIconWrapper>
                                 <SearchIcon />
                             </SearchIconWrapper>
-                            <StyledInputBase 
+                            <StyledInputBase
                                 placeholder='Search...'
                                 inputProps={{ 'aria-label': 'search' }}
                             />

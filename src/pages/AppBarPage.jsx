@@ -7,6 +7,7 @@ import {
     MenuAppBar,
     ResponsiveAppBar,
     SearchAppBar,
+    DrawerAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -15,6 +16,7 @@ const AppBarPage = () => {
         <MenuAppBar />,
         <ResponsiveAppBar />,
         <SearchAppBar />,
+        <DrawerAppBar />,
     ];
 
     return (
