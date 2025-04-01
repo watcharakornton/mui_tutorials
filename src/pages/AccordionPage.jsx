@@ -9,6 +9,7 @@ import {
     AccordionTransition,
     DisabledAccordion,
     ControlledAccordions,
+    CustomizedAccordions,
 } from "../surfaces/AccordionComponent";
 
 const AccordionPage = () => {
@@ -19,6 +20,7 @@ const AccordionPage = () => {
         <AccordionTransition />,
         <DisabledAccordion />,
         <ControlledAccordions />,
+        <CustomizedAccordions />,
     ];
 
     return (
