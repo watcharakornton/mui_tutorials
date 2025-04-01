@@ -3,13 +3,48 @@ import MyContainer from '../component/MyContainer'
 import {
     Grid,
     Box,
+    Stack,
     Button,
     Snackbar,
+    SnackbarContent,
     IconButton,
 } from '@mui/material';
 import {
     Close as CloseIcon
 } from '@mui/icons-material';
+
+export const LongTextSnackbar = () => {
+    const action = (
+        <Button color="secondary" size="small">
+            lorem ipsum dolorem
+        </Button>
+    );
+
+    return (
+        <MyContainer title="Long Text Snackbar">
+            <Stack spacing={2} sx={{ maxWidth: 600, width: '95%' }}>
+                <SnackbarContent message="I love snacks." action={action} />
+                <SnackbarContent
+                    message={
+                        'I love candy. I love cookies. I love cupcakes. \
+                    I love cheesecake. I love chocolate.'
+                    }
+                />
+                <SnackbarContent
+                    message="I love candy. I love cookies. I love cupcakes."
+                    action={action}
+                />
+                <SnackbarContent
+                    message={
+                        'I love candy. I love cookies. I love cupcakes. \
+                    I love cheesecake. I love chocolate.'
+                    }
+                    action={action}
+                />
+            </Stack>
+        </MyContainer>
+    )
+}
 
 export const PositionedSnackbar = () => {
     const [state, setState] = React.useState({
@@ -68,7 +103,7 @@ export const PositionedSnackbar = () => {
         <MyContainer title="Positioned Snackbar">
             <Box sx={{ width: 500 }}>
                 {buttons}
-                <Snackbar 
+                <Snackbar
                     anchorOrigin={{ vertical, horizontal }}
                     open={open}
                     onClose={handleClose}
@@ -91,7 +126,7 @@ export const SimpleSnackbar = () => {
         if (reason === 'clickaway') {
             return;
         }
-         
+
         setOpen(false);
     };
 
@@ -100,7 +135,7 @@ export const SimpleSnackbar = () => {
             <Button color="secondary" size="small" onClick={handleClose}>
                 UNDO
             </Button>
-            <IconButton 
+            <IconButton
                 size="small"
                 aria-label="close"
                 color="inherit"
@@ -115,7 +150,7 @@ export const SimpleSnackbar = () => {
         <MyContainer title="Simple Snackbar">
             <div>
                 <Button onClick={handleClick}>Open Snackbar</Button>
-                <Snackbar 
+                <Snackbar
                     open={open}
                     autoHideDuration={6000}
                     onClose={handleClose}

@@ -5,16 +5,18 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     SimpleSnackbar,
     PositionedSnackbar,
+    LongTextSnackbar,
 } from "../feedback/SnackbarComponent";
 
 const SnackbarPage = () => {
     const sections = [
         <SimpleSnackbar />,
         <PositionedSnackbar />,
+        <LongTextSnackbar />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
