@@ -15,6 +15,7 @@ import {
     HideAppBar,
     ElevationAppBar,
     BackToTop,
+    EnableColorOnDarkAppBar,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -31,6 +32,7 @@ const AppBarPage = () => {
         <HideAppBar />,
         <ElevationAppBar />,
         <BackToTop />,
+        <EnableColorOnDarkAppBar />,
     ];
 
     return (

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
-import { styled, alpha, useTheme } from '@mui/material/styles';
+import { styled, alpha, useTheme, ThemeProvider, createTheme } from '@mui/material/styles';
 import {
     AppBar,
     Box,
@@ -18,6 +18,7 @@ import {
     FormControlLabel,
     FormGroup,
     InputBase,
+    Stack,
 } from '@mui/material';
 import {
     Menu as MenuIcon,
@@ -28,6 +29,45 @@ import {
     Notifications as NotificationsIcon,
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
+
+export const EnableColorOnDarkAppBar = () => {
+    function appBarLabel(label) {
+        return (
+            <Toolbar>
+                <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                    <MenuIcon />
+                </IconButton>
+                <Typography variant='h6' noWrap component="div" sx={{ flexGrow: 1 }}>
+                    {label}
+                </Typography>
+            </Toolbar>
+        );
+    }
+
+    const darkTheme = createTheme({
+        palette: {
+            mode: 'dark',
+            primary: {
+                main: '#1976d2',
+            },
+        },
+    });
+
+    return (
+        <MyContainer title="Enable Color On Dark AppBar">
+            <Stack spacing={2} sx={{ width: '95%' }}>
+                <ThemeProvider theme={darkTheme}>
+                    <AppBar position="static" color="primary" enableColorOnDark>
+                        {appBarLabel('enableColorOnDark')}
+                    </AppBar>
+                    <AppBar position="static" color="primary">
+                        {appBarLabel('default')}
+                    </AppBar>
+                </ThemeProvider>
+            </Stack>
+        </MyContainer>
+    )
+}
 
 export const BackToTop = () => {
     return (
