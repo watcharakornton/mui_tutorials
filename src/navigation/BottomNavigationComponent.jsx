@@ -2,6 +2,7 @@ import * as React from 'react'
 import MyContainer from '../component/MyContainer'
 import {
     Box,
+    Button,
     BottomNavigation,
     BottomNavigationAction,
 } from '@mui/material';
@@ -11,6 +12,17 @@ import {
     LocationOn as LocationOnIcon,
     Folder as FolderIcon,
 } from '@mui/icons-material';
+
+
+
+export const FixedBottomNavigation = () => {
+
+    return (
+        <MyContainer title="Fixed Bottom Navigation">
+            <Button variant='outlined' href="/bottom-navigation/fixed-bottom-navigation">View Fixed Bottom Naviation</Button>
+        </MyContainer>
+    )
+}
 
 export const LabelBottomNavigation = () => {
     const [value, setValue] = React.useState('recents');
@@ -22,17 +34,17 @@ export const LabelBottomNavigation = () => {
     return (
         <MyContainer title="Label Bottom Navigation">
             <BottomNavigation sx={{ width: 500 }} value={value} onChange={handleChange}>
-                <BottomNavigationAction 
+                <BottomNavigationAction
                     label="Recents"
                     value="recents"
                     icon={<RestoreIcon />}
                 />
-                <BottomNavigationAction 
+                <BottomNavigationAction
                     label="Favorites"
                     value="favorites"
                     icon={<FavoriteIcon />}
                 />
-                <BottomNavigationAction 
+                <BottomNavigationAction
                     label="Nearby"
                     value="nearby"
                     icon={<LocationOnIcon />}

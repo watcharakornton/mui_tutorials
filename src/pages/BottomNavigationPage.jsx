@@ -5,12 +5,14 @@ import { ChevronLeft as ChevronLeftIcon, Label } from "@mui/icons-material";
 import {
     SimpleBottomNavigation,
     LabelBottomNavigation,
+    FixedBottomNavigation,
 } from "../navigation/BottomNavigationComponent";
 
 const BottomNavigationPage = () => {
     const sections = [
         <SimpleBottomNavigation />,
         <LabelBottomNavigation />,
+        <FixedBottomNavigation />,
     ];
 
     return (

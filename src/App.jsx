@@ -43,6 +43,8 @@ import ElevateAppBar from "./pages/AppBar/ElevateAppBar";
 import BackToTop from "./pages/AppBar/BackToTop";
 import DashboardLayoutBasic from "./pages/AppBar/DashboardLayoutBasic";
 
+import FixedBottomNavigation from "./pages/BottomNavigation/FixedBottomNavigation";
+
 function App() {
   return (
     <Router>
@@ -92,6 +94,9 @@ function App() {
         <Route path="/app-bar/elevate-app-bar" element={<ElevateAppBar />} />
         <Route path="/app-bar/back-to-top" element={<BackToTop />} />
         <Route path="/app-bar/dashboard-layout-basic" element={<DashboardLayoutBasic />} />
+
+        <Route path="/bottom-navigation/fixed-bottom-navigation" element={<FixedBottomNavigation />} />
+
       </Routes>
     </Router>
   );
