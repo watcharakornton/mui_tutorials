@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardMedia,
     CardActions,
+    CardActionArea,
     CardContent,
     Collapse,
     Avatar,
@@ -56,13 +57,99 @@ const ExpandMore = styled((props) => {
     ],
 }));
 
-export default function RecipeReviewCard(){
+export const MultiActionAreaCard = () => {
+    return (
+        <MyContainer title="Multi Action Area Card">
+            <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        image="/src/assets/images/cards/contemplative-reptile.jpg"
+                        alt="green iguana"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant='h5' component="div">
+                            Lizard
+                        </Typography>
+                        <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                            Lizards are a widespread group of squamate reptiles, with over 6,000
+                            species, ranging across all continents except Antarctica
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    <Button size="small" color="primary">
+                        Share
+                    </Button>
+                </CardActions>
+            </Card>
+        </MyContainer>
+    )
+}
+
+export const ImgMediaCard = () => {
+    return (
+        <MyContainer title="Img Media Card">
+            <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    image="/src/assets/images/cards/contemplative-reptile.jpg"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant='h5' component="div">
+                        Lizard
+                    </Typography>
+                    <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                        Lizards are a widespread group of squamate reptiles, with over 6,000
+                        species, ranging across all continents except Antarctica
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Share</Button>
+                    <Button size="small">Learn More</Button>
+                </CardActions>
+            </Card>
+        </MyContainer>
+    )
+}
+
+export const MediaCard = () => {
+    return (
+        <MyContainer title="Media Card">
+            <Card sx={{ maxWidth: 345 }}>
+                <CardMedia
+                    sx={{ height: 140 }}
+                    image="/src/assets/images/cards/contemplative-reptile.jpg"
+                    title="green iguana"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant='h5' component="div">
+                        Lizard
+                    </Typography>
+                    <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+                        Lizards are a widespread group of squamate reptiles, with over 6,000
+                        species, ranging across all continents except Antarctica
+                    </Typography>
+                </CardContent>
+                <CardActions>
+                    <Button size="small">Share</Button>
+                    <Button size="small">Learn More</Button>
+                </CardActions>
+            </Card>
+        </MyContainer>
+    )
+}
+
+export const RecipeReviewCard = () => {
     const [expanded, setExpanded] = React.useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
     };
-     
+
     return (
         <MyContainer title="Recipe Review Card">
             <Card sx={{ maxWidth: 345 }}>
@@ -80,7 +167,7 @@ export default function RecipeReviewCard(){
                     title="Shrimp and Chorizo Paella"
                     subheader="September 14, 2016"
                 />
-                <CardMedia 
+                <CardMedia
                     component="img"
                     height="194"
                     image="/src/assets/images/cards/paella.jpg"
@@ -147,13 +234,13 @@ export const OutlinedCard = () => {
     const card = (
         <React.Fragment>
             <CardContent>
-                <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14  }}>
+                <Typography gutterBottom sx={{ color: 'text.secondary', fontSize: 14 }}>
                     Word of the Day
                 </Typography>
                 <Typography variant='h5' component="div">
                     be{bull}nev{bull}o{bull}lent
                 </Typography>
-                <Typography sx={{ color: 'text.secondary', mb: 1.5  }}>adjective</Typography>
+                <Typography sx={{ color: 'text.secondary', mb: 1.5 }}>adjective</Typography>
                 <Typography variant='body2'>
                     well meaning and kindly.
                     <br />

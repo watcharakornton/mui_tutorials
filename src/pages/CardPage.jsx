@@ -5,14 +5,20 @@ import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
 import {
     BasicCard,
     OutlinedCard,
+    RecipeReviewCard,
+    MediaCard,
+    ImgMediaCard,
+    MultiActionAreaCard,
 } from "../surfaces/CardComponent";
-import RecipeReviewCard from "../surfaces/CardComponent";
 
 const CardPage = () => {
     const sections = [
         <BasicCard />,
         <OutlinedCard />,
         <RecipeReviewCard />,
+        <MediaCard />,
+        <ImgMediaCard />,
+        <MultiActionAreaCard />,
     ];
 
     return (
