@@ -1,14 +1,16 @@
 import * as React from "react";
 import { Container, Grid, Typography, Button, Divider, Collapse } from "@mui/material";
-import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
+import { ChevronLeft as ChevronLeftIcon, Label } from "@mui/icons-material";
 
 import {
     SimpleBottomNavigation,
+    LabelBottomNavigation,
 } from "../navigation/BottomNavigationComponent";
 
 const BottomNavigationPage = () => {
     const sections = [
         <SimpleBottomNavigation />,
+        <LabelBottomNavigation />,
     ];
 
     return (
