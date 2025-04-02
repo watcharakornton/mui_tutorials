@@ -75,7 +75,7 @@ const Home = () => {
     { title: "Snackbar page", href: "/snackbar" },
     { title: "Accordion page", href: "/accordion" },
     { title: "App Bar page", href: "/app-bar" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Card page", href: "/card" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
