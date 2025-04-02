@@ -92,7 +92,7 @@ export const SelectActionCard = () => {
                 }}
             >
                 {cards.map((card, index) => (
-                    <Card>
+                    <Card key={index}>
                         <CardActionArea
                             onClick={() => setSelectedCard(index)}
                             data-active={selectedCard === index ? '' : undefined}
