@@ -19,7 +19,7 @@ export const FixedBottomNavigation = () => {
 
     return (
         <MyContainer title="Fixed Bottom Navigation">
-            <Button variant='outlined' href="/bottom-navigation/fixed-bottom-navigation">View Fixed Bottom Naviation</Button>
+            <Button variant='contained' href="/bottom-navigation/fixed-bottom-navigation">View Fixed Bottom Naviation</Button>
         </MyContainer>
     )
 }

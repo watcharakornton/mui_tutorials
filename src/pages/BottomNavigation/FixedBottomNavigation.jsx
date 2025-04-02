@@ -1,4 +1,5 @@
 import * as React from 'react';
+import NavBar from '../../component/NavBar';
 import {
     Box,
     CssBaseline,
@@ -37,32 +38,35 @@ export default function FixedBottomNavigation() {
     }, [value, setMessages]);
 
     return (
-        <Box sx={{ pb: 7 }} ref={ref}>
-            <CssBaseline />
-            <List>
-                {messages.map(({ primary, secondary, person }, index) => (
-                    <ListItemButton key={index + person}>
-                        <ListItemAvatar>
-                            <Avatar alt="Profile Picture" src={person} />
-                        </ListItemAvatar>
-                        <ListItemText primary={primary} secondary={secondary} />
-                    </ListItemButton>
-                ))}
-            </List>
-            <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
-                <BottomNavigation
-                    showLabels
-                    value={value}
-                    onChange={(event, newValue) => {
-                        setValue(newValue);
-                    }}
-                >
-                    <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-                    <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-                    <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
-                </BottomNavigation>
-            </Paper>
-        </Box>
+        <>
+            <NavBar title="Fixed Bottom Navigation" path="bottom-navigation" />
+            <Box sx={{ pb: 7 }} ref={ref}>
+                <CssBaseline />
+                <List>
+                    {messages.map(({ primary, secondary, person }, index) => (
+                        <ListItemButton key={index + person}>
+                            <ListItemAvatar>
+                                <Avatar alt="Profile Picture" src={person} />
+                            </ListItemAvatar>
+                            <ListItemText primary={primary} secondary={secondary} />
+                        </ListItemButton>
+                    ))}
+                </List>
+                <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>
+                    <BottomNavigation
+                        showLabels
+                        value={value}
+                        onChange={(event, newValue) => {
+                            setValue(newValue);
+                        }}
+                    >
+                        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
+                        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+                        <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+                    </BottomNavigation>
+                </Paper>
+            </Box>
+        </>
     )
 }
 
