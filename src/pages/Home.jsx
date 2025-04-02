@@ -77,6 +77,8 @@ const Home = () => {
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
     <Container maxWidth="md" sx={{ my: 4, minHeight: "100vh" }}>
