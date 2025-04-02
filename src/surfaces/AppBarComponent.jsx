@@ -30,6 +30,14 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const DashboardLayoutBasic = () => {
+    return (
+        <MyContainer title="Dashboard Layout Basic">
+            <Button href="/app-bar/dashboard-layout-basic" variant='outlined'>View Dashboard Layout Basic</Button>
+        </MyContainer>
+    )
+}
+
 export const EnableColorOnDarkAppBar = () => {
     function appBarLabel(label) {
         return (

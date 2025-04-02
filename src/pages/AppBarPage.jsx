@@ -16,6 +16,7 @@ import {
     ElevationAppBar,
     BackToTop,
     EnableColorOnDarkAppBar,
+    DashboardLayoutBasic,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -33,6 +34,7 @@ const AppBarPage = () => {
         <ElevationAppBar />,
         <BackToTop />,
         <EnableColorOnDarkAppBar />,
+        <DashboardLayoutBasic />,
     ];
 
     return (
