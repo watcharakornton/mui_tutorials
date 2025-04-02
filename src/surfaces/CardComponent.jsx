@@ -1,6 +1,6 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
-import { styled } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 import {
     Box,
@@ -22,6 +22,9 @@ import {
     Share as ShareIcon,
     ExpandMore as ExpandMoreIcon,
     MoreVert as MoreVertIcon,
+    SkipPrevious as SkipPreviousIcon,
+    PlayArrow as PlayArrowIcon,
+    SkipNext as SkipNextIcon,
 } from '@mui/icons-material';
 
 const bull = (
@@ -56,6 +59,110 @@ const ExpandMore = styled((props) => {
         },
     ],
 }));
+
+const cards = [
+    {
+        id: 1,
+        title: 'Plants',
+        description: 'Plants are essential for all life.',
+    },
+    {
+        id: 2,
+        title: 'Animals',
+        description: 'Animals are a part of nature.',
+    },
+    {
+        id: 3,
+        title: 'Humans',
+        description: 'Humans depend on plants and animals for survival.',
+    },
+];
+
+export const SelectActionCard = () => {
+    const [selectedCard, setSelectedCard] = React.useState(0);
+
+    return (
+        <MyContainer title="Select Action Card">
+            <Box
+                sx={{
+                    width: '95%',
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(200px, 100%), 1fr))',
+                    gap: 2,
+                }}
+            >
+                {cards.map((card, index) => (
+                    <Card>
+                        <CardActionArea
+                            onClick={() => setSelectedCard(index)}
+                            data-active={selectedCard === index ? '' : undefined}
+                            sx={{
+                                height: '100%',
+                                '&[data-active]': {
+                                    backgroundColor: 'action.selected',
+                                    '&:hover': {
+                                        backgroundColor: 'action.selectedHover',
+                                    },
+                                },
+                            }}
+                        >
+                            <CardContent sx={{ height: '100%' }}>
+                                <Typography variant='h5' component="div">
+                                    {card.title}
+                                </Typography>
+                                <Typography variant='body2' color="text.secondary">
+                                    {card.description}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                ))}
+            </Box>
+        </MyContainer>
+    )
+}
+
+export const MediaControlCard = () => {
+    const theme = useTheme();
+
+    return (
+        <MyContainer title="Media Control Card">
+            <Card sx={{ display: 'flex' }}>
+                <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                    <CardContent sx={{ flex: '1 0 auto' }}>
+                        <Typography component="div" variant='h5'>
+                            Live Form Space
+                        </Typography>
+                        <Typography
+                            variant='subtitle1'
+                            component="div"
+                            sx={{ color: 'text.secondary' }}
+                        >
+                            Mac Miller
+                        </Typography>
+                    </CardContent>
+                    <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                        <IconButton aria-label="previous">
+                            {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
+                        </IconButton>
+                        <IconButton aria-label="play/pause">
+                            <PlayArrowIcon sx={{ height: 38, width: 38 }} />
+                        </IconButton>
+                        <IconButton aria-label="next">
+                            {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
+                        </IconButton>
+                    </Box>
+                </Box>
+                <CardMedia
+                    component="img"
+                    sx={{ width: 151 }}
+                    image="/src/assets/images/cards/live-from-space.jpg"
+                    alt="Live from space album cover"
+                />
+            </Card>
+        </MyContainer>
+    )
+}
 
 export const MultiActionAreaCard = () => {
     return (

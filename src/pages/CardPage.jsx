@@ -9,6 +9,8 @@ import {
     MediaCard,
     ImgMediaCard,
     MultiActionAreaCard,
+    MediaControlCard,
+    SelectActionCard,
 } from "../surfaces/CardComponent";
 
 const CardPage = () => {
@@ -19,6 +21,8 @@ const CardPage = () => {
         <MediaCard />,
         <ImgMediaCard />,
         <MultiActionAreaCard />,
+        <MediaControlCard />,
+        <SelectActionCard />,
     ];
 
     return (
