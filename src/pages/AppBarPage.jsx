@@ -14,6 +14,7 @@ import {
     BottomAppBar,
     HideAppBar,
     ElevationAppBar,
+    BackToTop,
 } from "../surfaces/AppBarComponent";
 
 const AppBarPage = () => {
@@ -29,6 +30,7 @@ const AppBarPage = () => {
         <BottomAppBar />,
         <HideAppBar />,
         <ElevationAppBar />,
+        <BackToTop />,
     ];
 
     return (

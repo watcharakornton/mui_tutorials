@@ -29,6 +29,14 @@ import {
     MoreVert as MoreIcon,
 } from '@mui/icons-material'
 
+export const BackToTop = () => {
+    return (
+        <MyContainer title="Back To Top">
+            <Button href="/app-bar/back-to-top" variant='outlined'>View Back To Top</Button>
+        </MyContainer>
+    )
+}
+
 export const ElevationAppBar = () => {
     return (
         <MyContainer title="Elevate Appbar">

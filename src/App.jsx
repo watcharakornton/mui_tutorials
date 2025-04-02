@@ -38,6 +38,7 @@ import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
 import HideAppBar from "./pages/AppBar/HideAppBar";
 import ElevateAppBar from "./pages/AppBar/ElevateAppBar";
+import BackToTop from "./pages/AppBar/BackToTop";
 
 function App() {
   return (
@@ -84,6 +85,7 @@ function App() {
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
         <Route path="/app-bar/hide-app-bar" element={<HideAppBar />} />
         <Route path="/app-bar/elevate-app-bar" element={<ElevateAppBar />} />
+        <Route path="/app-bar/back-to-top" element={<BackToTop />} />
       </Routes>
     </Router>
   );
