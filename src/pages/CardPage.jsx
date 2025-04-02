@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Container, Grid, Typography, Button, Divider, Collapse } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
-
+import { useNavigate } from 'react-router-dom';
 import {
     BasicCard,
     OutlinedCard,
@@ -14,6 +14,7 @@ import {
 } from "../surfaces/CardComponent";
 
 const CardPage = () => {
+    const navigate = useNavigate();
     const sections = [
         <BasicCard />,
         <OutlinedCard />,
@@ -24,6 +25,10 @@ const CardPage = () => {
         <MediaControlCard />,
         <SelectActionCard />,
     ];
+
+    function handleBack() {
+        navigate("/");
+    }
 
     return (
         <Container maxWidth="sm">
@@ -46,7 +51,7 @@ const CardPage = () => {
                     </React.Fragment>
                 ))}
                 <Grid item xs={12} sx={{ my: 5 }}>
-                    <Button size="large" startIcon={<ChevronLeftIcon />} href="/">
+                    <Button size="large" startIcon={<ChevronLeftIcon />} onClick={handleBack}>
                         Back
                     </Button>
                 </Grid>
