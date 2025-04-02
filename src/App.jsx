@@ -1,5 +1,6 @@
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NavBar from "./component/NavBar";
 import Home from "./pages/Home";
 import AutoCompletePage from "./pages/AutoCompletePage";
 import ButtonPage from "./pages/ButtonPage";
@@ -41,6 +42,7 @@ import ElevateAppBar from "./pages/AppBar/ElevateAppBar";
 function App() {
   return (
     <Router>
+      {/* <NavBar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/autocomplete" element={<AutoCompletePage />} />

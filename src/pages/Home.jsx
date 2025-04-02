@@ -9,6 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import NavBar from "../component/NavBar";
 
 const CardComponent = ({ title, href, isTemplate }) => {
   return (
@@ -81,13 +82,13 @@ const Home = () => {
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
-    <Container maxWidth="md" sx={{ my: 4, minHeight: "100vh" }}>
+    <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>
       <Typography variant="h4" sx={{ mb: 3, width: 200, mx: "auto" }}>
         Home page
       </Typography>
       <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
         {cards.map((card, index) => (
-          <Grid item xs={12} sm={6} md={4} key={index}>
+          <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
             <CardComponent
               title={card.title}
               href={card.href}
