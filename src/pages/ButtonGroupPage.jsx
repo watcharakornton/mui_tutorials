@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Container, Grid, Typography, Button, Divider } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon } from "@mui/icons-material";
-
+import MyBackButton from "../component/MyBackButton";
 import {
     BasicButtonGroup,
     VariantButtonGroup,
@@ -40,9 +40,7 @@ const Home = () => {
                     </React.Fragment>
                 ))}
                 <Grid item xs={12} sx={{ my: 5 }}>
-                    <Button size="large" startIcon={<ChevronLeftIcon />} href="/">
-                        Back
-                    </Button>
+                    <MyBackButton />
                 </Grid>
             </Grid>
         </Container>

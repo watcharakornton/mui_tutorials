@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Container, Grid, Divider, Button, Typography } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-
+import MyBackButton from '../component/MyBackButton';
 import {
     FloatingActionButtons,
     FloatingActionButtonSize,
@@ -39,7 +39,7 @@ const CheckboxPage = () => {
                     </React.Fragment>
                 ))}
                 <Grid item xs={12} sx={{ my: 5 }}>
-                    <Button size='large' startIcon={<ChevronLeftIcon />} href="/">Back</Button>
+                    <MyBackButton />
                 </Grid>
             </Grid>
         </Container>

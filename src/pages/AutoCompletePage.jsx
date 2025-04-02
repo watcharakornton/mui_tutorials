@@ -9,6 +9,7 @@ import {
     RenderGroup,
     DisabledOptions,
 } from '../inputs/AutocompleteComponent';
+import MyBackButton from '../component/MyBackButton';
 
 const AutoCompletePage = () => {
     const sections = [
@@ -42,9 +43,7 @@ const AutoCompletePage = () => {
                     </React.Fragment>
                 ))}
                 <Grid item xs={12} sx={{ my: 5 }}>
-                    <Button size="large" startIcon={<ChevronLeftIcon />} href="/">
-                        Back
-                    </Button>
+                    <MyBackButton />
                 </Grid>
             </Grid>
         </Container>

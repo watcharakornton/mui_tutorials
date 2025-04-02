@@ -16,7 +16,6 @@ import {
 
 
 export const FixedBottomNavigation = () => {
-
     return (
         <MyContainer title="Fixed Bottom Navigation">
             <Button variant='contained' href="/bottom-navigation/fixed-bottom-navigation">View Fixed Bottom Naviation</Button>

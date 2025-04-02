@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Container, Grid, Typography, Button, Divider, Collapse } from "@mui/material";
 import { ChevronLeft as ChevronLeftIcon, Label } from "@mui/icons-material";
-import { useNavigate } from 'react-router-dom';
+import MyBackButton from "../component/MyBackButton";
 
 import {
     SimpleBottomNavigation,
@@ -10,12 +10,6 @@ import {
 } from "../navigation/BottomNavigationComponent";
 
 const BottomNavigationPage = () => {
-    const navigate = useNavigate();
-
-    const handleBack = () => {
-        navigate("/");
-    };
-
     const sections = [
         <SimpleBottomNavigation />,
         <LabelBottomNavigation />,
@@ -43,9 +37,7 @@ const BottomNavigationPage = () => {
                     </React.Fragment>
                 ))}
                 <Grid item xs={12} sx={{ my: 5 }}>
-                    <Button size="large" startIcon={<ChevronLeftIcon />} onClick={handleBack}>
-                        Back
-                    </Button>
+                    <MyBackButton />
                 </Grid>
             </Grid>
         </Container>
