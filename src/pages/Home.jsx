@@ -78,7 +78,7 @@ const Home = () => {
     { title: "Card page", href: "/card" },
     { title: "Bottom Navigation page", href: "/bottom-navigation" },
     { title: "Breadcrumbs page", href: "/breadcrumbs"},
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Drawer page", href: "/drawer" },
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
