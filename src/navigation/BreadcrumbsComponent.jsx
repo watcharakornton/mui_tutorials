@@ -1,5 +1,6 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
+import { emphasize, styled } from '@mui/material/styles';
 import {
     Typography,
     Breadcrumbs,
@@ -8,6 +9,7 @@ import {
     Menu,
     MenuItem,
     IconButton,
+    Chip,
 } from '@mui/material/';
 
 import {
@@ -16,11 +18,60 @@ import {
     Grain as GrainIcon,
     Whatshot as WhatshotIcon,
     MoreHoriz as MoreHorizIcon,
+    ExpandMore as ExpandMoreIcon,
 } from '@mui/icons-material';
+
+const StyledBreadcrumb = styled(Chip)(({ theme }) => {
+    return {
+        backgroundColor: theme.palette.grey[100],
+        height: theme.spacing(3),
+        color: (theme.vars || theme).palette.text.primary,
+        fontWeight: theme.typography.fontWeightRegular,
+        '&:hover, &:focus': {
+            backgroundColor: emphasize(theme.palette.grey[100], 0.06),
+            ...theme.applyStyles('dark', {
+                backgroundColor: emphasize(theme.palette.grey[800], 0.06),
+            }),
+        },
+        '&:active': {
+            boxShadow: theme.shadows[1],
+            backgroundColor: emphasize(theme.palette.grey[100], 0.12),
+            ...theme.applyStyles('dark', {
+                backgroundColor: emphasize(theme.palette.grey[800], 0.12),
+            }),
+        },
+        ...theme.applyStyles('dark', {
+            backgroundColor: theme.palette.grey[800],
+        }),
+    };
+});
 
 function handleClick(event) {
     event.preventDefault();
     console.info('You clicked a breadcrumb.');
+}
+
+export const CustomizedBreadcrumbs = () => {
+    return (
+        <MyContainer title="Customized Breadcrumbs">
+            <div role="presentation" onClick={handleClick}>
+                <Breadcrumbs aria-label="breadcrumb">
+                    <StyledBreadcrumb
+                        component="a"
+                        href="#"
+                        label="Home"
+                        icon={<HomeIcon fontSize="small" />}
+                    />
+                    <StyledBreadcrumb component="a" href="#" label="Catalog" />
+                    <StyledBreadcrumb
+                        label="Accessories"
+                        deleteIcon={<ExpandMoreIcon />}
+                        onDelete={handleClick}
+                    />
+                </Breadcrumbs>
+            </div>
+        </MyContainer>
+    )
 }
 
 export const CondensedWithMenu = () => {

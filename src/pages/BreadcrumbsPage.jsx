@@ -9,6 +9,7 @@ import {
     IconBreadcrumbs,
     CollapseBreadcrumbs,
     CondensedWithMenu,
+    CustomizedBreadcrumbs,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
@@ -19,6 +20,7 @@ const BreadcrumbsPage = () => {
         <IconBreadcrumbs />,
         <CollapseBreadcrumbs />,
         <CondensedWithMenu />,
+        <CustomizedBreadcrumbs />,
     ];
 
     return (
