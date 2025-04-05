@@ -15,7 +15,15 @@ import {
 import {
     Inbox as InboxIcon,
     Mail as MailIcon,
-} from '@mui/icons-material';
+} from '@mui/icons-material'
+
+export const PersistentDrawerLeft = () => {
+    return (
+        <MyContainer title="Persistent Drawer Left">
+            <Button link='/' variant='outlined'>View Persistent Drawer Left</Button>
+        </MyContainer>
+    )
+}
 
 export const AnchorTemporaryDrawer = () => {
     const [state, setState] = React.useState({
@@ -27,7 +35,7 @@ export const AnchorTemporaryDrawer = () => {
 
     const toggleDrawer = (anchor, open) => (event) => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return ;
+            return;
         }
 
         setState({ ...state, [anchor]: open });
@@ -115,7 +123,7 @@ export const TemporaryDrawer = () => {
                     <ListItem key={text} disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon /> }
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                             </ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItemButton>

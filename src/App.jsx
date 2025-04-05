@@ -47,6 +47,8 @@ import DashboardLayoutBasic from "./pages/AppBar/DashboardLayoutBasic";
 
 import FixedBottomNavigation from "./pages/BottomNavigation/FixedBottomNavigation";
 
+import PersistentDrawerLeft from "./pages/Drawer/PersistentDrawerLeft";
+
 function App() {
   return (
     <Router>
@@ -100,6 +102,8 @@ function App() {
         <Route path="/app-bar/dashboard-layout-basic" element={<DashboardLayoutBasic />} />
 
         <Route path="/bottom-navigation/fixed-bottom-navigation" element={<FixedBottomNavigation />} />
+
+        <Route path="/drawer/persistent-drawer-left" elemtn={<PersistentDrawerLeft />} />
 
       </Routes>
     </Router>
