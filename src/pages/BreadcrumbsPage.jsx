@@ -6,6 +6,7 @@ import {
     BasicBreadcrumbs,
     ActiveLastBreadcrumb,
     CustomSeparator,
+    IconBreadcrumbs,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
@@ -13,6 +14,7 @@ const BreadcrumbsPage = () => {
         <BasicBreadcrumbs />,
         <ActiveLastBreadcrumb />,
         <CustomSeparator />,
+        <IconBreadcrumbs />,
     ];
 
     return (

@@ -9,11 +9,50 @@ import {
 
 import {
     NavigateNext as NavigateNextIcon,
+    Home as HomeIcon,
+    Grain as GrainIcon,
+    Whatshot as WhatshotIcon,
 } from '@mui/icons-material';
 
 function handleClick(event) {
     event.preventDefault();
     console.info('You clicked a breadcrumb.');
+}
+
+export const IconBreadcrumbs = () => {
+    return (
+        <MyContainer title="Icon Breadcrumbs">
+            <div role="presentaion" onClick={handleClick}>
+                <Breadcrumbs aria-label="breadcrumb">
+                    <Link
+                        underline='hover'
+                        sx={{ display: 'flex', alignItems: 'center' }}
+                        color="inherit"
+                        href="/"
+                    >
+                        <HomeIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                        MUI
+                    </Link>
+                    <Link
+                        underline='hover'
+                        sx={{ display: 'flex', alignItems: 'center' }}
+                        color="inherit"
+                        href="/material-ui/getting-started/installation/"
+                    >
+                        <WhatshotIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                        Core
+                    </Link>
+                    <Typography
+                        sx={{ color: 'text.primary', display: 'flex', alignItems: 'center' }}
+                    >
+                        <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
+                        Breadcrumb
+                    </Typography>
+                </Breadcrumbs>
+            </div>
+
+        </MyContainer>
+    )
 }
 
 export const CustomSeparator = () => {
