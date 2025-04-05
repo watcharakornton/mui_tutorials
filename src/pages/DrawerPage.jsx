@@ -4,11 +4,13 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     TemporaryDrawer,
+    AnchorTemporaryDrawer,
 } from "../navigation/DrawerComponent";
 
 const DrawerPage = () => {
     const sections = [
         <TemporaryDrawer />,
+        <AnchorTemporaryDrawer />,
     ];
 
     return (
