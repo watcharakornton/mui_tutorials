@@ -4,11 +4,13 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     BasicBreadcrumbs,
+    ActiveLastBreadcrumb,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
     const sections = [
         <BasicBreadcrumbs />,
+        <ActiveLastBreadcrumb />,
     ];
 
     return (
