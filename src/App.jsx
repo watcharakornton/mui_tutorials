@@ -35,6 +35,7 @@ import SnackbarPage from "./pages/SnackbarPage";
 import AccordionPage from "./pages/AccordionPage";
 import CardPage from "./pages/CardPage";
 import BottomNavigationPage from "./pages/BottomNavigationPage"
+import BreadcrumbsPage from "./pages/BreadcrumbsPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -87,6 +88,7 @@ function App() {
         <Route path="/app-bar" element={<AppBarPage />} />
         <Route path="/card" element={<CardPage />} />
         <Route path="/bottom-navigation" element={<BottomNavigationPage />} />
+        <Route path="/breadcrumbs" element={<BreadcrumbsPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
