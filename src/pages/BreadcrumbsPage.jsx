@@ -8,6 +8,7 @@ import {
     CustomSeparator,
     IconBreadcrumbs,
     CollapseBreadcrumbs,
+    CondensedWithMenu,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
@@ -17,6 +18,7 @@ const BreadcrumbsPage = () => {
         <CustomSeparator />,
         <IconBreadcrumbs />,
         <CollapseBreadcrumbs />,
+        <CondensedWithMenu />,
     ];
 
     return (
