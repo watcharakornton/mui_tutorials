@@ -5,12 +5,14 @@ import MyBackButton from "../component/MyBackButton";
 import {
     BasicBreadcrumbs,
     ActiveLastBreadcrumb,
+    CustomSeparator,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
     const sections = [
         <BasicBreadcrumbs />,
         <ActiveLastBreadcrumb />,
+        <CustomSeparator />,
     ];
 
     return (
