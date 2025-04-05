@@ -19,6 +19,30 @@ function handleClick(event) {
     console.info('You clicked a breadcrumb.');
 }
 
+export const CollapseBreadcrumbs = () => {
+    return (
+        <MyContainer title="Collapse Breadcrumbs">
+            <div rolw="presentation" onClick={handleClick}>
+                <Breadcrumbs maxItems={2} aria-label="breadcrumb">
+                    <Link underline="hover" color="inherit" href="#">
+                        Home
+                    </Link>
+                    <Link underline="hover" color="inherit" href="#">
+                        Catalog
+                    </Link>
+                    <Link underline="hover" color="inherit" href="#">
+                        Accessories
+                    </Link>
+                    <Link underline="hover" color="inherit" href="#">
+                        New Collection
+                    </Link>
+                    <Typography sx={{ color: 'text.primary' }}>Belts</Typography>
+                </Breadcrumbs>
+            </div>
+        </MyContainer>
+    )
+}
+
 export const IconBreadcrumbs = () => {
     return (
         <MyContainer title="Icon Breadcrumbs">

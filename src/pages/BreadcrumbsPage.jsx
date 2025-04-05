@@ -7,6 +7,7 @@ import {
     ActiveLastBreadcrumb,
     CustomSeparator,
     IconBreadcrumbs,
+    CollapseBreadcrumbs,
 } from "../navigation/BreadcrumbsComponent";
 
 const BreadcrumbsPage = () => {
@@ -15,6 +16,7 @@ const BreadcrumbsPage = () => {
         <ActiveLastBreadcrumb />,
         <CustomSeparator />,
         <IconBreadcrumbs />,
+        <CollapseBreadcrumbs />,
     ];
 
     return (
