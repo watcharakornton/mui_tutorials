@@ -16,7 +16,45 @@ import {
     ContentCopy,
     ContentPaste,
     Cloud,
+    Check,
 } from '@mui/icons-material';
+
+export const DenseMenu = () => {
+    return (
+        <MyContainer title="Dense Menu">
+            <Paper sx={{ width: 320 }}>
+                <MenuList dense>
+                    <MenuItem>
+                        <ListItemText inset>Single</ListItemText>
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemText inset>1.15</ListItemText>
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemText inset>Double</ListItemText>
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemIcon>
+                            <Check />
+                        </ListItemIcon>
+                        Custom: 1.2
+                    </MenuItem>
+                    <Divider />
+                    <MenuItem>
+                        <ListItemText>Add space before paragraph</ListItemText>
+                    </MenuItem>
+                    <MenuItem>
+                        <ListItemText>Add space after paragraph</ListItemText>
+                    </MenuItem>
+                    <Divider />
+                    <MenuItem>
+                        <ListItemText>Custom spacing...</ListItemText>
+                    </MenuItem>
+                </MenuList>
+            </Paper>
+        </MyContainer>
+    )
+}
 
 export const IconMenu = () => {
     return (

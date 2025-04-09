@@ -5,12 +5,14 @@ import MyBackButton from "../component/MyBackButton";
 import {
     BasicMenu,
     IconMenu,
+    DenseMenu,
 } from "../navigation/MenuComponent";
 
 const MenuPage = () => {
     const sections = [
         <BasicMenu />,
         <IconMenu />,
+        <DenseMenu />,
     ];
 
     return (
