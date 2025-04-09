@@ -80,7 +80,7 @@ const Home = () => {
     { title: "Breadcrumbs page", href: "/breadcrumbs"},
     { title: "Drawer page", href: "/drawer" },
     { title: "Links page", href: "/links" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Menu page", href: "/menu" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
   ];
