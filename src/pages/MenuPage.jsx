@@ -9,6 +9,7 @@ import {
     SimpleListMenu,
     PositionedMenu,
     AccountMenu,
+    CustomizedMenus,
 } from "../navigation/MenuComponent";
 
 const MenuPage = () => {
@@ -19,6 +20,7 @@ const MenuPage = () => {
         <SimpleListMenu />,
         <PositionedMenu />,
         <AccountMenu />,
+        <CustomizedMenus />,
     ];
 
     return (
