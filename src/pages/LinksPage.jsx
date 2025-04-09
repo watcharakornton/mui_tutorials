@@ -3,12 +3,16 @@ import { Container, Grid, Typography } from "@mui/material";
 import MyBackButton from "../component/MyBackButton";
 
 import {
-    Links
+    Links,
+    UnderlineLink,
+    ButtonLink,
 } from "../navigation/LinksComponent";
 
 const LinksPage = () => {
     const sections = [
         <Links />,
+        <UnderlineLink />,
+        <ButtonLink />,
     ];
 
     return (
