@@ -103,7 +103,7 @@ function App() {
 
         <Route path="/bottom-navigation/fixed-bottom-navigation" element={<FixedBottomNavigation />} />
 
-        <Route path="/drawer/persistent-drawer-left" elemtn={<PersistentDrawerLeft />} />
+        <Route path="/drawer/persistent-drawer-left" element={<PersistentDrawerLeft />} />
 
       </Routes>
     </Router>

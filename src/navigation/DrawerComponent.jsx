@@ -20,7 +20,7 @@ import {
 export const PersistentDrawerLeft = () => {
     return (
         <MyContainer title="Persistent Drawer Left">
-            <Button link='/' variant='outlined'>View Persistent Drawer Left</Button>
+            <Button href='/drawer/persistent-drawer-left' variant='outlined'>View Persistent Drawer Left</Button>
         </MyContainer>
     )
 }
