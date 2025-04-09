@@ -8,6 +8,7 @@ import {
     DenseMenu,
     SimpleListMenu,
     PositionedMenu,
+    AccountMenu,
 } from "../navigation/MenuComponent";
 
 const MenuPage = () => {
@@ -17,6 +18,7 @@ const MenuPage = () => {
         <DenseMenu />,
         <SimpleListMenu />,
         <PositionedMenu />,
+        <AccountMenu />,
     ];
 
     return (
