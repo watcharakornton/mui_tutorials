@@ -6,6 +6,7 @@ import {
     BasicMenu,
     IconMenu,
     DenseMenu,
+    SimpleListMenu,
 } from "../navigation/MenuComponent";
 
 const MenuPage = () => {
@@ -13,6 +14,7 @@ const MenuPage = () => {
         <BasicMenu />,
         <IconMenu />,
         <DenseMenu />,
+        <SimpleListMenu />,
     ];
 
     return (
