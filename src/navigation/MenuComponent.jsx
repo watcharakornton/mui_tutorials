@@ -41,6 +41,11 @@ const options = [
     'Hide all notification content',
 ];
 
+const options2 = [
+    'None',
+    'Atria',
+]
+
 const StyledMenu = styled((props) => (
     <Menu
         elevation={0}
