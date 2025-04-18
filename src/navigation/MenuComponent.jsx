@@ -32,6 +32,7 @@ import {
     FileCopy as FileCopyIcon,
     MoreHoriz as MoreHorizIcon,
     KeyboardArrowDown as KeyboardArrowDownIcon,
+    MoreVert as MoreVertIcon,
 } from '@mui/icons-material';
 
 const options = [
@@ -45,6 +46,25 @@ const options2 = [
     'None',
     'Atria',
 ]
+
+const options3 = [
+    'None',
+    'Atria',
+    'Callisto',
+    'Dione',
+    'Ganymede',
+    'Hangouts Call',
+    'Luna',
+    'Oberon',
+    'Phobos',
+    'Pyxis',
+    'Sedna',
+    'Titania',
+    'Triton',
+    'Umbriel',
+];
+
+const ITEM_HEIGHT = 48;
 
 const StyledMenu = styled((props) => (
     <Menu
@@ -88,6 +108,57 @@ const StyledMenu = styled((props) => (
         }),
     },
 }));
+
+export const LongMenu = () => {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <MyContainer title="Long Menu">
+            <div>
+                <IconButton
+                    aria-label="more"
+                    id="long-button"
+                    aria-controls={open ? 'long-menu' : undefined}
+                    aria-expanded={open ? 'true' : undefined}
+                    aria-haspopup="true"
+                    onClick={handleClick}
+                >
+                    <MoreVertIcon />
+                </IconButton>
+                <Menu
+                    id="long-menu"
+                    MenuListProps={{
+                        'aria-labelledby': 'long-button',
+                    }}
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    slotProps={{
+                        paper: {
+                            style: {
+                                maxHeight: ITEM_HEIGHT * 4.5,
+                                width: '20ch',
+                            },
+                        },
+                    }}
+                >
+                    {options3.map((option) => (
+                        <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
+                            {option}
+                        </MenuItem>
+                    ))}
+                </Menu>
+            </div>
+        </MyContainer>
+    );
+}
 
 export const CustomizedMenus = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
