@@ -4,11 +4,15 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     BasicPagination,
+    PaginationOutlined,
+    PaginationRounded,
 } from "../navigation/PaginationComponent";
 
 const PaginationPage = () => {
     const sections = [
         <BasicPagination />,
+        <PaginationOutlined />,
+        <PaginationRounded />,
     ];
 
     return (
