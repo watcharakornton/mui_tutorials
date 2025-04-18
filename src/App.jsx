@@ -39,6 +39,7 @@ import BreadcrumbsPage from "./pages/BreadcrumbsPage";
 import DrawerPage from "./pages/DrawerPage";
 import LinksPage from "./pages/LinksPage";
 import MenuPage from "./pages/MenuPage";
+import PaginationPage from "./pages/PaginationPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -97,6 +98,7 @@ function App() {
         <Route path="/drawer" element={<DrawerPage />} />
         <Route path="/links" element={<LinksPage />} />
         <Route path="/menu" element={<MenuPage />} />
+        <Route path="/pagination" element={<PaginationPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

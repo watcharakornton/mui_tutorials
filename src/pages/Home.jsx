@@ -81,7 +81,7 @@ const Home = () => {
     { title: "Drawer page", href: "/drawer" },
     { title: "Links page", href: "/links" },
     { title: "Menu page", href: "/menu" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Pagination page", href: "/pagination" },
     { title: "Templates", href: "/", isTemplate: true },
     { title: "Templates", href: "/", isTemplate: true },
   ];
