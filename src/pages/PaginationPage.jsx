@@ -6,6 +6,9 @@ import {
     BasicPagination,
     PaginationOutlined,
     PaginationRounded,
+    PaginationSize,
+    PaginationButtons,
+    CustomIcons,
 } from "../navigation/PaginationComponent";
 
 const PaginationPage = () => {
@@ -13,6 +16,9 @@ const PaginationPage = () => {
         <BasicPagination />,
         <PaginationOutlined />,
         <PaginationRounded />,
+        <PaginationSize />,
+        <PaginationButtons />,
+        <CustomIcons />,
     ];
 
     return (
