@@ -11,6 +11,7 @@ import {
     AccountMenu,
     CustomizedMenus,
     LongMenu,
+    GroupedMenu,
 } from "../navigation/MenuComponent";
 
 const MenuPage = () => {
@@ -23,6 +24,7 @@ const MenuPage = () => {
         <AccountMenu />,
         <CustomizedMenus />,
         <LongMenu />,
+        <GroupedMenu />,
     ];
 
     return (

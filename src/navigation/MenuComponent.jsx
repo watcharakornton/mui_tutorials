@@ -17,6 +17,7 @@ import {
     ListItemButton,
     IconButton,
     Tooltip,
+    ListSubheader,
 } from '@mui/material';
 import {
     ContentCut,
@@ -108,6 +109,49 @@ const StyledMenu = styled((props) => (
         }),
     },
 }));
+
+export const GroupedMenu = () => {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    return (
+        <MyContainer title="Grouped Menu">
+            <div>
+                <Button
+                    id="basic-button"
+                    aria-controls={open ? 'grouped-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                >
+                    Dashboard
+                </Button>
+                <Menu
+                    id="grouped-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                    }}
+                >
+                    <ListSubheader>Category 1</ListSubheader>
+                    <MenuItem onClick={handleClose}>Option 1</MenuItem>
+                    <MenuItem onClick={handleClose}>Option 2</MenuItem>
+                    <ListSubheader>Category 2</ListSubheader>
+                    <MenuItem onClick={handleClose}>Option 3</MenuItem>
+                    <MenuItem onClick={handleClose}>Option 4</MenuItem>
+                </Menu>
+            </div>
+        </MyContainer>
+    )
+}
 
 export const LongMenu = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
