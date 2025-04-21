@@ -4,11 +4,13 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     BoxBasic,
+    BoxSx,
 } from "../layout/BoxComponent";
 
 const BoxPage = () => {
     const sections = [
         <BoxBasic />,
+        <BoxSx />,
     ];
 
     return (
