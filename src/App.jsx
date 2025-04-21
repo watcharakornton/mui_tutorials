@@ -1,6 +1,5 @@
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import NavBar from "./component/NavBar";
 import Home from "./pages/Home";
 import AutoCompletePage from "./pages/AutoCompletePage";
 import ButtonPage from "./pages/ButtonPage";
@@ -43,7 +42,8 @@ import PaginationPage from "./pages/PaginationPage";
 import SpeedDialPage from "./pages/SpeedDialPage";
 import StepperPage from "./pages/StepperPage";
 import TabsPage from "./pages/TabsPage";
-import BoxPage from "./pages/BoxPage"
+import BoxPage from "./pages/BoxPage";
+import ContainerPage from "./pages/ContainerPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -107,6 +107,7 @@ function App() {
         <Route path="/stepper" element={<StepperPage />} />
         <Route path="/tabs" element={<TabsPage />} />
         <Route path="/box" element={<BoxPage />} />
+        <Route path="/container" element={<ContainerPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

@@ -86,7 +86,7 @@ const Home = () => {
     { title: "Stepper page", href: "/stepper" },
     { title: "Tabs page", href: "/tabs" },
     { title: "Box page", href: "/box" },
-    { title: "Template", href: "/", isTemplate: true },
+    { title: "Container page", href: "/container" },
     { title: "Template", href: "/", isTemplate: true },
   ];
   return (
