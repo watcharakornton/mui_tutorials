@@ -4,11 +4,15 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     BasicSpeedDial,
+    OpenIconSpeedDial,
+    SpeedDialTooltipOpen,
 } from "../navigation/SpeedDialComponent";
 
 const SpeedDialPage = () => {
     const sections = [
         <BasicSpeedDial />,
+        <OpenIconSpeedDial />,
+        <SpeedDialTooltipOpen />,
     ];
 
     return (
