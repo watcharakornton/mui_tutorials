@@ -9,6 +9,11 @@ import {
     PaginationSize,
     PaginationButtons,
     CustomIcons,
+    PaginationRanges,
+    PaginationControlled,
+    PaginationLink,
+    UsePagination,
+    TablePaginationDemo,
 } from "../navigation/PaginationComponent";
 
 const PaginationPage = () => {
@@ -19,6 +24,11 @@ const PaginationPage = () => {
         <PaginationSize />,
         <PaginationButtons />,
         <CustomIcons />,
+        <PaginationRanges />,
+        <PaginationControlled />,
+        <PaginationLink />,
+        <UsePagination />,
+        <TablePaginationDemo />,
     ];
 
     return (
