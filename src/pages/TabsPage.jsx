@@ -4,15 +4,29 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     BasicTabs,
+    CenteredTabs,
+    ScrollableTabsButtonAuto,
+    ScrollableTabsButtonForce,
+    ScrollableTabsButtonPrevent,
+    IconTabs,
+    IconLabelTabs,
+    IconPositionTabs,
 } from "../navigation/TabsComponent";
 
 const TabsPage = () => {
     const sections = [
         <BasicTabs />,
+        <CenteredTabs />,
+        <ScrollableTabsButtonAuto />,
+        <ScrollableTabsButtonForce />,
+        <ScrollableTabsButtonPrevent />,
+        <IconTabs />,
+        <IconLabelTabs />,
+        <IconPositionTabs />,
     ];
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
             <Grid
                 container
                 alignItems="center"
