@@ -40,6 +40,7 @@ import DrawerPage from "./pages/DrawerPage";
 import LinksPage from "./pages/LinksPage";
 import MenuPage from "./pages/MenuPage";
 import PaginationPage from "./pages/PaginationPage";
+import SpeedDialPage from "./pages/SpeedDialPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -99,6 +100,7 @@ function App() {
         <Route path="/links" element={<LinksPage />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/pagination" element={<PaginationPage />} />
+        <Route path="/speed-dial" element={<SpeedDialPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

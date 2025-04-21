@@ -82,7 +82,7 @@ const Home = () => {
     { title: "Links page", href: "/links" },
     { title: "Menu page", href: "/menu" },
     { title: "Pagination page", href: "/pagination" },
-    { title: "Templates", href: "/", isTemplate: true },
+    { title: "Speed Dial page", href: "/speed-dial" },
     { title: "Templates", href: "/", isTemplate: true },
   ];
   return (
