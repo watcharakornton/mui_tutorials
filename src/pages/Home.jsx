@@ -84,6 +84,10 @@ const Home = () => {
     { title: "Pagination page", href: "/pagination" },
     { title: "Speed Dial page", href: "/speed-dial" },
     { title: "Stepper page", href: "/stepper" },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
   ];
   return (
     <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>

@@ -4,15 +4,25 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     HorizontalLinearStepper,
+    HorizontalNonLinearStepper,
+    HorizontalLinearAlternativeLabelStepper,
+    HorizontalStepperWithError,
+    CustomizedSteppers,
+    VerticalLinearStepper,
 } from "../navigation/StepperComponent";
 
 const StepperPage = () => {
     const sections = [
         <HorizontalLinearStepper />,
+        <HorizontalNonLinearStepper />,
+        <HorizontalLinearAlternativeLabelStepper />,
+        <HorizontalStepperWithError />,
+        <CustomizedSteppers />,
+        <VerticalLinearStepper />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
