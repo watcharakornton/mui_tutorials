@@ -84,7 +84,7 @@ const Home = () => {
     { title: "Pagination page", href: "/pagination" },
     { title: "Speed Dial page", href: "/speed-dial" },
     { title: "Stepper page", href: "/stepper" },
-    { title: "Template", href: "/", isTemplate: true },
+    { title: "Tabs page", href: "/tabs" },
     { title: "Template", href: "/", isTemplate: true },
     { title: "Template", href: "/", isTemplate: true },
     { title: "Template", href: "/", isTemplate: true },

@@ -42,6 +42,7 @@ import MenuPage from "./pages/MenuPage";
 import PaginationPage from "./pages/PaginationPage";
 import SpeedDialPage from "./pages/SpeedDialPage";
 import StepperPage from "./pages/StepperPage";
+import TabsPage from "./pages/TabsPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -103,6 +104,7 @@ function App() {
         <Route path="/pagination" element={<PaginationPage />} />
         <Route path="/speed-dial" element={<SpeedDialPage />} />
         <Route path="/stepper" element={<StepperPage />} />
+        <Route path="/tabs" element={<TabsPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
