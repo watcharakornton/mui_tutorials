@@ -44,6 +44,7 @@ import StepperPage from "./pages/StepperPage";
 import TabsPage from "./pages/TabsPage";
 import BoxPage from "./pages/BoxPage";
 import ContainerPage from "./pages/ContainerPage";
+import GridPage from "./pages/GridPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -108,6 +109,7 @@ function App() {
         <Route path="/tabs" element={<TabsPage />} />
         <Route path="/box" element={<BoxPage />} />
         <Route path="/container" element={<ContainerPage />} />
+        <Route path="/grid" element={<GridPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

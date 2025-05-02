@@ -87,6 +87,10 @@ const Home = () => {
     { title: "Tabs page", href: "/tabs" },
     { title: "Box page", href: "/box" },
     { title: "Container page", href: "/container" },
+    { title: "Grid page", href: "/grid" },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
     { title: "Template", href: "/", isTemplate: true },
   ];
   return (
