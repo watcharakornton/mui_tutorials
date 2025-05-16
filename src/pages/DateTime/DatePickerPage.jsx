@@ -14,9 +14,9 @@ import {
     StaticDatePickerLandscape,
     HelperText,
     ClearableProp,
-} from "../../datetime/DateComponent";
+} from "../../datetime/DatePickerComponent";
 
-const DatePage = () => {
+const DatePickerPage = () => {
     const sections = [
         <BasicDatePicker />,
         <DatePickerValue />,
@@ -46,7 +46,7 @@ const DatePage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Date page
+                        Date Picker page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -66,4 +66,4 @@ const DatePage = () => {
     );
 };
 
-export default DatePage;
+export default DatePickerPage;

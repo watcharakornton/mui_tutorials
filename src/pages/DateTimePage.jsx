@@ -44,8 +44,8 @@ const CardComponent = ({ title, href, isTemplate }) => {
 
 const Home = () => {
     const cards = [
-        { title: "Date page", href: "/date-time/date" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Date Picker page", href: "/date-time/date-picker" },
+        { title: "Date Field", href: "/date-time/date-field" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
@@ -54,7 +54,7 @@ const Home = () => {
     return (
         <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>
             <Typography variant="h4" sx={{ mb: 3, width: 300, mx: "auto" }}>
-                DateTime page
+                Date Time page
             </Typography>
             <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
                 {cards.map((card, index) => (
