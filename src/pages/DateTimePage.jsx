@@ -45,8 +45,8 @@ const CardComponent = ({ title, href, isTemplate }) => {
 const Home = () => {
     const cards = [
         { title: "Date Picker page", href: "/date-time/date-picker" },
-        { title: "Date Field", href: "/date-time/date-field" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Date Field page", href: "/date-time/date-field" },
+        { title: "Date Calendar page", href: "/date-time/date-calendar" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
