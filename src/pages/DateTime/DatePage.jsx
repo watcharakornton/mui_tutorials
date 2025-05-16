@@ -6,12 +6,28 @@ import { useNavigate } from "react-router-dom";
 import {
     BasicDatePicker,
     DatePickerValue,
+    ResponsiveDatePickers,
+    FormPropsDatePickers,
+    DatePickerViews,
+    DatePickerOpenTo,
+    DatePickerYearsOrder,
+    StaticDatePickerLandscape,
+    HelperText,
+    ClearableProp,
 } from "../../datetime/DateComponent";
 
 const DatePage = () => {
     const sections = [
         <BasicDatePicker />,
         <DatePickerValue />,
+        <ResponsiveDatePickers />,
+        <FormPropsDatePickers />,
+        <DatePickerViews />,
+        <DatePickerOpenTo />,
+        <DatePickerYearsOrder />,
+        <StaticDatePickerLandscape />,
+        <HelperText />,
+        <ClearableProp />,
     ];
 
     const navigate = useNavigate();
@@ -21,7 +37,7 @@ const DatePage = () => {
     }
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
