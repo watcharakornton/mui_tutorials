@@ -4,11 +4,13 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     ClickAway,
+    PortalClickAway,
 } from "../utils/ClickAwayComponent";
 
 const ClickAwayPage = () => {
     const sections = [
         <ClickAway />,
+        <PortalClickAway />,
     ];
 
     return (
