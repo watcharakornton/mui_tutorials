@@ -3,16 +3,12 @@ import { Container, Grid, Typography } from "@mui/material";
 import MyBackButton from "../component/MyBackButton";
 
 import {
-    BasicGrid,
-    FullWidthGrid,
-    RowAndColumnSpacing,
-} from "../layout/GridComponent";
+    StandardImageList,
+} from "../layout/ImageListComponent";
 
-const GridPage = () => {
+const ImageListPage = () => {
     const sections = [
-        <BasicGrid />,
-        <FullWidthGrid />,
-        // <RowAndColumnSpacing />,
+        <StandardImageList />,
     ];
 
     return (
@@ -25,7 +21,7 @@ const GridPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Grid page
+                        Image List page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -43,4 +39,4 @@ const GridPage = () => {
     );
 };
 
-export default GridPage;
+export default ImageListPage;

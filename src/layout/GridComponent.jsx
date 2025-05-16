@@ -23,6 +23,29 @@ const Item = styled(Paper)(({ theme }) => ({
     }),
 }));
 
+export const RowAndColumnSpacing = () => {
+    return (
+        <MyContainer title="Row And Column Spacing">
+            <Box sx={{ width: '95%%' }}>
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid size={6}>
+                        <Item>1</Item>
+                    </Grid>
+                    <Grid size={6}>
+                        <Item>2</Item>
+                    </Grid>
+                    <Grid size={6}>
+                        <Item>3</Item>
+                    </Grid>
+                    <Grid size={6}>
+                        <Item>4</Item>
+                    </Grid>
+                </Grid>
+            </Box>
+        </MyContainer>
+    )
+}
+
 export const FullWidthGrid = () => {
     return (
         <MyContainer title="Full Width Grid">
