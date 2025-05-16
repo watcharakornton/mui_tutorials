@@ -9,7 +9,6 @@ import {
   Typography,
 } from "@mui/material";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import NavBar from "../component/NavBar";
 
 const CardComponent = ({ title, href, isTemplate }) => {
   return (
@@ -90,7 +89,7 @@ const Home = () => {
     { title: "Grid page", href: "/grid" },
     { title: "Image List page", href: "/image-list" },
     { title: "Click-Away page", href: "/click-away" },
-    { title: "Template", href: "/", isTemplate: true },
+    { title: "Date Time page", href: "/date-time" },
     { title: "Template", href: "/", isTemplate: true },
   ];
   return (

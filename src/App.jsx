@@ -47,6 +47,8 @@ import ContainerPage from "./pages/ContainerPage";
 import GridPage from "./pages/GridPage";
 import ImageListPage from "./pages/ImageListPage";
 import ClickAwayPage from "./pages/ClickAwayPage";
+import DateTimePage from "./pages/DateTimePage";
+import DatePage from "./pages/DateTime/DatePage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -114,6 +116,8 @@ function App() {
         <Route path="/grid" element={<GridPage />} />
         <Route path="/image-list" element={<ImageListPage />} />
         <Route path="/click-away" element={<ClickAwayPage />} />
+        <Route path="/date-time" element={<DateTimePage />} />
+        <Route path="/date-time/date" element={<DatePage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
