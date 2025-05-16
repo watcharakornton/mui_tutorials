@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 import {
     BasicDateField,
+    DateFieldValue,
+    CustomDateFormat,
 } from "../../datetime/DateFieldComponent";
 
 const DateFieldPage = () => {
     const sections = [
         <BasicDateField />,
+        <DateFieldValue />,
+        <CustomDateFormat />,
     ];
 
     const navigate = useNavigate();
@@ -19,7 +23,7 @@ const DateFieldPage = () => {
     }
 
     return (
-        <Container maxWidth="md">
+        <Container maxWidth="sm">
             <Grid
                 container
                 alignItems="center"
