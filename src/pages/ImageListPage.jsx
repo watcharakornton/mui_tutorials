@@ -4,15 +4,29 @@ import MyBackButton from "../component/MyBackButton";
 
 import {
     StandardImageList,
+    QuiltedImageList,
+    WovenImageList,
+    MasonryImageList,
+    TitlebarImageList,
+    TitlebarBelowImageList,
+    TitlebarBelowMasonaryImageList,
+    CustomImageList,
 } from "../layout/ImageListComponent";
 
 const ImageListPage = () => {
     const sections = [
         <StandardImageList />,
+        <QuiltedImageList />,
+        <WovenImageList />,
+        <MasonryImageList />,
+        <TitlebarImageList />,
+        <TitlebarBelowImageList />,
+        <TitlebarBelowMasonaryImageList />,
+        <CustomImageList />,
     ];
 
     return (
-        <Container maxWidth="sm">
+        <Container maxWidth="md">
             <Grid
                 container
                 alignItems="center"
