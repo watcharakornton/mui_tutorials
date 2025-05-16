@@ -46,6 +46,7 @@ import BoxPage from "./pages/BoxPage";
 import ContainerPage from "./pages/ContainerPage";
 import GridPage from "./pages/GridPage";
 import ImageListPage from "./pages/ImageListPage";
+import ClickAwayPage from "./pages/ClickAwayPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -112,6 +113,7 @@ function App() {
         <Route path="/container" element={<ContainerPage />} />
         <Route path="/grid" element={<GridPage />} />
         <Route path="/image-list" element={<ImageListPage />} />
+        <Route path="/click-away" element={<ClickAwayPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

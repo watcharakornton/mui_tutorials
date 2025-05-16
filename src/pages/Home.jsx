@@ -89,7 +89,7 @@ const Home = () => {
     { title: "Container page", href: "/container" },
     { title: "Grid page", href: "/grid" },
     { title: "Image List page", href: "/image-list" },
-    { title: "Template", href: "/", isTemplate: true },
+    { title: "Click-Away page", href: "/click-away" },
     { title: "Template", href: "/", isTemplate: true },
     { title: "Template", href: "/", isTemplate: true },
   ];
