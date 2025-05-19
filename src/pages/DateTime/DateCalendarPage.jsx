@@ -5,11 +5,19 @@ import { useNavigate } from "react-router-dom";
 
 import {
     BasicDateCalendar,
+    CustomMonthLayout,
+    AddWeekNumber,
+    WeekPicker,
+    DateCalendarServerRequest,
 } from "../../datetime/DateCalendarComponent";
 
 const DateCalendarPage = () => {
     const sections = [
         <BasicDateCalendar />,
+        <CustomMonthLayout />,
+        <AddWeekNumber />,
+        <WeekPicker />,
+        <DateCalendarServerRequest />,
     ];
 
     const navigate = useNavigate();
