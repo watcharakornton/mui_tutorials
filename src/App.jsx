@@ -51,6 +51,7 @@ import DateTimePage from "./pages/DateTimePage";
 import DatePickerPage from "./pages/DateTime/DatePickerPage";
 import DateFieldPage from "./pages/DateTime/DateFieldPage";
 import DateCalendarPage from "./pages/DateTime/DateCalendarPage";
+import TimePickerPage from "./pages/DateTime/TimePickerPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -122,6 +123,7 @@ function App() {
         <Route path="/date-time/date-picker" element={<DatePickerPage />} />
         <Route path="/date-time/date-field" element={<DateFieldPage />} />
         <Route path="/date-time/date-calendar" element={<DateCalendarPage />} />
+        <Route path="/date-time/time-picker" element={<TimePickerPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

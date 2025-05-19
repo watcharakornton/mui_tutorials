@@ -47,7 +47,7 @@ const Home = () => {
         { title: "Date Picker page", href: "/date-time/date-picker" },
         { title: "Date Field page", href: "/date-time/date-field" },
         { title: "Date Calendar page", href: "/date-time/date-calendar" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Time Picker page", href: "/date-time/time-picker" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
     ];
