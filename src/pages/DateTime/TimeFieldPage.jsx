@@ -5,11 +5,15 @@ import { useNavigate } from "react-router-dom";
 
 import {
     BasicTimeField,
+    TimeFieldValue,
+    CustomTimeFormat,
 } from "../../datetime/TimeFieldComponent";
 
 const TimeFieldPage = () => {
     const sections = [
         <BasicTimeField />,
+        <TimeFieldValue />,
+        <CustomTimeFormat />,
     ];
 
     const navigate = useNavigate();
