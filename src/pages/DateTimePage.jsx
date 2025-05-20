@@ -48,6 +48,9 @@ const Home = () => {
         { title: "Date Field page", href: "/date-time/date-field" },
         { title: "Date Calendar page", href: "/date-time/date-calendar" },
         { title: "Time Picker page", href: "/date-time/time-picker" },
+        { title: "Time Field page", href: "/date-time/time-field" },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
     ];
