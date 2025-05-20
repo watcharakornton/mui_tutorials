@@ -5,11 +5,23 @@ import { useNavigate } from "react-router-dom";
 
 import {
     DigitalClockBasic,
+    DigitalClockValue,
+    DigitalClockFormProps,
+    DigitalClockViews,
+    DigitalClockAmPm,
+    DigitalClockTimeStep,
+    DigitalClockSkipDisabled,
 } from "../../datetime/DigitalClockComponent";
 
 const DigitalClockPage = () => {
     const sections = [
         <DigitalClockBasic />,
+        <DigitalClockValue />,
+        <DigitalClockFormProps />,
+        <DigitalClockViews />,
+        <DigitalClockAmPm />,
+        <DigitalClockTimeStep />,
+        <DigitalClockSkipDisabled />,
     ];
 
     const navigate = useNavigate();
