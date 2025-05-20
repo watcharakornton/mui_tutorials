@@ -5,11 +5,25 @@ import { useNavigate } from "react-router-dom";
 
 import {
     BasicTimePicker,
+    TimePickerValue,
+    ResponsiveTimePickers,
+    FormPropsTimePickers,
+    TimePickerViews,
+    TimePickerOpenTo,
+    StaticTimePickerLandscape,
+    TimePickerViewRenderers,
 } from "../../datetime/TimePickerComponent";
 
 const TimePickerPage = () => {
     const sections = [
         <BasicTimePicker />,
+        <TimePickerValue />,
+        <ResponsiveTimePickers />,
+        <FormPropsTimePickers />,
+        <TimePickerViews />,
+        <TimePickerOpenTo />,
+        <StaticTimePickerLandscape />,
+        <TimePickerViewRenderers />,
     ];
 
     const navigate = useNavigate();
