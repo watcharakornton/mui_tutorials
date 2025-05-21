@@ -52,7 +52,7 @@ const Home = () => {
         { title: "Time Clock page", href: "/date-time/time-clock" },
         { title: "Digital Clock page", href: "/date-time/digital-clock" },
         { title: "Date Time Picker page", href: "/date-time/date-time-picker" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Date Time Field page", href: "/date-time/date-time-field" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
