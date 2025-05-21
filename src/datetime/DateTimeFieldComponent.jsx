@@ -37,9 +37,37 @@ export const DateTimeFieldValue = () => {
                         onKeyDown={(e) => {
                             if (e.key === 'Enter') {
                                 setValue(tempValue)
-                                console.log(tempValue?.format?.('MM/DD/YYYY HH:mm a') ?? tempValue)
+                                console.log(tempValue?.format?.('MM/DD/YYYY hh:mm a') ?? tempValue)
                             }
                         }}  
+                    />
+                </DemoContainer>
+            </LocalizationProvider>
+        </MyContainer>
+    )
+}
+
+export const CustomDateTimeFormat = () => {
+    return (
+        <MyContainer title="Custom Date Time Format">
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DemoContainer
+                    components={['DateTimeField', 'DateTimeField', 'DateTimeField']}
+                >
+                    <DateTimeField 
+                        label="Format with merdidiem"
+                        defaultValue={dayjs('2022-04-17T15:30')}
+                        format="L hh:mm a"
+                    />
+                    <DateTimeField 
+                        label="Format without merdidiem"
+                        defaultValue={dayjs('2022-04-17T15:30')}
+                        format="L HH:mm"
+                    />
+                    <DateTimeField 
+                        label="Localized format with full letter month"
+                        defaultValue={dayjs('2022-04-17T15:30')}
+                        format="LLL"
                     />
                 </DemoContainer>
             </LocalizationProvider>

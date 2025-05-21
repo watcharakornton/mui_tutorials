@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 import {
     BasicDateTimeField,
     DateTimeFieldValue,
+    CustomDateTimeFormat,
 } from "../../datetime/DateTimeFieldComponent";
 
 const DateTimeFieldPage = () => {
     const sections = [
         <BasicDateTimeField />,
         <DateTimeFieldValue />,
+        <CustomDateTimeFormat />,
     ];
 
     const navigate = useNavigate();
