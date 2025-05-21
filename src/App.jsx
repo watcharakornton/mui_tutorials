@@ -55,6 +55,7 @@ import TimePickerPage from "./pages/DateTime/TimePickerPage";
 import TimeFieldPage from "./pages/DateTime/TimeFieldPage";
 import TimeClockPage from "./pages/DateTime/TimeClockPage";
 import DigitalClockPage from "./pages/DateTime/DigitalClockPage";
+import DateTimePickerPage from "./pages/DateTime/DateTimePickerPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -130,6 +131,7 @@ function App() {
         <Route path="/date-time/time-field" element={<TimeFieldPage />} />
         <Route path="/date-time/time-clock" element={<TimeClockPage />} />
         <Route path="/date-time/digital-clock" element={<DigitalClockPage />} />
+        <Route path="/date-time/date-time-picker" element={<DateTimePickerPage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
