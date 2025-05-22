@@ -53,9 +53,7 @@ const Home = () => {
         { title: "Digital Clock page", href: "/date-time/digital-clock" },
         { title: "Date Time Picker page", href: "/date-time/date-time-picker" },
         { title: "Date Time Field page", href: "/date-time/date-time-field" },
-        { title: "Template", href: "/", isTemplate: true },
-        { title: "Template", href: "/", isTemplate: true },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Date Range Picker page", href: "/date-time/date-range-picker" },
     ];
     return (
         <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>
