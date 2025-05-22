@@ -58,6 +58,8 @@ import DigitalClockPage from "./pages/DateTime/DigitalClockPage";
 import DateTimePickerPage from "./pages/DateTime/DateTimePickerPage";
 import DateTimeFieldPage from "./pages/DateTime/DateTimeFieldPage";
 import DateRangePickerPage from "./pages/DateTime/DateRangePickerPage";
+import ChartsPage from "./pages/ChartsPage";
+import BarsChartsPage from "./pages/Charts/BarsChartsPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -136,6 +138,9 @@ function App() {
         <Route path="/date-time/date-time-picker" element={<DateTimePickerPage />} />
         <Route path="/date-time/date-time-field" element={<DateTimeFieldPage />} />
         <Route path="/date-time/date-range-picker" element={<DateRangePickerPage />} />
+        <Route path="/charts" element={<ChartsPage />} />
+        <Route path="/charts/bars-charts" element={<BarsChartsPage />} />
+        
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />

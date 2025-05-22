@@ -76,7 +76,7 @@ const Home = () => {
     { title: "App Bar page", href: "/app-bar" },
     { title: "Card page", href: "/card" },
     { title: "Bottom Navigation page", href: "/bottom-navigation" },
-    { title: "Breadcrumbs page", href: "/breadcrumbs"},
+    { title: "Breadcrumbs page", href: "/breadcrumbs" },
     { title: "Drawer page", href: "/drawer" },
     { title: "Links page", href: "/links" },
     { title: "Menu page", href: "/menu" },
@@ -90,6 +90,10 @@ const Home = () => {
     { title: "Image List page", href: "/image-list" },
     { title: "Click-Away page", href: "/click-away" },
     { title: "Date Time page", href: "/date-time" },
+    { title: "Charts page", href: "/charts" },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
+    { title: "Template", href: "/", isTemplate: true },
     { title: "Template", href: "/", isTemplate: true },
   ];
   return (

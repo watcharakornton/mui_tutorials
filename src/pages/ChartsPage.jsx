@@ -42,23 +42,20 @@ const CardComponent = ({ title, href, isTemplate }) => {
     );
 };
 
-const DateTimePage = () => {
+const ChartsPage = () => {
     const cards = [
-        { title: "Date Picker page", href: "/date-time/date-picker" },
-        { title: "Date Field page", href: "/date-time/date-field" },
-        { title: "Date Calendar page", href: "/date-time/date-calendar" },
-        { title: "Time Picker page", href: "/date-time/time-picker" },
-        { title: "Time Field page", href: "/date-time/time-field" },
-        { title: "Time Clock page", href: "/date-time/time-clock" },
-        { title: "Digital Clock page", href: "/date-time/digital-clock" },
-        { title: "Date Time Picker page", href: "/date-time/date-time-picker" },
-        { title: "Date Time Field page", href: "/date-time/date-time-field" },
-        { title: "Date Range Picker page", href: "/date-time/date-range-picker" },
+        { title: "Bars page", href: "/charts/bars-charts" },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
     ];
     return (
         <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>
             <Typography variant="h4" sx={{ mb: 3, width: 300, mx: "auto" }}>
-                Date Time page
+                Charts page
             </Typography>
             <Grid container spacing={2} rowSpacing={2} justifyContent="space-between">
                 {cards.map((card, index) => (
@@ -78,4 +75,4 @@ const DateTimePage = () => {
     );
 };
 
-export default DateTimePage;
+export default ChartsPage;
