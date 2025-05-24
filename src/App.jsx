@@ -60,6 +60,7 @@ import DateTimeFieldPage from "./pages/DateTime/DateTimeFieldPage";
 import DateRangePickerPage from "./pages/DateTime/DateRangePickerPage";
 import ChartsPage from "./pages/ChartsPage";
 import BarsChartsPage from "./pages/Charts/BarsChartsPage";
+import LineChartPage from "./pages/Charts/LineChartPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -140,6 +141,7 @@ function App() {
         <Route path="/date-time/date-range-picker" element={<DateRangePickerPage />} />
         <Route path="/charts" element={<ChartsPage />} />
         <Route path="/charts/bars-charts" element={<BarsChartsPage />} />
+        <Route path="/charts/line-chart" element={<LineChartPage />} />
         
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />

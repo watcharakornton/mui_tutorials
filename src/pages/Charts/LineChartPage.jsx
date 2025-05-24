@@ -5,11 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 import {
     SimpleLineChart,
+    TinyLineChart,
 } from "../../charts/LineChartComponent";
 
 const LineChartPage = () => {
     const sections = [
         <SimpleLineChart />,
+        <TinyLineChart />,
     ];
 
     const navigate = useNavigate();

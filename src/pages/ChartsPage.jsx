@@ -44,8 +44,8 @@ const CardComponent = ({ title, href, isTemplate }) => {
 
 const ChartsPage = () => {
     const cards = [
-        { title: "Bars page", href: "/charts/bars-charts" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Bar Chart page", href: "/charts/bars-charts" },
+        { title: "Line Chart page", href: "/charts/line-chart" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
