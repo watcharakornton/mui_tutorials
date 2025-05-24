@@ -51,6 +51,8 @@ const ChartsPage = () => {
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
+        { title: "Template", href: "/", isTemplate: true },
     ];
     return (
         <Container maxWidth="lg" sx={{ my: 4, minHeight: "100vh" }}>

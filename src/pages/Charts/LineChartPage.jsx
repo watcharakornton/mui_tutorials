@@ -4,46 +4,12 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { useNavigate } from "react-router-dom";
 
 import {
-    BasicBars,
-    BarsDataset,
-    StackBars,
-    HorizontalBars,
-    TickPlacementBars,
-    GridDemo,
-    BarLabel,
-    CustomLabels,
-    LabelsAboveBars,
-    BarClick,
-    TinyBarCharts,
-    SimpleBarChart,
-    StackedBarChart,
-    MixedBarChart,
-    PositiveAndNegativeBarChart,
-    BarChartStackBySign,
-    BiaxialBarChart,
-    PopulationPyramidBarChart,
-} from "../../charts/BarsChartsComponent";
+    SimpleLineChart,
+} from "../../charts/LineChartComponent";
 
-const BarsChartsPage = () => {
+const LineChartPage = () => {
     const sections = [
-        <BasicBars />,
-        <BarsDataset />,
-        <StackBars />,
-        <HorizontalBars />,
-        <TickPlacementBars />,
-        <GridDemo />,
-        <BarLabel />,
-        <CustomLabels />,
-        <LabelsAboveBars />,
-        <BarClick />,
-        <TinyBarCharts />,
-        <SimpleBarChart />,
-        <StackedBarChart />,
-        <MixedBarChart />,
-        <PositiveAndNegativeBarChart />,
-        <BarChartStackBySign />,
-        <BiaxialBarChart />,
-        <PopulationPyramidBarChart />,
+        <SimpleLineChart />,
     ];
 
     const navigate = useNavigate();
@@ -62,7 +28,7 @@ const BarsChartsPage = () => {
             >
                 <Grid item xs={12}>
                     <Typography variant="h3" align="center" sx={{ mt: 5 }}>
-                        Bars Charts page
+                        Line Chart page
                     </Typography>
                 </Grid>
                 {sections.map((Component, index) => (
@@ -82,4 +48,4 @@ const BarsChartsPage = () => {
     );
 };
 
-export default BarsChartsPage;
+export default LineChartPage;
