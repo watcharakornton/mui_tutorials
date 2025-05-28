@@ -6,12 +6,26 @@ import { useNavigate } from "react-router-dom";
 import {
     SimpleLineChart,
     TinyLineChart,
+    DashedLineChart,
+    BiaxialLineChart,
+    LineChartWithReferenceLines,
+    LineChartConnectNulls,
+    LiveLineChartNoSnap,
+    LineWithUncertaintyArea,
+    CustomLineMarks,
 } from "../../charts/LineChartComponent";
 
 const LineChartPage = () => {
     const sections = [
         <SimpleLineChart />,
         <TinyLineChart />,
+        <DashedLineChart />,
+        <BiaxialLineChart />,
+        <LineChartWithReferenceLines />,
+        <LineChartConnectNulls />,
+        <LiveLineChartNoSnap />,
+        <LineWithUncertaintyArea />,
+        <CustomLineMarks />,
     ];
 
     const navigate = useNavigate();
