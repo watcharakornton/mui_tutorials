@@ -46,7 +46,7 @@ const ChartsPage = () => {
     const cards = [
         { title: "Bar Chart page", href: "/charts/bars-charts" },
         { title: "Line Chart page", href: "/charts/line-chart" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Pie Chart page", href: "/charts/pie-chart" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },

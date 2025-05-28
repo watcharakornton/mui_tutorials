@@ -61,6 +61,7 @@ import DateRangePickerPage from "./pages/DateTime/DateRangePickerPage";
 import ChartsPage from "./pages/ChartsPage";
 import BarsChartsPage from "./pages/Charts/BarsChartsPage";
 import LineChartPage from "./pages/Charts/LineChartPage";
+import PieChartPage from "./pages/Charts/PieChartsPage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -142,6 +143,7 @@ function App() {
         <Route path="/charts" element={<ChartsPage />} />
         <Route path="/charts/bars-charts" element={<BarsChartsPage />} />
         <Route path="/charts/line-chart" element={<LineChartPage />} />
+        <Route path="/charts/pie-chart" element={<PieChartPage />} />
         
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
