@@ -4,12 +4,20 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { useNavigate } from "react-router-dom";
 
 import {
-    TwoLevelPieChart
+    TwoLevelPieChart,
+    StraightAnglePieChart,
+    PieChartWithCustomizedLabel,
+    PieChartWithPaddingAngle,
+    PieChartWithCenterLabel,
 } from "../../charts/PieChartsComponent";
 
 const PieChartPage = () => {
     const sections = [
         <TwoLevelPieChart />,
+        <StraightAnglePieChart />,
+        <PieChartWithCustomizedLabel />,
+        <PieChartWithPaddingAngle />,
+        <PieChartWithCenterLabel />,
     ];
 
     const navigate = useNavigate();
