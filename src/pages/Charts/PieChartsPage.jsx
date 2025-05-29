@@ -9,6 +9,7 @@ import {
     PieChartWithCustomizedLabel,
     PieChartWithPaddingAngle,
     PieChartWithCenterLabel,
+    PieChartWithCustomLegendAndTooltip,
 } from "../../charts/PieChartsComponent";
 
 const PieChartPage = () => {
@@ -18,6 +19,7 @@ const PieChartPage = () => {
         <PieChartWithCustomizedLabel />,
         <PieChartWithPaddingAngle />,
         <PieChartWithCenterLabel />,
+        <PieChartWithCustomLegendAndTooltip />,
     ];
 
     const navigate = useNavigate();

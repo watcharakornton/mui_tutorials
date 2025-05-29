@@ -1,9 +1,11 @@
 import * as React from 'react';
 import MyContainer from '../component/MyContainer';
 import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
+import { useDrawingArea } from '@mui/x-charts/hooks';
 import {
     Stack,
 } from '@mui/material';
+import { styled } from '@mui/material/styles';
 
 
 // Two level pie chart
@@ -32,7 +34,7 @@ const data2 = [
 export const TwoLevelPieChart = () => {
     return (
         <MyContainer title="Two level pie chart">
-            <PieChart 
+            <PieChart
                 series={[
                     {
                         innerRadius: 0,
@@ -68,7 +70,7 @@ const data = [
 export const StraightAnglePieChart = () => {
     return (
         <MyContainer title="Straight angle pie chart">
-            <PieChart 
+            <PieChart
                 series={[
                     {
                         startAngle: -90,
@@ -112,7 +114,7 @@ const getArcLabel = (params) => {
 export const PieChartWithCustomizedLabel = () => {
     return (
         <MyContainer title="Pie chart with customized label">
-            <PieChart 
+            <PieChart
                 series={[
                     {
                         outerRadius: 80,
@@ -139,7 +141,7 @@ export const PieChartWithPaddingAngle = () => {
     return (
         <MyContainer title="PieChartWithPaddingAngle">
             <Stack width="95%" direction="row" flexWrap="wrap">
-                <PieChart 
+                <PieChart
                     series={[
                         {
                             paddingAngle: 5,
@@ -152,7 +154,7 @@ export const PieChartWithPaddingAngle = () => {
                     height={200}
                     hideLegend
                 />
-                <PieChart 
+                <PieChart
                     series={[
                         {
                             startAngle: -90,
@@ -178,9 +180,91 @@ export const PieChartWithPaddingAngle = () => {
 
 // Pie chart with center label
 // ==================================================================
+const data4 = [
+    { value: 5, label: 'A' },
+    { value: 10, label: 'B' },
+    { value: 15, label: 'C' },
+    { value: 20, label: 'D' },
+];
+
+const size = {
+    width: 200,
+    height: 200,
+};
+
+const StyledText = styled('text')(({ theme }) => ({
+    fill: theme.palette.text.primary,
+    textAnchor: 'middle',
+    dominantBaseline: 'central',
+    fontSize: 20,
+}));
+
+function PieCenterLabel({ children }) {
+    const { width, height, left, top } = useDrawingArea();
+
+    return (
+        <StyledText x={left + width / 2} y={top + height / 2}>
+            {children}
+        </StyledText>
+    )
+}
+
 export const PieChartWithCenterLabel = () => {
     return (
-        <MyContainer title="Pie chart with center label"></MyContainer>
+        <MyContainer title="Pie chart with center label">
+            <PieChart series={[{ data: data4, innerRadius: 80 }]} {...size}>
+                <PieCenterLabel>Center label</PieCenterLabel>
+            </PieChart>
+        </MyContainer>
+    )
+}
+// ==================================================================
+
+
+// Pie chart with custom legend and tooltip
+// ==================================================================
+function HTMLDiamond({ className, color }) {
+    return (
+        <div
+            className={className}
+            style={{ transform: 'scale(0.6, 0.75) rotate(45deg)', background: color }}
+        />
+    );
+}
+
+function SVGStar({ className, color }) {
+    return (
+        <svg viewBox="-7.423 -7.423 14.846 14.846">
+            <path
+                className={className}
+                d="M0,-7.528L1.69,-2.326L7.16,-2.326L2.735,0.889L4.425,6.09L0,2.875L-4.425,6.09L-2.735,0.889L-7.16,-2.326L-1.69,-2.326Z"
+                fill={color}
+            />
+        </svg>
+    )
+}
+
+export const PieChartWithCustomLegendAndTooltip = () => {
+    return (
+        <MyContainer title="Pie chart wit custom legend and tooltip">
+            <PieChart 
+                series={[
+                    {
+                        data: [
+                            { value: 10, label: 'Circle', labelMarkType: 'circle' },
+                            {
+                                value: 15,
+                                label: 'Diamond',
+                                labelMarkType: HTMLDiamond,
+                            },
+                            { value: 20, label: 'Star', labelMarkType: SVGStar },
+                        ],
+                    },
+                ]}
+                width={200}
+                height={200}
+            />
+        </MyContainer>
     )
 }
 // ==================================================================
