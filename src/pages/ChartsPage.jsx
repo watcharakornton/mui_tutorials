@@ -48,7 +48,7 @@ const ChartsPage = () => {
         { title: "Line Chart page", href: "/charts/line-chart" },
         { title: "Pie Chart page", href: "/charts/pie-chart" },
         { title: "Scatter Chart page", href: "/charts/scatter-chart" },
-        { title: "Template", href: "/", isTemplate: true },
+        { title: "Spark line page", href: "/charts/sparkline" },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },
         { title: "Template", href: "/", isTemplate: true },

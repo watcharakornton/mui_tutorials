@@ -63,6 +63,7 @@ import BarsChartsPage from "./pages/Charts/BarsChartsPage";
 import LineChartPage from "./pages/Charts/LineChartPage";
 import PieChartPage from "./pages/Charts/PieChartsPage";
 import ScatterChartsPage from "./pages/Charts/ScatterChartsPage";
+import SparkLinePage from "./pages/Charts/SparkLinePage";
 
 import DrawerAppBar from "./pages/AppBar/DrawerAppBar";
 import BottomAppBar from "./pages/AppBar/BottomAppBar";
@@ -146,6 +147,7 @@ function App() {
         <Route path="/charts/line-chart" element={<LineChartPage />} />
         <Route path="/charts/pie-chart" element={<PieChartPage />} />
         <Route path="/charts/scatter-chart" element={<ScatterChartsPage />} />
+        <Route path="/charts/sparkline" element={<SparkLinePage />} />
 
         <Route path="/app-bar/Drawer-app-bar" element={<DrawerAppBar />} />
         <Route path="/app-bar/bottom-app-bar" element={<BottomAppBar />} />
