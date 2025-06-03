@@ -11,6 +11,8 @@ import {
     MenuItem,
     Button,
     Paper,
+    Checkbox,
+    Slider,
 } from '@mui/material';
 import { SparkLineChart } from '@mui/x-charts/SparkLineChart';
 import {
@@ -20,22 +22,22 @@ import {
 
 // Basic sparkline
 export const BasicSparkLine = () => {
-  return (
-    <MyContainer title="Basic sparkline">
-        <Stack direction="row" sx={{ width: '95%' }}>
-            <Box sx={{ flexGrow: 1 }}>
-                <SparkLineChart data={[1, 4, 2, 5, 7, 2, 4, 6]} height={100} />
-            </Box>
-            <Box sx={{ flexGrow: 1 }}>
-                <SparkLineChart
-                    plotType='bar'
-                    data={[1, 4, 2, 5, 7, 2, 4, 6]}
-                    height={100}
-                 />
-            </Box>
-        </Stack>
-    </MyContainer>
-  )
+    return (
+        <MyContainer title="Basic sparkline">
+            <Stack direction="row" sx={{ width: '95%' }}>
+                <Box sx={{ flexGrow: 1 }}>
+                    <SparkLineChart data={[1, 4, 2, 5, 7, 2, 4, 6]} height={100} />
+                </Box>
+                <Box sx={{ flexGrow: 1 }}>
+                    <SparkLineChart
+                        plotType='bar'
+                        data={[1, 4, 2, 5, 7, 2, 4, 6]}
+                        height={100}
+                    />
+                </Box>
+            </Stack>
+        </MyContainer>
+    )
 }
 
 // Area spark line
@@ -47,7 +49,7 @@ export const AreaSparkLine = () => {
                     <SparkLineChart data={[3, -10, -2, 5, 7, -2, 4, 6]} height={100} area />
                 </Box>
                 <Box sx={{ flexGrow: 1 }}>
-                    <SparkLineChart 
+                    <SparkLineChart
                         data={[3, -10, -2, 5, 7, -2, 4, 6]}
                         height={100}
                         curve="natural"
@@ -76,7 +78,7 @@ export const BasicSparkLineCustomization = () => {
         <MyContainer title="Basic spark line customization">
             <Stack direction="column" sx={{ width: '95%' }}>
                 <Stack direction="row">
-                    <FormControlLabel 
+                    <FormControlLabel
                         value="end"
                         control={
                             <Switch
@@ -88,11 +90,11 @@ export const BasicSparkLineCustomization = () => {
                         label="showHighlight"
                         labelPlacement="end"
                     />
-                    <FormControlLabel 
+                    <FormControlLabel
                         value="end"
                         control={
                             <Switch
-                                color="primary"    
+                                color="primary"
                                 checked={showTooltip}
                                 onChange={handleTooltipChange}
                             />
@@ -103,7 +105,7 @@ export const BasicSparkLineCustomization = () => {
                 </Stack>
                 <Stack direction="row" sx={{ width: '100%' }}>
                     <Box sx={{ flexGrow: 1 }}>
-                        <SparkLineChart 
+                        <SparkLineChart
                             data={[1, 4, 2, 5, 7, 2, 4, 6]}
                             height={100}
                             showHighlight={showHighlight}
@@ -111,7 +113,7 @@ export const BasicSparkLineCustomization = () => {
                         />
                     </Box>
                     <Box sx={{ flexGrow: 1 }}>
-                        <SparkLineChart 
+                        <SparkLineChart
                             plotType="bar"
                             data={[1, 4, 2, 5, 7, 2, 4, 6]}
                             height={100}
@@ -131,7 +133,7 @@ export const CustomAxis = () => {
         <MyContainer title="Custom axis">
             <Stack direction="row" sx={{ width: '95%' }}>
                 <Box sx={{ flexGrow: 1 }}>
-                    <SparkLineChart 
+                    <SparkLineChart
                         data={[1, 4, 2, 5, 7, 2, 4, 6]}
                         xAxis={{
                             scaleType: 'time',
@@ -153,7 +155,7 @@ export const CustomAxis = () => {
                     />
                 </Box>
                 <Box sx={{ flexGrow: 1 }}>
-                    <SparkLineChart 
+                    <SparkLineChart
                         plotType='bar'
                         data={[1, 4, 2, 5, 7, 2, 4, 6]}
                         height={100}
@@ -207,7 +209,7 @@ export const CustomYAxis = () => {
                 <Typography>With y-range fixed to [0, 100]</Typography>
                 <Stack sx={{ width: '100%' }} direction="row" spacing={2}>
                     <Box sx={{ flexGrow: 1 }}>
-                        <SparkLineChart 
+                        <SparkLineChart
                             data={smallValues}
                             yAxis={{
                                 min: 0,
@@ -218,7 +220,7 @@ export const CustomYAxis = () => {
                         />
                     </Box>
                     <Box sx={{ flexGrow: 1 }}>
-                        <SparkLineChart 
+                        <SparkLineChart
                             data={largeValues}
                             yAxis={{
                                 min: 0,
@@ -277,7 +279,7 @@ export const CustomDomainYAxis = () => {
             : domainLimitKey;
     return (
         <MyContainer title="Custom domain YAxis">
-            <Box 
+            <Box
                 sx={{
                     width: '95%',
                 }}
@@ -309,7 +311,7 @@ export const CustomDomainYAxis = () => {
                     <Box sx={{ flexGrow: 1 }}>
                         <SparkLineChart plotType="bar" {...settings2} yAxis={{ domainLimit }} />
                     </Box>
-                </Stack> 
+                </Stack>
             </Box>
         </MyContainer>
     )
@@ -344,12 +346,36 @@ const values2 = [0, 2, 3, 4, 6, 8, 7, 9, 15, 6, 8, 7, 12];
 export const ColorCustomizationMode = () => {
     return (
         <MyContainer title="Color customization mode">
-            
+            <DarkModeWrapper>
+                <SparkLineChart
+                    data={values2}
+                    color={(mode) => (mode === 'light' ? 'black' : 'white')}
+                    {...settings4}
+                />
+            </DarkModeWrapper>
         </MyContainer>
     )
 }
 
 function DarkModeWrapper(props) {
-    const theme = useTheme();    
+    const theme = useTheme();
     const [colorMode, setColorMode] = React.useState(theme.palette.mode);
+
+    const newTheme = createTheme({ palette: { mode: colorMode } });
+    return (
+        <ThemeProvider theme={newTheme}>
+            <Stack>
+                <Button
+                    onClick={() =>
+                        setColorMode((prev) => (prev === 'light' ? 'dark' : 'light'))
+                    }
+                    color="inherit"
+                    endIcon={colorMode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+                >
+                    {colorMode} mode
+                </Button>
+                <Paper sx={{ p: 2, width: '100%', maxWidth: 300 }}>{props.children}</Paper>
+            </Stack>
+        </ThemeProvider>
+    )
 }
